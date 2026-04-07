@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelForge Software - Desarrollo Web & Mobile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/components/navbar/navbar.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/servicios.css">
+    <link rel="stylesheet" href="/css/modales.css">
+</head>
+
+<body>
+    <div class="floating-pixels" id="floatingPixels"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">
+                <div class="logo-icon">
+                    <img src="/assets/Cubito_static.png" alt="PixelForge" style="width:100%;height:100%;object-fit:contain;">
+                </div>
+                <span class="logo-text"><span class="blue">PixelForge</span> Software</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="/pages/proyectos.html">Proyectos</a></li>
+                <li><a href="/pages/contactanos.html">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-split">
+
+            <!-- LEFT: texto -->
+            <div class="hero-text">
+                <div class="hero-eyebrow">▸ SOFTWARE STUDIO · SAN RAFAEL</div>
+                <h1>
+                    Forjamos el<br>
+                    <span class="blue">futuro digital</span><br>
+                    <span class="hero-sub">pixel a pixel</span>
+                </h1>
+                <p>Desarrollo de software web y móvil personalizado para llevar tu negocio al siguiente nivel</p>
+                <div class="hero-actions">
+                    <a href="#servicios" class="btn btn-secondary">Ver Servicios</a>
+                    <button class="btn-emocionar" id="btnEmocionar">
+                        <span class="btn-emocionar-text">¡Contactame, me voy a emocionar!</span>
+                        <span class="btn-emocionar-icon">💙</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- RIGHT: logo -->
+            <div class="hero-logo-wrap" id="heroLogoWrap">
+                <div class="hero-logo-glow"></div>
+                <img src="/assets/Cubito_static.png" alt="PixelForge Logo" class="hero-logo" id="heroLogo" data-gif="/assets/Cubito_de_forge_cayendo.gif">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features Bar -->
+    <section class="features-bar">
+        <div class="features-container">
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>Código Limpio</h3>
+                    <p>Desarrollo profesional y escalable</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>Responsive</h3>
+                    <p>Perfecto en cualquier dispositivo</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>Alto Rendimiento</h3>
+                    <p>Optimizado para velocidad</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════ SERVICES SECTION ══════════════════ -->
+    <section id="servicios" class="services">
+        <div class="section-header" style="position:relative;z-index:2;">
+            <div class="services-pixel-label">▸ SISTEMAS DISPONIBLES ◂</div>
+            <h2>Nuestros <span class="blue">Sistemas</span><span class="cursor-blink"></span></h2>
+            <p>Software listo para usar · desplegado en tiempo reducido · soporte mensual incluido</p>
+        </div>
+
+        <div class="services-grid-new">
+
+            <!-- 01 BARBERÍA -->
+            <div class="svc-card" onclick="openPxModal('modal-barberia')">
+            <div class="svc-gold-line"></div>
+                <div class="svc-number">// 01</div>
+                <div class="svc-icon-wrap"><div class="svc-icon">✂️</div></div>
+                <div class="svc-body">
+                    <h3>Barbería / Uñas</h3>
+                    <p>Agenda digital, cobros y empleados. El cliente se anota solo, vos cobrás y medís.</p>
+                    <div class="svc-features">
+                        <span class="svc-feat">Turnos online 24/7</span>
+                        <span class="svc-feat">Recordatorios por WhatsApp</span>
+                        <span class="svc-feat">Caja + comisiones por empleado</span>
+                    </div>
+                    <div class="svc-tags">
+                        <span class="svc-tag">Turnos</span>
+                        <span class="svc-tag">WhatsApp</span>
+                        <span class="svc-tag">Caja</span>
+                    </div>
+                </div>
+                <div class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+                <div class="svc-price-tag">$30.000 – $45.000 / mes</div>
+            </div>
+
+            <!-- 02 STOCK -->
+            <div class="svc-card" onclick="openPxModal('modal-stock')">
+            <div class="svc-gold-line"></div>
+                <div class="svc-number">// 02</div>
+                <div class="svc-icon-wrap"><div class="svc-icon">📦</div></div>
+                <div class="svc-body">
+                    <h3>Sistema de Stock</h3>
+                    <p>Inventario en tiempo real para ferreterías, almacenes, kioscos y cualquier comercio.</p>
+                    <div class="svc-features">
+                        <span class="svc-feat">Lector de código de barras</span>
+                        <span class="svc-feat">Alertas de stock bajo</span>
+                        <span class="svc-feat">POS integrado + reportes</span>
+                    </div>
+                    <div class="svc-tags">
+                        <span class="svc-tag">Inventario</span>
+                        <span class="svc-tag">POS</span>
+                        <span class="svc-tag">Alertas</span>
+                    </div>
+                </div>
+                <div class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+                <div class="svc-price-tag">$40.000 – $60.000 / mes</div>
+            </div>
+
+            <!-- 03 GYM -->
+            <div class="svc-card" onclick="openPxModal('modal-gym')">
+            <div class="svc-gold-line"></div>
+                <div class="svc-number">// 03</div>
+                <div class="svc-icon-wrap"><div class="svc-icon">🏋️</div></div>
+                <div class="svc-body">
+                    <h3>Sistema de Gym</h3>
+                    <p>Control de socios, membresías, cuotas y acceso. Con app mobile incluida en plan Pro.</p>
+                    <div class="svc-features">
+                        <span class="svc-feat">Control de pagos y vencimientos</span>
+                        <span class="svc-feat">Rutinas y clases por horario</span>
+                        <span class="svc-feat">Notificaciones de cuota</span>
+                    </div>
+                    <div class="svc-tags">
+                        <span class="svc-tag">Membresías</span>
+                        <span class="svc-tag">App Mobile</span>
+                        <span class="svc-tag">3 Planes</span>
+                    </div>
+                </div>
+                <div class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+                <div class="svc-price-tag">$45.000 – $60.000 / mes</div>
+            </div>
+
+            <!-- 04 RESTAURANTE -->
+            <div class="svc-card" onclick="openPxModal('modal-restaurante')">
+            <div class="svc-gold-line"></div>
+                <div class="svc-number">// 04</div>
+                <div class="svc-icon-wrap"><div class="svc-icon">🍕</div></div>
+                <div class="svc-body">
+                    <h3>Sistema Restaurante</h3>
+                    <p>Agente IA que toma pedidos por WhatsApp solo. Comandas digitales, delivery y menú QR.</p>
+                    <div class="svc-features">
+                        <span class="svc-feat">IA toma pedidos sin intervención</span>
+                        <span class="svc-feat">Menú QR siempre actualizado</span>
+                        <span class="svc-feat">Cierre de caja y reportes</span>
+                    </div>
+                    <div class="svc-tags">
+                        <span class="svc-tag">IA WhatsApp</span>
+                        <span class="svc-tag">Delivery</span>
+                        <span class="svc-tag">QR Menú</span>
+                    </div>
+                </div>
+                <div class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+                <div class="svc-price-tag">$45.000 – $60.000 / mes</div>
+            </div>
+
+            <!-- 05 LANDING PAGE -->
+            <div class="svc-card" onclick="openPxModal('modal-landing')">
+            <div class="svc-gold-line"></div>
+                <div class="svc-number">// 05</div>
+                <div class="svc-icon-wrap"><div class="svc-icon">🌐</div></div>
+                <div class="svc-body">
+                    <h3>Landing Page</h3>
+                    <p>Tu negocio en Google en 72 horas. Diseño a medida, SEO, hosting y dominio incluidos.</p>
+                    <div class="svc-features">
+                        <span class="svc-feat">SEO para aparecer en Google</span>
+                        <span class="svc-feat">Botón WhatsApp integrado</span>
+                        <span class="svc-feat">100% responsive — celular y PC</span>
+                    </div>
+                    <div class="svc-tags">
+                        <span class="svc-tag">SEO</span>
+                        <span class="svc-tag">72hs</span>
+                        <span class="svc-tag">Hosting</span>
+                    </div>
+                </div>
+                <div class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+                <div class="svc-price-tag">$25.000 – $45.000 / mes</div>
+            </div>
+
+            <!-- 06 MARKETPLACE -->
+            <div class="svc-card" onclick="openPxModal('modal-stock')">
+            <div class="svc-gold-line"></div>
+                <div class="svc-number">// 06</div>
+                <div class="svc-icon-wrap"><div class="svc-icon">👗</div></div>
+                <div class="svc-body">
+                    <h3>Marketplace de Ropa</h3>
+                    <p>Plataforma de venta local con carrito, MercadoPago y panel de vendedor propio.</p>
+                    <div class="svc-features">
+                        <span class="svc-feat">Catálogo con talles y colores</span>
+                        <span class="svc-feat">Pagos con MercadoPago</span>
+                        <span class="svc-feat">Panel de admin completo</span>
+                    </div>
+                    <div class="svc-tags">
+                        <span class="svc-tag">E-commerce</span>
+                        <span class="svc-tag">MercadoPago</span>
+                        <span class="svc-tag">Catálogo</span>
+                    </div>
+                </div>
+                <div class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+                <div class="svc-price-tag">A consultar</div>
+            </div>
+
+            <!-- 07 REDES SOCIALES — FEATURED -->
+            <div class="svc-card svc-card--featured" onclick="openPxModal('modal-redes')">
+                <div class="svc-badge">NUEVO</div>
+                <div class="svc-number">// 07</div>
+                <div class="svc-icon-wrap"><div class="svc-icon">📱</div></div>
+                <div class="svc-body">
+                    <h3>Gestión de Redes</h3>
+                    <p>Instagram gestionado por nosotros: estrategia, reels, historias y estadísticas mensuales.</p>
+                    <div class="svc-features">
+                        <span class="svc-feat">Producción de Reels profesionales</span>
+                        <span class="svc-feat">Planner mensual de contenido</span>
+                        <span class="svc-feat">3 planes según objetivos</span>
+                    </div>
+                    <div class="svc-tags">
+                        <span class="svc-tag">Instagram</span>
+                        <span class="svc-tag">Reels</span>
+                        <span class="svc-tag">Estrategia</span>
+                    </div>
+                </div>
+                <div class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+                <div class="svc-price-tag">$180.000 – $500.000 / mes</div>
+            </div>
+
+            <!-- 08 SOFTWARE PERSONALIZADO — DARK -->
+            <div class="svc-card svc-card--dark" onclick="openPxModal('modal-redes')">
+            <div class="svc-gold-line"></div>
+                <div class="svc-number">// 08</div>
+                <div class="svc-icon-wrap"><div class="svc-icon">⚙️</div></div>
+                <div class="svc-body">
+                    <h3>Software Personalizado</h3>
+                    <p>¿Tu negocio no entra en ningún molde? Analizamos, diseñamos y desarrollamos desde cero.</p>
+                    <div class="svc-features">
+                        <span class="svc-feat">Análisis de requerimientos</span>
+                        <span class="svc-feat">React + Node.js + MongoDB</span>
+                        <span class="svc-feat">Soporte y mantenimiento incluido</span>
+                    </div>
+                    <div class="svc-tags">
+                        <span class="svc-tag">A medida</span>
+                        <span class="svc-tag">Escalable</span>
+                        <span class="svc-tag">Soporte</span>
+                    </div>
+                </div>
+                <div class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+                <div class="svc-price-tag">A cotizar</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyectos" class="projects">
+        <div class="section-header">
+            <h2><span class="blue">Localidades</span> que confían en nosotros!</h2>
+            <p>Casos de éxito que nos enorgullecen</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card project-bowen">
+                <div class="project-overlay"></div>
+                <div class="project-info"><h3>Bowen</h3><p>Mendoza</p></div>
+            </div>
+            <div class="project-card project-alvear">
+                <div class="project-overlay"></div>
+                <div class="project-info"><h3>General Alvear</h3><p>Mendoza</p></div>
+            </div>
+            <div class="project-card project-sanrafael">
+                <div class="project-overlay"></div>
+                <div class="project-info"><h3>San Rafael</h3><p>Mendoza</p></div>
+            </div>
+            <div class="project-card project-malargue">
+                <div class="project-overlay"></div>
+                <div class="project-info"><h3>Malargüe</h3><p>Mendoza</p></div>
+            </div>
+            <div class="project-card project-next">
+                <div class="project-overlay"></div>
+                <div class="project-info"><h3>Sé nuestro próximo departamento!</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="contact-content">
+            <h2>¿Listo para <span class="blue">empezar</span>?</h2>
+            <p>Conversemos sobre tu proyecto y cómo podemos ayudarte a hacerlo realidad</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/5492625419121?text=Hola%20!%20,%20estoy%20interesado%20en%20sus%20servicios%20webs!%20quiero%20mas%20info!" target="_blank" class="btn btn-primary">💬 Contactar por WhatsApp</a>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub">
+                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <div class="footer-logo-icon">
+                <div class="footer-logo-bg"></div>
+                <div class="footer-logo-text">PF</div>
+            </div>
+            <span><span class="blue">PixelForge</span> Software</span>
+        </div>
+        <p>© 2025 PixelForge Software. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- ══════════════ MODALES PIXEL ART ══════════════ -->
+
+    <!-- Modal 01 Barbería -->
+    <div class="px-modal" id="modal-barberia">
+        <div class="px-modal-box">
+            <button class="px-modal-close" onclick="closePxModal('modal-barberia')">✕</button>
+            <div class="px-modal-header">
+                <span class="px-modal-icon">✂️</span>
+                <div>
+                    <div class="px-modal-num">// 01</div>
+                    <h2 class="px-modal-title">Barbería / Uñas</h2>
+                </div>
+            </div>
+            <div class="px-modal-body">
+                <div class="px-features">
+                    <div class="px-feat"><span class="px-feat-icon">📅</span><div><strong>Turnos online 24/7</strong><p>El cliente se anota solo desde su celular</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">💬</span><div><strong>WhatsApp automático</strong><p>Recordatorios sin intervención</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">💳</span><div><strong>Caja + comisiones</strong><p>Control individual por empleado</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">📊</span><div><strong>Stock de productos</strong><p>Alertas de reposición automáticas</p></div></div>
+                </div>
+                <div class="px-modal-footer">
+                    <div class="px-price">$30.000 – $45.000 <span>/ mes</span></div>
+                    <a href="https://wa.me/5492625419121?text=Hola!%20me%20interesa%20el%20Sistema%20de%20Barbería." target="_blank" class="px-wsp-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 02 Stock -->
+    <div class="px-modal" id="modal-stock">
+        <div class="px-modal-box">
+            <button class="px-modal-close" onclick="closePxModal('modal-stock')">✕</button>
+            <div class="px-modal-header">
+                <span class="px-modal-icon">📦</span>
+                <div>
+                    <div class="px-modal-num">// 02</div>
+                    <h2 class="px-modal-title">Sistema de Stock</h2>
+                </div>
+            </div>
+            <div class="px-modal-body">
+                <div class="px-features">
+                    <div class="px-feat"><span class="px-feat-icon">📦</span><div><strong>Inventario en tiempo real</strong><p>Entradas, salidas y stock actualizado</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">📱</span><div><strong>Lector de código de barras</strong><p>Escaneo físico integrado</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">🔔</span><div><strong>Alertas automáticas</strong><p>Nunca te quedés sin mercadería</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">💳</span><div><strong>POS integrado</strong><p>Cobrar y descontar stock en un paso</p></div></div>
+                </div>
+                <div class="px-modal-footer">
+                    <div class="px-price">$40.000 – $60.000 <span>/ mes</span></div>
+                    <a href="https://wa.me/5492625419121?text=Hola!%20me%20interesa%20el%20Sistema%20de%20Stock." target="_blank" class="px-wsp-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 03 Gym -->
+    <div class="px-modal" id="modal-gym">
+        <div class="px-modal-box">
+            <button class="px-modal-close" onclick="closePxModal('modal-gym')">✕</button>
+            <div class="px-modal-header">
+                <span class="px-modal-icon">🏋️</span>
+                <div>
+                    <div class="px-modal-num">// 03</div>
+                    <h2 class="px-modal-title">Sistema de Gym</h2>
+                </div>
+            </div>
+            <div class="px-modal-body">
+                <div class="px-features">
+                    <div class="px-feat"><span class="px-feat-icon">💳</span><div><strong>Control de pagos</strong><p>Cuotas, vencimientos y deudas</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">🏋️</span><div><strong>Rutinas y clases</strong><p>Agenda de actividades y cupos</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">🎫</span><div><strong>Membresías</strong><p>Control de socios avanzado</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">📱</span><div><strong>App Mobile</strong><p>Incluida en plan Pro y Premium</p></div></div>
+                </div>
+                <div class="px-modal-footer">
+                    <div class="px-price">$45.000 – $60.000 <span>/ mes</span></div>
+                    <a href="https://wa.me/5492625419121?text=Hola!%20me%20interesa%20el%20Sistema%20de%20Gimnasio." target="_blank" class="px-wsp-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 04 Restaurante -->
+    <div class="px-modal" id="modal-restaurante">
+        <div class="px-modal-box">
+            <button class="px-modal-close" onclick="closePxModal('modal-restaurante')">✕</button>
+            <div class="px-modal-header">
+                <span class="px-modal-icon">🍕</span>
+                <div>
+                    <div class="px-modal-num">// 04</div>
+                    <h2 class="px-modal-title">Sistema Restaurante</h2>
+                </div>
+            </div>
+            <div class="px-modal-body">
+                <div class="px-features">
+                    <div class="px-feat"><span class="px-feat-icon">🤖</span><div><strong>Agente IA por WhatsApp</strong><p>Pedidos automáticos sin intervención</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">📋</span><div><strong>Comandas digitales</strong><p>Plano del salón y cocina en tiempo real</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">📱</span><div><strong>Menú QR</strong><p>Sin imprimir, siempre actualizado</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">🚚</span><div><strong>Delivery integrado</strong><p>Pedidos para llevar y a domicilio</p></div></div>
+                </div>
+                <div class="px-modal-footer">
+                    <div class="px-price">$45.000 – $60.000 <span>/ mes</span></div>
+                    <a href="https://wa.me/5492625419121?text=Hola!%20me%20interesa%20el%20Sistema%20para%20Restaurante." target="_blank" class="px-wsp-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 05 Landing Page -->
+    <div class="px-modal" id="modal-landing">
+        <div class="px-modal-box">
+            <button class="px-modal-close" onclick="closePxModal('modal-landing')">✕</button>
+            <div class="px-modal-header">
+                <span class="px-modal-icon">🌐</span>
+                <div>
+                    <div class="px-modal-num">// 05</div>
+                    <h2 class="px-modal-title">Landing Page</h2>
+                </div>
+            </div>
+            <div class="px-modal-body">
+                <div class="px-features">
+                    <div class="px-feat"><span class="px-feat-icon">🌐</span><div><strong>Diseño profesional</strong><p>Adaptado a tu marca en 72 horas</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">🔍</span><div><strong>SEO incluido</strong><p>Aparecé en Google desde el día 1</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">💬</span><div><strong>WhatsApp integrado</strong><p>Botón de contacto directo</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">🖥️</span><div><strong>Hosting + dominio</strong><p>100% responsive, celular y PC</p></div></div>
+                </div>
+                <div class="px-modal-footer">
+                    <div class="px-price">$25.000 – $45.000 <span>/ mes</span></div>
+                    <a href="https://wa.me/5492625419121?text=Hola!%20me%20interesa%20una%20Landing%20Page." target="_blank" class="px-wsp-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 06 Marketplace -->
+    <div class="px-modal" id="modal-marketplace">
+        <div class="px-modal-box">
+            <button class="px-modal-close" onclick="closePxModal('modal-marketplace')">✕</button>
+            <div class="px-modal-header">
+                <span class="px-modal-icon">👗</span>
+                <div>
+                    <div class="px-modal-num">// 06</div>
+                    <h2 class="px-modal-title">Marketplace de Ropa</h2>
+                </div>
+            </div>
+            <div class="px-modal-body">
+                <div class="px-features">
+                    <div class="px-feat"><span class="px-feat-icon">👗</span><div><strong>Catálogo completo</strong><p>Talles, colores y variantes</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">💳</span><div><strong>MercadoPago integrado</strong><p>Pagos seguros al instante</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">🛒</span><div><strong>Carrito de compras</strong><p>Experiencia de compra fluida</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">⚙️</span><div><strong>Panel de admin</strong><p>Gestión completa de productos</p></div></div>
+                </div>
+                <div class="px-modal-footer">
+                    <div class="px-price px-price--consult">A consultar</div>
+                    <a href="https://wa.me/5492625419121?text=Hola!%20me%20interesa%20el%20Marketplace%20de%20Ropa." target="_blank" class="px-wsp-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 07 Redes Sociales -->
+    <div class="px-modal" id="modal-redes">
+        <div class="px-modal-box">
+            <button class="px-modal-close" onclick="closePxModal('modal-redes')">✕</button>
+            <div class="px-modal-header">
+                <span class="px-modal-icon">📱</span>
+                <div>
+                    <div class="px-modal-num">// 07</div>
+                    <h2 class="px-modal-title">Gestión de Redes</h2>
+                </div>
+            </div>
+            <div class="px-modal-body">
+                <div class="px-features">
+                    <div class="px-feat"><span class="px-feat-icon">🎬</span><div><strong>Reels profesionales</strong><p>Producción de contenido de calidad</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">📅</span><div><strong>Planner mensual</strong><p>Estrategia y calendario de contenido</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">📊</span><div><strong>Estadísticas mensuales</strong><p>Métricas y análisis de resultados</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">✨</span><div><strong>3 planes disponibles</strong><p>Según tus objetivos y presupuesto</p></div></div>
+                </div>
+                <div class="px-modal-footer">
+                    <div class="px-price">$180.000 – $500.000 <span>/ mes</span></div>
+                    <a href="https://wa.me/5492625419121?text=Hola!%20me%20interesa%20la%20Gestión%20de%20Redes%20Sociales." target="_blank" class="px-wsp-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 08 Software Personalizado -->
+    <div class="px-modal" id="modal-software">
+        <div class="px-modal-box">
+            <button class="px-modal-close" onclick="closePxModal('modal-software')">✕</button>
+            <div class="px-modal-header">
+                <span class="px-modal-icon">⚙️</span>
+                <div>
+                    <div class="px-modal-num">// 08</div>
+                    <h2 class="px-modal-title">Software Personalizado</h2>
+                </div>
+            </div>
+            <div class="px-modal-body">
+                <div class="px-features">
+                    <div class="px-feat"><span class="px-feat-icon">💡</span><div><strong>Análisis de necesidades</strong><p>Entendemos tu negocio antes de codear</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">🎨</span><div><strong>Diseño UI/UX</strong><p>Interfaz pensada para tu usuario</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">⚙️</span><div><strong>React + Node.js + MongoDB</strong><p>Stack moderno, limpio y escalable</p></div></div>
+                    <div class="px-feat"><span class="px-feat-icon">🚀</span><div><strong>Deploy + soporte</strong><p>Servidor dedicado y mantenimiento</p></div></div>
+                </div>
+                <div class="px-modal-footer">
+                    <div class="px-price px-price--consult">A cotizar</div>
+                    <a href="https://wa.me/5492625419121?text=Hola!%20me%20interesa%20desarrollar%20un%20Software%20Personalizado." target="_blank" class="px-wsp-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/components/navbar/navbar.js"></script>
+    <script src="/app.js"></script>
+    <script>
+    // ── Play GIF on button click ──────────────────────────────────
+    const btnEmocionar = document.getElementById('btnEmocionar');
+    const heroLogo     = document.getElementById('heroLogo');
+    let played = false;
+
+    btnEmocionar.addEventListener('click', () => {
+        if (!played) {
+            played = true;
+
+            // Swap static PNG → animated GIF
+            heroLogo.style.transition = 'opacity 0.3s';
+            heroLogo.style.opacity = '0';
+
+            setTimeout(() => {
+                heroLogo.src = heroLogo.dataset.gif;
+                heroLogo.style.opacity = '1';
+                btnEmocionar.querySelector('.btn-emocionar-text').textContent = '¡Me emocioné! 🎉';
+                btnEmocionar.disabled = true;
+                btnEmocionar.style.opacity = '0.6';
+            }, 300);
+
+            // Open WhatsApp after the animation plays a bit
+            setTimeout(() => {
+                window.open('https://wa.me/5492625419121?text=Hola!%20me%20interesa%20saber%20mas%20sobre%20sus%20servicios!', '_blank');
+            }, 3500);
+        }
+    });
+    </script>
+    <script>
+    function openPxModal(id) {
+        document.getElementById(id).classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closePxModal(id) {
+        document.getElementById(id).classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.px-modal').forEach(modal => {
+        modal.addEventListener('click', e => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.px-modal.active').forEach(m => {
+                m.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+    });
+    </script>
+</body>
+</html>
