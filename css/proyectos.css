@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  zoom: 0.9; /* equivale al 80% del navegador */
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+
+/* Floating Pixels */
+.floating-pixels {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.pixel {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(1, 128, 235, 0.6);
+  animation: floatPixels 10s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(1, 128, 235, 0.8);
+  border-radius: 2px;
+}
+
+@keyframes floatPixels {
+  0%, 100% { 
+    transform: translateY(0) translateX(0) rotate(0deg); 
+    opacity: 0.4;
+  }
+  25% {
+    opacity: 0.8;
+    transform: translateY(-25px) translateX(15px) rotate(90deg);
+  }
+  50% { 
+    transform: translateY(-50px) translateX(-10px) rotate(180deg); 
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+    transform: translateY(-25px) translateX(-20px) rotate(270deg);
+  }
+}
+
+/* Projects Section */
+.projects-section {
+  min-height: 100vh;
+  padding: 140px 20px 96px;
+  background: linear-gradient(180deg, #000, #0a0a0a);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.section-header h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.section-header h1 img {
+  width: 64px;
+  height: 64px;
+  animation: bounce 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px rgba(1, 128, 235, 0.6));
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.section-header h1 .blue {
+  color: #0180eb;
+}
+
+.section-header p {
+  font-size: 1.25rem;
+  color: #9ca3af;
+}
+
+/* Coming Soon Container */
+.coming-soon-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.coming-soon-content {
+  text-align: center;
+  padding: 60px 40px;
+  background: rgba(26, 26, 26, 0.5);
+  border: 2px solid rgba(1, 128, 235, 0.3);
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.coming-soon-content::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #0180eb, #6366f1, #0180eb);
+  background-size: 300% 300%;
+  border-radius: 24px;
+  z-index: -1;
+  opacity: 0.3;
+  animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Animación de píxeles */
+.pixel-animation {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.pixel-box {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #0180eb, #6366f1);
+  border-radius: 8px;
+  animation: pixelFloat 2s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(1, 128, 235, 0.5);
+}
+
+.pixel-box:nth-child(1) { animation-delay: 0s; }
+.pixel-box:nth-child(2) { animation-delay: 0.2s; }
+.pixel-box:nth-child(3) { animation-delay: 0.4s; }
+.pixel-box:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes pixelFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+.coming-soon-content h2 {
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #fff 0%, #0180eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+}
+
+.coming-soon-content p {
+  font-size: 1.25rem;
+  color: #9ca3af;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+/* Barra de progreso */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0180eb, #6366f1, #0180eb);
+  background-size: 200% 100%;
+  border-radius: 10px;
+  width: 65%;
+  animation: progressMove 2s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(1, 128, 235, 0.6);
+}
+
+@keyframes progressMove {
+  0%, 100% { background-position: 0% 0%; }
+  50% { background-position: 100% 0%; }
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 48px;
+  background: linear-gradient(135deg, #0180eb, #0160c0);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(1, 128, 235, 0.4);
+  border: 2px solid transparent;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(1, 128, 235, 0.6);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-header h1 {
+    font-size: 2rem;
+    gap: 16px;
+  }
+
+  .section-header h1 img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+  }
+
+  .projects-section {
+    padding: 120px 20px 64px;
+  }
+
+  .coming-soon-content {
+    padding: 40px 24px;
+  }
+
+  .coming-soon-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .coming-soon-content p {
+    font-size: 1rem;
+  }
+
+  .pixel-animation {
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .pixel-box {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn {
+    padding: 14px 36px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h1 {
+    font-size: 1.75rem;
+    gap: 8px;
+    line-height: 1.3;
+  }
+
+  .section-header h1 img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .coming-soon-content {
+    padding: 32px 20px;
+  }
+
+  .coming-soon-content h2 {
+    font-size: 2rem;
+  }
+
+  .coming-soon-content p {
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+  }
+
+  .pixel-animation {
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .pixel-box {
+    width: 28px;
+    height: 28px;
+  }
+
+  .progress-bar {
+    margin-bottom: 32px;
+  }
+
+  .btn {
+    padding: 12px 32px;
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - PixelForge Software</title>
+    <link rel="stylesheet" href="/components/navbar/navbar.css">
+    <link rel="stylesheet" href="/components/footer/footer.css">
+    <link rel="stylesheet" href="/css/contactanos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- Pixel grid background -->
+  <div class="pixel-grid" aria-hidden="true"></div>
+
+  <!-- Floating pixels animados -->
+  <div class="floating-pixels" id="floatingPixels" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-container">
+        <a href="/index.html" class="logo">
+            <div class="logo-icon">
+                <div class="logo-bg"></div>
+                <div class="logo-text-icon">PF</div>
+            </div>
+            <span class="logo-text"><span class="blue">PixelForge</span> Software</span>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/index.html#servicios">Servicios</a></li>
+            <li><a href="/pages/proyectos.html">Proyectos</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- ======================== HERO HEADER ======================== -->
+  <section class="page-hero">
+    <div class="hero-inner">
+      <div class="pixel-badge">// CONTACTANOS.EXE</div>
+      <h1 class="hero-title">
+        <span class="title-line">ESTAMOS</span>
+        <span class="title-line blue">LISTOS</span>
+        <span class="title-line">PARA VOS</span>
+      </h1>
+      <p class="hero-sub">Hacé realidad tu proyecto con nosotros ↓</p>
+      <!-- Sprite pixel art decorativo -->
+      <div class="hero-sprite" aria-hidden="true">
+        <div class="sprite-char"></div>
+      </div>
+    </div>
+    <!-- Borde inferior pixelado -->
+    <div class="pixel-border-bottom" aria-hidden="true"></div>
+  </section>
+
+  <!-- ======================== FEATURES BAR ======================== -->
+  <div class="features-bar">
+    <div class="features-container">
+      <div class="feature">
+        <div class="feature-icon pixel-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <h3>Escribe tus consultas</h3>
+          <p>¡Ninguna duda es mal recibida!</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon pixel-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <h3>Multiplataforma</h3>
+          <p>Aquí, por WhatsApp o donde prefieras</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon pixel-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <h3>¡Respondemos rápido!</h3>
+          <p>No esperarás mucho tiempo</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== MAIN CONTENT ======================== -->
+  <main class="contact-section">
+
+    <!-- TEAM SECTION -->
+    <section class="team-section" aria-labelledby="team-heading">
+      <div class="section-header">
+        <div class="section-label">[ PARTY SELECT ]</div>
+        <h2 id="team-heading">Nuestro <span class="blue">Equipo</span></h2>
+      </div>
+
+      <div class="team-grid">
+
+        <!-- Card 1 -->
+        <article class="team-card team-card-1">
+          <div class="card-corner tl" aria-hidden="true"></div>
+          <div class="card-corner tr" aria-hidden="true"></div>
+          <div class="card-corner bl" aria-hidden="true"></div>
+          <div class="card-corner br" aria-hidden="true"></div>
+          <div class="card-top-bar">
+            <span class="card-id">// 01</span>
+            <span class="card-status blink">● ONLINE</span>
+          </div>
+          <div class="team-avatar team-avatar-1" aria-label="Avatar de Carlos Gatica"></div>
+          <div class="card-body">
+            <div class="name-plate">
+              <h3>Carlos Gatica</h3>
+              <div class="team-role">COO &amp; Co-founder</div>
+            </div>
+            <p class="team-description">
+              Supervisa las operaciones diarias, coordina los equipos internos y asegura que los procesos se ejecuten con eficiencia y calidad.
+            </p>
+            <div class="card-stats" aria-hidden="true">
+              <div class="stat"><span class="stat-label">OPS</span><div class="stat-bar"><div class="stat-fill" style="--w:90%"></div></div></div>
+              <div class="stat"><span class="stat-label">MGT</span><div class="stat-bar"><div class="stat-fill" style="--w:85%"></div></div></div>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/char9703" class="social-link" aria-label="GitHub de Carlos" target="_blank" rel="noopener noreferrer">
+                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GH
+              </a>
+              <a href="https://linkedin.com/in/carlos-gatica-a8a16632b" class="social-link" aria-label="LinkedIn de Carlos" target="_blank" rel="noopener noreferrer">
+                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LI
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="team-card team-card-2 card-featured">
+          <div class="card-corner tl" aria-hidden="true"></div>
+          <div class="card-corner tr" aria-hidden="true"></div>
+          <div class="card-corner bl" aria-hidden="true"></div>
+          <div class="card-corner br" aria-hidden="true"></div>
+          <div class="featured-crown" aria-hidden="true">★ FOUNDER ★</div>
+          <div class="card-top-bar">
+            <span class="card-id">// 02</span>
+            <span class="card-status blink">● ONLINE</span>
+          </div>
+          <div class="team-avatar team-avatar-2" aria-label="Avatar de Rafael Ortega"></div>
+          <div class="card-body">
+            <div class="name-plate">
+              <h3>Rafael Ortega</h3>
+              <div class="team-role">CEO &amp; Founder</div>
+            </div>
+            <p class="team-description">
+              Lidera la visión estratégica de la empresa, impulsando la innovación y el crecimiento con enfoque en experiencia de usuario excepcional.
+            </p>
+            <div class="card-stats" aria-hidden="true">
+              <div class="stat"><span class="stat-label">STR</span><div class="stat-bar"><div class="stat-fill" style="--w:95%"></div></div></div>
+              <div class="stat"><span class="stat-label">VIS</span><div class="stat-bar"><div class="stat-fill" style="--w:98%"></div></div></div>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/tomitas1x" class="social-link" aria-label="GitHub de Rafael" target="_blank" rel="noopener noreferrer">
+                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GH
+              </a>
+              <a href="https://www.linkedin.com/in/%E2%9C%A8-rafael-david-ortega-5a4180269/" class="social-link" aria-label="LinkedIn de Rafael" target="_blank" rel="noopener noreferrer">
+                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LI
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="team-card team-card-3">
+          <div class="card-corner tl" aria-hidden="true"></div>
+          <div class="card-corner tr" aria-hidden="true"></div>
+          <div class="card-corner bl" aria-hidden="true"></div>
+          <div class="card-corner br" aria-hidden="true"></div>
+          <div class="card-top-bar">
+            <span class="card-id">// 03</span>
+            <span class="card-status blink">● ONLINE</span>
+          </div>
+          <div class="team-avatar team-avatar-3" aria-label="Avatar de Martin Canales"></div>
+          <div class="card-body">
+            <div class="name-plate">
+              <h3>Martin Canales</h3>
+              <div class="team-role">CTO &amp; Co-founder</div>
+            </div>
+            <p class="team-description">
+              Define la arquitectura tecnológica y lidera el equipo de desarrollo, garantizando soluciones escalables, seguras y alineadas al negocio.
+            </p>
+            <div class="card-stats" aria-hidden="true">
+              <div class="stat"><span class="stat-label">DEV</span><div class="stat-bar"><div class="stat-fill" style="--w:97%"></div></div></div>
+              <div class="stat"><span class="stat-label">SEC</span><div class="stat-bar"><div class="stat-fill" style="--w:88%"></div></div></div>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/martin1195" class="social-link" aria-label="GitHub de Martin" target="_blank" rel="noopener noreferrer">
+                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GH
+              </a>
+              <a href="https://www.linkedin.com/in/martincanalesdev/" class="social-link" aria-label="LinkedIn de Martin" target="_blank" rel="noopener noreferrer">
+                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LI
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ======================== WHATSAPP SECTION ======================== -->
+    <section class="whatsapp-section" aria-labelledby="contact-heading">
+      <div class="ws-inner">
+
+        <!-- Panel izquierdo: imagen / decoración pixel art -->
+        <div class="ws-art-panel" aria-hidden="true">
+          <div class="ws-art-frame">
+            <div class="art-pixel-decoration"></div>
+            <img src="/assets/contactanosss.webp" alt="" class="ws-art-image">
+            <div class="art-label">[ CONTACT_PORTAL.PNG ]</div>
+          </div>
+        </div>
+
+        <!-- Panel derecho: CTA -->
+        <div class="ws-cta-panel">
+          <div class="cta-header">
+            <div class="section-label">[ NUEVA MISIÓN ]</div>
+            <h2 id="contact-heading">Contactanos por<br><span class="blue">WhatsApp</span></h2>
+            <p class="cta-subtitle">Respondemos rápido y estamos listos para ayudarte</p>
+          </div>
+
+          <ul class="benefits-list" aria-label="Beneficios de contactarnos">
+            <li class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">⚡</div>
+              <div class="benefit-text">
+                <h4>Respuesta Inmediata</h4>
+                <p>No esperarás horas, te contestamos al instante</p>
+              </div>
+            </li>
+            <li class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">💰</div>
+              <div class="benefit-text">
+                <h4>Nos Adaptamos a tu Bolsillo</h4>
+                <p>Planes flexibles para todos los presupuestos</p>
+              </div>
+            </li>
+            <li class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">🎯</div>
+              <div class="benefit-text">
+                <h4>Soluciones Personalizadas</h4>
+                <p>Tu proyecto es único, nuestra propuesta también</p>
+              </div>
+            </li>
+            <li class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">🤝</div>
+              <div class="benefit-text">
+                <h4>Asesoramiento Sin Compromiso</h4>
+                <p>Charlamos sobre tu idea sin presiones</p>
+              </div>
+            </li>
+          </ul>
+
+          <a href="https://wa.me/5492625419121?text=Hola!%20Quiero%20consultar%20sobre%20un%20proyecto"
+             class="whatsapp-btn"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Escribirnos por WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            <span>▶ ESCRIBINOS POR WHATSAPP</span>
+          </a>
+
+          <!-- Pixel decorativo inferior -->
+          <div class="cta-pixel-row" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer>
+    <div class="footer-logo">
+        <div class="footer-logo-icon">
+            <div class="footer-logo-bg"></div>
+            <div class="footer-logo-text">PF</div>
+        </div>
+        <span><span class="blue">PixelForge</span> Software</span>
+    </div>
+    <p>© 2024 PixelForge Software. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="/components/navbar/navbar.js"></script>
+  <script src="/js/contactanos.js"></script>
+  <script src="/components/footer/footer.js"></script>
+  <script>
+    // Generar floating pixels dinámicamente
+    const container = document.getElementById('floatingPixels');
+    const colors = ['rgba(1,128,235,0.25)', 'rgba(0,220,255,0.15)', 'rgba(1,96,192,0.2)'];
+    const sizes = [8, 12, 16, 20];
+    for (let i = 0; i < 40; i++) {
+      const px = document.createElement('div');
+      px.className = 'pixel';
+      const size = sizes[Math.floor(Math.random() * sizes.length)];
+      px.style.cssText = `
+        left: ${Math.random() * 100}%;
+        top: ${Math.random() * 100}%;
+        width: ${size}px;
+        height: ${size}px;
+        background: ${colors[Math.floor(Math.random() * colors.length)]};
+        animation-delay: ${Math.random() * 6}s;
+        animation-duration: ${3 + Math.random() * 5}s;
+      `;
+      container.appendChild(px);
+    }
+  </script>
+</body>
+</html>
