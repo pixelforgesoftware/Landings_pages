@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Metas para buscadores -->
+  <title>Paso a Paso — Calzado Deportivo, Urbano e Importado en Bowen</title>
+  <meta name="description" content="Zapatería Paso a Paso en Bowen: especialistas en calzado deportivo, urbano e importado. Talles especiales, atención personalizada y envíos a toda la Argentina." />
+  <meta name="keywords" content="zapatería bowen, calzado deportivo mendoza, zapatillas importadas argentina, zapatería paso a paso, calzado urbano bowen" />
+  <meta name="author" content="Pixel Forge Software" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://zapateriapasoapaso.com.ar" />
+
+  <!-- Config para redes sociales -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Paso a Paso — Calzado Deportivo, Urbano e Importado" />
+  <meta property="og:description" content="Tu zapatería en Bowen, Mendoza. Amplio stock y envíos a todo el país." />
+  <meta property="og:url" content="https://zapateriapasoapaso.com.ar" />
+  <meta property="og:image" content="https://zapateriapasoapaso.com.ar/assets/img/logo.png" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Zapatería Paso a Paso" />
+  <meta name="twitter:description" content="Especialistas en calzado deportivo, urbano e importado en Bowen, Mendoza." />
+  <meta name="twitter:image" content="https://zapateriapasoapaso.com.ar/assets/img/logo.png" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+
+  <!-- Tipografías de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <!-- Datos estructurados para Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ShoeStore",
+    "name": "Zapatería Paso a Paso",
+    "description": "Zapatería en Bowen especializada en calzado deportivo, urbano e importado para toda la familia.",
+    "url": "https://zapateriapasoapaso.com.ar",
+    "image": "https://zapateriapasoapaso.com.ar/assets/img/logo.png",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Sarmiento 449 - Local 1",
+      "addressLocality": "Bowen",
+      "addressRegion": "Mendoza",
+      "postalCode": "5622",
+      "addressCountry": "AR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -35.0011,
+      "longitude": -68.4966
+    },
+    "telephone": "+542604041470",
+    "openingHours": ["Mo-Sa 09:00-12:30", "Mo-Sa 17:00-21:00"],
+    "areaServed": {
+      "@type": "Country",
+      "name": "AR"
+    },
+    "sameAs": [
+      "https://www.instagram.com/zapateriapasoapaso2025",
+      "https://www.facebook.com/Zapateriapasoapaso"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://zapateriapasoapaso.com.ar"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Colección",
+      "item": "https://zapateriapasoapaso.com.ar#categorias"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Ubicación",
+      "item": "https://zapateriapasoapaso.com.ar#contacto"
+    }]
+  }
+  </script>
+  <!-- Barra de navegación -->
+  <header id="navbar" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Navegación principal">
+        <a href="#hero" class="nav-logo" aria-label="Zapatería Paso a Paso - Inicio">
+          <img src="assets/img/logo.png" alt="Zapatería Paso a Paso" class="logo-img">
+        </a>
+        <!-- Links de navegación -->
+        <div class="nav-links">
+          <a href="#categorias" class="nav-link">Colección</a>
+          <a href="#contacto" class="nav-link">Ubicación</a>
+          <a href="#cta-final" class="nav-link">Consultas</a>
+        </div>
+        <!-- Botón principal -->
+        <a href="#" class="nav-cta"
+           data-wa="Hola! Quiero consultar por calzado disponible 👟"
+           aria-label="Consultar por WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M11.998 0C5.372 0 0 5.373 0 12c0 2.117.554 4.099 1.522 5.814L.057 23.516a.5.5 0 0 0 .619.612l5.9-1.544A11.932 11.932 0 0 0 12 24c6.627 0 12-5.373 12-12S18.625 0 11.998 0zm0 21.818a9.805 9.805 0 0 1-5.012-1.374l-.36-.213-3.498.916.934-3.412-.235-.371A9.797 9.797 0 0 1 2.18 12c0-5.417 4.403-9.818 9.818-9.818 5.416 0 9.818 4.401 9.818 9.818 0 5.416-4.402 9.818-9.818 9.818z"/>
+          </svg>
+          Consultar
+        </a>
+        <button class="nav-toggle"
+                id="nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#categorias" class="mobile-menu-link">Coleccion</a>
+        <a href="#contacto" class="mobile-menu-link">Ubicacion</a>
+        <a href="#cta-final" class="mobile-menu-link">Consultas</a>
+        <a href="#"
+           class="mobile-menu-cta"
+           data-wa="Hola! Quiero consultar por calzado disponible"
+           aria-label="Consultar por WhatsApp desde el menu">
+          Escribinos por WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Sección de Inicio (Hero) -->
+    <section id="hero" aria-labelledby="hero-title">
+      <div class="hero-bg">
+        <div class="hero-watermark" aria-hidden="true">
+          <img src="assets/img/logo.png" alt="" />
+        </div>
+        <div class="hero-images-grid" aria-hidden="true">
+          <div class="hero-img-cell">
+            <img src="assets/img/deportivo-chile-1.jpg"
+                 alt="Calzado deportivo importado" loading="eager" />
+          </div>
+          <div class="hero-img-cell">
+            <img src="assets/img/urbano-nacional-1.jpg"
+                 alt="Zapatillas urbanas" loading="eager" />
+          </div>
+          <div class="hero-img-cell">
+            <img src="assets/img/importado-brazil-1.jpg"
+                 alt="Calzado importado de Brasil" loading="eager" />
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero-content">
+        <span class="hero-tag" aria-label="Ubicación: Bowen, Mendoza">Bowen, Mendoza</span>
+
+        <h1 id="hero-title" class="display-xl hero-title">
+          El par<br />que<br />
+          <span class="line-2">buscabas.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Deportivo, urbano e importado para toda la familia.
+          Amplio stock y atención personalizada.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#"
+             class="btn btn-primary btn-lg"
+             id="hero-wa-btn"
+             data-wa="Hola! Vi su landing y quiero saber qué modelos tienen disponibles 👟"
+             aria-label="Consultar por WhatsApp">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.133-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M11.998 0C5.372 0 0 5.373 0 12c0 2.117.554 4.099 1.522 5.814L.057 23.516a.5.5 0 0 0 .619.612l5.9-1.544A11.932 11.932 0 0 0 12 24c6.627 0 12-5.373 12-12S18.625 0 11.998 0zm0 21.818a9.805 9.805 0 0 1-5.012-1.374l-.36-.213-3.498.916.934-3.412-.235-.371A9.797 9.797 0 0 1 2.18 12c0-5.417 4.403-9.818 9.818-9.818 5.416 0 9.818 4.401 9.818 9.818 0 5.416-4.402 9.818-9.818 9.818z"/>
+            </svg>
+            Escribinos por WhatsApp
+          </a>
+          <a href="#categorias" class="btn btn-outline btn-lg" aria-label="Ver catálogo">
+            Ver colección
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </div>
+    </section>
+
+
+    <!-- Sección de Colección (Carruseles) -->
+    <section id="categorias" class="section" aria-labelledby="cats-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="label">Colección</p>
+          <h2 id="cats-title" class="display-lg">
+            Algo para<br />cada uno.
+          </h2>
+          <div class="divider-bar"></div>
+          <p class="body-lg section-copy-limit">
+            Más de 8 líneas de calzado distintas. Siempre con modelos nuevos y talles amplios.
+          </p>
+        </header>
+
+        <div class="cats-grid" role="list">
+
+          <!-- Deportivo (Chile) -->
+          <article class="cat-card reveal" role="listitem" aria-label="Categoría: Deportivo">
+            <div class="cat-carousel" data-category="deportivo">
+              <div class="carousel-slides">
+                <div class="slide"><img src="assets/img/deportivo-chile-1.jpg" alt="Zapatillas deportivas importadas de Chile modelo 1" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/deportivo-chile-2.jpg" alt="Zapatillas de deporte alto rendimiento Chile" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/deportivo-chile-3.jpg" alt="Calzado deportivo para running Chile" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/deportivo-chile-4.jpg" alt="Zapatillas deportivas blancas Chile" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/deportivo-chile-5.jpg" alt="Zapatillas para entrenamiento Chile" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/deportivo-chile-6.jpg" alt="Calzado deportivo moderno Chile" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/deportivo-chile-7.jpg" alt="Zapatillas deportivas suela liviana Chile" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/deportivo-chile-8.jpg" alt="Zapatillas deportivas estilo urbano Chile" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/deportivo-chile-9.jpg" alt="Calzado de fitness Chile" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/deportivo-chile-10.jpg" alt="Zapatillas deportivas negras Chile" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/deportivo-chile-11.jpg" alt="Zapatillas deportivas colores variados Chile" loading="lazy"></div>
+              </div>
+            </div>
+            <div class="cat-info">
+              <p class="cat-tag">Importado Chile · Unisex</p>
+              <h3 class="cat-name">Deportivo</h3>
+            </div>
+          </article>
+
+          <!-- Urbano (Nacional) -->
+          <article class="cat-card reveal reveal-delay-1" role="listitem" aria-label="Categoría: Urbano">
+            <div class="cat-carousel" data-category="urbano">
+              <div class="carousel-slides">
+                <div class="slide"><img src="assets/img/urbano-nacional-1.jpg" alt="Zapatillas urbanas nacionales modelo 1" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/urbano-nacional-2.jpg" alt="Calzado urbano industria nacional" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/urbano-nacional-3.jpg" alt="Zapatillas clásicas urbanas nacionales" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/urbano-nacional-4.jpg" alt="Zapatillas de moda urbana Mendoza" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/urbano-nacional-5.jpg" alt="Calzado urbano cómodo nacional" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/urbano-nacional-6.jpg" alt="Zapatillas urbanas colores oscuros" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/urbano-nacional-7.jpg" alt="Zapatillas urbanas estilo juvenil" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/urbano-nacional-8.jpg" alt="Zapatillas urbanas suela alta nacional" loading="lazy"></div>
+              </div>
+            </div>
+            <div class="cat-info">
+              <p class="cat-tag">Nacionales · 36 al 44</p>
+              <h3 class="cat-name">Urbano</h3>
+            </div>
+          </article>
+
+          <!-- Importado (Brasil) -->
+          <article class="cat-card reveal reveal-delay-2" role="listitem" aria-label="Categoría: Importado">
+            <div class="cat-carousel" data-category="importado">
+              <div class="carousel-slides">
+                <div class="slide"><img src="assets/img/importado-brazil-1.jpg" alt="Zapatillas importadas de Brasil modelo 1" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-2.jpg" alt="Calzado premium Brasil importado" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-3.jpg" alt="Zapatillas urbanas Brasil importadas" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-4.jpg" alt="Calzado de cuero sintético Brasil" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-5.jpg" alt="Zapatillas de diseño brasileño" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-6.jpg" alt="Zapatillas importadas plataforma Brasil" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-7.jpg" alt="Calzado importado elegante Brasil" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-8.jpg" alt="Zapatillas de marca Brasil importadas" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-9.jpg" alt="Zapatillas Brasil confort premium" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-10.jpg" alt="Calzado brasileño alta calidad" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-11.jpg" alt="Zapatillas Brasil colores neutros" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-12.jpg" alt="Zapatillas Brasil modelo exclusivo 1" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-13.jpg" alt="Zapatillas Brasil modelo exclusivo 2" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-14.jpg" alt="Zapatillas Brasil modelo exclusivo 3" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-15.jpg" alt="Zapatillas Brasil modelo exclusivo 4" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-16.jpg" alt="Zapatillas Brasil modelo exclusivo 5" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-17.jpg" alt="Zapatillas Brasil modelo exclusivo 6" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-18.jpg" alt="Zapatillas Brasil modelo exclusivo 7" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-19.jpg" alt="Zapatillas Brasil modelo exclusivo 8" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-20.jpg" alt="Zapatillas Brasil modelo exclusivo 9" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-21.jpg" alt="Zapatillas Brasil modelo exclusivo 10" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-22.jpg" alt="Zapatillas Brasil modelo exclusivo 11" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/importado-brazil-23.jpg" alt="Zapatillas Brasil modelo exclusivo 12" loading="lazy"></div>
+              </div>
+            </div>
+            <div class="cat-info">
+              <p class="cat-tag">Importado Brasil · 33 al 44</p>
+              <h3 class="cat-name">Importado</h3>
+            </div>
+          </article>
+
+          <!-- Niños -->
+          <article class="cat-card reveal reveal-delay-3" role="listitem" aria-label="Categoría: Niños">
+            <div class="cat-carousel" data-category="ninos">
+              <div class="carousel-slides">
+                <div class="slide"><img src="assets/img/ninos-1.jpg" alt="Calzado para niños modelo 1" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/ninos-2.jpg" alt="Zapatillas infantiles escolares o recreativas" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/ninos-3.jpg" alt="Zapatillas para niños colores llamativos" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/ninos-4.jpg" alt="Calzado infantil resistente" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/ninos-5.jpg" alt="Zapatillas niños modelos urbanos" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/ninos-6.jpg" alt="Calzado para niñas y niños Bowen" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/ninos-7.jpg" alt="Zapatillas infantiles talle pequeño" loading="lazy"></div>
+                <div class="slide"><img src="assets/img/ninos-8.jpg" alt="Zapatillas para chicos industria nacional" loading="lazy"></div>
+              </div>
+            </div>
+            <div class="cat-info">
+              <p class="cat-tag">Infantil · 20 al 35</p>
+              <h3 class="cat-name">Niños</h3>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="cats-cta reveal">
+          <a href="https://www.instagram.com/zapateriapasoapaso2025" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn btn-outline btn-lg" 
+             aria-label="Ver más modelos en Instagram">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+            Ver más en Instagram
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Sección: Por qué elegirnos -->
+    <section id="diferenciales" class="section" aria-labelledby="diffs-title">
+      <div class="container">
+        <div class="diffs-layout">
+
+          <!-- Visual -->
+          <div class="sticky-visual">
+            <div class="diffs-visual">
+              <div class="diffs-img-main">
+                <img src="assets/img/planta-liviana-1.jpg"
+                     alt="Calzado con planta liviana - Paso a Paso"
+                     loading="lazy" />
+              </div>
+              <div class="diffs-badge" aria-label="Más de 8 líneas de calzado">
+                <div class="num">10+</div>
+                <div class="text">líneas de<br/>calzado</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lista de diferenciales -->
+          <div>
+            <header class="section-header section-header-tight reveal">
+              <p class="label">Por qué elegirnos</p>
+              <h2 id="diffs-title" class="display-lg">
+                Más que<br />una zapatería.
+              </h2>
+              <div class="divider-bar"></div>
+            </header>
+
+            <div class="diffs-list">
+
+              <div class="diff-item reveal reveal-delay-1">
+                <div class="diff-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/>
+                    <circle cx="12" cy="12" r="2"/>
+                    <path d="M6 12h.01M18 12h.01"/>
+                  </svg>
+                </div>
+                <div class="diff-text">
+                  <h3>Amplio stock permanente</h3>
+                  <p>Deportivo, urbano, importado, ojotas, botines y más — siempre disponibles.</p>
+                </div>
+              </div>
+
+              <div class="diff-item reveal reveal-delay-2">
+                <div class="diff-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                  </svg>
+                </div>
+                <div class="diff-text">
+                  <h3>Atención personalizada</h3>
+                  <p>Te asesoramos para que encuentres el par ideal según tu uso y comodidad.</p>
+                </div>
+              </div>
+
+              <div class="diff-item reveal reveal-delay-3">
+                <div class="diff-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                </div>
+                <div class="diff-text">
+                  <h3>Local físico en Bowen</h3>
+                  <p>Av. Sarmiento 449 — Podés venir, probarte y elegir tranquilo/a.</p>
+                </div>
+              </div>
+
+              <div class="diff-item reveal reveal-delay-5">
+                <div class="diff-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="2" y="5" width="20" height="14" rx="2"/>
+                    <line x1="2" y1="10" x2="22" y2="10"/>
+                  </svg>
+                </div>
+                <div class="diff-text">
+                  <h3>Todas las formas de pago</h3>
+                  <p>Efectivo, transferencia bancaria o tarjeta. Vos elegís cómo pagás.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Showcase de modelos sueltos -->
+    <section id="galeria" class="section" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="gallery-intro">
+          <div class="reveal">
+            <p class="label">Nuestros modelos</p>
+            <h2 id="gallery-title" class="display-lg">
+              El stock<br />habla solo.
+            </h2>
+            <div class="divider-bar"></div>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <p class="body-lg gallery-copy">
+              Tocá cada foto para verla en detalle.
+              Cualquier modelo podés consultarlo por WhatsApp.
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-grid" role="list" aria-label="Galería de productos">
+
+          <div class="gal-item gal-item-1 reveal" role="listitem" tabindex="0"
+               aria-label="Ver foto de zapatillas deportivas importadas">
+            <img src="assets/img/deportivo-chile-3.jpg"
+                 alt="Zapatillas deportivas importadas desde Chile"
+                 loading="lazy" />
+          </div>
+
+          <div class="gal-item gal-item-2 reveal reveal-delay-1" role="listitem" tabindex="0"
+               aria-label="Ver foto de zapatillas urbanas">
+            <img src="assets/img/urbano-nacional-3.jpg"
+                 alt="Zapatillas urbanas nacionales unisex"
+                 loading="lazy" />
+          </div>
+
+          <div class="gal-item gal-item-3 reveal reveal-delay-2" role="listitem" tabindex="0"
+               aria-label="Ver foto de botines">
+            <img src="assets/img/botines-1.jpg"
+                 alt="Botines de fútbol 5 y 11 - niños y adultos"
+                 loading="lazy" />
+          </div>
+
+          <div class="gal-item gal-item-4 reveal reveal-delay-1" role="listitem" tabindex="0"
+               aria-label="Ver foto de calzado importado de Brasil">
+            <img src="assets/img/importado-brazil-3.jpg"
+                 alt="Zapatillas importadas de Brasil urbanas y deportivas"
+                 loading="lazy" />
+          </div>
+
+          <div class="gal-item gal-item-5 reveal reveal-delay-2" role="listitem" tabindex="0"
+               aria-label="Ver foto de ojotas">
+            <img src="assets/img/ojotas-1.jpg"
+                 alt="Ojotas y gomones para adultos y niños"
+                 loading="lazy" />
+          </div>
+
+          <div class="gal-item gal-item-6 reveal reveal-delay-3" role="listitem" tabindex="0"
+               aria-label="Ver foto de zapatillas planta liviana">
+            <img src="assets/img/planta-liviana-2.jpg"
+                 alt="Zapatillas planta liviana hasta talles especiales"
+                 loading="lazy" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Datos de contacto y Mapa -->
+    <section id="contacto" class="section" aria-labelledby="contacto-title">
+      <div class="container">
+        <header class="section-header section-header-spacious reveal">
+          <p class="label">Encontranos</p>
+          <h2 id="contacto-title" class="display-lg">
+            Vení o consultanos<br />cuando quieras.
+          </h2>
+          <div class="divider-bar"></div>
+        </header>
+
+        <div class="info-grid">
+          <div class="info-block">
+            <!-- Dirección -->
+            <div class="info-item info-card reveal">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <h3>Dirección</h3>
+                <p>Av. Sarmiento 449 - Local 1<br />Bowen, Mendoza</p>
+              </div>
+            </div>
+
+            <!-- Horarios -->
+            <div class="info-item info-card reveal reveal-delay-1">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <div>
+                <h3>Horarios</h3>
+                <p class="info-hours">
+                  Lunes a Sábado<br />
+                  <strong>9:00 a 12:30 hs</strong><br />
+                  <strong>17:00 a 21:00 hs</strong>
+                </p>
+              </div>
+            </div>
+
+            <!-- WhatsApp -->
+            <a href="#" class="info-item info-link reveal reveal-delay-2" data-wa="Hola! Quiero consultar disponibilidad de calzado 👟">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.133-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                  <path d="M11.998 0C5.372 0 0 5.373 0 12c0 2.117.554 4.099 1.522 5.814L.057 23.516a.5.5 0 0 0 .619.612l5.9-1.544A11.932 11.932 0 0 0 12 24c6.627 0 12-5.373 12-12S18.625 0 11.998 0zm0 21.818a9.805 9.805 0 0 1-5.012-1.374l-.36-.213-3.498.916.934-3.412-.235-.371A9.797 9.797 0 0 1 2.18 12c0-5.417 4.403-9.818 9.818-9.818 5.416 0 9.818 4.401 9.818 9.818 0 5.416-4.402 9.818-9.818 9.818z"/>
+                </svg>
+              </div>
+              <div class="info-copy">
+                <h3>WhatsApp</h3>
+                <div class="info-value info-value-strong">
+                  2604 041470
+                </div>
+              </div>
+              <div class="info-link-chevron">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/zapateriapasoapaso2025" target="_blank" rel="noopener noreferrer" class="info-item info-link reveal reveal-delay-3">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="info-copy">
+                <h3>Instagram</h3>
+                <div class="info-value">
+                  @zapateriapasoapaso2025
+                </div>
+              </div>
+              <div class="info-link-chevron">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/Zapateriapasoapaso" target="_blank" rel="noopener noreferrer" class="info-item info-link reveal reveal-delay-4">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                </svg>
+              </div>
+              <div class="info-copy">
+                <h3>Facebook</h3>
+                <div class="info-value">
+                  Zapatería Paso a Paso
+                </div>
+              </div>
+              <div class="info-link-chevron">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </a>
+          </div>
+
+          <!-- Mapa -->
+          <div class="sticky-visual">
+            <div class="reveal reveal-delay-2">
+              <div class="map-container">
+                <iframe
+                  src="https://maps.google.com/maps?q=Av.+Sarmiento+449,+Bowen,+Mendoza&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  title="Mapa de Zapatería Paso a Paso en Bowen, Mendoza"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <p class="contact-map-note">
+                📍 Av. Sarmiento 449 - Local 1, Bowen, Mendoza
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Envíos y Formas de pago -->
+    <section id="envios" class="section" aria-labelledby="envios-title">
+      <div class="container">
+        <header class="section-header section-header-medium reveal">
+          <p class="label">Comprá fácil</p>
+          <h2 id="envios-title" class="display-lg">
+            Simple, rápido<br />y sin vueltas.
+          </h2>
+          <div class="divider-bar"></div>
+        </header>
+
+        <div class="envios-grid">
+
+          <div class="envio-card reveal">
+            <div class="envio-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="1" y="3" width="15" height="13" rx="1"/>
+                <path d="M16 8h4l3 4v4h-7V8zM5.5 21a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM18.5 21a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+              </svg>
+            </div>
+            <h3>Envíos</h3>
+            <p>
+              ¿No podés venir al local? Sin problema.
+              Coordinamos el envío directo a tu domicilio.
+              Solo avisanos por WhatsApp y te contamos cómo funciona.
+            </p>
+            <div class="pills">
+              <span class="pill">📦 A cualquier lugar</span>
+              <span class="pill">💬 Coordinado con vos</span>
+            </div>
+          </div>
+
+          <div class="envio-card reveal reveal-delay-2">
+            <div class="envio-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="5" width="20" height="14" rx="2"/>
+                <line x1="2" y1="10" x2="22" y2="10"/>
+              </svg>
+            </div>
+            <h3>Medios de pago</h3>
+            <p>
+              Pagá como más te convenga.
+              Aceptamos efectivo, transferencia bancaria y todas las tarjetas.
+              Sin complicaciones.
+            </p>
+            <div class="pills">
+              <span class="pill">💵 Efectivo</span>
+              <span class="pill">🏦 Transferencia</span>
+              <span class="pill">💳 Tarjetas</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Llamada a la acción final -->
+    <section id="cta-final" class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-inner">
+          <span class="cta-eyebrow reveal">¿Listo/a para encontrar tu par?</span>
+
+          <h2 id="cta-title" class="display-lg cta-title reveal">
+            Consultanos.<br />
+            <em>Sin compromiso.</em>
+          </h2>
+
+          <p class="cta-text reveal">
+            Escribinos por WhatsApp y en minutos te mostramos
+            los modelos que tenemos, tu talle y los precios del momento.
+            Rápido, sin vueltas.
+          </p>
+
+          <div class="cta-actions reveal reveal-delay-2">
+            <a href="#"
+               class="btn btn-primary btn-lg"
+               id="cta-wa-btn"
+               data-wa="Hola! Quiero ver los modelos disponibles y consultar talles 👟"
+               aria-label="Consultar por WhatsApp">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.133-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M11.998 0C5.372 0 0 5.373 0 12c0 2.117.554 4.099 1.522 5.814L.057 23.516a.5.5 0 0 0 .619.612l5.9-1.544A11.932 11.932 0 0 0 12 24c6.627 0 12-5.373 12-12S18.625 0 11.998 0zm0 21.818a9.805 9.805 0 0 1-5.012-1.374l-.36-.213-3.498.916.934-3.412-.235-.371A9.797 9.797 0 0 1 2.18 12c0-5.417 4.403-9.818 9.818-9.818 5.416 0 9.818 4.401 9.818 9.818 0 5.416-4.402 9.818-9.818 9.818z"/>
+              </svg>
+              Escribir por WhatsApp
+            </a>
+            <a href="https://www.instagram.com/zapateriapasoapaso2025"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-outline btn-lg"
+               aria-label="Ver Instagram de Paso a Paso">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+              Ver Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Footer del sitio -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="assets/img/logo.png" alt="Zapatería Paso a Paso" class="logo-img">
+        </div>
+        <p class="footer-credit">
+          Diseño por <a href="https://pixelforgesoftware.site" target="_blank" rel="noopener">Pixel Forge Software</a>
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="WhatsApp" data-wa="Hola! Quiero consultar sobre calzado 👟">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.133-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M11.998 0C5.372 0 0 5.373 0 12c0 2.117.554 4.099 1.522 5.814L.057 23.516a.5.5 0 0 0 .619.612l5.9-1.544A11.932 11.932 0 0 0 12 24c6.627 0 12-5.373 12-12S18.625 0 11.998 0zm0 21.818a9.805 9.805 0 0 1-5.012-1.374l-.36-.213-3.498.916.934-3.412-.235-.371A9.797 9.797 0 0 1 2.18 12c0-5.417 4.403-9.818 9.818-9.818 5.416 0 9.818 4.401 9.818 9.818 0 5.416-4.402 9.818-9.818 9.818z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/zapateriapasoapaso2025" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/Zapateriapasoapaso" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- WhatsApp flotante -->
+  <a href="#"
+     class="wa-float"
+     id="wa-float-btn"
+     data-wa="Hola! Quiero consultar sobre calzado disponible 👟"
+     aria-label="Abrir WhatsApp de Zapatería Paso a Paso">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.133-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M11.998 0C5.372 0 0 5.373 0 12c0 2.117.554 4.099 1.522 5.814L.057 23.516a.5.5 0 0 0 .619.612l5.9-1.544A11.932 11.932 0 0 0 12 24c6.627 0 12-5.373 12-12S18.625 0 11.998 0zm0 21.818a9.805 9.805 0 0 1-5.012-1.374l-.36-.213-3.498.916.934-3.412-.235-.371A9.797 9.797 0 0 1 2.18 12c0-5.417 4.403-9.818 9.818-9.818 5.416 0 9.818 4.401 9.818 9.818 0 5.416-4.402 9.818-9.818 9.818z"/>
+    </svg>
+  </a>
+
+  <!-- El visualizador de fotos (Lightbox) -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Galería de imágenes">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Cerrar imagen">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="lightbox-nav">
+      <button id="lightbox-prev" aria-label="Imagen anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+      <button id="lightbox-next" aria-label="Siguiente imagen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+    </div>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="" />
+  </div>
+
+  <!-- Link del js -->
+  <script src="scripts/main.js" defer></script>
+
+</body>
+</html>
