@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zapateriapasoapaso.com.ar/sitemap.xml
+Sitemap: https://zapateriapasoapaso.site/sitemap.xml
 
 # robots.txt para buscadores (SEO)
