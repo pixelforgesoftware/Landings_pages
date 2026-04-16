@@ -1,260 +1,169 @@
-// Datos de los proyectos
-const projectsData = {
-  1: {
-    title: "Sistema de Gestión para Gimnasios",
-    tags: ["Web App", "React"],
-    description: "Desarrollamos una plataforma completa para la gestión de gimnasios que incluye control de membresías, seguimiento de rutinas personalizadas, gestión de pagos automáticos y análisis de métricas de clientes. El sistema permite a los entrenadores crear planes de entrenamiento personalizados y hacer seguimiento del progreso de cada cliente en tiempo real.",
-    client: "FitLife Gym Network",
-    date: "2024",
-    tech: "React, Node.js, MongoDB, Stripe",
-    images: [
-      "/assets/banner_contactano.png",
-      "/assets/video_header.gif"
-    ],
-    link: "#"
+/* ═══════════════════════════════════════════════════════
+   PROYECTOS.JS — PixelForge Software
+   ═══════════════════════════════════════════════════════ */
+
+const PROJECTS = [
+  {
+    num: '01',
+    title: 'Barberia <span>Bowen</span>',
+    topTitle: 'PROYECTO_BOWEN.exe',
+    tag: 'Barberia de bowen',
+    desc: 'Ayudando a que las peluquerias tengan un mejor control sobre sus clientes, gastos, ingresos, salidas, egresos, etc gracias barberayrton por confiar en nosotros!.',
+    techs: ['HTML5', 'CSS3', 'JavaScript', 'Electron', 'Backup'],
+    img: '/assets/sistema_ayrton.jpeg',
+    link: 'https://www.instagram.com/0800ninja/'
   },
-  2: {
-    title: "Tienda Online de Ropa Moderna",
-    tags: ["E-commerce", "Full Stack"],
-    description: "Creamos una tienda online moderna y elegante con gestión completa de inventario, carrito de compras, pasarela de pagos integrada y panel de administración. La plataforma incluye filtros avanzados, wishlist, sistema de recomendaciones y notificaciones por email. Optimizada para conversiones y experiencia de usuario fluida en todos los dispositivos.",
-    client: "Urban Style Fashion",
-    date: "2024",
-    tech: "Next.js, TypeScript, PostgreSQL, Mercado Pago",
-    images: [
-      "/assets/Servicio_Tienda_ropa.png",
-      "/assets/Bowen.png"
-    ],
-    link: "#"
+  {
+    num: '02',
+    title: 'Cabañas <span>Madrigueras</span>',
+    topTitle: 'PROYECTO_ALVEAR.exe',
+    tag: 'Cabañas madrigueras',
+    desc: 'Cabañas madrigueras general alvear decidieron dar un paso a la modernidad con nosotros implementan un crecimiento de clientela gracias a su landing page, gracias por confiar!.',
+    techs: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind', 'Estatics'],
+    img: '/assets/cabañas_madri.jpeg',
+    link: 'https://complejolasmadrigueras.com/'
   },
-  3: {
-    title: "Portal de Noticias Digital",
-    tags: ["CMS", "WordPress"],
-    description: "Desarrollamos un portal de noticias moderno con sistema de gestión de contenido personalizado, categorización automática de artículos, sistema de comentarios moderados y newsletter integrado. Incluye panel de analytics para editores, SEO optimizado y carga instantánea de artículos para mejorar la experiencia del lector.",
-    client: "Mendoza Digital News",
-    date: "2024",
-    tech: "WordPress, PHP, MySQL, Redis",
-    images: [
-      "/assets/Servicio_noticias.png",
-      "/assets/Departamento_sanrafael.png"
-    ],
-    link: "#"
+  {
+    num: '03',
+    title: 'Zapateria <span>Paso a Paso</span>',
+    topTitle: 'PROYECTO_SANRAFAEL.exe',
+    tag: 'E-commerce',
+    desc: 'Tienda online para cliente de gemeral alvear con catálogo de productos, integración con medios de pago y panel de administración para gestionar stock y pedidos en whatsapp para ser mas humanos, gracias por confiar!.',
+    techs: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind'],
+    img: '/assets/landing_page_lujan2.jpeg',
+    link: 'https://zapateriapasoapaso.site/'
   },
-  4: {
-    title: "Web Oficial Municipio de Bowen",
-    tags: ["Gobierno", "Institucional"],
-    description: "Sitio web institucional para el municipio de Bowen con información turística, trámites online, calendario de eventos y sistema de gestión de reclamos ciudadanos. Incluye sección de noticias municipales, galería de fotos y acceso directo a servicios más utilizados por los ciudadanos.",
-    client: "Municipalidad de Bowen",
-    date: "2024",
-    tech: "HTML5, CSS3, JavaScript, PHP",
-    images: [
-      "/assets/Bowen.png",
-      "/assets/Servicio_gyms.png"
-    ],
-    link: "#"
+  {
+    num: '04',
+    title: 'Shomer <span>Seguridad</span>',
+    topTitle: 'PROYECTO_SEGURIDAD.exe',
+    tag: 'Sistema de matriculas',
+    desc: 'Sistema de gestión de matricuas para administrar el ingreso al objetivo. Permite a los trabajadores obtener su oblea y a los de seguridad les permite editar esas obleas agregar nuevas o eliminarlas con 2 roles administrativos generados, gracias por la confianza!',
+    techs: ['Vue.js', 'Laravel', 'MySQL', 'Twilio'],
+    img: '/assets/shomer2.jpeg',
+    link: '#'
   },
-  5: {
-    title: "Portal Web General Alvear",
-    tags: ["Gobierno", "Turismo"],
-    description: "Plataforma web integral para el departamento de General Alvear que destaca sus atractivos turísticos, actividades económicas y servicios municipales. Incluye mapa interactivo de la ciudad, directorio comercial, agenda cultural y sistema de reservas para espacios públicos.",
-    client: "Municipalidad de General Alvear",
-    date: "2024",
-    tech: "React, Node.js, MongoDB, Leaflet",
-    images: [
-      "/assets/Departamento_alvear (1).png",
-      "/assets/Departamento_malargue.png"
-    ],
-    link: "#"
+  {
+    num: '05',
+    title: 'Gym <span>FitPro</span>',
+    topTitle: 'PROYECTO_FITPRO.exe',
+    tag: 'Sistema de socios',
+    desc: 'Plataforma de gestión completa para gimnasio. Control de socios, vencimientos de cuotas, clases y actividades, acceso con QR y reportes mensuales. El dueño maneja todo desde el celular.',
+    techs: ['React', 'Node.js', 'PostgreSQL', 'QR Code'],
+    img: '/assets/Servicio_ventas.webp',
+    link: '#'
   },
-  6: {
-    title: "Sitio Web San Rafael",
-    tags: ["Turismo", "Responsive"],
-    description: "Website enfocado en promover el turismo en San Rafael, destacando sus bodegas, aventuras outdoor y gastronomía. Sistema de reservas integrado para hoteles y excursiones, galería fotográfica inmersiva y blog de viajeros. Optimizado para dispositivos móviles y con múltiples idiomas disponibles.",
-    client: "Secretaría de Turismo San Rafael",
-    date: "2024",
-    tech: "Vue.js, Laravel, MySQL, AWS",
-    images: [
-      "/assets/Departamento_sanrafael.png",
-      "/assets/Servicio_Tienda_ropa.png"
-    ],
-    link: "#"
+  {
+    num: '06',
+    title: 'Tienda <span>Ropa</span>',
+    topTitle: 'PROYECTO_TIENDA.exe',
+    tag: 'E-commerce',
+    desc: 'E-commerce de indumentaria con catálogo filtrable por talla, color y categoría. Integración con Instagram Shopping, carrito persistente y proceso de compra simplificado con MercadoPago.',
+    techs: ['Next.js', 'Stripe', 'Sanity CMS', 'Vercel'],
+    img: '/assets/Servicio_Tienda_ropa.webp',
+    link: '#'
+  },
+  {
+    num: '07',
+    title: 'Centro <span>Deportivo</span>',
+    topTitle: 'PROYECTO_DEPORTIVO.exe',
+    tag: 'App de reservas',
+    desc: 'Aplicación web para reserva de canchas y actividades en un centro deportivo. Los usuarios ven disponibilidad en tiempo real, reservan y pagan online. El staff gestiona horarios y cancellaciones desde el panel.',
+    techs: ['React', 'Firebase', 'Node.js', 'MercadoPago'],
+    img: '/assets/Servicio_gyms.webp',
+    link: '#'
+  },
+  {
+    num: '08',
+    title: 'Tu <span>Proyecto</span>',
+    topTitle: 'PROYECTO_TUYO.exe',
+    tag: '¿El próximo?',
+    desc: '¿Tenés una idea y no sabés por dónde arrancar? Nosotros te ayudamos a definir, diseñar y desarrollar tu sistema a medida. Trabajamos con vos desde el concepto hasta el deploy, con soporte incluido.',
+    techs: ['A tu medida', 'Tu stack', 'Tu presupuesto'],
+    img: '/assets/software_particular.webp',
+    link: '#contacto'
   }
-};
+];
 
-// Elementos del DOM
-const modal = document.getElementById('projectModal');
-const closeModal = document.getElementById('closeModal');
-const projectCards = document.querySelectorAll('.project-card-mini');
-const prevImageBtn = document.getElementById('prevImage');
-const nextImageBtn = document.getElementById('nextImage');
+(function () {
+  const backdrop = document.getElementById('prjModalBackdrop');
+  const modal    = document.getElementById('prjModal');
+  const closeBtn = document.getElementById('prjModalClose');
 
-// Variables globales para el carrusel de imágenes
-let currentProject = null;
-let currentImageIndex = 0;
+  // Referencias a elementos del modal
+  const elNum    = document.getElementById('prjModalNum');
+  const elTitle  = document.getElementById('prjModalTitle');
+  const elDesc   = document.getElementById('prjModalDesc');
+  const elImg    = document.getElementById('prjModalImg');
+  const elTechs  = document.getElementById('prjModalTechs');
+  const elLink   = document.getElementById('prjModalLink');
+  const elTopTitle = document.getElementById('prjModalTopTitle');
 
-// Función para actualizar la imagen del modal
-function updateModalImage() {
-  const modalImage = document.getElementById('modalImage');
-  const indicators = document.getElementById('imageIndicators');
-  
-  if (!currentProject || !currentProject.images) return;
-  
-  // Actualizar imagen
-  modalImage.src = currentProject.images[currentImageIndex];
-  
-  // Actualizar indicadores
-  indicators.innerHTML = '';
-  currentProject.images.forEach((img, index) => {
-    const dot = document.createElement('span');
-    dot.className = 'indicator-dot';
-    if (index === currentImageIndex) {
-      dot.classList.add('active');
-    }
-    dot.addEventListener('click', () => {
-      currentImageIndex = index;
-      updateModalImage();
+  // Abrir modal
+  function openModal(idx) {
+    const p = PROJECTS[idx];
+    if (!p) return;
+
+    elNum.textContent      = p.num;
+    elTitle.innerHTML      = p.title;
+    elDesc.textContent     = p.desc;
+    elImg.style.backgroundImage = `url('${p.img}')`;
+    elLink.href            = p.link;
+    elTopTitle.textContent = p.topTitle;
+
+    // Techs
+    elTechs.innerHTML = p.techs
+      .map(t => `<span class="prj-modal-tech">${t}</span>`)
+      .join('');
+
+    backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+
+    // Focus trap básico
+    setTimeout(() => closeBtn.focus(), 50);
+  }
+
+  // Cerrar modal
+  function closeModal() {
+    backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Click en cards
+  document.querySelectorAll('.prj-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const idx = parseInt(card.dataset.project, 10);
+      openModal(idx);
     });
-    indicators.appendChild(dot);
   });
-  
-  // Mostrar/ocultar botones de navegación si solo hay una imagen
-  if (currentProject.images.length <= 1) {
-    prevImageBtn.style.display = 'none';
-    nextImageBtn.style.display = 'none';
-  } else {
-    prevImageBtn.style.display = 'block';
-    nextImageBtn.style.display = 'block';
-  }
-}
 
-// Función para abrir el modal con los datos del proyecto
-function openModal(projectId) {
-  const project = projectsData[projectId];
-  
-  if (!project) return;
-  
-  currentProject = project;
-  currentImageIndex = 0;
-  
-  // Actualizar contenido del modal
-  updateModalImage();
-  document.getElementById('modalTitle').textContent = project.title;
-  document.getElementById('modalTag1').textContent = project.tags[0];
-  document.getElementById('modalTag2').textContent = project.tags[1];
-  document.getElementById('modalDescription').textContent = project.description;
-  document.getElementById('modalClient').textContent = project.client;
-  document.getElementById('modalDate').textContent = project.date;
-  document.getElementById('modalTech').textContent = project.tech;
-  document.getElementById('modalLink').href = project.link;
-  
-  // Mostrar modal
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
+  // Cerrar con botón
+  closeBtn.addEventListener('click', closeModal);
 
-// Función para cerrar el modal
-function closeModalFunction() {
-  modal.classList.remove('active');
-  document.body.style.overflow = 'auto';
-  currentProject = null;
-  currentImageIndex = 0;
-}
-
-// Event listeners para las cards
-projectCards.forEach(card => {
-  card.addEventListener('click', () => {
-    const projectId = card.dataset.project;
-    openModal(projectId);
+  // Cerrar al hacer click en el backdrop (fuera del modal)
+  backdrop.addEventListener('click', (e) => {
+    if (e.target === backdrop) closeModal();
   });
-});
 
-// Event listener para cerrar el modal
-closeModal.addEventListener('click', closeModalFunction);
+  // Cerrar con Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && backdrop.classList.contains('open')) {
+      closeModal();
+    }
+  });
 
-// Navegación de imágenes
-prevImageBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-  if (!currentProject) return;
-  currentImageIndex = (currentImageIndex - 1 + currentProject.images.length) % currentProject.images.length;
-  updateModalImage();
-});
-
-nextImageBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-  if (!currentProject) return;
-  currentImageIndex = (currentImageIndex + 1) % currentProject.images.length;
-  updateModalImage();
-});
-
-// Touch events para móvil (mejor soporte)
-prevImageBtn.addEventListener('touchend', (e) => {
-  e.preventDefault();
-  if (!currentProject) return;
-  currentImageIndex = (currentImageIndex - 1 + currentProject.images.length) % currentProject.images.length;
-  updateModalImage();
-});
-
-nextImageBtn.addEventListener('touchend', (e) => {
-  e.preventDefault();
-  if (!currentProject) return;
-  currentImageIndex = (currentImageIndex + 1) % currentProject.images.length;
-  updateModalImage();
-});
-
-// Cerrar modal al hacer click fuera del contenido
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    closeModalFunction();
-  }
-});
-
-// Cerrar modal con la tecla ESC
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modal.classList.contains('active')) {
-    closeModalFunction();
-  }
-});
-
-// Navegación con teclado (flechas)
-document.addEventListener('keydown', (e) => {
-  if (!modal.classList.contains('active') || !currentProject) return;
-  
-  if (e.key === 'ArrowLeft') {
-    currentImageIndex = (currentImageIndex - 1 + currentProject.images.length) % currentProject.images.length;
-    updateModalImage();
-  } else if (e.key === 'ArrowRight') {
-    currentImageIndex = (currentImageIndex + 1) % currentProject.images.length;
-    updateModalImage();
-  }
-});
-
-// Crear pixeles flotantes
-document.addEventListener('DOMContentLoaded', () => {
-  const floatingPixelsContainer = document.getElementById('floatingPixels');
-  
-  if (floatingPixelsContainer) {
-      const pixelCount = 12;
-      
-      for (let i = 0; i < pixelCount; i++) {
-          const pixel = document.createElement('div');
-          pixel.className = 'pixel';
-          
-          // Posición horizontal aleatoria
-          pixel.style.left = Math.random() * 100 + '%';
-          
-          // Posición vertical aleatoria inicial
-          pixel.style.top = Math.random() * 100 + '%';
-          
-          // Delay aleatorio para que no todos empiecen juntos
-          pixel.style.animationDelay = (Math.random() * 5) + 's';
-          
-          // Duración aleatoria
-          pixel.style.animationDuration = (8 + Math.random() * 6) + 's';
-          
-          floatingPixelsContainer.appendChild(pixel);
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
       }
-      
-      console.log('Pixeles flotantes creados en proyectos:', pixelCount);
-  }
-});
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.prj-header, .prj-grid').forEach(el => {
+    observer.observe(el);
+  });
+
+})();

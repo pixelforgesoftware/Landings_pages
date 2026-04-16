@@ -1,76 +1,318 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos - PixelForge Software</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/components/navbar/navbar.css">
-    <link rel="stylesheet" href="/components/footer/footer.css">
-    <link rel="stylesheet" href="/css/proyectos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos — PixelForge Software | Casos de éxito en Mendoza</title>
+  <meta name="description" content="Conocé los proyectos reales que ya están corriendo en el Sur de Mendoza. Sistemas web a medida desarrollados por PixelForge Software." />
+  <meta name="keywords" content="proyectos software, casos de éxito, mendoza, san rafael, bowen, alvear, malargüe, pixelforge">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pixelforgesofware.com/pages/proyectos.html">
+  <meta property="og:title" content="Proyectos — PixelForge Software">
+  <meta property="og:description" content="Sistemas web a medida desarrollados por PixelForge Software que ya están potenciando negocios reales.">
+  <meta property="og:image" content="https://pixelforgesofware.com/assets/Cubito_static.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://pixelforgesofware.com/pages/proyectos.html">
+  <meta property="twitter:title" content="Proyectos — PixelForge Software">
+  <meta property="twitter:description" content="Conocé los proyectos reales desarrollados por PixelForge en el Sur de Mendoza.">
+  <meta property="twitter:image" content="https://pixelforgesofware.com/assets/Cubito_static.png">
+
+  <!-- Favicon & Canonical -->
+  <link rel="icon" type="image/png" href="/assets/Cubito_static.png">
+  <link rel="canonical" href="https://pixelforgesofware.com/pages/proyectos.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="/components/navbar/navbar.css" />
+  <link rel="stylesheet" href="/components/footer/footer.css" />
+  <link rel="stylesheet" href="/css/proyectos.css" />
+
+  <style>
+    /* Reset mínimo y base de página */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      zoom: 0.9;
+      background: #000;
+      color: #f0f4ff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+    }
+
+    /* Espaciado para que el contenido no quede bajo el navbar fijo */
+    .page-content {
+      padding-top: 72px; /* igual a --nav-height */
+    }
+  </style>
 </head>
 <body>
-  <div class="floating-pixels" id="floatingPixels"></div>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="/index.html" class="logo">
-                <div class="logo-icon">
-                    <div class="logo-bg"></div>
-                    <div class="logo-text-icon">PF</div>
-                </div>
-                <span class="logo-text"><span class="blue">PixelForge</span> Software</span>
-            </a>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/index.html#servicios">Servicios</a></li>
-                <li><a href="/pages/contactanos.html">Contacto</a></li>
-            </ul>
-            
-            <button class="menu-toggle" id="menuToggle">☰</button>
-        </div>
-    </nav>
 
-    <!-- Projects Section -->
-    <section class="projects-section">
-        <div class="section-header">
-            <h1>Nuestros <span class="blue">Proyectos</span> <img src="/assets/Cubito_de_forge_cayendo.gif" alt=""></h1>
-            <p>Explora los trabajos que hemos realizado para nuestros clientes</p>
+  <!-- ══════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+
+      <a href="/index.html" class="logo">
+        <div class="logo-icon">
+          <img src="/assets/Cubito_static.png" alt="PixelForge" style="width:100%;height:100%;object-fit:contain;">
+        </div>
+        <span class="logo-text"><span class="blue">PixelForge</span> Software</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/index.html#servicios">Servicios</a></li>
+        <li><a href="/pages/proyectos.html" class="active">Proyectos</a></li>
+        <li><a href="/pages/contactanos.html">Quiénes Somos</a></li>
+      </ul>
+
+      <!-- CTA desktop -->
+      <a href="https://wa.me/5492625419121?text=Hola!%20quiero%20comenzar%20con%20mi%20proyecto%20%F0%9F%9A%80"
+         target="_blank" rel="noopener" class="nav-cta">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Comenzá ahora
+      </a>
+
+      <!-- Toggle hamburguesa -->
+      <button class="menu-toggle" id="menuToggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="mobileMenu"
+              aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/index.html"              class="mobile-menu-link">Inicio</a>
+      <a href="/index.html#servicios"    class="mobile-menu-link">Servicios</a>
+      <a href="/pages/proyectos.html"    class="mobile-menu-link">Proyectos</a>
+      <a href="/pages/contactanos.html"  class="mobile-menu-link">Quiénes Somos</a>
+      <a href="https://wa.me/5492625419121?text=Hola!%20quiero%20comenzar%20con%20mi%20proyecto%20%F0%9F%9A%80"
+         target="_blank" rel="noopener"
+         class="mobile-menu-cta">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Comenzá ahora
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════════════
+       CONTENIDO PRINCIPAL
+  ══════════════════════════════════════════════════ -->
+  <main class="page-content">
+
+    <!-- ═══════════════════════════════════════════════════════
+         PROYECTOS — grid de clientes + modal detalle
+         ═══════════════════════════════════════════════════════ -->
+
+    <section class="prj-section" id="proyectos">
+      <div class="prj-wrap">
+
+        <!-- HEADER -->
+        <div class="prj-header">
+          <span class="prj-eyebrow">. CLIENTES REALES .</span>
+          <h2 class="prj-title">NUESTROS <span class="blue">PROYECTOS</span></h2>
+          <p class="prj-sub">Sistemas que ya están corriendo</p>
         </div>
 
-        <div class="coming-soon-container">
-            <div class="coming-soon-content">
-                <div class="pixel-animation">
-                    <div class="pixel-box"></div>
-                    <div class="pixel-box"></div>
-                    <div class="pixel-box"></div>
-                    <div class="pixel-box"></div>
-                </div>
-                <h2>Próximamente</h2>
-                <p>Estamos trabajando en mostrar nuestros mejores proyectos.<br>¡Vuelve pronto para ver nuestro portfolio completo!</p>
-                <div class="progress-bar">
-                    <div class="progress-fill"></div>
-                </div>
-                <a href="/index.html" class="btn btn-primary">Volver al Inicio</a>
+        <!-- GRID -->
+        <div class="prj-grid">
+
+          <!-- CARD 1 -->
+          <article class="prj-card" data-project="0">
+            <div class="prj-card-img" style="background-image: url('/assets/sistema_ayrton2.jpeg')"></div>
+            <div class="prj-card-overlay"></div>
+            <div class="prj-card-content">
+              <span class="prj-card-num">01</span>
+              <h3 class="prj-card-name">Barberia<br><span>Bowen</span></h3>
+              <span class="prj-card-tag">Sistema para barberias</span>
             </div>
-        </div>
+            <div class="prj-card-hover">
+              <span>Ver proyecto →</span>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="prj-card" data-project="1">
+            <div class="prj-card-img" style="background-image: url('/assets/landing_page_cabañas_madri.webp')"></div>
+            <div class="prj-card-overlay"></div>
+            <div class="prj-card-content">
+              <span class="prj-card-num">02</span>
+              <h3 class="prj-card-name">Cabañas <span>Alvear</span></h3>
+              <span class="prj-card-tag">Cabañas madrigueras</span>
+            </div>
+            <div class="prj-card-hover"><span>Ver proyecto →</span></div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="prj-card" data-project="2">
+            <div class="prj-card-img" style="background-image: url('/assets/landing_page_lujan\ \(1\).jpeg')"></div>
+            <div class="prj-card-overlay"></div>
+            <div class="prj-card-content">
+              <span class="prj-card-num">03</span>
+              <h3 class="prj-card-name">Zapateria <span>Bowen</span></h3>
+              <span class="prj-card-tag">Zapateria paso a paso</span>
+            </div>
+            <div class="prj-card-hover"><span>Ver proyecto →</span></div>
+          </article>
+
+          <!-- CARD 4 -->
+          <article class="prj-card" data-project="3">
+            <div class="prj-card-img" style="background-image: url('../assets/shomer1.jpeg')"></div>
+            <div class="prj-card-overlay"></div>
+            <div class="prj-card-content">
+              <span class="prj-card-num">04</span>
+              <h3 class="prj-card-name">Shomer. <span>Seguridad</span></h3>
+              <span class="prj-card-tag">Sistema de matriculas</span>
+            </div>
+            <div class="prj-card-hover"><span>Ver proyecto →</span></div>
+          </article>
+
+          <!-- CARD 5 -->
+          <article class="prj-card" data-project="4">
+            <div class="prj-card-img" style="background-image: url('../assets/Servicio_ventas.webp')"></div>
+            <div class="prj-card-overlay"></div>
+            <div class="prj-card-content">
+              <span class="prj-card-num">05</span>
+              <h3 class="prj-card-name">Gym <span>FitPro</span></h3>
+              <span class="prj-card-tag">Sistema de socios</span>
+            </div>
+            <div class="prj-card-hover"><span>Ver proyecto →</span></div>
+          </article>
+
+          <!-- CARD 6 -->
+          <article class="prj-card" data-project="5">
+            <div class="prj-card-img" style="background-image: url('../assets/Servicio_Tienda_ropa.webp')"></div>
+            <div class="prj-card-overlay"></div>
+            <div class="prj-card-content">
+              <span class="prj-card-num">06</span>
+              <h3 class="prj-card-name">Tienda <span>Ropa</span></h3>
+              <span class="prj-card-tag">E-commerce</span>
+            </div>
+            <div class="prj-card-hover"><span>Ver proyecto →</span></div>
+          </article>
+
+          <!-- CARD 7 -->
+          <article class="prj-card" data-project="6">
+            <div class="prj-card-img" style="background-image: url('../assets/Servicio_gyms.webp')"></div>
+            <div class="prj-card-overlay"></div>
+            <div class="prj-card-content">
+              <span class="prj-card-num">07</span>
+              <h3 class="prj-card-name">Centro <span>Deportivo</span></h3>
+              <span class="prj-card-tag">App de reservas</span>
+            </div>
+            <div class="prj-card-hover"><span>Ver proyecto →</span></div>
+          </article>
+
+          <!-- CARD 8 -->
+          <article class="prj-card prj-card--cta" data-project="7">
+            <div class="prj-card-img" style="background-image: url('../assets/software_particular.webp')"></div>
+            <div class="prj-card-overlay"></div>
+            <div class="prj-card-content">
+              <span class="prj-card-num">08</span>
+              <h3 class="prj-card-name">Tu <span>Proyecto</span></h3>
+              <span class="prj-card-tag">¿El próximo?</span>
+            </div>
+            <div class="prj-card-hover"><span>Hablemos →</span></div>
+          </article>
+
+        </div><!-- /prj-grid -->
+      </div><!-- /prj-wrap -->
     </section>
 
+
+    <!-- ═══════════════════ MODAL ═══════════════════ -->
+    <div class="prj-modal-backdrop" id="prjModalBackdrop">
+      <div class="prj-modal" id="prjModal" role="dialog" aria-modal="true">
+
+        <!-- Barra superior pixel -->
+        <div class="prj-modal-topbar">
+          <div class="prj-modal-dots">
+            <span class="prj-dot prj-dot--r"></span>
+            <span class="prj-dot prj-dot--y"></span>
+            <span class="prj-dot prj-dot--g"></span>
+          </div>
+          <span class="prj-modal-topbar-title" id="prjModalTopTitle">PROYECTO_01.exe</span>
+          <button class="prj-modal-close" id="prjModalClose" aria-label="Cerrar">✕</button>
+        </div>
+
+        <!-- Cuerpo -->
+        <div class="prj-modal-body">
+
+          <!-- Columna imagen -->
+          <div class="prj-modal-img-col">
+            <div class="prj-modal-img" id="prjModalImg"></div>
+            <div class="prj-modal-img-scanlines"></div>
+          </div>
+
+          <!-- Columna info -->
+          <div class="prj-modal-info">
+            <span class="prj-modal-num" id="prjModalNum">01</span>
+            <h2 class="prj-modal-title" id="prjModalTitle">—</h2>
+            <p class="prj-modal-desc" id="prjModalDesc">—</p>
+
+            <div class="prj-modal-divider"></div>
+
+            <div class="prj-modal-tech-label">TECNOLOGÍAS</div>
+            <div class="prj-modal-techs" id="prjModalTechs"></div>
+
+            <div class="prj-modal-footer">
+              <a href="#" class="prj-modal-cta" id="prjModalLink" target="_blank" rel="noopener">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1v-3M10 2h4m0 0v4m0-4L7 9"/>
+                </svg>
+                Visitar sitio
+              </a>
+            </div>
+          </div>
+
+        </div><!-- /prj-modal-body -->
+      </div><!-- /prj-modal -->
+    </div><!-- /backdrop -->
+
+  </main>
+
+
+  <!-- ══════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════ -->
     <!-- Footer -->
     <footer>
-        <div class="footer-logo">
-            <div class="footer-logo-icon">
-                <div class="footer-logo-bg"></div>
-                <div class="footer-logo-text">PF</div>
-            </div>
-            <span><span class="blue">PixelForge</span> Software</span>
-        </div>
-        <p>© 2024 PixelForge Software. Todos los derechos reservados.</p>
+      <div class="footer-logo">
+          <div class="footer-logo-icon">
+              <div class="footer-logo-bg"><img src="/assets/Cubito_static.png" alt="" class="footer-logo-icon"></div>
+              <div class="footer-logo-text"></div>
+          </div>
+          <span class="footer-logo-name"><span class="blue">PixelForge</span> Software</span>
+      </div>
+      <p>© 2024 PixelForge Software. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="/components/navbar/navbar.js"></script>
+
+  <!-- ══════════════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════════════ -->
+  <script src="/components/navbar/navbar.js"></script>
+  <script src="/js/proyectos.js"></script>
+  <script>
+    // Año automático en el footer
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>

@@ -1,0 +1,7 @@
+# robots.txt for https://pixelforgesofware.com/
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://pixelforgesofware.com/sitemap.xml

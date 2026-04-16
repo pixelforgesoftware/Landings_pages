@@ -1,338 +1,565 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - PixelForge Software</title>
-    <link rel="stylesheet" href="/components/navbar/navbar.css">
-    <link rel="stylesheet" href="/components/footer/footer.css">
-    <link rel="stylesheet" href="/css/contactanos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiénes Somos — PixelForge Software | Nuestro equipo</title>
+  <meta name="description"
+    content="Conocé al equipo detrás de PixelForge Software. Somos especialistas en forjar el futuro digital de los negocios en San Rafael, Mendoza.">
+  <meta name="keywords"
+    content="quiénes somos, equipo pixelforge, desarrolladores mendoza, software studio, san rafael">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pixelforgesofware.com/pages/contactanos.html">
+  <meta property="og:title" content="Quiénes Somos — PixelForge Software">
+  <meta property="og:description" content="Un equipo chico con ideas grandes. Conocé nuestra historia y pilares.">
+  <meta property="og:image" content="https://pixelforgesofware.com/assets/Cubito_static.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://pixelforgesofware.com/pages/contactanos.html">
+  <meta property="twitter:title" content="Quiénes Somos — PixelForge Software">
+  <meta property="twitter:description" content="Conocé a las personas detrás del código en PixelForge Software.">
+  <meta property="twitter:image" content="https://pixelforgesofware.com/assets/Cubito_static.png">
+
+  <!-- Favicon & Canonical -->
+  <link rel="icon" type="image/png" href="/assets/Cubito_static.png">
+  <link rel="canonical" href="https://pixelforgesofware.com/pages/contactanos.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/components/navbar/navbar.css">
+  <link rel="stylesheet" href="/css/contactanos.css">
+  <style>
+    body {
+      zoom: 0.9;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- Scanline overlay -->
-  <div class="scanlines" aria-hidden="true"></div>
-
-  <!-- Pixel grid background -->
+  <!-- Background layers -->
   <div class="pixel-grid" aria-hidden="true"></div>
-
-  <!-- Floating pixels animados -->
+  <div class="scanlines" aria-hidden="true"></div>
   <div class="floating-pixels" id="floatingPixels" aria-hidden="true"></div>
 
-  <!-- Navbar -->
+  <!-- ══════════════ NAVBAR ══════════════ -->
   <nav id="navbar">
     <div class="nav-container">
-        <a href="/index.html" class="logo">
-            <div class="logo-icon">
-                <div class="logo-bg"></div>
-                <div class="logo-text-icon">PF</div>
-            </div>
-            <span class="logo-text"><span class="blue">PixelForge</span> Software</span>
-        </a>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/index.html#servicios">Servicios</a></li>
-            <li><a href="/pages/proyectos.html">Proyectos</a></li>
-        </ul>
-        <button class="menu-toggle" id="menuToggle">☰</button>
+      <a href="/index.html" class="logo">
+        <div class="logo-icon">
+          <img src="/assets/Cubito_static.png" alt="PixelForge" style="width:100%;height:100%;object-fit:contain;">
+        </div>
+        <span class="logo-text"><span class="blue">PixelForge</span> Software</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/index.html#servicios">Servicios</a></li>
+        <li><a href="/pages/proyectos.html">Proyectos</a></li>
+        <li><a href="/pages/contactanos.html" class="active">Quiénes Somos</a></li>
+      </ul>
+      <a href="https://wa.me/5492625419121?text=Hola!%20quiero%20comenzar%20con%20mi%20proyecto%20%F0%9F%9A%80"
+        target="_blank" rel="noopener" class="nav-cta">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+        Comenzá ahora
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileMenu"
+        aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/index.html" class="mobile-menu-link">Inicio</a>
+      <a href="/index.html#servicios" class="mobile-menu-link">Servicios</a>
+      <a href="/pages/proyectos.html" class="mobile-menu-link">Proyectos</a>
+      <a href="/pages/contactanos.html" class="mobile-menu-link">Quiénes Somos</a>
+      <a href="https://wa.me/5492625419121?text=Hola!%20quiero%20comenzar%20con%20mi%20proyecto%20%F0%9F%9A%80"
+        target="_blank" rel="noopener" class="mobile-menu-cta">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+        Comenzá ahora
+      </a>
     </div>
   </nav>
 
-  <!-- ======================== HERO HEADER ======================== -->
-  <section class="page-hero">
-    <div class="hero-inner">
-      <div class="pixel-badge">// CONTACTANOS.EXE</div>
-      <h1 class="hero-title">
-        <span class="title-line">ESTAMOS</span>
-        <span class="title-line blue">LISTOS</span>
-        <span class="title-line">PARA VOS</span>
-      </h1>
-      <p class="hero-sub">Hacé realidad tu proyecto con nosotros ↓</p>
-      <!-- Sprite pixel art decorativo -->
-      <div class="hero-sprite" aria-hidden="true">
-        <div class="sprite-char"></div>
+  <!-- ══════════════ HERO — igual estilo que index ══════════════ -->
+  <section class="qs-hero">
+    <div class="qs-hero-split">
+
+      <!-- Izquierda: texto -->
+      <div class="qs-hero-text">
+        <div class="qs-eyebrow">▸ QUIÉNES SOMOS · SAN RAFAEL</div>
+        <h1>
+          Somos<br>
+          <span class="blue glitch">PixelForge</span><br>
+          <span class="qs-hero-sub">Software</span>
+        </h1>
+        <p>Un equipo chico con ideas grandes. Construimos software que le da tiempo, clientes y visibilidad a tu negocio
+          — pixel a pixel.</p>
+        <div class="qs-hero-actions">
+          <a href="#nuestra-historia" class="btn btn-secondary">▸ Nuestra historia</a>
+          <a href="https://wa.me/5492625419121?text=Hola!%20quiero%20comenzar%20con%20mi%20proyecto%20%F0%9F%9A%80"
+            target="_blank" rel="noopener" class="btn btn-primary">
+            💬 Hablemos
+          </a>
+        </div>
       </div>
+
+      <!-- Derecha: logo flotante -->
+      <div class="qs-hero-logo-wrap">
+        <div class="qs-hero-logo-glow"></div>
+        <img src="/assets/Cubito_static.png" alt="PixelForge Logo" class="qs-hero-logo" id="heroLogo"
+          data-gif="/assets/cubito.gif">
+      </div>
+
     </div>
-    <!-- Borde inferior pixelado -->
-    <div class="pixel-border-bottom" aria-hidden="true"></div>
+    <!-- grid pixel decorativo -->
+    <div class="qs-hero-grid" aria-hidden="true"></div>
   </section>
 
-  <!-- ======================== FEATURES BAR ======================== -->
-  <div class="features-bar">
-    <div class="features-container">
-      <div class="feature">
-        <div class="feature-icon pixel-icon">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
-          </svg>
-        </div>
-        <div class="feature-text">
-          <h3>Escribe tus consultas</h3>
-          <p>¡Ninguna duda es mal recibida!</p>
-        </div>
+  <!-- ══════════════ HISTORIA — layout tipo noticia ══════════════ -->
+  <section id="nuestra-historia" class="historia-section">
+
+    <div class="historia-wrap">
+
+      <!-- Encabezado de sección -->
+      <div class="historia-header reveal">
+        <span class="sec-eyebrow">▸ NUESTRO CAMINO ◂</span>
+        <h2>La historia de <span class="blue glitch">PixelForge</span></h2>
+        <div class="sec-divider"></div>
       </div>
-      <div class="feature">
-        <div class="feature-icon pixel-icon">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-          </svg>
+
+      <!-- Bloque 1: Bienvenida — imagen derecha -->
+      <article class="historia-bloque reveal">
+        <div class="hb-content">
+          <div class="hb-tag">[ BIENVENIDA ]</div>
+          <h3>Es un placer que hayas llegado hasta acá</h3>
+          <p>
+            Gracias por tomarte el tiempo de conocernos. Somos un equipo que nació con una idea muy simple:
+            hacer software que realmente le sirva a la gente — no software genérico que hay que adaptar a
+            la fuerza. Cada proyecto que arrancamos es un compromiso real con vos y con tu negocio.
+          </p>
         </div>
-        <div class="feature-text">
-          <h3>Multiplataforma</h3>
-          <p>Aquí, por WhatsApp o donde prefieras</p>
+        <div class="hb-visual">
+          <div class="hb-pixel-card">
+            <div class="hb-pc-top">
+              <span class="hb-dot r"></span>
+              <span class="hb-dot y"></span>
+              <span class="hb-dot g"></span>
+              <span class="hb-pc-title">PIXELFORGE.EXE</span>
+            </div>
+            <div class="hb-pc-body">
+              <div class="hb-stat-row"><span class="hb-stat-label">CLIENTES</span><span
+                  class="hb-stat-val blue">ACTIVOS</span></div>
+              <div class="hb-stat-row"><span class="hb-stat-label">SOPORTE</span><span
+                  class="hb-stat-val cyan">24/7</span></div>
+              <div class="hb-stat-row"><span class="hb-stat-label">STATUS</span><span class="hb-stat-val green blink">●
+                  ONLINE</span></div>
+              <div class="hb-progress">
+                <div class="hb-prog-label">COMPROMISO</div>
+                <div class="hb-prog-bar">
+                  <div class="hb-prog-fill" style="--w:100%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </article>
+
+      <!-- Bloque 2: 3 pilares — imagen izquierda -->
+      <article class="historia-bloque reverse reveal">
+        <div class="hb-content">
+          <div class="hb-tag">[ NUESTROS PILARES ]</div>
+          <h3>Tres reglas que nunca rompemos</h3>
+          <div class="pilares-list">
+            <div class="pilar">
+              <div class="pilar-icon">🤝</div>
+              <div class="pilar-text">
+                <h4>Ambiente sano, siempre</h4>
+                <p>Nos importa que el espacio de trabajo — para nuestro equipo y para vos — sea cómodo, sin toxicidad y
+                  sin presiones.</p>
+              </div>
+            </div>
+            <div class="pilar">
+              <div class="pilar-icon">📡</div>
+              <div class="pilar-text">
+                <h4>Seguimiento continuo</h4>
+                <p>Cada cliente tiene acompañamiento real desde el primer día hasta el último. No te dejamos solo ni
+                  abrumado con nada.</p>
+              </div>
+            </div>
+            <div class="pilar">
+              <div class="pilar-icon">🧩</div>
+              <div class="pilar-text">
+                <h4>Todo a tu medida</h4>
+                <p>Casi todos los módulos de cada servicio son moldeables según tu negocio. No vendemos plantillas —
+                  construimos lo que necesitás.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hb-visual">
+          <div class="hb-pixel-card terminal">
+            <div class="hb-pc-top">
+              <span class="hb-dot r"></span>
+              <span class="hb-dot y"></span>
+              <span class="hb-dot g"></span>
+              <span class="hb-pc-title">VALORES.SYS</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="t-prompt">$</span> <span class="t-cmd">init pixelforge</span></p>
+              <p><span class="t-out">▸ Cargando valores...</span></p>
+              <p><span class="t-out green">✓ Ambiente sano</span></p>
+              <p><span class="t-out green">✓ Seguimiento real</span></p>
+              <p><span class="t-out green">✓ Software a medida</span></p>
+              <p><span class="t-out cyan">▸ Sistema listo.</span></p>
+              <p class="t-cursor"><span class="t-prompt">$</span> <span class="cursor-blink">█</span></p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bloque 3: Lo que logran los clientes — imagen derecha -->
+      <article class="historia-bloque reveal">
+        <div class="hb-content">
+          <div class="hb-tag">[ RESULTADOS REALES ]</div>
+          <h3>Para que a tu negocio le vaya mejor</h3>
+          <p>
+            Nuestros servicios están pensados para que ganes en tres frentes: tiempo libre, mejor organización
+            y más visibilidad. Eso se traduce en más clientes, mejor cartelera de productos y una administración
+            que no te consume la cabeza.
+          </p>
+          <div class="resultados-grid">
+            <div class="resultado-item">
+              <span class="res-icon">⏰</span>
+              <span>Más tiempo libre</span>
+            </div>
+            <div class="resultado-item">
+              <span class="res-icon">📊</span>
+              <span>Mejor administración</span>
+            </div>
+            <div class="resultado-item">
+              <span class="res-icon">👁️</span>
+              <span>Más visibilidad</span>
+            </div>
+            <div class="resultado-item">
+              <span class="res-icon">👥</span>
+              <span>Más clientela</span>
+            </div>
+          </div>
+        </div>
+        <div class="hb-visual">
+          <div class="hb-pixel-card stats">
+            <div class="hb-pc-top">
+              <span class="hb-dot r"></span>
+              <span class="hb-dot y"></span>
+              <span class="hb-dot g"></span>
+              <span class="hb-pc-title">RESULTADOS.DAT</span>
+            </div>
+            <div class="hb-pc-body">
+              <div class="hb-progress">
+                <div class="hb-prog-label">TIEMPO LIBRE</div>
+                <div class="hb-prog-bar">
+                  <div class="hb-prog-fill" style="--w:85%"></div>
+                </div>
+              </div>
+              <div class="hb-progress">
+                <div class="hb-prog-label">ADMINISTRACIÓN</div>
+                <div class="hb-prog-bar">
+                  <div class="hb-prog-fill" style="--w:92%"></div>
+                </div>
+              </div>
+              <div class="hb-progress">
+                <div class="hb-prog-label">VISIBILIDAD</div>
+                <div class="hb-prog-bar">
+                  <div class="hb-prog-fill cyan-fill" style="--w:78%"></div>
+                </div>
+              </div>
+              <div class="hb-progress">
+                <div class="hb-prog-label">CLIENTELA</div>
+                <div class="hb-prog-bar">
+                  <div class="hb-prog-fill cyan-fill" style="--w:88%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bloque 4: Modalidad — full width con fondo especial -->
+      <article class="historia-bloque fullwidth reveal">
+        <div class="hb-tag">[ CÓMO TRABAJAMOS ]</div>
+        <h3>Sin letra chica. Sin sorpresas.</h3>
+        <p>
+          Nuestros servicios son mensuales con un mínimo de 3 meses. Simple, claro, sin trampas.
+          ¿Tenés alguna duda? Bienvenida sea — es mejor hablar que quedarse con la pregunta.
+          No mordemos, te lo prometemos.
+        </p>
+        <div class="modalidad-items">
+          <div class="mod-item">
+            <span class="mod-icon">📅</span>
+            <h4>Servicio mensual</h4>
+            <p>Pagás mes a mes, sin contratos eternos ni ataduras.</p>
+          </div>
+          <div class="mod-item">
+            <span class="mod-icon">🔒</span>
+            <h4>Mínimo 3 meses</h4>
+            <p>El tiempo justo para que puedas ver resultados reales.</p>
+          </div>
+          <div class="mod-item">
+            <span class="mod-icon">💬</span>
+            <h4>Dudas: siempre</h4>
+            <p>Cualquier consulta es bienvenida en cualquier momento.</p>
+          </div>
+          <div class="mod-item">
+            <span class="mod-icon">🚫</span>
+            <h4>Sin cobros raros</h4>
+            <p>No hay costos ocultos. Lo que acordamos, es lo que pagás.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ══════════════ EQUIPO ══════════════ -->
+  <section class="equipo-section">
+    <div class="equipo-wrap">
+
+      <div class="historia-header reveal">
+        <span class="sec-eyebrow">▸ EL EQUIPO ◂</span>
+        <h2>Las personas detrás del <span class="blue glitch">código</span></h2>
+        <div class="sec-divider"></div>
       </div>
-      <div class="feature">
-        <div class="feature-icon pixel-icon">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-          </svg>
-        </div>
-        <div class="feature-text">
-          <h3>¡Respondemos rápido!</h3>
-          <p>No esperarás mucho tiempo</p>
-        </div>
+
+      <div class="equipo-grid">
+
+        <!-- Card 1: Charly -->
+        <article class="eq-card reveal">
+          <div class="eq-card-inner">
+            <div class="eq-header">
+              <div class="eq-badge">CEO &amp; Co-founder</div>
+              <span class="eq-status blink">● ONLINE</span>
+            </div>
+            <div class="eq-avatar" style="background-image: url('/assets/foto_avatar_charly.webp')"
+              aria-label="Avatar de Charly"></div>
+            <div class="eq-info">
+              <h3>Charly</h3>
+              <p>Visión de negocio, liderazgo de equipo y relación con los clientes. El que convierte ideas en proyectos
+                reales.</p>
+              <div class="eq-stats">
+                <div class="eq-stat"><span class="eq-stat-label">LIDERAZGO</span>
+                  <div class="eq-bar">
+                    <div class="eq-fill" style="--w:95%"></div>
+                  </div>
+                </div>
+                <div class="eq-stat"><span class="eq-stat-label">DISEÑO</span>
+                  <div class="eq-bar">
+                    <div class="eq-fill" style="--w:80%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="eq-socials">
+                <a href="#" class="eq-social" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                  GH
+                </a>
+                <a href="#" class="eq-social" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  LI
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Rafael -->
+        <article class="eq-card reveal">
+          <div class="eq-card-inner">
+            <div class="eq-header">
+              <div class="eq-badge">Designer &amp; Co-founder</div>
+              <span class="eq-status blink">● ONLINE</span>
+            </div>
+            <div class="eq-avatar" style="background-image: url('/assets/avatar_rafa.jpg')"
+              aria-label="Avatar de Rafael"></div>
+            <div class="eq-info">
+              <h3>Rafael</h3>
+              <p>Diseño UI/UX y experiencia de usuario. El que hace que cada pixel esté exactamente donde tiene que
+                estar.</p>
+              <div class="eq-stats">
+                <div class="eq-stat"><span class="eq-stat-label">UI/UX</span>
+                  <div class="eq-bar">
+                    <div class="eq-fill" style="--w:98%"></div>
+                  </div>
+                </div>
+                <div class="eq-stat"><span class="eq-stat-label">VISUAL</span>
+                  <div class="eq-bar">
+                    <div class="eq-fill" style="--w:93%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="eq-socials">
+                <a href="#" class="eq-social" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                  GH
+                </a>
+                <a href="#" class="eq-social" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  LI
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Martin -->
+        <article class="eq-card reveal">
+          <div class="eq-card-inner">
+            <div class="eq-header">
+              <div class="eq-badge">CTO &amp; Co-founder</div>
+              <span class="eq-status blink">● ONLINE</span>
+            </div>
+            <div class="eq-avatar" style="background-image: url('/assets/foto_avatar_canales.webp')"
+              aria-label="Avatar de Martin"></div>
+            <div class="eq-info">
+              <h3>Martin Canales</h3>
+              <p>Arquitectura tecnológica y liderazgo del equipo de desarrollo. Soluciones escalables, seguras y bien
+                pensadas.</p>
+              <div class="eq-stats">
+                <div class="eq-stat"><span class="eq-stat-label">DEV</span>
+                  <div class="eq-bar">
+                    <div class="eq-fill" style="--w:97%"></div>
+                  </div>
+                </div>
+                <div class="eq-stat"><span class="eq-stat-label">SEC</span>
+                  <div class="eq-bar">
+                    <div class="eq-fill" style="--w:88%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="eq-socials">
+                <a href="https://github.com/martin1195" class="eq-social" target="_blank" rel="noopener noreferrer"
+                  aria-label="GitHub de Martin">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                  GH
+                </a>
+                <a href="https://www.linkedin.com/in/martincanalesdev/" class="eq-social" target="_blank"
+                  rel="noopener noreferrer" aria-label="LinkedIn de Martin">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  LI
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ======================== MAIN CONTENT ======================== -->
-  <main class="contact-section">
-
-    <!-- TEAM SECTION -->
-    <section class="team-section" aria-labelledby="team-heading">
-      <div class="section-header">
-        <div class="section-label">[ PARTY SELECT ]</div>
-        <h2 id="team-heading">Nuestro <span class="blue">Equipo</span></h2>
+  <!-- ══════════════ CTA FINAL ══════════════ -->
+  <section class="cta-final">
+    <div class="cta-final-inner reveal">
+      <div class="cta-final-tag">[ NUEVA MISIÓN ]</div>
+      <h2>¿Listo para <span class="blue">empezar</span>?</h2>
+      <p>No hace falta tener todo claro — hablemos y lo armamos juntos. No mordemos, te lo prometemos 😄</p>
+      <a href="https://wa.me/5492625419121?text=Hola!%20Quiero%20consultar%20sobre%20un%20proyecto" class="whatsapp-btn"
+        target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+        <span>▶ ESCRIBINOS POR WHATSAPP</span>
+      </a>
+      <div class="cta-pixel-row" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
       </div>
+    </div>
+  </section>
 
-      <div class="team-grid">
-
-        <!-- Card 1 -->
-        <article class="team-card team-card-1">
-          <div class="card-corner tl" aria-hidden="true"></div>
-          <div class="card-corner tr" aria-hidden="true"></div>
-          <div class="card-corner bl" aria-hidden="true"></div>
-          <div class="card-corner br" aria-hidden="true"></div>
-          <div class="card-top-bar">
-            <span class="card-id">// 01</span>
-            <span class="card-status blink">● ONLINE</span>
-          </div>
-          <div class="team-avatar team-avatar-1" aria-label="Avatar de Carlos Gatica"></div>
-          <div class="card-body">
-            <div class="name-plate">
-              <h3>Carlos Gatica</h3>
-              <div class="team-role">COO &amp; Co-founder</div>
-            </div>
-            <p class="team-description">
-              Supervisa las operaciones diarias, coordina los equipos internos y asegura que los procesos se ejecuten con eficiencia y calidad.
-            </p>
-            <div class="card-stats" aria-hidden="true">
-              <div class="stat"><span class="stat-label">OPS</span><div class="stat-bar"><div class="stat-fill" style="--w:90%"></div></div></div>
-              <div class="stat"><span class="stat-label">MGT</span><div class="stat-bar"><div class="stat-fill" style="--w:85%"></div></div></div>
-            </div>
-            <div class="social-links">
-              <a href="https://github.com/char9703" class="social-link" aria-label="GitHub de Carlos" target="_blank" rel="noopener noreferrer">
-                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                GH
-              </a>
-              <a href="https://linkedin.com/in/carlos-gatica-a8a16632b" class="social-link" aria-label="LinkedIn de Carlos" target="_blank" rel="noopener noreferrer">
-                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                LI
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="team-card team-card-2 card-featured">
-          <div class="card-corner tl" aria-hidden="true"></div>
-          <div class="card-corner tr" aria-hidden="true"></div>
-          <div class="card-corner bl" aria-hidden="true"></div>
-          <div class="card-corner br" aria-hidden="true"></div>
-          <div class="featured-crown" aria-hidden="true">★ FOUNDER ★</div>
-          <div class="card-top-bar">
-            <span class="card-id">// 02</span>
-            <span class="card-status blink">● ONLINE</span>
-          </div>
-          <div class="team-avatar team-avatar-2" aria-label="Avatar de Rafael Ortega"></div>
-          <div class="card-body">
-            <div class="name-plate">
-              <h3>Rafael Ortega</h3>
-              <div class="team-role">CEO &amp; Founder</div>
-            </div>
-            <p class="team-description">
-              Lidera la visión estratégica de la empresa, impulsando la innovación y el crecimiento con enfoque en experiencia de usuario excepcional.
-            </p>
-            <div class="card-stats" aria-hidden="true">
-              <div class="stat"><span class="stat-label">STR</span><div class="stat-bar"><div class="stat-fill" style="--w:95%"></div></div></div>
-              <div class="stat"><span class="stat-label">VIS</span><div class="stat-bar"><div class="stat-fill" style="--w:98%"></div></div></div>
-            </div>
-            <div class="social-links">
-              <a href="https://github.com/tomitas1x" class="social-link" aria-label="GitHub de Rafael" target="_blank" rel="noopener noreferrer">
-                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                GH
-              </a>
-              <a href="https://www.linkedin.com/in/%E2%9C%A8-rafael-david-ortega-5a4180269/" class="social-link" aria-label="LinkedIn de Rafael" target="_blank" rel="noopener noreferrer">
-                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                LI
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="team-card team-card-3">
-          <div class="card-corner tl" aria-hidden="true"></div>
-          <div class="card-corner tr" aria-hidden="true"></div>
-          <div class="card-corner bl" aria-hidden="true"></div>
-          <div class="card-corner br" aria-hidden="true"></div>
-          <div class="card-top-bar">
-            <span class="card-id">// 03</span>
-            <span class="card-status blink">● ONLINE</span>
-          </div>
-          <div class="team-avatar team-avatar-3" aria-label="Avatar de Martin Canales"></div>
-          <div class="card-body">
-            <div class="name-plate">
-              <h3>Martin Canales</h3>
-              <div class="team-role">CTO &amp; Co-founder</div>
-            </div>
-            <p class="team-description">
-              Define la arquitectura tecnológica y lidera el equipo de desarrollo, garantizando soluciones escalables, seguras y alineadas al negocio.
-            </p>
-            <div class="card-stats" aria-hidden="true">
-              <div class="stat"><span class="stat-label">DEV</span><div class="stat-bar"><div class="stat-fill" style="--w:97%"></div></div></div>
-              <div class="stat"><span class="stat-label">SEC</span><div class="stat-bar"><div class="stat-fill" style="--w:88%"></div></div></div>
-            </div>
-            <div class="social-links">
-              <a href="https://github.com/martin1195" class="social-link" aria-label="GitHub de Martin" target="_blank" rel="noopener noreferrer">
-                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                GH
-              </a>
-              <a href="https://www.linkedin.com/in/martincanalesdev/" class="social-link" aria-label="LinkedIn de Martin" target="_blank" rel="noopener noreferrer">
-                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                LI
-              </a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ======================== WHATSAPP SECTION ======================== -->
-    <section class="whatsapp-section" aria-labelledby="contact-heading">
-      <div class="ws-inner">
-
-        <!-- Panel izquierdo: imagen / decoración pixel art -->
-        <div class="ws-art-panel" aria-hidden="true">
-          <div class="ws-art-frame">
-            <div class="art-pixel-decoration"></div>
-            <img src="/assets/contactanosss.webp" alt="" class="ws-art-image">
-            <div class="art-label">[ CONTACT_PORTAL.PNG ]</div>
-          </div>
-        </div>
-
-        <!-- Panel derecho: CTA -->
-        <div class="ws-cta-panel">
-          <div class="cta-header">
-            <div class="section-label">[ NUEVA MISIÓN ]</div>
-            <h2 id="contact-heading">Contactanos por<br><span class="blue">WhatsApp</span></h2>
-            <p class="cta-subtitle">Respondemos rápido y estamos listos para ayudarte</p>
-          </div>
-
-          <ul class="benefits-list" aria-label="Beneficios de contactarnos">
-            <li class="benefit-item">
-              <div class="benefit-icon" aria-hidden="true">⚡</div>
-              <div class="benefit-text">
-                <h4>Respuesta Inmediata</h4>
-                <p>No esperarás horas, te contestamos al instante</p>
-              </div>
-            </li>
-            <li class="benefit-item">
-              <div class="benefit-icon" aria-hidden="true">💰</div>
-              <div class="benefit-text">
-                <h4>Nos Adaptamos a tu Bolsillo</h4>
-                <p>Planes flexibles para todos los presupuestos</p>
-              </div>
-            </li>
-            <li class="benefit-item">
-              <div class="benefit-icon" aria-hidden="true">🎯</div>
-              <div class="benefit-text">
-                <h4>Soluciones Personalizadas</h4>
-                <p>Tu proyecto es único, nuestra propuesta también</p>
-              </div>
-            </li>
-            <li class="benefit-item">
-              <div class="benefit-icon" aria-hidden="true">🤝</div>
-              <div class="benefit-text">
-                <h4>Asesoramiento Sin Compromiso</h4>
-                <p>Charlamos sobre tu idea sin presiones</p>
-              </div>
-            </li>
-          </ul>
-
-          <a href="https://wa.me/5492625419121?text=Hola!%20Quiero%20consultar%20sobre%20un%20proyecto"
-             class="whatsapp-btn"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="Escribirnos por WhatsApp">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-            <span>▶ ESCRIBINOS POR WHATSAPP</span>
-          </a>
-
-          <!-- Pixel decorativo inferior -->
-          <div class="cta-pixel-row" aria-hidden="true">
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ======================== FOOTER ======================== -->
+  <!-- Footer -->
   <footer>
     <div class="footer-logo">
-        <div class="footer-logo-icon">
-            <div class="footer-logo-bg"></div>
-            <div class="footer-logo-text">PF</div>
-        </div>
-        <span><span class="blue">PixelForge</span> Software</span>
+      <div class="footer-logo-icon">
+        <div class="footer-logo-bg"><img src="/assets/Cubito_static.png" alt="" class="footer-logo-icon"></div>
+        <div class="footer-logo-text"></div>
+      </div>
+      <span class="footer-logo-name"><span class="blue">PixelForge</span> Software</span>
     </div>
     <p>© 2024 PixelForge Software. Todos los derechos reservados.</p>
   </footer>
 
   <script src="/components/navbar/navbar.js"></script>
-  <script src="/js/contactanos.js"></script>
-  <script src="/components/footer/footer.js"></script>
   <script>
-    // Generar floating pixels dinámicamente
+    // ── Floating pixels
     const container = document.getElementById('floatingPixels');
     const colors = ['rgba(1,128,235,0.25)', 'rgba(0,220,255,0.15)', 'rgba(1,96,192,0.2)'];
     const sizes = [8, 12, 16, 20];
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 35; i++) {
       const px = document.createElement('div');
       px.className = 'pixel';
       const size = sizes[Math.floor(Math.random() * sizes.length)];
       px.style.cssText = `
         left: ${Math.random() * 100}%;
-        top: ${Math.random() * 100}%;
-        width: ${size}px;
-        height: ${size}px;
+        width: ${size}px; height: ${size}px;
         background: ${colors[Math.floor(Math.random() * colors.length)]};
-        animation-delay: ${Math.random() * 6}s;
-        animation-duration: ${3 + Math.random() * 5}s;
+        animation-delay: ${Math.random() * 8}s;
+        animation-duration: ${6 + Math.random() * 6}s;
       `;
       container.appendChild(px);
     }
+
+    // ── Logo hover gif
+    /*
+    const logo = document.getElementById('heroLogo');
+    if (logo) {
+      const staticSrc = logo.src;
+      const gifSrc = logo.dataset.gif;
+      logo.addEventListener('mouseenter', () => { logo.src = gifSrc; });
+      logo.addEventListener('mouseleave', () => { logo.src = staticSrc; });
+    }
+    */
+
+    // ── Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.07 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
+
 </html>

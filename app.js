@@ -13,16 +13,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Create floating pixels
-const floatingPixelsContainer = document.getElementById('floatingPixels');
-for (let i = 0; i < 6; i++) {
-    const pixel = document.createElement('div');
-    pixel.className = 'pixel';
-    pixel.style.left = Math.random() * 100 + '%';
-    pixel.style.top = Math.random() * 100 + '%';
-    pixel.style.animationDelay = Math.random() * 2 + 's';
-    pixel.style.animationDuration = (3 + Math.random() * 4) + 's';
-    floatingPixelsContainer.appendChild(pixel);
-}
+(function() {
+    const container = document.getElementById('floatingPixels');
+    if (!container) return;
+    const colors = ['rgba(1,128,235,0.25)', 'rgba(0,220,255,0.15)', 'rgba(1,96,192,0.2)'];
+    const sizes = [8, 12, 16, 20];
+    for (let i = 0; i < 40; i++) {
+        const px = document.createElement('div');
+        px.className = 'pixel';
+        const size = sizes[Math.floor(Math.random() * sizes.length)];
+        px.style.cssText = `
+            left:${Math.random()*100}%;
+            top:${Math.random()*100}%;
+            width:${size}px;
+            height:${size}px;
+            background:${colors[Math.floor(Math.random()*colors.length)]};
+            animation-delay:${Math.random()*6}s;
+            animation-duration:${3+Math.random()*5}s;
+        `;
+        container.appendChild(px);
+    }
+})();
 
 // Add animation to service cards on scroll
 const observerOptions = {
@@ -160,4 +171,95 @@ ventasModal?.addEventListener('click', (e) => {
         ventasModal.classList.remove('active');
         document.body.style.overflow = '';
     }
+});
+// =============================================================================
+// SELECTOR DE SISTEMAS (pfSelect)
+// =============================================================================
+
+const topbarTitles = [
+    'PIXELBARBER · v2.1',
+    'PIXELSTOCK · v1.4',
+    'ORAMGYM · v3.0',
+    'RESTAURANTE OS · v2.0',
+    'LANDING PAGE · DEPLOY',
+    'MARKETPLACE · v1.0',
+    'VOZ MARKETING · REDES',
+    'SOFTWARE A MEDIDA'
+];
+
+function pfSelect(el, idx) {
+    document.querySelectorAll('.pf-sys-item').forEach(i => i.classList.remove('active'));
+    el.classList.add('active');
+    document.querySelectorAll('.pf-panel').forEach(p => p.classList.remove('visible'));
+    document.getElementById('pfPanel' + idx).classList.add('visible');
+    document.getElementById('pfTopbarTitle').textContent = topbarTitles[idx];
+}
+
+// =============================================================================
+// BOTÓN EMOCIONAR
+// =============================================================================
+
+const btnEmocionar = document.getElementById('btnEmocionar');
+const heroLogo     = document.getElementById('heroLogo');
+let played = false;
+
+if (btnEmocionar && heroLogo) {
+    btnEmocionar.addEventListener('click', () => {
+        window.open('https://wa.me/5492625419121?text=Hola!%20me%20interesa%20saber%20mas%20sobre%20sus%20servicios!', '_blank');
+    });
+}
+
+// =============================================================================
+// MODALES GENERICOS (px-modal)
+// =============================================================================
+
+function openPxModal(id) {
+    document.getElementById(id).classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closePxModal(id) {
+    document.getElementById(id).classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.px-modal').forEach(modal => {
+    modal.addEventListener('click', e => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+});
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.px-modal.active').forEach(m => {
+            m.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+});
+
+// =============================================================================
+// ACORDEÓN DE SERVICIOS
+// =============================================================================
+
+document.querySelectorAll('.acc-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+        const item = trigger.closest('.acc-item');
+        const isOpen = item.classList.contains('open');
+
+        // Cerrar todos
+        document.querySelectorAll('.acc-item.open').forEach(openItem => {
+            openItem.classList.remove('open');
+            openItem.querySelector('.acc-trigger').setAttribute('aria-expanded', 'false');
+        });
+
+        // Abrir el clickeado si estaba cerrado
+        if (!isOpen) {
+            item.classList.add('open');
+            trigger.setAttribute('aria-expanded', 'true');
+        }
+    });
 });
