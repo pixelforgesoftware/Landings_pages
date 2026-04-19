@@ -38,7 +38,7 @@ const PROJECTS = [
     title: 'Shomer <span>Seguridad</span>',
     topTitle: 'PROYECTO_SEGURIDAD.exe',
     tag: 'Sistema de matriculas',
-    desc: 'Sistema de gestión de matricuas para administrar el ingreso al objetivo. Permite a los trabajadores obtener su oblea y a los de seguridad les permite editar esas obleas agregar nuevas o eliminarlas con 2 roles administrativos generados, gracias por la confianza!',
+    desc: 'Sistema de gestión de matriculas para administrar el ingreso al objetivo. Permite a los trabajadores obtener su oblea y a los de seguridad les permite editar esas obleas agregar nuevas o eliminarlas con 2 roles administrativos generados, gracias por la confianza!',
     techs: ['Vue.js', 'Laravel', 'MySQL', 'Twilio'],
     img: '/assets/shomer2.jpeg',
     link: '#'
