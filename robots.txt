@@ -1,0 +1,10 @@
+# /robots.txt
+User-agent: *
+Allow: /
+
+# Block admin/private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+Sitemap: https://sfplus.com.ar/sitemap.xml
