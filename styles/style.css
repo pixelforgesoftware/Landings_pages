@@ -6,6 +6,9 @@
   border-style: solid;
   border-color: currentColor;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
