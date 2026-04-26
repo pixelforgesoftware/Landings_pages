@@ -166,10 +166,10 @@ function initIntersectionObserver() {
 // --- Navbar & Mobile Toggle ---
 function initNavbar() {
     const nav = document.getElementById('main-nav');
-    const toggle = document.getElementById('mobile-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const closeBtn = document.getElementById('mobile-close');
-    
+    const mobileBtn = document.getElementById('mobile-toggle');
+    let menuOpen = false;
+
+    // 1. Scroll Effect
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             nav.classList.add('scrolled');
@@ -178,24 +178,58 @@ function initNavbar() {
         }
     });
 
-    if (toggle && mobileMenu) {
-        toggle.addEventListener('click', () => {
-            mobileMenu.classList.add('open');
+    // 2. Dynamic Mobile Menu Creation
+    const mobileMenuDiv = document.createElement('div');
+    mobileMenuDiv.className = "mobile-menu-dropdown";
+    mobileMenuDiv.innerHTML = `
+        <a href="#canales" class="mobile-nav-link">Canales</a>
+        <a href="#precios" class="mobile-nav-link">Precios</a>
+        <a href="#app" class="mobile-nav-link">App</a>
+        <a href="#contacto" class="mobile-nav-link">Contacto</a>
+        <a href="https://wa.me/5492625413267?text=Hola!%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20planes%20de%20SF%20Plus!%20TV." target="_blank" rel="noopener noreferrer" class="mobile-btn-contratar">Contratar ahora</a>
+    `;
+
+    // Add to nav container
+    const navContainer = nav.querySelector('.container');
+    if (navContainer) {
+        navContainer.appendChild(mobileMenuDiv);
+    }
+
+    // Close menu when clicking a link
+    mobileMenuDiv.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuOpen = false;
+            mobileMenuDiv.style.display = "none";
+            updateMobileBtnIcon();
         });
+    });
 
-        if (closeBtn) {
-            closeBtn.addEventListener('click', () => {
-                mobileMenu.classList.remove('open');
-            });
+    function updateMobileBtnIcon() {
+        if (!mobileBtn) return;
+        if (menuOpen) {
+            mobileBtn.innerHTML = '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>';
+        } else {
+            mobileBtn.innerHTML = '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>';
         }
+    }
 
-        // Close menu when clicking a link
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('open');
-            });
+    if (mobileBtn) {
+        mobileBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent closing when clicking the button itself
+            menuOpen = !menuOpen;
+            mobileMenuDiv.style.display = menuOpen ? "flex" : "none";
+            updateMobileBtnIcon();
         });
     }
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (menuOpen && !nav.contains(e.target)) {
+            menuOpen = false;
+            mobileMenuDiv.style.display = "none";
+            updateMobileBtnIcon();
+        }
+    });
 }
 
 // --- Tabs ---
