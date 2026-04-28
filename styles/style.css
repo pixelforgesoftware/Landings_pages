@@ -105,6 +105,12 @@ img, video {
   color: #3399FF;
 }
 
+.nav-logo-img {
+  height: 2rem;
+  width: auto;
+  display: block;
+}
+
 .nav-links {
   display: none;
   align-items: center; gap: 0.25rem;
@@ -1252,6 +1258,12 @@ img, video {
 }
 
 .footer-brand-name span { color: #3399FF; }
+
+.footer-logo-img {
+  height: 2rem;
+  width: auto;
+  display: block;
+}
 
 .footer-desc {
   color: rgba(219, 234, 254, 0.7);
