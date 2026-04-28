@@ -210,6 +210,18 @@ body {
     color: var(--accent);
 }
 
+.nav-logo-img {
+    height: 2rem;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-logo-img {
+    height: 2rem;
+    width: auto;
+    object-fit: contain;
+}
+
 .nav-links {
     display: none;
     align-items: center;
