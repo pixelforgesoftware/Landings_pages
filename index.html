@@ -334,7 +334,7 @@
       <form id="rsvp-form" class="rsvp-form-container">
         <div class="form-group">
           <label class="form-label">Nombre Completo</label>
-          <input type="text" class="form-input" required placeholder="Ej: Familia Pérez o Juan Gómez">
+          <input type="text" name="nombre" class="form-input" required placeholder="Ej: Familia Pérez o Juan Gómez">
         </div>
         <div class="form-group">
           <label class="form-label">Cantidad de Invitados</label>
@@ -349,21 +349,21 @@
           <div class="menu-options-grid">
             <label class="menu-option">
               <input type="radio" name="menu" value="carne" required checked>
-              <div class="menu-card"><div class="menu-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 4C11.5 4 8 6 6 9C4 12 4 16 7 19C9 21 13 21 16 19C19 17 21 13 20 9C19 6 17 4 15 4Z" fill="#E86C6C" stroke="#A84D4D" stroke-width="1.2"/></svg></div><span class="menu-name">Carne</span></div>
+              <div class="menu-card"><div class="menu-icon">🥩</div><span class="menu-name">Carne</span></div>
             </label>
             <label class="menu-option">
               <input type="radio" name="menu" value="vegetariano">
-              <div class="menu-card"><div class="menu-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="11" r="5" fill="#4ADE80"/></svg></div><span class="menu-name">Vegetariano</span></div>
+              <div class="menu-card"><div class="menu-icon">🥗</div><span class="menu-name">Vegetariano</span></div>
             </label>
             <label class="menu-option">
               <input type="radio" name="menu" value="sintacc">
-              <div class="menu-card"><div class="menu-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10 14V8M14 14V8" stroke="#FACC15" stroke-width="1.5"/></svg></div><span class="menu-name">Sin TACC</span></div>
+              <div class="menu-card"><div class="menu-icon">🌾</div><span class="menu-name">Sin TACC</span></div>
             </label>
           </div>
         </div>
         <div class="form-group last">
           <label class="form-label">Alergias o comentarios</label>
-          <input type="text" class="form-input" placeholder="Ej: Celíaco, sin nueces, etc.">
+          <input type="text" name="alergias" class="form-input" placeholder="Ej: Celíaco, sin nueces, etc.">
         </div>
         <button type="submit" class="btn-primary">Confirmar Asistencia</button>
       </form>
@@ -373,6 +373,7 @@
   <footer class="site-footer">
     <p class="footer-names">Yesica & Guillermo</p>
     <p class="footer-date">24 de octubre · 2026</p>
+    <p class="footer-credits">Diseño por <a href="https://pixelforgesoftware.site/" target="_blank"><strong>Pixel Forge</strong></a></p>
   </footer>
 
   <script src="./scripts/main.js"></script>

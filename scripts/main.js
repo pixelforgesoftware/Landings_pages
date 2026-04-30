@@ -69,26 +69,58 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(updateCountdown, 1000);
   updateCountdown(); // Llamada inicial
 
-  // 4. Simulador del Formulario RSVP
+  // 4. Integración Real del Formulario RSVP (Google Sheets)
   const rsvpForm = document.getElementById('rsvp-form');
+  // URL de tu Web App desplegada en Apps Script
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyEaHCyM98mx4b2mS06-jlkV90YRaV6iy2yWkhwZqcogMFR4aTyEcijkPMjZFJTCXPe/exec';
+
   if (rsvpForm) {
     rsvpForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
-      const btn = rsvpForm.querySelector('button');
+      const btn = rsvpForm.querySelector('.btn-primary');
       const originalText = btn.innerText;
       btn.innerText = "Enviando...";
       btn.disabled = true;
 
-      // Simular tiempo de carga
-      setTimeout(() => {
+      // Recolectar datos en formato URLSearchParams (más compatible)
+      const formData = new FormData(rsvpForm);
+      const params = new URLSearchParams();
+      params.append('nombre', formData.get('nombre'));
+      params.append('invitados', formData.get('guests'));
+      params.append('menu', formData.get('menu'));
+      params.append('alergias', formData.get('alergias') || 'Ninguna');
+
+      // Enviar a Google Apps Script
+      fetch(SCRIPT_URL + "?action=rsvp", {
+        method: 'POST',
+        mode: 'no-cors',
+        body: params
+      })
+      .then(() => {
+        // Al usar 'no-cors' no podemos leer la respuesta, pero si llega aquí es éxito
         rsvpForm.innerHTML = `
-          <div style="text-align: center; padding: 40px 0;">
-            <h3 class="font-serif" style="font-size: 2rem; color: var(--color-terracota); margin-bottom: 16px;">¡Gracias!</h3>
-            <p style="color: var(--color-text-medium);">Tu asistencia fue confirmada. Nos vemos el 24 de octubre.</p>
+          <div class="animate-fade-in" style="text-align: center; padding: 40px 0;">
+            <div style="margin-bottom: 24px;">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#C1765A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="font-serif" style="font-size: 2rem; color: var(--color-terracota); margin-bottom: 16px;">¡Confirmado!</h3>
+            <p style="color: var(--color-text-medium); font-size: 1.1rem; line-height: 1.6;">
+              Muchas gracias por confirmar. <br>
+              ¡Nos vemos el 24 de octubre!
+            </p>
           </div>
         `;
-      }, 1500);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Hubo un problema al enviar tu confirmación. Por favor, reintentá en unos minutos.');
+        btn.innerText = originalText;
+        btn.disabled = false;
+      });
     });
   }
 
