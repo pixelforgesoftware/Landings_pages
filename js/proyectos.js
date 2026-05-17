@@ -75,6 +75,16 @@ const PROJECTS = [
   },
   {
     num: '08',
+    title: 'SF Plus <span>Internet</span>',
+    topTitle: 'PROYECTO_SFPLUS.exe',
+    tag: 'Agencia de internet y TV',
+    desc: 'SF Plus es una consultora que brinda servicios de internet y canales de TV a sus clientes. Desarrollamos su presencia digital para que lleguen a más usuarios y gestionen mejor su cartera de clientes. Gracias por confiar en nosotros!',
+    techs: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'],
+    img: '/assets/sfplus.webp', // ← AGREGÁ ACÁ LA FOTO DEL CLIENTE
+    link: 'https://sfplus.com.ar/'
+  },
+  {
+    num: '09',
     title: 'Tu <span>Proyecto</span>',
     topTitle: 'PROYECTO_TUYO.exe',
     tag: '¿El próximo?',
