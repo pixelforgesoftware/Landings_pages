@@ -271,6 +271,31 @@ button:hover {
   border: 1px solid rgba(201, 169, 110, 0.2);
 }
 
+.rsvp-price-banner {
+  background: linear-gradient(135deg, rgba(201, 169, 110, 0.08) 0%, rgba(193, 118, 90, 0.05) 100%);
+  border: 1px dashed var(--color-gold);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.rsvp-price-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text-medium);
+  margin: 0;
+}
+
+.rsvp-price-amount {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-terracota);
+  display: inline-block;
+  margin: 0 4px;
+}
+
 .form-group {
   margin-bottom: 24px;
 }
@@ -1649,6 +1674,37 @@ button:hover {
   margin-top: 8px;
 }
 
+.btn-download-invitation {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  background: var(--color-terracota);
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(193, 118, 90, 0.15);
+  cursor: pointer;
+}
+
+.btn-download-invitation:hover {
+  background: var(--color-terracota-deep);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(193, 118, 90, 0.25);
+}
+
+.btn-download-invitation:active {
+  transform: translateY(0);
+}
+
 /* Sello de lacre al pie de la tarjeta */
 .card-wax-seal {
   position: absolute;
@@ -2211,5 +2267,62 @@ section.bg-pattern-light {
 @media (min-width: 1024px) {
   .photo-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- Botón Flotante de Música de Fondo --- */
+.music-toggle-btn {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(250, 245, 239, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(201, 169, 110, 0.4);
+  color: var(--color-terracota);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 16px rgba(193, 118, 90, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 !important; /* Reset body default button paddings */
+}
+
+.music-toggle-btn:hover {
+  background: var(--color-cream-warm);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(193, 118, 90, 0.22);
+  border-color: var(--color-terracota);
+}
+
+.music-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+.music-toggle-btn.is-playing {
+  animation: music-pulse 2s infinite alternate;
+  border-color: var(--color-terracota);
+}
+
+@keyframes music-pulse {
+  0% {
+    box-shadow: 0 4px 16px rgba(193, 118, 90, 0.12);
+  }
+  100% {
+    box-shadow: 0 4px 24px rgba(193, 118, 90, 0.28), 0 0 10px rgba(193, 118, 90, 0.15);
+  }
+}
+
+@media (max-width: 480px) {
+  .music-toggle-btn {
+    top: 16px;
+    left: 16px;
+    width: 40px;
+    height: 40px;
   }
 }

@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Cuenta Regresiva (Countdown)
-  // Fecha objetivo: 24 de octubre de 2026 a las 19:00 hs
-  const targetDate = new Date("2026-10-24T19:00:00").getTime();
+  // Fecha objetivo: 9 de octubre de 2026 a las 19:00 hs
+  const targetDate = new Date("2026-10-09T19:00:00").getTime();
   
   const elDays = document.getElementById('days');
   const elHours = document.getElementById('hours');
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 class="font-serif" style="font-size: 2rem; color: var(--color-terracota); margin-bottom: 16px;">¡Confirmado!</h3>
             <p style="color: var(--color-text-medium); font-size: 1.1rem; line-height: 1.6;">
               Muchas gracias por confirmar. <br>
-              ¡Nos vemos el 24 de octubre!
+              ¡Nos vemos el 9 de octubre!
             </p>
           </div>
         `;
@@ -187,6 +187,33 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         toggleEnvelope();
+      }
+    });
+  }
+
+  // 6. Lógica de Música de Fondo (Play/Pause)
+  const musicToggle = document.getElementById('music-toggle');
+  const bgMusic = document.getElementById('background-music');
+  const playIcon = document.getElementById('music-play-icon');
+  const pauseIcon = document.getElementById('music-pause-icon');
+
+  if (musicToggle && bgMusic && playIcon && pauseIcon) {
+    musicToggle.addEventListener('click', () => {
+      if (bgMusic.paused) {
+        bgMusic.play()
+          .then(() => {
+            musicToggle.classList.add('is-playing');
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'block';
+          })
+          .catch(error => {
+            console.error("No se pudo iniciar la música:", error);
+          });
+      } else {
+        bgMusic.pause();
+        musicToggle.classList.remove('is-playing');
+        playIcon.style.display = 'block';
+        pauseIcon.style.display = 'none';
       }
     });
   }
