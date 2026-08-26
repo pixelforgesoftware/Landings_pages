@@ -1,0 +1,150 @@
+/* Sistema de diseño institucional - Parroquia San Francisco de Asís y Colegio Sagrada Familia */
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Paleta institucional */
+  --color-blue: #1e3a5f;
+  --color-blue-deep: #14283f;
+  --color-blue-soft: #e9eff6;
+
+  --color-red: #8c2f39;
+  --color-red-deep: #6d2129;
+  --color-red-soft: #f6ebee;
+
+  --color-gold: #ab8a3d;
+  --color-gold-bright: #cfae5e;
+  --color-gold-soft: #f4eddc;
+
+  --color-paper: #f7f4ee;
+  --color-cream: #fcfaf5;
+  --color-warm-white: #fffdf8;
+
+  --color-ink: #2a2e38;
+  --color-ink-soft: #5b6170;
+  --color-line: #e3ddcf;
+
+  /* Tipografías */
+  --font-serif: "Merriweather", Georgia, "Times New Roman", serif;
+  --font-sans: "Source Sans 3", "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ------------------------------------------------------------
+   Estilos base
+   ------------------------------------------------------------ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--color-gold-soft);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Contenedor estándar con padding responsivo */
+.wrap {
+  width: 100%;
+  max-width: 74rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 640px) {
+  .wrap { padding-inline: 1.75rem; }
+}
+@media (min-width: 1024px) {
+  .wrap { padding-inline: 2.25rem; }
+}
+
+/* Separador institucional dorado */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-gold) 20%,
+    var(--color-gold) 80%,
+    transparent
+  );
+  opacity: 0.75;
+}
+
+/* Textura de fondo institucional con motivo de cruz */
+.pattern-cross {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M13 9h2v4h4v2h-4v4h-2v-4H9v-2h4z' fill='%23ab8a3d' fill-opacity='0.10'/%3E%3C/svg%3E");
+}
+
+/* Marco decorativo para imágenes destacadas */
+.frame-gold {
+  position: relative;
+}
+.frame-gold::after {
+  content: "";
+  position: absolute;
+  inset: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--color-gold) 65%, transparent);
+  pointer-events: none;
+}
+
+/* Animación sutil de entrada (respeta prefers-reduced-motion) */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Sombras personalizadas basadas en la paleta */
+.shadow-inst {
+  box-shadow: 0 8px 30px color-mix(in srgb, var(--color-blue) 10%, transparent);
+}
+.shadow-inst-lg {
+  box-shadow: 0 10px 40px color-mix(in srgb, var(--color-gold) 18%, transparent);
+}
+.shadow-header {
+  box-shadow: 0 2px 18px color-mix(in srgb, var(--color-blue) 9%, transparent);
+}
+
+/* Enlaces editoriales */
+.prose-link {
+  color: var(--color-blue);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-gold) 70%, transparent);
+  text-underline-offset: 3px;
+}
+.prose-link:hover {
+  color: var(--color-red);
+}

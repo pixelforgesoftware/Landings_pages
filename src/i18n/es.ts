@@ -1,0 +1,661 @@
+/**
+ * Diccionario de textos en español (idioma por defecto y referencia de tipos).
+ */
+
+export const es = {
+  common: {
+    parishShort: "San Francisco de Asís",
+    locationLine: "Real del Padre · San Rafael · Mendoza",
+    mottoA: "Luz del mundo",
+    mottoB: "Sal de la tierra",
+    pendingImage: "Imagen pendiente",
+    pendingLogo: "Logo pendiente",
+    mapPending: "Mapa pendiente",
+    imagePendingAria: "imagen pendiente",
+    soon: "Próximamente",
+    copy: "Copiar",
+    copied: "¡Copiado!",
+    skipToContent: "Saltar al contenido",
+    openMenu: "Abrir menú",
+    closeMenu: "Cerrar menú",
+    logos: {
+      parish: "Logo Parroquia — pendiente",
+      school: "Escudo Colegio — pendiente",
+    },
+    names: {
+      parish: "Parroquia San Francisco de Asís",
+      schoolShort: "Colegio Sagrada Familia de Nazareth",
+      schoolFull: "Colegio Parroquial 242 Sagrada Familia de Nazareth",
+      garden: "Jardín Maternal JP-338 San Francisco de Asís",
+    },
+    nav: {
+      home: "Inicio",
+      parish: "Parroquia",
+      school: "Colegio",
+      history: "Historia",
+      projects: "Proyectos",
+      gallery: "Galería",
+      collaborate: "Colaborar",
+      contact: "Contacto",
+    },
+    pageTitles: {
+      home: "Parroquia San Francisco de Asís | Real del Padre",
+      parish: "Parroquia | San Francisco de Asís",
+      school: "Colegio Sagrada Familia de Nazareth",
+      history: "Nuestra historia | San Francisco de Asís",
+      projects: "Proyectos | San Francisco de Asís",
+      gallery: "Galería | San Francisco de Asís",
+      collaborate: "Colaborar | San Francisco de Asís",
+      contact: "Contacto | San Francisco de Asís",
+    },
+  },
+
+  home: {
+    hero: {
+      eyebrow: "Real del Padre · San Rafael · Mendoza",
+      title: "Parroquia San Francisco de Asís",
+      subtitle: "Fe, educación y comunidad en Real del Padre",
+      quote: "Formamos personas, educamos en la fe y construimos comunidad.",
+      intro:
+        "Somos una comunidad parroquial y educativa de Real del Padre, San Rafael, Mendoza. Desde la fe acompañamos a niños, jóvenes, familias y comunidades a través de la educación, la evangelización y el servicio.",
+      ctaPrimary: "Conocé nuestra comunidad",
+      ctaSecondary: "Conocé nuestros proyectos",
+      ctaCollab: "Quiero colaborar",
+      photo: "Foto panorámica de la Parroquia San Francisco de Asís y su comunidad",
+    },
+    institutions: {
+      title: "Una misma comunidad, un mismo proyecto",
+      intro:
+        "La Parroquia, el Colegio y el Jardín Maternal forman parte de un único proyecto pastoral, educativo y comunitario.",
+      parishDesc:
+        "Erigida canónicamente el 5 de marzo de 1987, es el corazón evangelizador de nuestra comunidad.",
+      schoolDesc:
+        "Desde 2012 ofrece a niños y jóvenes una educación católica integral, cercana a sus familias.",
+      gardenDesc:
+        "Desde octubre de 2012 acompaña con cercanía los primeros pasos de los más pequeños.",
+    },
+    unity: {
+      eyebrow: "Una comunidad, una misión",
+      title: "Parroquia y Colegio: un mismo camino",
+      p1: "Desde 1987, la Parroquia San Francisco de Asís desarrolla en Real del Padre, Jaime Prats y diversos parajes rurales una misión evangelizadora, educativa, social y caritativa.",
+      p2: "Dentro de esa misión nació el Colegio Sagrada Familia de Nazareth. Para nuestra comunidad, la educación es una verdadera forma de evangelización y un servicio concreto a las familias.",
+      parishCardTitle: "Parroquia San Francisco de Asís",
+      parishCardDesc:
+        "La vida de fe, los sacramentos, la catequesis, la caridad y la misión rural.",
+      parishCardLink: "Conocer la Parroquia",
+      schoolCardTitle: "Colegio Sagrada Familia de Nazareth",
+      schoolCardDesc:
+        "Una educación católica integral que crece junto a las familias de la comunidad.",
+      schoolCardLink: "Conocer el Colegio",
+    },
+    stats: {
+      parish: "Fundación de la Parroquia",
+      school: "Inicio del Colegio",
+      students: "Alumnos, aproximadamente",
+      families: "Familias, aproximadamente",
+      levels: "Niveles educativos",
+    },
+    timeline: {
+      eyebrow: "Nuestra historia",
+      title: "Un camino que sigue creciendo",
+      link: "Conocer nuestra historia →",
+      items: [
+        { year: "1987", date: "5 de marzo", text: "La Parroquia San Francisco de Asís es erigida canónicamente." },
+        { year: "2012", date: "5 de marzo", text: "Comienza sus actividades el Colegio." },
+        { year: "2012", date: "2 de octubre", text: "Comienza el Jardín Maternal." },
+        { year: "2014", date: "", text: "Comienza el Nivel Primario." },
+        { year: "2021", date: "", text: "Comienza el Nivel Secundario." },
+        { year: "Hoy", date: "", text: "La comunidad continúa creciendo con nuevos proyectos educativos y con la futura Capilla San José." },
+      ],
+    },
+    school: {
+      eyebrow: "Colegio Sagrada Familia de Nazareth",
+      title: "Educar es también evangelizar",
+      intro:
+        "El Colegio Parroquial Sagrada Familia de Nazareth nació de una necesidad concreta de la comunidad: ofrecer a los niños y jóvenes de Real del Padre una educación católica integral, cercana a sus familias y profundamente vinculada con la vida comunitaria.",
+      levelsTitle: "Actualmente comprende",
+      levels: [
+        { name: "Jardín Maternal", desc: "Acompañamiento cercano en los primeros años de vida." },
+        { name: "Nivel Inicial", desc: "Los primeros pasos de la vida escolar." },
+        { name: "Nivel Primario", desc: "Una formación integral que crece junto a las familias." },
+        { name: "Nivel Secundario", desc: "Jóvenes que se preparan para el futuro desde la fe." },
+      ],
+      link: "Conocer el Colegio →",
+    },
+    values: {
+      eyebrow: "Nuestros valores",
+      title: "Lo que nos define",
+      list: [
+        "Fe",
+        "Responsabilidad",
+        "Libertad",
+        "Caridad",
+        "Respeto",
+        "Compromiso",
+        "Esfuerzo",
+        "Honestidad",
+        "Servicio",
+        "Espíritu comunitario",
+      ],
+    },
+    projects: {
+      eyebrow: "Proyectos",
+      title: "Seguimos creciendo",
+      intro:
+        "Nuestra historia demuestra que cada etapa del proyecto pudo concretarse gracias al esfuerzo de familias, docentes, alumnos, colaboradores y personas que creyeron en esta obra. Actualmente tenemos dos grandes proyectos.",
+      p1Kicker: "Proyecto educativo",
+      p1Title: "Nuevas aulas y biblioteca",
+      p1Goal: "Continuar fortaleciendo la infraestructura educativa del Colegio.",
+      p1NeedCount: "3 aulas · 1 biblioteca · equipamiento",
+      p1Cta: "Conocer proyecto",
+      p2Kicker: "Proyecto pastoral y comunitario",
+      p2Title: "Futura Capilla San José",
+      p2Text:
+        "Un nuevo espacio de oración y encuentro destinado a toda la comunidad parroquial y educativa. La futura Capilla San José será construida dentro del predio del Colegio, pero estará abierta a toda la comunidad.",
+      p2Photo: "Plano / render de la futura Capilla San José",
+      p2Cta: "Descubrir la futura Capilla",
+    },
+    collaborate: {
+      title: "Cada colaboración ayuda a construir futuro",
+      text: "Quien colabora con nuestra institución no está ayudando solamente a construir un edificio o adquirir materiales. Está ayudando a educar, formar y abrir nuevas oportunidades para niños y jóvenes. Está colaborando con las familias y con el crecimiento de toda una comunidad.",
+      cta: "Ver formas de colaborar",
+    },
+  },
+
+  parish: {
+    eyebrow: "Nuestra Parroquia",
+    title: "Parroquia San Francisco de Asís",
+    location: "Real del Padre, San Rafael, Mendoza, Argentina",
+    heroPhoto: "Foto principal de la Parroquia San Francisco de Asís",
+    history: {
+      eyebrow: "Historia",
+      title: "Una misión desde 1987",
+      p1: "La Parroquia San Francisco de Asís fue erigida canónicamente el 5 de marzo de 1987.",
+      p2: "Desde entonces desarrolla una importante misión evangelizadora, educativa, social y caritativa.",
+      p3: "Su acción alcanza Real del Padre, Jaime Prats y numerosos parajes rurales.",
+      reachTitle: "Nuestra misión llega a",
+      reach: ["Real del Padre", "Jaime Prats", "Numerosos parajes rurales"],
+    },
+    life: {
+      eyebrow: "Vida parroquial",
+      title: "Una presencia que va más allá de los sacramentos",
+      intro: "La vida parroquial no se limita a la celebración de los sacramentos. También desarrolla:",
+      items: [
+        "Catequesis",
+        "Formación de niños",
+        "Formación de jóvenes",
+        "Formación de adultos",
+        "Atención a enfermos",
+        "Atención a ancianos",
+        "Obras de caridad",
+        "Misiones rurales",
+        "Iniciativas de promoción humana",
+      ],
+    },
+    gallery: {
+      title: "La vida de la Parroquia",
+      intro: "Fotografías que se incorporarán próximamente.",
+      items: [
+        "Parroquia exterior",
+        "Interior de la Parroquia",
+        "Celebración religiosa",
+        "Comunidad",
+        "Misiones rurales",
+        "Capillas y comunidades rurales",
+      ],
+    },
+    mass: {
+      eyebrow: "Celebraciones",
+      title: "Horarios de Misa",
+      winterTitle: "Horario de invierno",
+      winterDays: "Martes a domingos",
+      winterNote:
+        "Desde después de Pascua hasta después del 4 de octubre, fiesta de San Francisco de Asís.",
+      summerTitle: "Horario de verano",
+      summerDays: "Martes a viernes",
+      summerNote: "Hasta Pascua.",
+      sourceNote: "Horarios informados por la institución.",
+    },
+    cta: {
+      text: "¿Tenés alguna consulta sobre la vida parroquial? Escribinos y con gusto te respondemos.",
+      button: "Ir a contacto",
+    },
+  },
+
+  school: {
+    eyebrow: "Nuestro Colegio",
+    title: "Colegio Parroquial 242 Sagrada Familia de Nazareth",
+    subtitle: "El proyecto educativo comprende también el Jardín Maternal JP-338 San Francisco de Asís.",
+    heroPhoto: "Foto panorámica del Colegio",
+    identity: {
+      eyebrow: "Identidad",
+      title: "Una educación católica integral",
+      p1: "Nuestro Colegio Parroquial Sagrada Familia de Nazareth es una institución educativa católica que busca ofrecer una formación integral a niños y jóvenes.",
+      p2: "Queremos que nuestros alumnos puedan crecer académicamente, pero también como personas: libres, responsables, solidarias y abiertas a la trascendencia.",
+      p3: "La fe cristiana forma parte de nuestra identidad y de nuestra manera de comprender la educación.",
+      p4: "Entendemos la educación como una tarea compartida entre escuela, familia y comunidad. Buscamos construir vínculos cercanos y acompañar a las familias en la formación de sus hijos.",
+      p5: "El proyecto educativo se encuentra profundamente vinculado con la vida de la Parroquia San Francisco de Asís.",
+    },
+    figures: {
+      students: "Alumnos, aproximadamente",
+      families: "Familias, aproximadamente",
+    },
+    levels: {
+      eyebrow: "Propuesta educativa",
+      title: "Niveles educativos",
+      intro: "El proyecto educativo acompaña el crecimiento de niños y jóvenes a través de cuatro niveles.",
+      items: [
+        { name: "Jardín Maternal", note: "JP-338 San Francisco de Asís" },
+        { name: "Nivel Inicial", note: "" },
+        { name: "Nivel Primario", note: "" },
+        { name: "Nivel Secundario", note: "" },
+      ],
+    },
+    activities: {
+      eyebrow: "Vida escolar",
+      title: "Actividades del Colegio",
+      intro: "La vida del Colegio se expresa en una rica variedad de actividades académicas, pastorales y comunitarias.",
+      items: [
+        "Actividades académicas",
+        "Actividades pastorales",
+        "Celebraciones religiosas",
+        "Catequesis",
+        "Actos escolares",
+        "Actividades culturales",
+        "Actividades deportivas",
+        "Actividades artísticas",
+        "Talleres para padres",
+        "Propuestas formativas para las familias",
+        "Actividades comunitarias",
+      ],
+      photos: [
+        "Alumnos y docentes",
+        "Actividades educativas",
+        "Actividades deportivas",
+        "Celebración religiosa en el Colegio",
+      ],
+      photosNote:
+        "Las fotografías institucionales se publicarán con las autorizaciones de difusión correspondientes.",
+    },
+    hours: {
+      eyebrow: "Organización",
+      title: "Horarios del Colegio",
+      days: "Lunes a viernes",
+      items: [
+        { name: "Jardín Maternal", time: "09:00 – 12:00" },
+        { name: "Nivel Primario", time: "08:00 – 12:45" },
+        { name: "Nivel Secundario", time: "13:30 – 18:30" },
+      ],
+      initialNote: "El horario del Nivel Inicial no se encuentra publicado; pueden consultarlo por WhatsApp o correo electrónico.",
+    },
+    cta: {
+      text: "El Colegio sigue creciendo. Cada colaboración hace posible nuevas aulas, mejores espacios y más oportunidades.",
+      button: "Ver cómo colaborar",
+    },
+  },
+
+  history: {
+    eyebrow: "Nuestra historia",
+    title: "Una historia de crecimiento",
+    intro1:
+      "La idea del Colegio nació de una necesidad concreta: ofrecer a los niños y jóvenes de Real del Padre una educación católica integral, cercana a sus familias y vinculada profundamente con la comunidad.",
+    intro2:
+      "La institución fue creada para no limitarse a transmitir conocimientos, sino para formar integralmente a la persona: intelectual, humana, social y espiritualmente.",
+    intro3: "El crecimiento fue progresivo.",
+    timelineTitle: "Un camino construido entre todos",
+    timeline: [
+      {
+        year: "1987",
+        title: "Nace la Parroquia",
+        text: "El 5 de marzo de 1987 se erige canónicamente la Parroquia San Francisco de Asís.",
+        photos: ["Imagen de San Francisco de Asís"],
+      },
+      {
+        year: "2012",
+        title: "Nace el Colegio",
+        text: "El 5 de marzo de 2012 comienza sus actividades el Colegio.",
+        photos: ["Comienzos del Colegio", "Primeras aulas", "Primera etapa de construcción"],
+      },
+      {
+        year: "2012",
+        title: "Jardín Maternal",
+        text: "El 2 de octubre comienza el Jardín Maternal.",
+        photos: ["Crecimiento del Jardín Maternal"],
+      },
+      {
+        year: "2014",
+        title: "Nivel Primario",
+        text: "Comienza el Nivel Primario.",
+        photos: ["Crecimiento del Nivel Primario", "Primeros docentes", "Inauguraciones"],
+      },
+      {
+        year: "2021",
+        title: "Nivel Secundario",
+        text: "Comienza una nueva etapa con el Nivel Secundario.",
+        photos: ["Inicio del Nivel Secundario"],
+      },
+      {
+        year: "Hoy",
+        title: "Seguimos creciendo",
+        text: "La comunidad trabaja actualmente en 3 nuevas aulas, una biblioteca, mejores espacios educativos y la futura Capilla San José.",
+        photos: ["Colegio actual", "Plano / render de la futura Capilla San José"],
+      },
+    ],
+    community: {
+      eyebrow: "Comunidad",
+      title: "Una obra de toda la comunidad",
+      p1: "Muchas etapas fueron posibles gracias al esfuerzo de docentes, familias, alumnos y colaboradores. Muchas familias participaron directamente mediante trabajo, materiales, construcción, pintura y mantenimiento.",
+      quote:
+        "Cada aula, cada espacio y cada etapa del Colegio tienen detrás una historia de sacrificio, trabajo y esperanza.",
+    },
+    cta: {
+      title: "La historia continúa",
+      text: "Hoy seguimos construyendo: nuevas aulas, una biblioteca y la futura Capilla San José.",
+      projects: "Conocer los proyectos actuales",
+      collaborate: "Quiero colaborar",
+    },
+  },
+
+  projects: {
+    eyebrow: "Proyectos",
+    title: "Construimos el futuro juntos",
+    subtitle:
+      "Nuestra comunidad continúa creciendo a través de proyectos educativos y pastorales que buscan servir a las familias de Real del Padre y fortalecer la vida comunitaria.",
+    needsTitle: "Necesidades",
+    educational: {
+      kicker: "Proyecto educativo",
+      title: "Crecimiento educativo",
+      subtitle: "3 nuevas aulas y una biblioteca",
+      description:
+        "Actualmente el Colegio necesita ampliar su infraestructura para acompañar el crecimiento del proyecto educativo.",
+      needs: [
+        "Construcción de 3 nuevas aulas",
+        "Construcción de 1 biblioteca",
+        "Equipamiento tecnológico",
+        "Laboratorio",
+        "Equipamiento para nuevos espacios",
+        "Mobiliario",
+        "Materiales didácticos",
+        "Mejoras",
+        "Mantenimiento general",
+      ],
+      photos: ["Plano del proyecto", "Estado actual", "Construcción", "Avances futuros"],
+      progressTitle: "Avances del proyecto",
+      progressText: "Próximamente compartiremos aquí las novedades y avances de esta obra.",
+      cta: "Colaborar con este proyecto",
+    },
+    chapel: {
+      kicker: "Proyecto pastoral y comunitario",
+      title: "Futura Capilla San José",
+      lead: "La futura Capilla San José representa un nuevo sueño para nuestra comunidad.",
+      p2: "Estará ubicada dentro del predio del Colegio Sagrada Familia de Nazareth, pero no será una capilla exclusivamente escolar: será un lugar destinado a toda la comunidad parroquial y educativa.",
+      spacesTitle: "Un espacio para",
+      spaces: ["la oración", "la celebración", "la adoración", "la formación", "el encuentro"],
+      unity: "Esta obra expresa la profunda unidad que buscamos vivir entre Parroquia, Escuela y Comunidad.",
+      needs: [
+        "Planificación",
+        "Construcción",
+        "Materiales",
+        "Terminación",
+        "Iluminación",
+        "Bancos",
+        "Mobiliario",
+        "Equipamiento litúrgico",
+        "Ornamentación religiosa",
+      ],
+      photos: [
+        "Imagen de San José",
+        "Plano de la futura Capilla",
+        "Render de la futura Capilla",
+        "Terreno de la futura Capilla",
+        "Avances de construcción",
+        "Futuras fotografías de obra",
+      ],
+      updatesTitle: "Seguí el crecimiento de la obra",
+      updatesText:
+        "Este espacio está preparado para compartir, a medida que la obra avance, actualizaciones, fotografías, hitos y testimonios de colaboradores.",
+      updatesEmpty: "Todavía no publicamos novedades de esta obra.",
+      cta: "Colaborar con la Capilla",
+    },
+    bottom: {
+      text: "Cada aporte, grande o pequeño, ayuda a que estos proyectos se conviertan en realidad.",
+      cta: "Ver formas de colaborar",
+    },
+  },
+
+  gallery: {
+    eyebrow: "Galería",
+    title: "La vida de nuestra comunidad",
+    intro:
+      "Un recorrido visual por la historia, las actividades y el crecimiento de la comunidad parroquial y educativa.",
+    note: "Galería en preparación: cada recuadro indica la fotografía que se incorporará próximamente.",
+    filterAll: "Todas",
+    videos: {
+      title: "Videos institucionales",
+      text: "Este espacio está preparado para incorporar videos sobre la historia del Colegio, el trabajo comunitario, los proyectos y la futura Capilla San José.",
+      empty: "Todavía no hay videos publicados.",
+    },
+    categories: [
+      {
+        id: "parroquia",
+        name: "Parroquia",
+        items: [
+          "Exterior de la Parroquia San Francisco de Asís",
+          "Interior de la Parroquia",
+          "Celebraciones religiosas",
+          "Vida parroquial",
+        ],
+      },
+      {
+        id: "colegio",
+        name: "Colegio",
+        items: [
+          "Instalaciones del Colegio",
+          "Aulas",
+          "Alumnos y docentes",
+          "Familias",
+          "Actividades educativas",
+        ],
+      },
+      {
+        id: "actividades",
+        name: "Actividades",
+        items: [
+          "Actos escolares",
+          "Actividades deportivas",
+          "Actividades culturales",
+          "Actividades artísticas",
+          "Actividades pastorales",
+        ],
+      },
+      {
+        id: "comunidad",
+        name: "Comunidad y misión",
+        items: [
+          "Misiones rurales",
+          "Actividades comunitarias",
+          "Capillas y comunidades de la jurisdicción",
+        ],
+      },
+      {
+        id: "historia",
+        name: "Nuestra historia",
+        items: [
+          "Comienzos del Colegio",
+          "Primeras aulas",
+          "Construcción",
+          "Primeros docentes",
+          "Participación de las familias",
+          "Inauguraciones",
+          "Crecimiento de los niveles",
+        ],
+      },
+      {
+        id: "capilla",
+        name: "Capilla San José",
+        items: [
+          "Imagen de San José",
+          "Bocetos",
+          "Planos",
+          "Render",
+          "Terreno",
+          "Construcción",
+          "Avances futuros",
+        ],
+      },
+    ],
+  },
+
+  collaborate: {
+    eyebrow: "Colaborar",
+    title: "Cada colaboración construye futuro",
+    quote:
+      "Nuestra historia demuestra que, cuando una comunidad se une y alguien cree en un sueño, ese sueño puede convertirse poco a poco en una obra capaz de transformar muchas vidas.",
+    lead:
+      "Quien colabora con nuestra institución no está ayudando solamente a construir un edificio o adquirir materiales. Está ayudando a educar, formar y abrir nuevas oportunidades para niños y jóvenes, a colaborar con las familias y a contribuir al crecimiento de toda una comunidad.",
+    waysTitle: "Formas de colaborar",
+    waysIntro:
+      "Personas, familias, empresas, instituciones, fundaciones, parroquias y organizaciones pueden colaborar de muchas maneras.",
+    materials: {
+      title: "Materiales y aportes",
+      items: [
+        "Aporte económico",
+        "Materiales de construcción",
+        "Equipamiento tecnológico",
+        "Libros",
+        "Materiales lúdicos",
+        "Materiales didácticos",
+        "Equipamiento para aulas",
+        "Equipamiento para biblioteca",
+        "Materiales para la futura Capilla San José",
+        "Mobiliario",
+        "Equipamiento litúrgico",
+      ],
+    },
+    modalities: {
+      title: "Modalidades",
+      items: [
+        "Colaboración puntual",
+        "Colaboración mensual",
+        "Financiación total de un proyecto",
+        "Financiación parcial de un proyecto",
+        "Colaboración con un aula",
+        "Colaboración con la biblioteca",
+        "Colaboración con la Capilla San José",
+        "Colaboración institucional",
+      ],
+    },
+    national: {
+      title: "Desde Argentina",
+      text: "Escribinos por WhatsApp o por correo electrónico para coordinar tu colaboración. Cada aporte se conversa y se acuerda de manera personal y transparente.",
+      whatsapp: "Escribir por WhatsApp",
+      email: "Enviar un correo",
+    },
+    international: {
+      eyebrow: "Colaboradores internacionales",
+      title: "Vínculos de solidaridad con el mundo",
+      text: "La institución desea establecer vínculos de solidaridad con personas, familias, instituciones, fundaciones y comunidades de diferentes lugares del mundo.",
+      historyTitle: "Antecedentes de colaboración internacional",
+      historyText:
+        "Organismos eclesiales y fundaciones colaboraron anteriormente en distintas etapas del crecimiento del Colegio, entre ellos:",
+      historyNote:
+        "Estas colaboraciones ayudaron a financiar cuatro etapas del crecimiento de la Escuela Parroquial.",
+      donationTitle: "Colaboraciones desde el exterior",
+      donationIntro:
+        "Quienes deseen colaborar desde el exterior pueden realizar su donación a través de la cuenta en euros de la Diócesis de San Rafael en el Istituto per le Opere di Religione (IOR).",
+      warningTitle: "Antes de realizar la transferencia",
+      warningText:
+        "Solicitamos comunicarse con el IOR y especificar que la donación está destinada a:",
+      or: "o",
+      labels: {
+        holder: "Titular",
+        institution: "Institución",
+        account: "Cuenta en euros",
+        iban: "IBAN",
+        swift: "SWIFT / BIC",
+        concept: "Concepto de la transferencia",
+        address: "Dirección",
+      },
+    },
+    form: {
+      title: "Escribinos",
+      intro:
+        "Completá el formulario y nos pondremos en contacto. Sirve tanto para personas e instituciones de Argentina como del exterior.",
+      name: "Nombre",
+      country: "País",
+      email: "Correo electrónico",
+      whatsapp: "WhatsApp",
+      whatsappOptional: "opcional",
+      organization: "Institución / organización",
+      collabType: "Tipo de colaboración",
+      project: "Proyecto que deseas apoyar",
+      selectPlaceholder: "Seleccioná una opción…",
+      message: "Mensaje",
+      messagePlaceholder: "Contanos cómo te gustaría colaborar…",
+      privacy: "He leído y acepto que mis datos sean utilizados para responder esta consulta.",
+      submit: "Quiero ponerme en contacto",
+      required: "Este campo es obligatorio.",
+      invalidEmail: "Ingresá un correo electrónico válido.",
+      collabOptions: [
+        "Aporte económico",
+        "Materiales",
+        "Equipamiento",
+        "Mobiliario",
+        "Tecnología",
+        "Colaboración institucional",
+        "Otro",
+      ],
+      projectOptions: [
+        "Colegio en general",
+        "Proyecto educativo",
+        "Nuevas aulas",
+        "Biblioteca",
+        "Futura Capilla San José",
+        "Necesidad específica",
+      ],
+      demoTitle: "Formulario en modo demostración",
+      demoText:
+        "Este formulario todavía no está conectado a un servidor, por lo que la consulta no se envió realmente. Para que tu mensaje llegue de inmediato, escribinos por WhatsApp o por correo electrónico.",
+    },
+  },
+
+  contact: {
+    eyebrow: "Contacto",
+    title: "Estamos cerca, escribinos",
+    intro:
+      "Podés comunicarte con nosotros desde Argentina o desde cualquier parte del mundo. Con gusto respondemos consultas de personas, familias, instituciones y organizaciones.",
+    whatsapp: {
+      title: "WhatsApp",
+      action: "Chatear por WhatsApp",
+    },
+    email: {
+      title: "Correo electrónico",
+      action: "Enviar un correo",
+    },
+    schoolAddress: {
+      title: "Dirección del Colegio",
+      mapLabel: "Ubicación Colegio — mapa pendiente",
+    },
+    parishAddress: {
+      title: "Dirección de la Parroquia",
+      mapLabel: "Ubicación Parroquia — mapa pendiente",
+    },
+    mapNote: "El mapa interactivo se incorporará próximamente.",
+    social: {
+      title: "Redes sociales",
+      note: "Los enlaces oficiales de nuestras redes sociales (Instagram, Facebook y YouTube) serán confirmados próximamente.",
+    },
+  },
+
+  footer: {
+    identity: "Parroquia San Francisco de Asís — Real del Padre, San Rafael, Mendoza, Argentina.",
+    phrase: "Formamos personas, educamos en la fe y construimos comunidad.",
+    motto: "Luz del mundo · Sal de la tierra",
+    navTitle: "Navegación",
+    institutionsTitle: "Instituciones",
+    contactTitle: "Contacto",
+    rights: "Todos los derechos reservados.",
+  },
+};
+
+export type Dict = typeof es;

@@ -1,0 +1,659 @@
+/**
+ * Diccionario de textos en italiano.
+ */
+
+import type { Dict } from "./es";
+
+export const it: Dict = {
+  common: {
+    parishShort: "San Francesco d'Assisi",
+    locationLine: "Real del Padre · San Rafael · Mendoza",
+    mottoA: "Luce del mondo",
+    mottoB: "Sale della terra",
+    pendingImage: "Immagine in attesa",
+    pendingLogo: "Logo in attesa",
+    mapPending: "Mappa in attesa",
+    imagePendingAria: "immagine in attesa",
+    soon: "Prossimamente",
+    copy: "Copia",
+    copied: "Copiato!",
+    skipToContent: "Vai al contenuto",
+    openMenu: "Apri il menu",
+    closeMenu: "Chiudi il menu",
+    logos: {
+      parish: "Logo Parrocchia — in attesa",
+      school: "Stemma Collegio — in attesa",
+    },
+    names: {
+      parish: "Parrocchia San Francesco d'Assisi",
+      schoolShort: "Collegio Sacra Famiglia di Nazareth",
+      schoolFull: "Collegio Parrocchiale 242 Sacra Famiglia di Nazareth",
+      garden: "Asilo Nido JP-338 San Francesco d'Assisi",
+    },
+    nav: {
+      home: "Home",
+      parish: "Parrocchia",
+      school: "Collegio",
+      history: "La nostra storia",
+      projects: "Progetti",
+      gallery: "Galleria",
+      collaborate: "Sostienici",
+      contact: "Contatti",
+    },
+    pageTitles: {
+      home: "Parrocchia San Francesco d'Assisi | Real del Padre",
+      parish: "Parrocchia | San Francesco d'Assisi",
+      school: "Collegio Sacra Famiglia di Nazareth",
+      history: "La nostra storia | San Francesco d'Assisi",
+      projects: "Progetti | San Francesco d'Assisi",
+      gallery: "Galleria | San Francesco d'Assisi",
+      collaborate: "Sostienici | San Francesco d'Assisi",
+      contact: "Contatti | San Francesco d'Assisi",
+    },
+  },
+
+  home: {
+    hero: {
+      eyebrow: "Real del Padre · San Rafael · Mendoza",
+      title: "Parrocchia San Francesco d'Assisi",
+      subtitle: "Fede, educazione e comunità a Real del Padre",
+      quote: "Formiamo persone, educhiamo nella fede e costruiamo comunità.",
+      intro:
+        "Siamo una comunità parrocchiale ed educativa di Real del Padre, San Rafael, Mendoza. Dalla fede accompagniamo bambini, giovani, famiglie e comunità attraverso l'educazione, l'evangelizzazione e il servizio.",
+      ctaPrimary: "Scopri la nostra comunità",
+      ctaSecondary: "Scopri i nostri progetti",
+      ctaCollab: "Voglio aiutare",
+      photo: "Foto panoramica della Parrocchia San Francesco d'Assisi e della sua comunità",
+    },
+    institutions: {
+      title: "Una stessa comunità, un unico progetto",
+      intro:
+        "La Parrocchia, il Collegio e l'Asilo Nido fanno parte di un unico progetto pastorale, educativo e comunitario.",
+      parishDesc:
+        "Eretta canonicamente il 5 marzo 1987, è il cuore evangelizzatore della nostra comunità.",
+      schoolDesc:
+        "Dal 2012 offre a bambini e giovani un'educazione cattolica integrale, vicina alle loro famiglie.",
+      gardenDesc:
+        "Dall'ottobre 2012 accompagna con tenerezza i primi passi dei più piccoli.",
+    },
+    unity: {
+      eyebrow: "Una comunità, una missione",
+      title: "Parrocchia e Collegio: un unico cammino",
+      p1: "Dal 1987 la Parrocchia San Francesco d'Assisi svolge a Real del Padre, a Jaime Prats e in diversi villaggi rurali una missione evangelizzatrice, educativa, sociale e caritativa.",
+      p2: "All'interno di questa missione è nato il Collegio Sacra Famiglia di Nazareth. Per la nostra comunità, l'educazione è una vera forma di evangelizzazione e un servizio concreto alle famiglie.",
+      parishCardTitle: "Parrocchia San Francesco d'Assisi",
+      parishCardDesc: "La vita di fede, i sacramenti, la catechesi, la carità e la missione rurale.",
+      parishCardLink: "Conosci la Parrocchia",
+      schoolCardTitle: "Collegio Sacra Famiglia di Nazareth",
+      schoolCardDesc: "Un'educazione cattolica integrale che cresce insieme alle famiglie della comunità.",
+      schoolCardLink: "Conosci il Collegio",
+    },
+    stats: {
+      parish: "Fondazione della Parrocchia",
+      school: "Inizio del Collegio",
+      students: "Alunni, approssimativamente",
+      families: "Famiglie, approssimativamente",
+      levels: "Livelli educativi",
+    },
+    timeline: {
+      eyebrow: "La nostra storia",
+      title: "Un cammino che continua a crescere",
+      link: "Conosci la nostra storia →",
+      items: [
+        { year: "1987", date: "5 marzo", text: "La Parrocchia San Francesco d'Assisi viene eretta canonicamente." },
+        { year: "2012", date: "5 marzo", text: "Il Collegio inizia le sue attività." },
+        { year: "2012", date: "2 ottobre", text: "Inizia l'Asilo Nido." },
+        { year: "2014", date: "", text: "Inizia il livello primario." },
+        { year: "2021", date: "", text: "Inizia il livello secondario." },
+        { year: "Oggi", date: "", text: "La comunità continua a crescere con nuovi progetti educativi e con la futura Cappella di San Giuseppe." },
+      ],
+    },
+    school: {
+      eyebrow: "Collegio Sacra Famiglia di Nazareth",
+      title: "Educare è anche evangelizzare",
+      intro:
+        "Il Collegio Parrocchiale Sacra Famiglia di Nazareth è nato da un'esigenza concreta della comunità: offrire ai bambini e ai giovani di Real del Padre un'educazione cattolica integrale, vicina alle loro famiglie e profondamente legata alla vita comunitaria.",
+      levelsTitle: "Oggi comprende",
+      levels: [
+        { name: "Asilo Nido", desc: "Accompagnamento vicino nei primi anni di vita." },
+        { name: "Scuola dell'Infanzia", desc: "I primi passi della vita scolastica." },
+        { name: "Scuola Primaria", desc: "Una formazione integrale che cresce con le famiglie." },
+        { name: "Scuola Secondaria", desc: "Giovani che si preparano al futuro a partire dalla fede." },
+      ],
+      link: "Conosci il Collegio →",
+    },
+    values: {
+      eyebrow: "I nostri valori",
+      title: "Ciò che ci definisce",
+      list: [
+        "Fede",
+        "Responsabilità",
+        "Libertà",
+        "Carità",
+        "Rispetto",
+        "Impegno",
+        "Sforzo",
+        "Onestà",
+        "Servizio",
+        "Spirito comunitario",
+      ],
+    },
+    projects: {
+      eyebrow: "Progetti",
+      title: "Continuiamo a crescere",
+      intro:
+        "La nostra storia dimostra che ogni tappa del progetto è stata possibile grazie all'impegno di famiglie, docenti, alunni, collaboratori e persone che hanno creduto in quest'opera. Oggi abbiamo due grandi progetti.",
+      p1Kicker: "Progetto educativo",
+      p1Title: "Nuove aule e biblioteca",
+      p1Goal: "Continuare a rafforzare l'infrastruttura educativa del Collegio.",
+      p1NeedCount: "3 aule · 1 biblioteca · attrezzature",
+      p1Cta: "Vedi il progetto",
+      p2Kicker: "Progetto pastorale e comunitario",
+      p2Title: "Futura Cappella di San Giuseppe",
+      p2Text:
+        "Un nuovo spazio di preghiera e di incontro destinato a tutta la comunità parrocchiale ed educativa. La futura Cappella di San Giuseppe sarà costruita all'interno del terreno del Collegio, ma sarà aperta a tutta la comunità.",
+      p2Photo: "Planimetria / render della futura Cappella di San Giuseppe",
+      p2Cta: "Scopri la futura Cappella",
+    },
+    collaborate: {
+      title: "Ogni contributo aiuta a costruire il futuro",
+      text: "Chi sostiene la nostra istituzione non aiuta soltanto a costruire un edificio o ad acquistare materiali. Aiuta a educare, a formare e ad aprire nuove opportunità per bambini e giovani. Collabora con le famiglie e con la crescita di un'intera comunità.",
+      cta: "Vedi come aiutare",
+    },
+  },
+
+  parish: {
+    eyebrow: "La nostra Parrocchia",
+    title: "Parrocchia San Francesco d'Assisi",
+    location: "Real del Padre, San Rafael, Mendoza, Argentina",
+    heroPhoto: "Foto principale della Parrocchia San Francesco d'Assisi",
+    history: {
+      eyebrow: "Storia",
+      title: "Una missione dal 1987",
+      p1: "La Parrocchia San Francesco d'Assisi è stata eretta canonicamente il 5 marzo 1987.",
+      p2: "Da allora svolge un'importante missione evangelizzatrice, educativa, sociale e caritativa.",
+      p3: "La sua azione raggiunge Real del Padre, Jaime Prats e numerosi villaggi rurali.",
+      reachTitle: "La nostra missione raggiunge",
+      reach: ["Real del Padre", "Jaime Prats", "Numerosi villaggi rurali"],
+    },
+    life: {
+      eyebrow: "Vita parrocchiale",
+      title: "Una presenza che va oltre i sacramenti",
+      intro: "La vita parrocchiale non si limita alla celebrazione dei sacramenti. Comprende anche:",
+      items: [
+        "Catechesi",
+        "Formazione dei bambini",
+        "Formazione dei giovani",
+        "Formazione degli adulti",
+        "Attenzione agli ammalati",
+        "Attenzione agli anziani",
+        "Opere di carità",
+        "Missioni rurali",
+        "Iniziative di promozione umana",
+      ],
+    },
+    gallery: {
+      title: "La vita della Parrocchia",
+      intro: "Le fotografie saranno aggiunte prossimamente.",
+      items: [
+        "Esterno della Parrocchia",
+        "Interno della Parrocchia",
+        "Celebrazione religiosa",
+        "Comunità",
+        "Missioni rurali",
+        "Cappelle e comunità rurali",
+      ],
+    },
+    mass: {
+      eyebrow: "Celebrazioni",
+      title: "Orari delle Messe",
+      winterTitle: "Orario invernale",
+      winterDays: "Da martedì a domenica",
+      winterNote:
+        "Da dopo Pasqua fino a dopo il 4 ottobre, festa di San Francesco d'Assisi.",
+      summerTitle: "Orario estivo",
+      summerDays: "Da martedì a venerdì",
+      summerNote: "Fino a Pasqua.",
+      sourceNote: "Orari comunicati dall'istituzione.",
+    },
+    cta: {
+      text: "Hai domande sulla vita parrocchiale? Scrivici e ti risponderemo volentieri.",
+      button: "Vai ai contatti",
+    },
+  },
+
+  school: {
+    eyebrow: "Il nostro Collegio",
+    title: "Collegio Parrocchiale 242 Sacra Famiglia di Nazareth",
+    subtitle: "Il progetto educativo comprende anche l'Asilo Nido JP-338 San Francesco d'Assisi.",
+    heroPhoto: "Foto panoramica del Collegio",
+    identity: {
+      eyebrow: "Identità",
+      title: "Un'educazione cattolica integrale",
+      p1: "Il nostro Collegio Parrocchiale Sacra Famiglia di Nazareth è un'istituzione educativa cattolica che cerca di offrire una formazione integrale a bambini e giovani.",
+      p2: "Vogliamo che i nostri alunni possano crescere academicamente, ma anche come persone: libere, responsabili, solidali e aperte alla trascendenza.",
+      p3: "La fede cristiana fa parte della nostra identità e del nostro modo di comprendere l'educazione.",
+      p4: "Intendiamo l'educazione come un compito condiviso tra scuola, famiglia e comunità. Cerchiamo di costruire legami vicini e di accompagnare le famiglie nella formazione dei loro figli.",
+      p5: "Il progetto educativo è profondamente legato alla vita della Parrocchia San Francesco d'Assisi.",
+    },
+    figures: {
+      students: "Alunni, approssimativamente",
+      families: "Famiglie, approssimativamente",
+    },
+    levels: {
+      eyebrow: "Proposta educativa",
+      title: "Livelli educativi",
+      intro: "Il progetto educativo accompagna la crescita di bambini e giovani attraverso quattro livelli.",
+      items: [
+        { name: "Asilo Nido", note: "JP-338 San Francesco d'Assisi" },
+        { name: "Scuola dell'Infanzia", note: "" },
+        { name: "Scuola Primaria", note: "" },
+        { name: "Scuola Secondaria", note: "" },
+      ],
+    },
+    activities: {
+      eyebrow: "Vita scolastica",
+      title: "Attività del Collegio",
+      intro: "La vita del Collegio si esprime in una ricca varietà di attività accademiche, pastorali e comunitarie.",
+      items: [
+        "Attività accademiche",
+        "Attività pastorali",
+        "Celebrazioni religiose",
+        "Catechesi",
+        "Cerimonie scolastiche",
+        "Attività culturali",
+        "Attività sportive",
+        "Attività artistiche",
+        "Laboratori per genitori",
+        "Proposte formative per le famiglie",
+        "Attività comunitarie",
+      ],
+      photos: [
+        "Alunni e docenti",
+        "Attività educative",
+        "Attività sportive",
+        "Celebrazione religiosa nel Collegio",
+      ],
+      photosNote:
+        "Le fotografie istituzionali saranno pubblicate in conformità con le relative autorizzazioni.",
+    },
+    hours: {
+      eyebrow: "Organizzazione",
+      title: "Orari del Collegio",
+      days: "Da lunedì a venerdì",
+      items: [
+        { name: "Asilo Nido", time: "09:00 – 12:00" },
+        { name: "Scuola Primaria", time: "08:00 – 12:45" },
+        { name: "Scuola Secondaria", time: "13:30 – 18:30" },
+      ],
+      initialNote: "L'orario della Scuola dell'Infanzia non è pubblicato; è possibile chiederlo via WhatsApp o e-mail.",
+    },
+    cta: {
+      text: "Il Collegio continua a crescere. Ogni contributo rende possibili nuove aule, spazi migliori e più opportunità.",
+      button: "Vedi come aiutare",
+    },
+  },
+
+  history: {
+    eyebrow: "La nostra storia",
+    title: "Una storia di crescita",
+    intro1:
+      "L'idea del Collegio è nata da un'esigenza concreta: offrire ai bambini e ai giovani di Real del Padre un'educazione cattolica integrale, vicina alle loro famiglie e profondamente legata alla comunità.",
+    intro2:
+      "L'istituzione è stata creata per non limitarsi a trasmettere conoscenze, ma per formare integralmente la persona: intellettualmente, umanamente, socialmente e spiritualmente.",
+    intro3: "La crescita è stata progressiva.",
+    timelineTitle: "Un cammino costruito insieme",
+    timeline: [
+      {
+        year: "1987",
+        title: "Nasce la Parrocchia",
+        text: "Il 5 marzo 1987 viene eretta canonicamente la Parrocchia San Francesco d'Assisi.",
+        photos: ["Immagine di San Francesco d'Assisi"],
+      },
+      {
+        year: "2012",
+        title: "Nasce il Collegio",
+        text: "Il 5 marzo 2012 il Collegio inizia le sue attività.",
+        photos: ["Inizi del Collegio", "Prime aule", "Prima fase di costruzione"],
+      },
+      {
+        year: "2012",
+        title: "Asilo Nido",
+        text: "Il 2 ottobre inizia l'Asilo Nido.",
+        photos: ["Crescita dell'Asilo Nido"],
+      },
+      {
+        year: "2014",
+        title: "Scuola Primaria",
+        text: "Inizia la Scuola Primaria.",
+        photos: ["Crescita della Scuola Primaria", "Primi docenti", "Inaugurazioni"],
+      },
+      {
+        year: "2021",
+        title: "Scuola Secondaria",
+        text: "Inizia una nuova tappa con la Scuola Secondaria.",
+        photos: ["Inizio della Scuola Secondaria"],
+      },
+      {
+        year: "Oggi",
+        title: "Continuiamo a crescere",
+        text: "La comunità lavora attualmente a 3 nuove aule, una biblioteca, spazi educativi migliori e la futura Cappella di San Giuseppe.",
+        photos: ["Il Collegio oggi", "Planimetria / render della futura Cappella di San Giuseppe"],
+      },
+    ],
+    community: {
+      eyebrow: "Comunità",
+      title: "Un'opera di tutta la comunità",
+      p1: "Molte tappe sono state possibili grazie all'impegno di docenti, famiglie, alunni e collaboratori. Molte famiglie hanno partecipato direttamente con lavoro, materiali, costruzione, pittura e manutenzione.",
+      quote:
+        "Dietro ogni aula, ogni spazio e ogni tappa del Collegio c'è una storia di sacrificio, lavoro e speranza.",
+    },
+    cta: {
+      title: "La storia continua",
+      text: "Oggi continuiamo a costruire: nuove aule, una biblioteca e la futura Cappella di San Giuseppe.",
+      projects: "Conosci i progetti attuali",
+      collaborate: "Voglio aiutare",
+    },
+  },
+
+  projects: {
+    eyebrow: "Progetti",
+    title: "Costruiamo il futuro insieme",
+    subtitle:
+      "La nostra comunità continua a crescere attraverso progetti educativi e pastorali che cercano di servire le famiglie di Real del Padre e di rafforzare la vita comunitaria.",
+    needsTitle: "Esigenze",
+    educational: {
+      kicker: "Progetto educativo",
+      title: "Crescita educativa",
+      subtitle: "3 nuove aule e una biblioteca",
+      description:
+        "Attualmente il Collegio ha bisogno di ampliare la sua infrastruttura per accompagnare la crescita del progetto educativo.",
+      needs: [
+        "Costruzione di 3 nuove aule",
+        "Costruzione di 1 biblioteca",
+        "Attrezzature tecnologiche",
+        "Laboratorio",
+        "Attrezzature per i nuovi spazi",
+        "Arredi",
+        "Materiale didattico",
+        "Miglioramenti",
+        "Manutenzione generale",
+      ],
+      photos: ["Planimetria del progetto", "Stato attuale", "Costruzione", "Avanzamenti futuri"],
+      progressTitle: "Avanzamento del progetto",
+      progressText: "Prossimamente condivideremo qui le novità e i progressi di quest'opera.",
+      cta: "Sostieni questo progetto",
+    },
+    chapel: {
+      kicker: "Progetto pastorale e comunitario",
+      title: "Futura Cappella di San Giuseppe",
+      lead: "La futura Cappella di San Giuseppe rappresenta un nuovo sogno per la nostra comunità.",
+      p2: "Sarà situata all'interno del terreno del Collegio Sacra Famiglia di Nazareth, ma non sarà una cappella esclusivamente scolastica: sarà un luogo destinato a tutta la comunità parrocchiale ed educativa.",
+      spacesTitle: "Uno spazio per",
+      spaces: ["la preghiera", "la celebrazione", "l'adorazione", "la formazione", "l'incontro"],
+      unity: "Quest'opera esprime la profonda unità che cerchiamo di vivere tra Parrocchia, Scuola e Comunità.",
+      needs: [
+        "Pianificazione",
+        "Costruzione",
+        "Materiali",
+        "Finiture",
+        "Illuminazione",
+        "Panche",
+        "Arredi",
+        "Attrezzature liturgiche",
+        "Ornamenti religiosi",
+      ],
+      photos: [
+        "Immagine di San Giuseppe",
+        "Planimetria della futura Cappella",
+        "Render della futura Cappella",
+        "Terreno della futura Cappella",
+        "Avanzamento della costruzione",
+        "Future fotografie dell'opera",
+      ],
+      updatesTitle: "Segui la crescita dell'opera",
+      updatesText:
+        "Questo spazio è pronto per condividere, man mano che l'opera avanzerà, aggiornamenti, fotografie, traguardi e testimonianze dei collaboratori.",
+      updatesEmpty: "Non abbiamo ancora pubblicato novità su quest'opera.",
+      cta: "Sostieni la Cappella",
+    },
+    bottom: {
+      text: "Ogni contributo, grande o piccolo, aiuta a trasformare questi progetti in realtà.",
+      cta: "Vedi come aiutare",
+    },
+  },
+
+  gallery: {
+    eyebrow: "Galleria",
+    title: "La vita della nostra comunità",
+    intro:
+      "Un percorso visivo attraverso la storia, le attività e la crescita della comunità parrocchiale ed educativa.",
+    note: "Galleria in preparazione: ogni riquadro indica la fotografia che sarà aggiunta prossimamente.",
+    filterAll: "Tutte",
+    videos: {
+      title: "Video istituzionali",
+      text: "Questo spazio è pronto per includere video sulla storia del Collegio, sul lavoro comunitario, sui progetti e sulla futura Cappella di San Giuseppe.",
+      empty: "Non ci sono ancora video pubblicati.",
+    },
+    categories: [
+      {
+        id: "parroquia",
+        name: "Parrocchia",
+        items: [
+          "Esterno della Parrocchia San Francesco d'Assisi",
+          "Interno della Parrocchia",
+          "Celebrazioni religiose",
+          "Vita parrocchiale",
+        ],
+      },
+      {
+        id: "colegio",
+        name: "Collegio",
+        items: [
+          "Strutture del Collegio",
+          "Aule",
+          "Alunni e docenti",
+          "Famiglie",
+          "Attività educative",
+        ],
+      },
+      {
+        id: "actividades",
+        name: "Attività",
+        items: [
+          "Cerimonie scolastiche",
+          "Attività sportive",
+          "Attività culturali",
+          "Attività artistiche",
+          "Attività pastorali",
+        ],
+      },
+      {
+        id: "comunidad",
+        name: "Comunità e missione",
+        items: [
+          "Missioni rurali",
+          "Attività comunitarie",
+          "Cappelle e comunità della giurisdizione",
+        ],
+      },
+      {
+        id: "historia",
+        name: "La nostra storia",
+        items: [
+          "Inizi del Collegio",
+          "Prime aule",
+          "Costruzione",
+          "Primi docenti",
+          "Partecipazione delle famiglie",
+          "Inaugurazioni",
+          "Crescita dei livelli",
+        ],
+      },
+      {
+        id: "capilla",
+        name: "Cappella di San Giuseppe",
+        items: [
+          "Immagine di San Giuseppe",
+          "Bozzetti",
+          "Planimetrie",
+          "Render",
+          "Terreno",
+          "Costruzione",
+          "Avanzamenti futuri",
+        ],
+      },
+    ],
+  },
+
+  collaborate: {
+    eyebrow: "Sostienici",
+    title: "Ogni contributo costruisce il futuro",
+    quote:
+      "La nostra storia dimostra che, quando una comunità si unisce e qualcuno crede in un sogno, quel sogno può diventare poco a poco un'opera capace di trasformare molte vite.",
+    lead:
+      "Chi sostiene la nostra istituzione non aiuta soltanto a costruire un edificio o ad acquistare materiali. Aiuta a educare, a formare e ad aprire nuove opportunità per bambini e giovani, a collaborare con le famiglie e a contribuire alla crescita di un'intera comunità.",
+    waysTitle: "Modi per aiutare",
+    waysIntro:
+      "Persone, famiglie, aziende, istituzioni, fondazioni, parrocchie e organizzazioni possono aiutare in molti modi.",
+    materials: {
+      title: "Materiali e contributi",
+      items: [
+        "Contributo economico",
+        "Materiali da costruzione",
+        "Attrezzature tecnologiche",
+        "Libri",
+        "Materiali ludici",
+        "Materiale didattico",
+        "Attrezzature per le aule",
+        "Attrezzature per la biblioteca",
+        "Materiali per la futura Cappella di San Giuseppe",
+        "Arredi",
+        "Attrezzature liturgiche",
+      ],
+    },
+    modalities: {
+      title: "Modalità",
+      items: [
+        "Contributo una tantum",
+        "Contributo mensile",
+        "Finanziamento totale di un progetto",
+        "Finanziamento parziale di un progetto",
+        "Sostegno di un'aula",
+        "Sostegno della biblioteca",
+        "Sostegno della Cappella di San Giuseppe",
+        "Collaborazione istituzionale",
+      ],
+    },
+    national: {
+      title: "Dall'Argentina",
+      text: "Scrivici via WhatsApp o e-mail per concordare il tuo contributo. Ogni dono viene discusso e concordato in modo personale e trasparente.",
+      whatsapp: "Scrivi su WhatsApp",
+      email: "Invia un'e-mail",
+    },
+    international: {
+      eyebrow: "Collaboratori internazionali",
+      title: "Legami di solidarietà con il mondo",
+      text: "L'istituzione desidera stabilire legami di solidarietà con persone, famiglie, istituzioni, fondazioni e comunità di diversi luoghi del mondo.",
+      historyTitle: "Precedenti di collaborazione internazionale",
+      historyText:
+        "Organismi ecclesiali e fondazioni hanno collaborato in precedenza in diverse tappe della crescita del Collegio, tra cui:",
+      historyNote:
+        "Queste collaborazioni hanno aiutato a finanziare quattro tappe della crescita della Scuola Parrocchiale.",
+      donationTitle: "Donazioni dall'estero",
+      donationIntro:
+        "Chi desidera sostenerci dall'estero può donare tramite il conto in euro della Diocesi di San Rafael presso l'Istituto per le Opere di Religione (IOR).",
+      warningTitle: "Prima di effettuare il bonifico",
+      warningText:
+        "Chiediamo di contattare lo IOR e di specificare che la donazione è destinata a:",
+      or: "oppure",
+      labels: {
+        holder: "Intestatario",
+        institution: "Istituzione",
+        account: "Conto in euro",
+        iban: "IBAN",
+        swift: "SWIFT / BIC",
+        concept: "Causale del bonifico",
+        address: "Indirizzo",
+      },
+    },
+    form: {
+      title: "Scrivici",
+      intro:
+        "Compila il modulo e ti contatteremo. Vale sia per persone e istituzioni dell'Argentina sia dell'estero.",
+      name: "Nome",
+      country: "Paese",
+      email: "E-mail",
+      whatsapp: "WhatsApp",
+      whatsappOptional: "facoltativo",
+      organization: "Istituzione / organizzazione",
+      collabType: "Tipo di contributo",
+      project: "Progetto che desideri sostenere",
+      selectPlaceholder: "Seleziona un'opzione…",
+      message: "Messaggio",
+      messagePlaceholder: "Raccontaci come vorresti aiutare…",
+      privacy: "Ho letto e accetto che i miei dati siano utilizzati per rispondere a questa richiesta.",
+      submit: "Desidero mettermi in contatto",
+      required: "Questo campo è obbligatorio.",
+      invalidEmail: "Inserisci un indirizzo e-mail valido.",
+      collabOptions: [
+        "Contributo economico",
+        "Materiali",
+        "Attrezzature",
+        "Arredi",
+        "Tecnologia",
+        "Collaborazione istituzionale",
+        "Altro",
+      ],
+      projectOptions: [
+        "Collegio in generale",
+        "Progetto educativo",
+        "Nuove aule",
+        "Biblioteca",
+        "Futura Cappella di San Giuseppe",
+        "Esigenza specifica",
+      ],
+      demoTitle: "Modulo in modalità dimostrazione",
+      demoText:
+        "Questo modulo non è ancora collegato a un server, quindi la richiesta non è stata realmente inviata. Perché il tuo messaggio arrivi subito, scrivici su WhatsApp o invia un'e-mail.",
+    },
+  },
+
+  contact: {
+    eyebrow: "Contatti",
+    title: "Siamo vicini, scrivici",
+    intro:
+      "Puoi contattarci dall'Argentina o da qualsiasi parte del mondo. Rispondiamo volentieri alle domande di persone, famiglie, istituzioni e organizzazioni.",
+    whatsapp: {
+      title: "WhatsApp",
+      action: "Chatta su WhatsApp",
+    },
+    email: {
+      title: "E-mail",
+      action: "Invia un'e-mail",
+    },
+    schoolAddress: {
+      title: "Indirizzo del Collegio",
+      mapLabel: "Posizione Collegio — mappa in attesa",
+    },
+    parishAddress: {
+      title: "Indirizzo della Parrocchia",
+      mapLabel: "Posizione Parrocchia — mappa in attesa",
+    },
+    mapNote: "La mappa interattiva sarà aggiunta prossimamente.",
+    social: {
+      title: "Social media",
+      note: "I link ufficiali dei nostri social (Instagram, Facebook e YouTube) saranno confermati prossimamente.",
+    },
+  },
+
+  footer: {
+    identity: "Parrocchia San Francesco d'Assisi — Real del Padre, San Rafael, Mendoza, Argentina.",
+    phrase: "Formiamo persone, educhiamo nella fede e costruiamo comunità.",
+    motto: "Luce del mondo · Sale della terra",
+    navTitle: "Navigazione",
+    institutionsTitle: "Istituzioni",
+    contactTitle: "Contatti",
+    rights: "Tutti i diritti riservati.",
+  },
+};
