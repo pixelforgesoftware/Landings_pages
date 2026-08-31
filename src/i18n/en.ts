@@ -10,19 +10,16 @@ export const en: Dict = {
     locationLine: "Real del Padre · San Rafael · Mendoza",
     mottoA: "Light of the world",
     mottoB: "Salt of the earth",
-    pendingImage: "Image pending",
-    pendingLogo: "Logo pending",
-    mapPending: "Map pending",
-    imagePendingAria: "image pending",
     soon: "Coming soon",
     copy: "Copy",
     copied: "Copied!",
     skipToContent: "Skip to content",
     openMenu: "Open menu",
     closeMenu: "Close menu",
+    openInMaps: "Open in Google Maps",
     logos: {
-      parish: "Parish logo — pending",
-      school: "School crest — pending",
+      parish: "Insignia of the Parish of St. Francis of Assisi",
+      school: "Insignia of the Holy Family of Nazareth School",
     },
     names: {
       parish: "Parish of St. Francis of Assisi",
@@ -90,9 +87,9 @@ export const en: Dict = {
     },
     stats: {
       parish: "Parish foundation",
-      school: "School opening",
-      students: "Students, approximately",
-      families: "Families, approximately",
+      school: "School start",
+      students: "Students",
+      families: "Families",
       levels: "Educational levels",
     },
     timeline: {
@@ -152,7 +149,6 @@ export const en: Dict = {
       p2Title: "Future St. Joseph Chapel",
       p2Text:
         "A new space of prayer and encounter for the whole parish and school community. The future St. Joseph Chapel will be built on the School grounds, but it will be open to the entire community.",
-      p2Photo: "Plans / render of the future St. Joseph Chapel",
       p2Cta: "Discover the future Chapel",
     },
     collaborate: {
@@ -194,7 +190,7 @@ export const en: Dict = {
     },
     gallery: {
       title: "The life of the Parish",
-      intro: "Photographs will be added soon.",
+      intro: "Moments and milestones shared together with our community and families in Real del Padre.",
       items: [
         "Parish exterior",
         "Parish interior",
@@ -237,8 +233,8 @@ export const en: Dict = {
       p5: "The educational project is deeply connected with the life of the Parish of St. Francis of Assisi.",
     },
     figures: {
-      students: "Students, approximately",
-      families: "Families, approximately",
+      students: "Students",
+      families: "Families",
     },
     levels: {
       eyebrow: "Educational program",
@@ -380,8 +376,8 @@ export const en: Dict = {
         "General maintenance",
       ],
       photos: ["Project plans", "Current state", "Construction", "Future progress"],
-      progressTitle: "Project progress",
-      progressText: "We will soon share news and progress of this work here.",
+      progressTitle: "Institutional commitment",
+      progressText: "The project progresses in a planned manner according to the resources gathered by the community and donations received.",
       cta: "Support this project",
     },
     chapel: {
@@ -409,12 +405,15 @@ export const en: Dict = {
         "Render of the future Chapel",
         "Site of the future Chapel",
         "Construction progress",
-        "Future construction photographs",
+        "Worksite photographs",
       ],
-      updatesTitle: "Follow the growth of the work",
+      statusBadge: "Project Status",
+      statusTitle: "Preliminary design and architectural planning stage",
+      statusDescription:
+        "The architectural preliminary project was designed by the technical team to respond to the spiritual, liturgical and educational-pastoral needs of the community.",
+      updatesTitle: "A work of faith and community",
       updatesText:
-        "This space is ready to share, as the work advances, updates, photographs, milestones and testimonies of our supporters.",
-      updatesEmpty: "We have not published updates about this work yet.",
+        "Every contribution received goes directly to the foundations, structure and ornamentation of St. Joseph Chapel, consolidating this meeting space.",
       cta: "Support the Chapel",
     },
     bottom: {
@@ -428,7 +427,7 @@ export const en: Dict = {
     title: "The life of our community",
     intro:
       "A visual journey through the history, activities and growth of our parish and school community.",
-    note: "Gallery in preparation: each frame indicates the photograph that will be added soon.",
+    note: "Community gallery: a visual journey through the history, activities and growth of our community.",
     filterAll: "All",
     videos: {
       title: "Institutional videos",
@@ -488,19 +487,6 @@ export const en: Dict = {
           "Families taking part",
           "Openings",
           "Growth of the levels",
-        ],
-      },
-      {
-        id: "capilla",
-        name: "St. Joseph Chapel",
-        items: [
-          "Image of St. Joseph",
-          "Sketches",
-          "Plans",
-          "Render",
-          "Site",
-          "Construction",
-          "Future progress",
         ],
       },
     ],
@@ -593,7 +579,8 @@ export const en: Dict = {
       message: "Message",
       messagePlaceholder: "Tell us how you would like to help…",
       privacy: "I have read and accept that my data will be used to answer this inquiry.",
-      submit: "Get in touch",
+      submit: "Send inquiry via Email",
+      submitWhatsApp: "Send inquiry via WhatsApp",
       required: "This field is required.",
       invalidEmail: "Please enter a valid email address.",
       collabOptions: [
@@ -613,9 +600,10 @@ export const en: Dict = {
         "Future St. Joseph Chapel",
         "Specific need",
       ],
-      demoTitle: "Form in demo mode",
+      demoTitle: "Inquiry ready to send by email",
       demoText:
-        "This form is not connected to a server yet, so your inquiry was not actually sent. To reach us right away, please message us on WhatsApp or send an email.",
+        "Your email client will open with all details already filled in, ready to send to the parish.",
+      openEmailClient: "Open email client with filled data",
     },
   },
 
@@ -634,16 +622,38 @@ export const en: Dict = {
     },
     schoolAddress: {
       title: "School address",
-      mapLabel: "School location — map pending",
+      mapLabel: "School location in Real del Padre",
     },
     parishAddress: {
       title: "Parish address",
-      mapLabel: "Parish location — map pending",
+      mapLabel: "Parish location in Real del Padre",
     },
-    mapNote: "An interactive map will be added soon.",
     social: {
       title: "Social media",
       note: "Our official social media links (Instagram, Facebook and YouTube) will be confirmed soon.",
+    },
+    form: {
+      title: "Send us your inquiry",
+      intro: "Fill in your details and send your message directly via WhatsApp or email without delay.",
+      name: "Full name",
+      phone: "Phone / WhatsApp",
+      email: "Email",
+      destination: "Inquiry recipient",
+      destinationPlaceholder: "Select who to direct your inquiry to…",
+      destinationOptions: [
+        "Parish of St. Francis of Assisi",
+        "Holy Family of Nazareth School (Secondary / Primary)",
+        "Nursery JP-338 St. Francis of Assisi",
+        "Parish Office / Baptisms / Sacraments",
+        "General inquiry",
+      ],
+      message: "Message or reason for inquiry",
+      messagePlaceholder: "Write your message here...",
+      privacy: "I accept that these details will be used to respond to my inquiry.",
+      submitWhatsApp: "Send inquiry via WhatsApp",
+      submitEmail: "Send inquiry via Email",
+      required: "This field is required.",
+      invalidEmail: "Please enter a valid email address.",
     },
   },
 

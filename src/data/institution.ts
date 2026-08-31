@@ -15,12 +15,24 @@ export const CONTACT = {
     "San Rafael, Mendoza",
     "Argentina",
   ],
+  schoolGeo: {
+    lat: -34.83785,
+    lng: -67.75661,
+    query: "Colegio P-242 Sagrada Familia de Nazareth, Real del Padre, San Rafael, Mendoza",
+    bbox: "-67.7610,-34.8405,-67.7520,-34.8350",
+  },
   parishAddress: [
     "Malvinas Argentinas s/n",
     "Real del Padre",
     "San Rafael, Mendoza",
     "Argentina",
   ],
+  parishGeo: {
+    lat: -34.84312,
+    lng: -67.76821,
+    query: "Parroquia San Francisco de Asis, Real del Padre, San Rafael, Mendoza",
+    bbox: "-67.7725,-34.8455,-67.7640,-34.8405",
+  },
 } as const;
 
 export const WHATSAPP_URL = `https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(

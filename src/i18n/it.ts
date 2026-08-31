@@ -10,19 +10,16 @@ export const it: Dict = {
     locationLine: "Real del Padre · San Rafael · Mendoza",
     mottoA: "Luce del mondo",
     mottoB: "Sale della terra",
-    pendingImage: "Immagine in attesa",
-    pendingLogo: "Logo in attesa",
-    mapPending: "Mappa in attesa",
-    imagePendingAria: "immagine in attesa",
     soon: "Prossimamente",
     copy: "Copia",
     copied: "Copiato!",
     skipToContent: "Vai al contenuto",
     openMenu: "Apri il menu",
     closeMenu: "Chiudi il menu",
+    openInMaps: "Apri su Google Maps",
     logos: {
-      parish: "Logo Parrocchia — in attesa",
-      school: "Stemma Collegio — in attesa",
+      parish: "Insegna della Parrocchia San Francesco d'Assisi",
+      school: "Insegna del Collegio Sacra Famiglia di Nazareth",
     },
     names: {
       parish: "Parrocchia San Francesco d'Assisi",
@@ -91,8 +88,8 @@ export const it: Dict = {
     stats: {
       parish: "Fondazione della Parrocchia",
       school: "Inizio del Collegio",
-      students: "Alunni, approssimativamente",
-      families: "Famiglie, approssimativamente",
+      students: "Alunni",
+      families: "Famiglie",
       levels: "Livelli educativi",
     },
     timeline: {
@@ -152,7 +149,6 @@ export const it: Dict = {
       p2Title: "Futura Cappella di San Giuseppe",
       p2Text:
         "Un nuovo spazio di preghiera e di incontro destinato a tutta la comunità parrocchiale ed educativa. La futura Cappella di San Giuseppe sarà costruita all'interno del terreno del Collegio, ma sarà aperta a tutta la comunità.",
-      p2Photo: "Planimetria / render della futura Cappella di San Giuseppe",
       p2Cta: "Scopri la futura Cappella",
     },
     collaborate: {
@@ -194,7 +190,7 @@ export const it: Dict = {
     },
     gallery: {
       title: "La vita della Parrocchia",
-      intro: "Le fotografie saranno aggiunte prossimamente.",
+      intro: "Momenti e tappe condivisi insieme alla nostra comunità e alle famiglie di Real del Padre.",
       items: [
         "Esterno della Parrocchia",
         "Interno della Parrocchia",
@@ -237,8 +233,8 @@ export const it: Dict = {
       p5: "Il progetto educativo è profondamente legato alla vita della Parrocchia San Francesco d'Assisi.",
     },
     figures: {
-      students: "Alunni, approssimativamente",
-      families: "Famiglie, approssimativamente",
+      students: "Alunni",
+      families: "Famiglie",
     },
     levels: {
       eyebrow: "Proposta educativa",
@@ -380,8 +376,8 @@ export const it: Dict = {
         "Manutenzione generale",
       ],
       photos: ["Planimetria del progetto", "Stato attuale", "Costruzione", "Avanzamenti futuri"],
-      progressTitle: "Avanzamento del progetto",
-      progressText: "Prossimamente condivideremo qui le novità e i progressi di quest'opera.",
+      progressTitle: "Impegno istituzionale",
+      progressText: "L'opera prosegue in modo pianificato in base alle risorse raccolte dalla comunità e alle donazioni ricevute.",
       cta: "Sostieni questo progetto",
     },
     chapel: {
@@ -407,14 +403,16 @@ export const it: Dict = {
         "Immagine di San Giuseppe",
         "Planimetria della futura Cappella",
         "Render della futura Cappella",
-        "Terreno della futura Cappella",
-        "Avanzamento della costruzione",
-        "Future fotografie dell'opera",
+        "Avanzamento dei lavori",
+        "Fotografie del cantiere",
       ],
-      updatesTitle: "Segui la crescita dell'opera",
+      statusBadge: "Stato del progetto",
+      statusTitle: "Fase di progettazione preliminare e planimetria",
+      statusDescription:
+        "Il progetto architettonico preliminare è stato ideato dal team tecnico per rispondere alle esigenze spirituali, liturgiche e pastorali-educative della comunità.",
+      updatesTitle: "Un'opera di fede e comunità",
       updatesText:
-        "Questo spazio è pronto per condividere, man mano che l'opera avanzerà, aggiornamenti, fotografie, traguardi e testimonianze dei collaboratori.",
-      updatesEmpty: "Non abbiamo ancora pubblicato novità su quest'opera.",
+        "Ogni contributo ricevuto è destinato direttamente alle fondamenta, alla struttura e agli ornamenti della Cappella di San Giuseppe, consolidando questo spazio di incontro.",
       cta: "Sostieni la Cappella",
     },
     bottom: {
@@ -428,7 +426,7 @@ export const it: Dict = {
     title: "La vita della nostra comunità",
     intro:
       "Un percorso visivo attraverso la storia, le attività e la crescita della comunità parrocchiale ed educativa.",
-    note: "Galleria in preparazione: ogni riquadro indica la fotografia che sarà aggiunta prossimamente.",
+    note: "Galleria comunitaria: un viaggio visivo attraverso la storia, le attività e la crescita della nostra comunità.",
     filterAll: "Tutte",
     videos: {
       title: "Video istituzionali",
@@ -488,19 +486,6 @@ export const it: Dict = {
           "Partecipazione delle famiglie",
           "Inaugurazioni",
           "Crescita dei livelli",
-        ],
-      },
-      {
-        id: "capilla",
-        name: "Cappella di San Giuseppe",
-        items: [
-          "Immagine di San Giuseppe",
-          "Bozzetti",
-          "Planimetrie",
-          "Render",
-          "Terreno",
-          "Costruzione",
-          "Avanzamenti futuri",
         ],
       },
     ],
@@ -593,7 +578,8 @@ export const it: Dict = {
       message: "Messaggio",
       messagePlaceholder: "Raccontaci come vorresti aiutare…",
       privacy: "Ho letto e accetto che i miei dati siano utilizzati per rispondere a questa richiesta.",
-      submit: "Desidero mettermi in contatto",
+      submit: "Invia richiesta via e-mail",
+      submitWhatsApp: "Invia richiesta via WhatsApp",
       required: "Questo campo è obbligatorio.",
       invalidEmail: "Inserisci un indirizzo e-mail valido.",
       collabOptions: [
@@ -613,9 +599,10 @@ export const it: Dict = {
         "Futura Cappella di San Giuseppe",
         "Esigenza specifica",
       ],
-      demoTitle: "Modulo in modalità dimostrazione",
+      demoTitle: "Richiesta pronta da inviare via e-mail",
       demoText:
-        "Questo modulo non è ancora collegato a un server, quindi la richiesta non è stata realmente inviata. Perché il tuo messaggio arrivi subito, scrivici su WhatsApp o invia un'e-mail.",
+        "Si aprirà il tuo client di posta con tutti i dettagli già compilati, pronti per essere inviati alla parrocchia.",
+      openEmailClient: "Apri il client di posta con i dati compilati",
     },
   },
 
@@ -634,16 +621,38 @@ export const it: Dict = {
     },
     schoolAddress: {
       title: "Indirizzo del Collegio",
-      mapLabel: "Posizione Collegio — mappa in attesa",
+      mapLabel: "Posizione del Collegio a Real del Padre",
     },
     parishAddress: {
       title: "Indirizzo della Parrocchia",
-      mapLabel: "Posizione Parrocchia — mappa in attesa",
+      mapLabel: "Posizione della Parrocchia a Real del Padre",
     },
-    mapNote: "La mappa interattiva sarà aggiunta prossimamente.",
     social: {
       title: "Social media",
       note: "I link ufficiali dei nostri social (Instagram, Facebook e YouTube) saranno confermati prossimamente.",
+    },
+    form: {
+      title: "Inviaci la tua richiesta",
+      intro: "Compila i tuoi dati e inviaci il tuo messaggio direttamente tramite WhatsApp o e-mail senza ritardi.",
+      name: "Nome e cognome",
+      phone: "Telefono / WhatsApp",
+      email: "E-mail",
+      destination: "Destinatario della richiesta",
+      destinationPlaceholder: "Seleziona a chi indirizzare la richiesta…",
+      destinationOptions: [
+        "Parrocchia San Francesco d'Assisi",
+        "Collegio Sacra Famiglia di Nazareth (Secondario / Primario)",
+        "Nido Infanzia JP-338 San Francesco d'Assisi",
+        "Segreteria Parrocchiale / Battesimi / Sacramenti",
+        "Richiesta generale",
+      ],
+      message: "Messaggio o motivo della richiesta",
+      messagePlaceholder: "Scrivi qui il tuo messaggio...",
+      privacy: "Accetto che questi dati vengano utilizzati per rispondere alla mia richiesta.",
+      submitWhatsApp: "Invia richiesta via WhatsApp",
+      submitEmail: "Invia richiesta via e-mail",
+      required: "Questo campo è obbligatorio.",
+      invalidEmail: "Inserisci un indirizzo e-mail valido.",
     },
   },
 

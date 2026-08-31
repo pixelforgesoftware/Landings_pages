@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Inicio / Home -->
+  <url>
+    <loc>https://parroquiasanfrancisco.edu.ar/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://parroquiasanfrancisco.edu.ar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parroquiasanfrancisco.edu.ar/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://parroquiasanfrancisco.edu.ar/?lang=it"/>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Nuestra Parroquia -->
+  <url>
+    <loc>https://parroquiasanfrancisco.edu.ar/parroquia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://parroquiasanfrancisco.edu.ar/parroquia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parroquiasanfrancisco.edu.ar/parroquia?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://parroquiasanfrancisco.edu.ar/parroquia?lang=it"/>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Nuestro Colegio -->
+  <url>
+    <loc>https://parroquiasanfrancisco.edu.ar/colegio</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://parroquiasanfrancisco.edu.ar/colegio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parroquiasanfrancisco.edu.ar/colegio?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://parroquiasanfrancisco.edu.ar/colegio?lang=it"/>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Nuestra Historia -->
+  <url>
+    <loc>https://parroquiasanfrancisco.edu.ar/historia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://parroquiasanfrancisco.edu.ar/historia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parroquiasanfrancisco.edu.ar/historia?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://parroquiasanfrancisco.edu.ar/historia?lang=it"/>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Proyectos (3 Aulas + Capilla San José) -->
+  <url>
+    <loc>https://parroquiasanfrancisco.edu.ar/proyectos</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://parroquiasanfrancisco.edu.ar/proyectos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parroquiasanfrancisco.edu.ar/proyectos?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://parroquiasanfrancisco.edu.ar/proyectos?lang=it"/>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Galería Comunitaria -->
+  <url>
+    <loc>https://parroquiasanfrancisco.edu.ar/galeria</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://parroquiasanfrancisco.edu.ar/galeria"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parroquiasanfrancisco.edu.ar/galeria?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://parroquiasanfrancisco.edu.ar/galeria?lang=it"/>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Colaborar y Donaciones -->
+  <url>
+    <loc>https://parroquiasanfrancisco.edu.ar/colaborar</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://parroquiasanfrancisco.edu.ar/colaborar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parroquiasanfrancisco.edu.ar/colaborar?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://parroquiasanfrancisco.edu.ar/colaborar?lang=it"/>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Contacto Directo -->
+  <url>
+    <loc>https://parroquiasanfrancisco.edu.ar/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://parroquiasanfrancisco.edu.ar/contacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://parroquiasanfrancisco.edu.ar/contacto?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://parroquiasanfrancisco.edu.ar/contacto?lang=it"/>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+</urlset>

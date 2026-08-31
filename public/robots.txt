@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap oficial de la Parroquia San Francisco de Asís y Colegio Sagrada Familia de Nazareth
+Sitemap: https://parroquiasanfrancisco.edu.ar/sitemap.xml

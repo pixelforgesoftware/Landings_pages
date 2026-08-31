@@ -1,38 +1,78 @@
-import { useI18n } from "@/i18n";
+import { useState } from "react";
 import { IconMapPin } from "./icons";
 
 /**
- * Componente reservado para la ubicación geográfica y dirección institucional.
- * TODO: Integrar iframe interactivo de Google Maps u OpenStreetMap.
+ * Componente de mapa interactivo con visor de OpenStreetMap y enlace a Google Maps.
  */
 
-interface MapPlaceholderProps {
+interface MapCardProps {
   label: string;
   addressLines: readonly string[];
-  note: string;
+  geo: {
+    lat: number;
+    lng: number;
+    query: string;
+    bbox: string;
+  };
+  buttonLabel?: string;
 }
 
-export default function MapPlaceholder({ label, addressLines, note }: MapPlaceholderProps) {
-  const { t } = useI18n();
+export default function MapPlaceholder({
+  label,
+  addressLines,
+  geo,
+  buttonLabel = "Ver en Google Maps",
+}: MapCardProps) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(geo.query)}`;
+  const embedUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${geo.bbox}&layer=mapnik&marker=${geo.lat},${geo.lng}`;
+
   return (
-    <div className="pattern-cross border border-line bg-gradient-to-br from-cream to-gold-soft/50">
-      <div className="flex flex-col items-center gap-2 px-4 py-10 text-center">
-        <span aria-hidden className="flex h-11 w-11 items-center justify-center rounded-full border border-gold/50 text-gold">
-          <IconMapPin size={20} />
-        </span>
-        <p className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-gold">
-          {t.common.mapPending}
-        </p>
-        <p className="font-serif text-sm italic text-ink-soft">{label}</p>
-        <p className="mt-2 text-sm text-ink-soft">{note}</p>
+    <div className="overflow-hidden border border-line bg-warm-white shadow-inst transition-shadow hover:shadow-md">
+      {/* Mapa interactivo */}
+      <div className="relative aspect-[16/10] w-full bg-sand/30 sm:aspect-[16/9]">
+        {!isLoaded && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-warm-white/90 p-4 text-center">
+            <span
+              aria-hidden
+              className="flex h-10 w-10 animate-pulse items-center justify-center rounded-full border border-gold/60 bg-warm-white text-gold"
+            >
+              <IconMapPin size={20} />
+            </span>
+            <p className="font-serif text-xs font-semibold text-blue-deep">Cargando mapa interactivo...</p>
+          </div>
+        )}
+        <iframe
+          title={label}
+          src={embedUrl}
+          loading="lazy"
+          className={`h-full w-full border-0 transition-opacity duration-500 ${isLoaded ? "opacity-100" : "opacity-0"}`}
+          onLoad={() => setIsLoaded(true)}
+        />
       </div>
-      <address className="border-t border-line bg-cream/80 px-4 py-3 text-center text-sm not-italic leading-relaxed text-ink">
-        {addressLines.map((line) => (
-          <span key={line} className="block">
-            {line}
-          </span>
-        ))}
-      </address>
+
+      {/* Información y botón de apertura en Google Maps */}
+      <div className="border-t border-line/80 bg-gradient-to-br from-warm-white to-gold-soft/20 p-5 text-center sm:p-6">
+        <p className="font-serif text-base font-bold text-blue-deep">{label}</p>
+        <address className="mt-2 text-sm not-italic leading-relaxed text-ink-soft">
+          {addressLines.map((line) => (
+            <span key={line} className="block">
+              {line}
+            </span>
+          ))}
+        </address>
+        <div className="mt-4">
+          <a
+            href={mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-sm border border-gold/60 bg-warm-white px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-blue-deep shadow-xs transition-all hover:border-gold hover:bg-gold-soft/50 hover:text-blue hover:shadow-sm active:translate-y-px"
+          >
+            <IconMapPin size={15} className="text-gold" />
+            {buttonLabel}
+          </a>
+        </div>
+      </div>
     </div>
   );
 }

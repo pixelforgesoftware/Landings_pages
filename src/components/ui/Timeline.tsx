@@ -1,16 +1,19 @@
-import ImagePlaceholder from "./ImagePlaceholder";
-
 /**
  * Línea de tiempo institucional (variante compacta para portada y completa para historia).
  */
+
+export interface TimelinePhoto {
+  label: string;
+  src?: string;
+}
 
 export interface TimelineEntry {
   year: string;
   date?: string;
   title?: string;
   text: string;
-  /** Etiquetas de fotografías pendientes (solo variante full). */
-  photos?: string[];
+  /** Fotografías con src o etiquetas de fotos pendientes (solo variante full). */
+  photos?: (string | TimelinePhoto)[];
 }
 
 interface TimelineProps {
@@ -50,14 +53,32 @@ export default function Timeline({ items, variant = "compact" }: TimelineProps) 
 
             {full && item.photos && item.photos.length > 0 && (
               <div className={`mt-5 grid gap-4 ${item.photos.length > 1 ? "sm:grid-cols-2 lg:grid-cols-3" : "max-w-md"}`}>
-                {item.photos.map((photo) => (
-                  <ImagePlaceholder
-                    key={photo}
-                    label={photo}
-                    kind="photo"
-                    className="aspect-[4/3] w-full"
-                  />
-                ))}
+                {item.photos.map((photo, pIdx) => {
+                  const isObj = typeof photo === "object";
+                  const label = isObj ? photo.label : photo;
+                  const src = isObj ? photo.src : undefined;
+
+                  if (!src) return null;
+
+                  return (
+                    <figure
+                      key={label + pIdx}
+                      className="group overflow-hidden border border-line bg-warm-white shadow-sm transition-all duration-300 hover:border-gold/60 hover:shadow-inst"
+                    >
+                      <div className="aspect-[4/3] w-full overflow-hidden">
+                        <img
+                          src={src}
+                          alt={label}
+                          className="h-full w-full object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                      </div>
+                      <figcaption className="border-t border-line/80 px-3 py-2 text-xs italic text-ink-soft">
+                        {label}
+                      </figcaption>
+                    </figure>
+                  );
+                })}
               </div>
             )}
           </div>

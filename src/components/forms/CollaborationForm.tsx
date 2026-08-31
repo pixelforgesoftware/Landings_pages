@@ -1,7 +1,8 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { useI18n } from "@/i18n";
-import { CONTACT, WHATSAPP_URL } from "@/data/institution";
+import { CONTACT } from "@/data/institution";
 import Button from "@/components/ui/Button";
+import { IconWhatsApp, IconMail } from "@/components/ui/icons";
 
 /**
  * Formulario de contacto para colaboradores institucionales.
@@ -70,12 +71,41 @@ export default function CollaborationForm() {
     return next;
   };
 
+  const buildMessageBody = () => {
+    return [
+      `*Consulta de colaboración institucional*`,
+      `• *Nombre:* ${values.name.trim()}`,
+      `• *País:* ${values.country.trim()}`,
+      `• *Email:* ${values.email.trim()}`,
+      values.whatsapp.trim() ? `• *WhatsApp:* ${values.whatsapp.trim()}` : null,
+      values.organization.trim() ? `• *Institución:* ${values.organization.trim()}` : null,
+      `• *Tipo de colaboración:* ${values.collabType}`,
+      `• *Proyecto de interés:* ${values.project}`,
+      values.message.trim() ? `\n*Mensaje:*\n${values.message.trim()}` : null,
+    ]
+      .filter(Boolean)
+      .join("\n");
+  };
+
+  const handleWhatsAppSend = () => {
+    const next = validate();
+    setErrors(next);
+    if (Object.keys(next).length > 0) return;
+
+    const message = buildMessageBody();
+    const url = `https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const next = validate();
     setErrors(next);
     if (Object.keys(next).length === 0) {
-      // TODO: Conectar con servicio de envío de correos
+      const subject = `Consulta de colaboración: ${values.name.trim()} (${values.project})`;
+      const body = buildMessageBody();
+      const mailtoUrl = `mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoUrl;
       setDemoNotice(true);
     } else {
       setDemoNotice(false);
@@ -272,18 +302,38 @@ export default function CollaborationForm() {
           <p className="font-serif text-lg font-bold text-blue-deep">{f.demoTitle}</p>
           <p className="mt-2 text-[0.95rem] leading-relaxed text-ink">{f.demoText}</p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Button href={WHATSAPP_URL} external variant="primary">
-              {t.collaborate.national.whatsapp}
+            <Button
+              type="button"
+              variant="primary"
+              onClick={handleWhatsAppSend}
+            >
+              <IconWhatsApp size={18} />
+              {f.submitWhatsApp}
             </Button>
-            <Button href={`mailto:${CONTACT.email}`} variant="secondary">
-              {t.collaborate.national.email}
+            <Button
+              href={`mailto:${CONTACT.email}?subject=${encodeURIComponent(`Consulta: ${values.name} (${values.project})`)}&body=${encodeURIComponent(buildMessageBody())}`}
+              variant="secondary"
+            >
+              <IconMail size={18} />
+              {f.openEmailClient}
             </Button>
           </div>
         </div>
       )}
 
-      <div className="mt-6">
-        <Button type="submit" variant="primary" size="lg">
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <Button
+          type="button"
+          variant="primary"
+          size="lg"
+          onClick={handleWhatsAppSend}
+          className="bg-green-700 hover:bg-green-800 border-green-800 text-warm-white"
+        >
+          <IconWhatsApp size={20} />
+          {f.submitWhatsApp}
+        </Button>
+        <Button type="submit" variant="secondary" size="lg">
+          <IconMail size={20} />
           {f.submit}
         </Button>
       </div>

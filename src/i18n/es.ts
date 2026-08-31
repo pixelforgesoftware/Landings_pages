@@ -8,19 +8,16 @@ export const es = {
     locationLine: "Real del Padre · San Rafael · Mendoza",
     mottoA: "Luz del mundo",
     mottoB: "Sal de la tierra",
-    pendingImage: "Imagen pendiente",
-    pendingLogo: "Logo pendiente",
-    mapPending: "Mapa pendiente",
-    imagePendingAria: "imagen pendiente",
     soon: "Próximamente",
     copy: "Copiar",
     copied: "¡Copiado!",
     skipToContent: "Saltar al contenido",
     openMenu: "Abrir menú",
     closeMenu: "Cerrar menú",
+    openInMaps: "Ver en Google Maps",
     logos: {
-      parish: "Logo Parroquia — pendiente",
-      school: "Escudo Colegio — pendiente",
+      parish: "Insignia de la Parroquia San Francisco de Asís",
+      school: "Insignia del Colegio Sagrada Familia de Nazareth",
     },
     names: {
       parish: "Parroquia San Francisco de Asís",
@@ -91,8 +88,8 @@ export const es = {
     stats: {
       parish: "Fundación de la Parroquia",
       school: "Inicio del Colegio",
-      students: "Alumnos, aproximadamente",
-      families: "Familias, aproximadamente",
+      students: "Alumnos",
+      families: "Familias",
       levels: "Niveles educativos",
     },
     timeline: {
@@ -152,7 +149,6 @@ export const es = {
       p2Title: "Futura Capilla San José",
       p2Text:
         "Un nuevo espacio de oración y encuentro destinado a toda la comunidad parroquial y educativa. La futura Capilla San José será construida dentro del predio del Colegio, pero estará abierta a toda la comunidad.",
-      p2Photo: "Plano / render de la futura Capilla San José",
       p2Cta: "Descubrir la futura Capilla",
     },
     collaborate: {
@@ -194,7 +190,7 @@ export const es = {
     },
     gallery: {
       title: "La vida de la Parroquia",
-      intro: "Fotografías que se incorporarán próximamente.",
+      intro: "Momentos e hitos compartidos junto a nuestra comunidad y las familias de Real del Padre.",
       items: [
         "Parroquia exterior",
         "Interior de la Parroquia",
@@ -237,8 +233,8 @@ export const es = {
       p5: "El proyecto educativo se encuentra profundamente vinculado con la vida de la Parroquia San Francisco de Asís.",
     },
     figures: {
-      students: "Alumnos, aproximadamente",
-      families: "Familias, aproximadamente",
+      students: "Alumnos",
+      families: "Familias",
     },
     levels: {
       eyebrow: "Propuesta educativa",
@@ -380,8 +376,8 @@ export const es = {
         "Mantenimiento general",
       ],
       photos: ["Plano del proyecto", "Estado actual", "Construcción", "Avances futuros"],
-      progressTitle: "Avances del proyecto",
-      progressText: "Próximamente compartiremos aquí las novedades y avances de esta obra.",
+      progressTitle: "Compromiso institucional",
+      progressText: "La obra avanza de forma planificada según los recursos acumulados por la comunidad y las donaciones recibidas.",
       cta: "Colaborar con este proyecto",
     },
     chapel: {
@@ -409,12 +405,15 @@ export const es = {
         "Render de la futura Capilla",
         "Terreno de la futura Capilla",
         "Avances de construcción",
-        "Futuras fotografías de obra",
+        "Fotografías de la obra",
       ],
-      updatesTitle: "Seguí el crecimiento de la obra",
+      statusBadge: "Estado del proyecto",
+      statusTitle: "En etapa de anteproyecto y planimetría",
+      statusDescription:
+        "El anteproyecto arquitectónico fue concebido por el equipo técnico para responder a las necesidades espirituales, litúrgicas y pastorales de la comunidad escolar y parroquial.",
+      updatesTitle: "Una obra de fe y comunidad",
       updatesText:
-        "Este espacio está preparado para compartir, a medida que la obra avance, actualizaciones, fotografías, hitos y testimonios de colaboradores.",
-      updatesEmpty: "Todavía no publicamos novedades de esta obra.",
+        "Cada aporte recibido se destina directamente a los cimientos, la estructura y la ornamentación de la Capilla San José, consolidando este espacio de encuentro.",
       cta: "Colaborar con la Capilla",
     },
     bottom: {
@@ -428,7 +427,7 @@ export const es = {
     title: "La vida de nuestra comunidad",
     intro:
       "Un recorrido visual por la historia, las actividades y el crecimiento de la comunidad parroquial y educativa.",
-    note: "Galería en preparación: cada recuadro indica la fotografía que se incorporará próximamente.",
+    note: "Galería comunitaria: un recorrido visual por la historia, las actividades y el crecimiento de nuestra comunidad.",
     filterAll: "Todas",
     videos: {
       title: "Videos institucionales",
@@ -488,19 +487,6 @@ export const es = {
           "Participación de las familias",
           "Inauguraciones",
           "Crecimiento de los niveles",
-        ],
-      },
-      {
-        id: "capilla",
-        name: "Capilla San José",
-        items: [
-          "Imagen de San José",
-          "Bocetos",
-          "Planos",
-          "Render",
-          "Terreno",
-          "Construcción",
-          "Avances futuros",
         ],
       },
     ],
@@ -593,7 +579,8 @@ export const es = {
       message: "Mensaje",
       messagePlaceholder: "Contanos cómo te gustaría colaborar…",
       privacy: "He leído y acepto que mis datos sean utilizados para responder esta consulta.",
-      submit: "Quiero ponerme en contacto",
+      submit: "Enviar consulta por correo",
+      submitWhatsApp: "Enviar consulta por WhatsApp",
       required: "Este campo es obligatorio.",
       invalidEmail: "Ingresá un correo electrónico válido.",
       collabOptions: [
@@ -613,9 +600,10 @@ export const es = {
         "Futura Capilla San José",
         "Necesidad específica",
       ],
-      demoTitle: "Formulario en modo demostración",
+      demoTitle: "Consulta lista para enviar por correo",
       demoText:
-        "Este formulario todavía no está conectado a un servidor, por lo que la consulta no se envió realmente. Para que tu mensaje llegue de inmediato, escribinos por WhatsApp o por correo electrónico.",
+        "Se abrirá tu cliente de correo con todos los datos completados listos para enviar a la parroquia.",
+      openEmailClient: "Abrir correo con los datos cargados",
     },
   },
 
@@ -634,16 +622,38 @@ export const es = {
     },
     schoolAddress: {
       title: "Dirección del Colegio",
-      mapLabel: "Ubicación Colegio — mapa pendiente",
+      mapLabel: "Ubicación del Colegio en Real del Padre",
     },
     parishAddress: {
       title: "Dirección de la Parroquia",
-      mapLabel: "Ubicación Parroquia — mapa pendiente",
+      mapLabel: "Ubicación de la Parroquia en Real del Padre",
     },
-    mapNote: "El mapa interactivo se incorporará próximamente.",
     social: {
       title: "Redes sociales",
       note: "Los enlaces oficiales de nuestras redes sociales (Instagram, Facebook y YouTube) serán confirmados próximamente.",
+    },
+    form: {
+      title: "Envianos tu consulta",
+      intro: "Completá tus datos y envianos tu mensaje directamente por WhatsApp o correo electrónico sin demoras.",
+      name: "Nombre y apellido",
+      phone: "Teléfono / WhatsApp",
+      email: "Correo electrónico",
+      destination: "Destinatario de la consulta",
+      destinationPlaceholder: "Seleccioná a quién dirigir la consulta…",
+      destinationOptions: [
+        "Parroquia San Francisco de Asís",
+        "Colegio Sagrada Familia de Nazareth (Secundario / Primario)",
+        "Jardín Maternal JP-338 San Francisco de Asís",
+        "Secretaría Parroquial / Bautismos / Sacramentos",
+        "Consulta general",
+      ],
+      message: "Mensaje o motivo de la consulta",
+      messagePlaceholder: "Escribí aquí tu consulta...",
+      privacy: "Acepto que estos datos sean utilizados para responder a mi consulta.",
+      submitWhatsApp: "Enviar consulta por WhatsApp",
+      submitEmail: "Enviar consulta por correo",
+      required: "Este campo es obligatorio.",
+      invalidEmail: "Ingresá un correo electrónico válido.",
     },
   },
 

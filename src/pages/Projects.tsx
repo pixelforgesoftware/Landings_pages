@@ -1,8 +1,7 @@
 import { useI18n, usePageTitle } from "@/i18n";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import { IconCalendar } from "@/components/ui/icons";
+import { IconCalendar, IconChurch } from "@/components/ui/icons";
 
 /**
  * Página de proyectos institucionales: Crecimiento Educativo y Futura Capilla San José.
@@ -71,11 +70,31 @@ export default function Projects() {
           </div>
 
           <div className="grid grid-cols-2 content-start gap-4">
-            {p.educational.photos.map((photo, i) => (
-              <Reveal key={photo} delay={i * 70}>
-                <ImagePlaceholder label={photo} kind="plan" className="aspect-[4/3] w-full" />
-              </Reveal>
-            ))}
+            {p.educational.photos.map((photo, i) => {
+              let src: string | undefined;
+              if (i === 0) src = "/images/colegio-edificio-exterior.webp";
+              if (i === 1) src = "/images/colegio-aula-preparada.webp";
+              if (i === 2) src = "/images/obras-construccion-aulas.webp";
+              if (i === 3) src = "/images/historia-2017-inauguracion.webp";
+
+              return (
+                <Reveal key={photo} delay={i * 70}>
+                  <figure className="group overflow-hidden border border-line bg-warm-white shadow-sm transition-all duration-300 hover:border-gold/60 hover:shadow-inst">
+                    <div className="aspect-[4/3] w-full overflow-hidden">
+                      <img
+                        src={src}
+                        alt={photo}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <figcaption className="border-t border-line/80 px-3 py-2 text-xs italic text-ink-soft">
+                      {photo}
+                    </figcaption>
+                  </figure>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -116,23 +135,23 @@ export default function Projects() {
             </div>
           </Reveal>
 
-          {/* Galería de planos y conceptos */}
-          <Reveal className="mt-12">
-            <div className="frame-gold mx-auto max-w-4xl">
-              <ImagePlaceholder
-                label={p.chapel.photos[2]}
-                kind="plan"
-                className="aspect-[4/3] w-full sm:aspect-[16/8]"
-              />
+          {/* Estado del proyecto arquitectónico */}
+          <Reveal className="mx-auto mt-12 max-w-3xl">
+            <div className="border border-gold/50 bg-gold-soft/30 p-7 text-center shadow-inst sm:p-10">
+              <span aria-hidden className="mx-auto mb-4 flex h-13 w-13 items-center justify-center rounded-full border border-gold/60 bg-warm-white text-gold shadow-sm">
+                <IconChurch size={24} />
+              </span>
+              <p className="text-[0.72rem] font-bold uppercase tracking-[0.22em] text-gold">
+                {p.chapel.statusBadge}
+              </p>
+              <h3 className="mt-2 font-serif text-2xl font-bold text-blue-deep sm:text-3xl">
+                {p.chapel.statusTitle}
+              </h3>
+              <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-ink-soft sm:text-base">
+                {p.chapel.statusDescription}
+              </p>
             </div>
           </Reveal>
-          <div className="mx-auto mt-6 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-3">
-            {[p.chapel.photos[0], p.chapel.photos[1], p.chapel.photos[3], p.chapel.photos[4], p.chapel.photos[5]].map(
-              (photo) => (
-                <ImagePlaceholder key={photo} label={photo} className="aspect-[4/3] w-full" />
-              ),
-            )}
-          </div>
 
           {/* Necesidades del proyecto */}
           <Reveal className="mx-auto mt-14 max-w-4xl">
@@ -148,19 +167,16 @@ export default function Projects() {
             </ul>
           </Reveal>
 
-          {/* Novedades y seguimiento de obra */}
+          {/* Obra de fe y comunidad */}
           <Reveal className="mx-auto mt-14 max-w-3xl">
-            <div className="border border-gold/50 bg-gold-soft/50 p-7 text-center sm:p-9">
+            <div className="border border-gold/50 bg-gold-soft/50 p-7 text-center sm:p-9 shadow-inst">
               <h3 className="font-serif text-2xl font-bold text-blue-deep">{p.chapel.updatesTitle}</h3>
               <p className="mt-3 leading-relaxed text-ink-soft">{p.chapel.updatesText}</p>
-              <p className="mt-5 inline-block border border-dashed border-gold/60 bg-warm-white px-5 py-3 text-sm italic text-ink-soft">
-                {p.chapel.updatesEmpty}
-              </p>
-            </div>
-            <div className="mt-8 text-center">
-              <Button href="/colaborar" variant="gold" size="lg">
-                {p.chapel.cta}
-              </Button>
+              <div className="mt-7">
+                <Button href="/colaborar" variant="gold" size="lg">
+                  {p.chapel.cta}
+                </Button>
+              </div>
             </div>
           </Reveal>
         </div>

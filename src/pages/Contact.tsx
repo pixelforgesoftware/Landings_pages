@@ -1,7 +1,9 @@
 import { useI18n, usePageTitle } from "@/i18n";
 import { CONTACT, WHATSAPP_URL } from "@/data/institution";
 import ContactCard from "@/components/ui/ContactCard";
+import ContactForm from "@/components/forms/ContactForm";
 import MapPlaceholder from "@/components/ui/MapPlaceholder";
+import SectionTitle from "@/components/ui/SectionTitle";
 import Reveal from "@/components/ui/Reveal";
 
 /**
@@ -29,7 +31,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Canales de contacto */}
+      {/* Canales de contacto directo */}
       <section aria-label="Canales de contacto" className="wrap py-14 sm:py-16">
         <div className="grid gap-6 md:grid-cols-2 max-w-3xl mx-auto">
           <Reveal>
@@ -54,6 +56,22 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Formulario de consulta rápida */}
+      <section aria-labelledby="form-contacto" className="border-t border-line bg-cream/70 py-16 sm:py-20">
+        <div className="wrap max-w-4xl">
+          <Reveal>
+            <SectionTitle
+              title={c.form.title}
+              lead={c.form.intro}
+              align="center"
+            />
+          </Reveal>
+          <Reveal delay={100} className="mt-10">
+            <ContactForm />
+          </Reveal>
+        </div>
+      </section>
+
       {/* Direcciones institucionales */}
       <section aria-labelledby="direcciones" className="border-y border-line bg-cream">
         <div className="wrap grid gap-8 py-16 lg:grid-cols-2 sm:py-20">
@@ -67,7 +85,8 @@ export default function Contact() {
                 <MapPlaceholder
                   label={c.schoolAddress.mapLabel}
                   addressLines={CONTACT.schoolAddress}
-                  note={c.mapNote}
+                  geo={CONTACT.schoolGeo}
+                  buttonLabel={t.common.openInMaps}
                 />
               </div>
             </div>
@@ -80,7 +99,8 @@ export default function Contact() {
                 <MapPlaceholder
                   label={c.parishAddress.mapLabel}
                   addressLines={CONTACT.parishAddress}
-                  note={c.mapNote}
+                  geo={CONTACT.parishGeo}
+                  buttonLabel={t.common.openInMaps}
                 />
               </div>
             </div>
@@ -90,7 +110,7 @@ export default function Contact() {
 
       {/* Redes sociales institucionales */}
       <section aria-labelledby="redes" className="wrap py-14">
-        <div className="mx-auto max-w-2xl border border-dashed border-gold/60 bg-gold-soft/40 p-8 text-center">
+        <div className="mx-auto max-w-2xl border border-gold/40 bg-warm-white p-8 text-center shadow-inst">
           <h2 id="redes" className="font-serif text-xl font-bold text-blue-deep">{c.social.title}</h2>
           <p className="mt-3 text-sm leading-relaxed text-ink-soft">{c.social.note}</p>
           <p className="mt-4 inline-block rounded-sm border border-gold/60 bg-warm-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-gold">

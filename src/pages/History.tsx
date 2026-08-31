@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { useI18n, usePageTitle } from "@/i18n";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Timeline from "@/components/ui/Timeline";
@@ -11,6 +12,58 @@ export default function History() {
   const { t } = useI18n();
   usePageTitle(t.common.pageTitles.history);
   const h = t.history;
+
+  const timelineWithPhotos = useMemo(() => {
+    return h.timeline.map((entry) => {
+      if (entry.year === "2012" && (entry.title?.includes("Colegio") || entry.title?.includes("School"))) {
+        return {
+          ...entry,
+          photos: [
+            { label: "Comienzos del Colegio y acondicionamiento", src: "/images/historia-2012-inicio.webp" },
+            { label: "Acto inaugural con la comunidad", src: "/images/hero-home.webp" },
+            { label: "Primeras aulas preparadas", src: "/images/colegio-aula-preparada.webp" },
+          ],
+        };
+      }
+      if (entry.year === "2012" && (entry.title?.includes("Jardín") || entry.title?.includes("Kindergarten"))) {
+        return {
+          ...entry,
+          photos: [
+            { label: "Alumnos y docentes del Jardín Maternal", src: "/images/colegio-nivel-inicial.webp" },
+          ],
+        };
+      }
+      if (entry.year === "2014") {
+        return {
+          ...entry,
+          photos: [
+            { label: "Construcción de aulas con la comunidad", src: "/images/obras-construccion-aulas.webp" },
+            { label: "Inauguración de nuevas aulas", src: "/images/historia-2017-inauguracion.webp" },
+            { label: "Alumnos de Nivel Primario", src: "/images/colegio-primaria-formacion.webp" },
+          ],
+        };
+      }
+      if (entry.year === "2021") {
+        return {
+          ...entry,
+          photos: [
+            { label: "Ampliación de infraestructura escolar", src: "/images/historia-2018-aula.webp" },
+            { label: "Comunidad y autoridades presentes", src: "/images/colegio-comunidad-8xmille.webp" },
+          ],
+        };
+      }
+      if (entry.year === "Hoy" || entry.year === "Today") {
+        return {
+          ...entry,
+          photos: [
+            { label: "Familias colaborando activamente", src: "/images/comunidad-trabajo.webp" },
+            { label: "Comunidad unida por nuevos proyectos", src: "/images/colegio-primeras-docentes.webp" },
+          ],
+        };
+      }
+      return entry;
+    });
+  }, [h.timeline]);
 
   return (
     <>
@@ -37,7 +90,7 @@ export default function History() {
           <SectionTitle title={h.timelineTitle} />
         </Reveal>
         <div className="mt-12">
-          <Timeline items={h.timeline} variant="full" />
+          <Timeline items={timelineWithPhotos} variant="full" />
         </div>
       </section>
 

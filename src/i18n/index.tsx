@@ -84,5 +84,9 @@ export function useI18n(): I18nValue {
 export function usePageTitle(title: string) {
   useEffect(() => {
     document.title = title;
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute("content", title);
+    }
   }, [title]);
 }

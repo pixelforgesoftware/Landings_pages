@@ -24,10 +24,10 @@ export default function LogoPlaceholder({
       role="img"
       aria-label={label}
       title={label}
-      className={`flex shrink-0 items-center justify-center border border-dashed ${
+      className={`flex shrink-0 items-center justify-center border shadow-xs transition-colors ${
         dark
-          ? "border-gold-bright/60 bg-blue-deep/40 text-gold-bright"
-          : "border-gold/60 bg-gold-soft/50 text-gold"
+          ? "border-gold-bright/70 bg-gold-soft/15 text-gold-bright"
+          : "border-gold/70 bg-gold-soft/40 text-gold"
       } ${className}`}
     >
       <IconCross size={16} />

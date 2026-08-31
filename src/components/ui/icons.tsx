@@ -30,16 +30,6 @@ export function IconCross(props: IconProps) {
   );
 }
 
-export function IconImage(props: IconProps) {
-  return (
-    <svg {...base(props)}>
-      <rect x="3" y="4.5" width="18" height="15" rx="1.5" />
-      <circle cx="9" cy="10" r="1.6" />
-      <path d="M3.5 17.5 9 13l3.5 3 3-2.5 5 4" />
-    </svg>
-  );
-}
-
 export function IconMapPin(props: IconProps) {
   return (
     <svg {...base(props)}>
@@ -92,15 +82,6 @@ export function IconX(props: IconProps) {
   );
 }
 
-export function IconGlobe(props: IconProps) {
-  return (
-    <svg {...base(props)}>
-      <circle cx="12" cy="12" r="8.5" />
-      <path d="M3.5 12h17M12 3.5c2.3 2.2 3.4 5.2 3.4 8.5s-1.1 6.3-3.4 8.5c-2.3-2.2-3.4-5.2-3.4-8.5s1.1-6.3 3.4-8.5Z" />
-    </svg>
-  );
-}
-
 export function IconCopy(props: IconProps) {
   return (
     <svg {...base(props)}>
@@ -145,16 +126,6 @@ export function IconBook(props: IconProps) {
   );
 }
 
-export function IconUsers(props: IconProps) {
-  return (
-    <svg {...base(props)}>
-      <circle cx="9" cy="8.5" r="3" />
-      <path d="M3.5 19.5c.5-3.5 2.8-5.5 5.5-5.5s5 2 5.5 5.5" />
-      <path d="M15.5 5.7a3 3 0 1 1 .2 5.7M16.5 14.2c2.2.5 3.6 2.3 4 5.3" />
-    </svg>
-  );
-}
-
 export function IconHeart(props: IconProps) {
   return (
     <svg {...base(props)}>
@@ -168,15 +139,6 @@ export function IconCalendar(props: IconProps) {
     <svg {...base(props)}>
       <rect x="3.5" y="5" width="17" height="15.5" rx="1.5" />
       <path d="M3.5 9.5h17M8 3v4M16 3v4" />
-    </svg>
-  );
-}
-
-export function IconPlan(props: IconProps) {
-  return (
-    <svg {...base(props)}>
-      <rect x="3.5" y="3.5" width="17" height="17" rx="1.5" />
-      <path d="M8 20.5v-6.5H3.5M20.5 8H14V3.5M14 14l3.5 3.5" />
     </svg>
   );
 }

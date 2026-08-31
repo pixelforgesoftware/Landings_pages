@@ -1,7 +1,6 @@
 import { useI18n, usePageTitle } from "@/i18n";
 import { MASS_TIMES } from "@/data/institution";
 import SectionTitle from "@/components/ui/SectionTitle";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import { IconClock, IconMapPin } from "@/components/ui/icons";
@@ -33,8 +32,13 @@ export default function Parish() {
             </p>
             <p className="mt-5 max-w-xl leading-relaxed text-cream/85">{p.history.p1}</p>
           </div>
-          <div className="frame-gold">
-            <ImagePlaceholder tone="dark" label={p.heroPhoto} className="aspect-[4/3] w-full" />
+          <div className="frame-gold overflow-hidden">
+            <img
+              src="/images/hero-parish.webp"
+              alt="Monseñor Eduardo María Taussig junto al Pbro. Nicolás Ortiz ante la placa inaugural"
+              className="aspect-[4/3] w-full object-cover object-top transition-transform duration-700 hover:scale-105"
+              loading="eager"
+            />
           </div>
         </div>
       </section>
@@ -96,11 +100,33 @@ export default function Parish() {
           <SectionTitle eyebrow={t.common.nav.gallery} title={p.gallery.title} lead={p.gallery.intro} />
         </Reveal>
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {p.gallery.items.map((label, i) => (
-            <Reveal key={label} delay={(i % 3) * 80}>
-              <ImagePlaceholder label={label} className="aspect-[4/3] w-full" />
-            </Reveal>
-          ))}
+          {p.gallery.items.map((label, i) => {
+            let src: string | undefined;
+            if (i === 0) src = "/images/colegio-edificio-exterior.webp";
+            if (i === 1) src = "/images/colegio-primeras-docentes.webp";
+            if (i === 2) src = "/images/parroquia-altar.webp";
+            if (i === 3) src = "/images/comunidad-trabajo.webp";
+            if (i === 4) src = "/images/colegio-comunidad-8xmille.webp";
+            if (i === 5) src = "/images/comunidad-jornada-trabajo.webp";
+
+            return (
+              <Reveal key={label} delay={(i % 3) * 80}>
+                <figure className="group overflow-hidden border border-line bg-warm-white shadow-sm transition-all duration-300 hover:border-gold/60 hover:shadow-inst">
+                  <div className="aspect-[4/3] w-full overflow-hidden">
+                    <img
+                      src={src}
+                      alt={label}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <figcaption className="border-t border-line/80 px-3 py-2 text-xs italic text-ink-soft">
+                    {label}
+                  </figcaption>
+                </figure>
+              </Reveal>
+            );
+          })}
         </div>
       </section>
 

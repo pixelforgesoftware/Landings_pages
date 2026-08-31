@@ -3,18 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Metadatos de búsqueda principales -->
     <title>Parroquia San Francisco de Asís | Real del Padre</title>
     <meta
       name="description"
-      content="Parroquia San Francisco de Asís y Colegio Sagrada Familia de Nazareth. Fe, educación y comunidad en Real del Padre, San Rafael, Mendoza."
+      content="Parroquia San Francisco de Asís y Colegio Parroquial Sagrada Familia de Nazareth. Fe, educación católica integral y comunidad en Real del Padre, San Rafael, Mendoza, Argentina."
     />
+    <meta name="keywords" content="Parroquia San Francisco de Asís, Colegio Sagrada Familia de Nazareth, Real del Padre, San Rafael, Mendoza, educación católica, Capilla San José, donaciones IOR, iglesia católica" />
+    <meta name="author" content="Parroquia San Francisco de Asís" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://parroquiasanfrancisco.edu.ar/" />
+
+    <!-- Geolocalización para búsquedas locales (Local SEO) -->
+    <meta name="geo.region" content="AR-M" />
+    <meta name="geo.placename" content="Real del Padre, San Rafael, Mendoza" />
+    <meta name="geo.position" content="-34.84312;-67.76821" />
+    <meta name="ICBM" content="-34.84312, -67.76821" />
+
+    <!-- Open Graph / Redes Sociales (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://parroquiasanfrancisco.edu.ar/" />
+    <meta property="og:title" content="Parroquia San Francisco de Asís | Real del Padre" />
+    <meta property="og:description" content="Formamos personas, educamos en la fe y construimos comunidad. Conocé nuestra parroquia, colegio y proyectos de crecimiento en Mendoza." />
+    <meta property="og:image" content="https://parroquiasanfrancisco.edu.ar/images/hero-home.webp" />
+    <meta property="og:image:alt" content="Parroquia San Francisco de Asís y comunidad educativa" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Parroquia San Francisco de Asís" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Parroquia San Francisco de Asís | Real del Padre" />
+    <meta name="twitter:description" content="Formamos personas, educamos en la fe y construimos comunidad en Real del Padre, San Rafael, Mendoza." />
+    <meta name="twitter:image" content="https://parroquiasanfrancisco.edu.ar/images/hero-home.webp" />
+
+    <!-- Favicon e Iconografía -->
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <meta name="theme-color" content="#1a2e40" />
+
+    <!-- Tipografía optimizada con preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Datos estructurados JSON-LD (Schema.org) para motores de búsqueda -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CatholicChurch",
+          "@id": "https://parroquiasanfrancisco.edu.ar/#parroquia",
+          "name": "Parroquia San Francisco de Asís",
+          "url": "https://parroquiasanfrancisco.edu.ar/",
+          "foundingDate": "1987-03-05",
+          "telephone": "+54-9-260-4607108",
+          "email": "curanicolasortiz@yahoo.com.ar",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Malvinas Argentinas s/n",
+            "addressLocality": "Real del Padre",
+            "addressRegion": "Mendoza",
+            "addressCountry": "AR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -34.84312,
+            "longitude": -67.76821
+          }
+        },
+        {
+          "@type": "School",
+          "@id": "https://parroquiasanfrancisco.edu.ar/#colegio",
+          "name": "Colegio Parroquial 242 Sagrada Familia de Nazareth",
+          "url": "https://parroquiasanfrancisco.edu.ar/colegio",
+          "foundingDate": "2012-03-05",
+          "telephone": "+54-9-260-4607108",
+          "email": "curanicolasortiz@yahoo.com.ar",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle Misiones y San Juan",
+            "addressLocality": "Real del Padre",
+            "addressRegion": "Mendoza",
+            "addressCountry": "AR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -34.83785,
+            "longitude": -67.75661
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

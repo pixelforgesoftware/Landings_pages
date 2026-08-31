@@ -132,9 +132,9 @@ export default function Collaborate() {
       <section aria-labelledby="formulario" className="border-t border-line bg-cream">
         <div className="wrap py-16 sm:py-20">
           <Reveal>
-            <SectionTitle title={c.form.title} lead={c.form.intro} />
+            <SectionTitle title={c.form.title} lead={c.form.intro} align="center" />
           </Reveal>
-          <Reveal delay={100} className="mt-10 max-w-4xl">
+          <Reveal delay={100} className="mt-10 max-w-4xl mx-auto">
             <CollaborationForm />
           </Reveal>
         </div>

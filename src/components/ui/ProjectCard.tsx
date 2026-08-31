@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import clsx from "clsx";
-import ImagePlaceholder from "./ImagePlaceholder";
 import { IconArrowRight } from "./icons";
 
 /**
@@ -13,7 +12,7 @@ interface ProjectCardProps {
   text: string;
   /** Línea breve de necesidades, ej. "3 aulas · 1 biblioteca". */
   meta?: string;
-  photo?: { label: string; kind?: "photo" | "plan" };
+  photo?: { label: string; src?: string };
   ctaLabel: string;
   ctaHref: string;
   featured?: boolean;
@@ -44,12 +43,15 @@ export default function ProjectCard({
       {/* Filete dorado superior en la tarjeta destacada */}
       {featured && <div aria-hidden className="h-1 w-full bg-gradient-to-r from-gold/30 via-gold to-gold/30" />}
 
-      {photo && (
-        <ImagePlaceholder
-          label={photo.label}
-          kind={photo.kind ?? "plan"}
-          className={clsx("w-full", featured ? "aspect-[16/9]" : "aspect-[16/10]")}
-        />
+      {photo?.src && (
+        <div className={clsx("w-full overflow-hidden border-b border-line", featured ? "aspect-[16/9]" : "aspect-[16/10]")}>
+          <img
+            src={photo.src}
+            alt={photo.label}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+        </div>
       )}
 
       <div className={clsx("flex flex-1 flex-col p-6 sm:p-7", featured && "sm:p-8")}>

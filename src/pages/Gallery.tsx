@@ -7,6 +7,38 @@ import Reveal from "@/components/ui/Reveal";
 /**
  * Galería multimedia institucional con filtros interactivos por categoría.
  */
+const PHOTO_MAP: Record<string, string> = {
+  // Parroquia
+  "parroquia-0": "/images/colegio-edificio-exterior.webp",
+  "parroquia-1": "/images/colegio-primeras-docentes.webp",
+  "parroquia-2": "/images/parroquia-altar.webp",
+  "parroquia-3": "/images/hero-parish.webp",
+  // Colegio
+  "colegio-0": "/images/hero-school.webp",
+  "colegio-1": "/images/colegio-aula-preparada.webp",
+  "colegio-2": "/images/colegio-clase.webp",
+  "colegio-3": "/images/comunidad-trabajo.webp",
+  "colegio-4": "/images/colegio-sagrada-familia.webp",
+  // Actividades
+  "actividades-0": "/images/colegio-alumnos-bandera.webp",
+  "actividades-1": "/images/colegio-nivel-inicial.webp",
+  "actividades-2": "/images/colegio-primaria-formacion.webp",
+  "actividades-3": "/images/colegio-inicial-merienda.webp",
+  "actividades-4": "/images/colegio-sagrada-familia.webp",
+  // Comunidad
+  "comunidad-0": "/images/colegio-comunidad-8xmille.webp",
+  "comunidad-1": "/images/comunidad-trabajo.webp",
+  "comunidad-2": "/images/comunidad-jornada-trabajo.webp",
+  // Historia
+  "historia-0": "/images/historia-2012-inicio.webp",
+  "historia-1": "/images/colegio-aula-preparada.webp",
+  "historia-2": "/images/obras-construccion-aulas.webp",
+  "historia-3": "/images/colegio-primeras-docentes.webp",
+  "historia-4": "/images/comunidad-trabajo.webp",
+  "historia-5": "/images/historia-2017-inauguracion.webp",
+  "historia-6": "/images/colegio-primaria-formacion.webp",
+};
+
 export default function Gallery() {
   const { t } = useI18n();
   usePageTitle(t.common.pageTitles.gallery);
@@ -16,12 +48,16 @@ export default function Gallery() {
 
   const allItems = useMemo<GalleryItem[]>(() => {
     return g.categories.flatMap((cat) =>
-      cat.items.map((caption, i) => ({
-        id: `${cat.id}-${i}`,
-        caption,
-        categoryName: cat.name,
-        categoryId: cat.id,
-      })),
+      cat.items.map((caption, i) => {
+        const id = `${cat.id}-${i}`;
+        return {
+          id,
+          caption,
+          categoryName: cat.name,
+          categoryId: cat.id,
+          src: PHOTO_MAP[id],
+        };
+      }),
     );
   }, [g.categories]);
 
@@ -70,7 +106,7 @@ export default function Gallery() {
       {/* Videos institucionales */}
       <section aria-label={g.videos.title} className="border-t border-line bg-cream">
         <div className="wrap py-14">
-          <div className="mx-auto max-w-3xl border border-dashed border-gold/60 bg-warm-white p-8 text-center sm:p-10">
+          <div className="mx-auto max-w-3xl border border-gold/40 bg-warm-white p-8 text-center shadow-inst sm:p-10">
             <span aria-hidden className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-gold/50 text-gold">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                 <rect x="3" y="5.5" width="18" height="13" rx="1.5" />

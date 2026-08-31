@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useI18n, usePageTitle } from "@/i18n";
 import { STATS } from "@/data/institution";
 import LogoPlaceholder from "@/components/ui/LogoPlaceholder";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Timeline from "@/components/ui/Timeline";
 import ProjectCard from "@/components/ui/ProjectCard";
@@ -84,11 +83,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="frame-gold">
-            <ImagePlaceholder
-              tone="dark"
-              label={t.home.hero.photo}
-              className="aspect-[4/3] w-full lg:aspect-[5/4]"
+          <div className="frame-gold overflow-hidden">
+            <img
+              src="/images/hero-home.webp"
+              alt="Acto de inauguración e inicio de clases de la comunidad en San José de los Chañares"
+              className="aspect-[4/3] w-full object-cover lg:aspect-[5/4] transition-transform duration-700 hover:scale-105"
+              loading="eager"
             />
           </div>
         </div>
@@ -220,11 +220,18 @@ export default function Home() {
               {t.home.timeline.link}
             </Link>
           </p>
-          <div className="mt-10 hidden lg:block">
-            <ImagePlaceholder
-              label={t.parish.gallery.items[0]}
-              className="aspect-[4/3] max-w-md"
-            />
+          <div className="mt-10 hidden lg:block max-w-md border border-line bg-warm-white shadow-inst">
+            <div className="overflow-hidden aspect-[4/3] w-full bg-warm-white">
+              <img
+                src="/images/comunidad-trabajo.webp"
+                alt="Familias y comunidad de Chañares participando en el traslado y equipamiento escolar"
+                className="h-full w-full object-cover object-[center_top] transition-transform duration-500 hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+            <p className="border-t border-line px-3.5 py-2.5 text-xs italic text-ink-soft">
+              Esfuerzo conjunto de familias y colaboradores en el acondicionamiento de las aulas
+            </p>
           </div>
         </Reveal>
         <Reveal delay={100} className="mt-10 lg:mt-0">
@@ -300,7 +307,11 @@ export default function Home() {
               title={t.home.projects.p1Title}
               text={t.home.projects.p1Goal}
               meta={t.home.projects.p1NeedCount}
-              photo={{ label: `${t.projects.educational.photos[0]} — ${t.projects.educational.subtitle}`, kind: "plan" }}
+              photo={{
+                label: `${t.projects.educational.photos[0]} — ${t.projects.educational.subtitle}`,
+                kind: "photo",
+                src: "/images/colegio-aula-preparada.webp",
+              }}
               ctaLabel={t.home.projects.p1Cta}
               ctaHref="/proyectos#proyecto-educativo"
               className="h-full"
@@ -312,7 +323,10 @@ export default function Home() {
               kicker={t.home.projects.p2Kicker}
               title={t.home.projects.p2Title}
               text={t.home.projects.p2Text}
-              photo={{ label: t.home.projects.p2Photo, kind: "plan" }}
+              photo={{
+                label: "Comunidad parroquial y educativa en el predio escolar",
+                src: "/images/colegio-comunidad-8xmille.webp",
+              }}
               ctaLabel={t.home.projects.p2Cta}
               ctaHref="/proyectos#capilla-san-jose"
               className="h-full"

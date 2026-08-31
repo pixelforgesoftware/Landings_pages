@@ -1,7 +1,6 @@
 import { useI18n, usePageTitle } from "@/i18n";
 import { STATS, SCHOOL_HOURS } from "@/data/institution";
 import SectionTitle from "@/components/ui/SectionTitle";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import { IconClock } from "@/components/ui/icons";
@@ -36,8 +35,13 @@ export default function School() {
           <p className="mx-auto mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-cream/85">
             {s.subtitle}
           </p>
-          <div className="frame-gold mx-auto mt-10 max-w-5xl">
-            <ImagePlaceholder tone="dark" label={s.heroPhoto} className="aspect-[4/3] w-full sm:aspect-[16/7]" />
+          <div className="frame-gold mx-auto mt-10 max-w-5xl overflow-hidden">
+            <img
+              src="/images/hero-school.webp"
+              alt={s.heroPhoto}
+              className="aspect-[4/3] w-full object-cover sm:aspect-[16/7] transition-transform duration-700 hover:scale-105"
+              loading="eager"
+            />
           </div>
         </div>
       </section>
@@ -69,7 +73,19 @@ export default function School() {
               </p>
             </div>
           </div>
-          <ImagePlaceholder label={s.activities.photos[0]} className="aspect-[4/3] w-full" />
+          <div className="border border-line bg-warm-white shadow-inst">
+            <div className="overflow-hidden aspect-[4/3] w-full bg-warm-white">
+              <img
+                src="/images/colegio-clase.webp"
+                alt="Docentes y alumnos compartiendo la jornada en el aula"
+                className="h-full w-full object-cover object-[center_15%] transition-transform duration-500 hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+            <p className="border-t border-line px-3.5 py-2.5 text-xs italic text-ink-soft">
+              Comunidad educativa: docentes, familias y alumnos en el aula
+            </p>
+          </div>
         </Reveal>
       </section>
 
@@ -79,22 +95,58 @@ export default function School() {
           <Reveal>
             <SectionTitle eyebrow={s.levels.eyebrow} title={s.levels.title} lead={s.levels.intro} />
           </Reveal>
-          <ol className="mt-10 max-w-3xl">
-            {s.levels.items.map((level, i) => (
-              <Reveal key={level.name} delay={i * 70}>
-                <li className="flex items-center gap-5 border-b border-line py-5 first:border-t sm:gap-8">
-                  <span aria-hidden className="w-12 shrink-0 font-serif text-2xl font-black text-gold sm:text-3xl">
-                    {["I", "II", "III", "IV"][i]}
-                  </span>
-                  <div className="min-w-0 flex-1">
-                    <p className="font-serif text-lg font-bold text-blue-deep sm:text-xl">{level.name}</p>
-                    {level.note && <p className="mt-0.5 text-sm text-ink-soft">{level.note}</p>}
+          <div className="mt-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <ol className="max-w-2xl">
+              {s.levels.items.map((level, i) => (
+                <Reveal key={level.name} delay={i * 70}>
+                  <li className="flex items-center gap-5 border-b border-line py-5 first:border-t sm:gap-8">
+                    <span aria-hidden className="w-12 shrink-0 font-serif text-2xl font-black text-gold sm:text-3xl">
+                      {["I", "II", "III", "IV"][i]}
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-serif text-lg font-bold text-blue-deep sm:text-xl">{level.name}</p>
+                      {level.note && <p className="mt-0.5 text-sm text-ink-soft">{level.note}</p>}
+                    </div>
+                    <span aria-hidden className="hidden h-2 w-2 rotate-45 bg-red sm:block" />
+                  </li>
+                </Reveal>
+              ))}
+            </ol>
+
+            {/* Muestra fotográfica de los niveles */}
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+              <Reveal delay={120}>
+                <div className="border border-line bg-warm-white shadow-sm transition-all duration-300 hover:border-gold/60 hover:shadow-inst">
+                  <div className="overflow-hidden aspect-[4/3] w-full bg-warm-white">
+                    <img
+                      src="/images/colegio-nivel-inicial.webp"
+                      alt="Nivel Inicial: docentes y alumnos en el inicio de clases"
+                      className="h-full w-full object-cover object-[center_20%] transition-transform duration-500 hover:scale-105"
+                      loading="lazy"
+                    />
                   </div>
-                  <span aria-hidden className="hidden h-2 w-2 rotate-45 bg-red sm:block" />
-                </li>
+                  <p className="border-t border-line px-3.5 py-2.5 text-xs italic text-ink-soft">
+                    Nivel Inicial: primeras vivencias e integración
+                  </p>
+                </div>
               </Reveal>
-            ))}
-          </ol>
+              <Reveal delay={200}>
+                <div className="border border-line bg-warm-white shadow-sm transition-all duration-300 hover:border-gold/60 hover:shadow-inst">
+                  <div className="overflow-hidden aspect-[4/3] w-full bg-warm-white">
+                    <img
+                      src="/images/colegio-primaria-formacion.webp"
+                      alt="Nivel Primario: formación de alumnos y docentes"
+                      className="h-full w-full object-cover object-[center_25%] transition-transform duration-500 hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="border-t border-line px-3.5 py-2.5 text-xs italic text-ink-soft">
+                    Nivel Primario: formación académica y virtudes
+                  </p>
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -113,8 +165,44 @@ export default function School() {
             ))}
           </ul>
           <div className="grid grid-cols-2 gap-4">
-            {s.activities.photos.map((label) => (
-              <ImagePlaceholder key={label} label={label} className="aspect-[4/3] w-full" />
+            {[
+              {
+                label: s.activities.photos[0],
+                src: "/images/colegio-primaria-formacion.webp",
+                caption: "Formación de alumnos y docentes",
+              },
+              {
+                label: s.activities.photos[1],
+                src: "/images/colegio-sagrada-familia.webp",
+                caption: "Actividades formativas e ideario",
+              },
+              {
+                label: s.activities.photos[2],
+                src: "/images/colegio-alumnos-bandera.webp",
+                caption: "Actos patrios e institucionales",
+              },
+              {
+                label: s.activities.photos[3],
+                src: "/images/historia-2017-inauguracion.webp",
+                caption: "Celebraciones e inauguraciones",
+              },
+            ].map((item) => (
+              <figure
+                key={item.label}
+                className="group overflow-hidden border border-line bg-warm-white shadow-sm transition-all duration-300 hover:border-gold/60 hover:shadow-inst"
+              >
+                <div className="aspect-[4/3] w-full overflow-hidden">
+                  <img
+                    src={item.src}
+                    alt={item.label}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="border-t border-line/80 px-3 py-2 text-xs italic text-ink-soft">
+                  {item.caption}
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>
