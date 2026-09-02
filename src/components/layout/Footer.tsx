@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useI18n } from "@/i18n";
 import { CONTACT, WHATSAPP_URL, SOCIAL } from "@/data/institution";
-import LogoPlaceholder from "@/components/ui/LogoPlaceholder";
 import { IconMail, IconWhatsApp } from "@/components/ui/icons";
 
 /**
@@ -38,7 +37,18 @@ export default function Footer() {
         {/* Identidad */}
         <div>
           <div className="flex items-center gap-3">
-            <LogoPlaceholder label={t.common.logos.parish} tone="dark" />
+            <div className="flex items-center gap-2">
+              <img
+                src="/images/logo-parroquia.webp"
+                alt={t.common.logos.parish}
+                className="h-9 w-auto max-w-[36px] object-contain"
+              />
+              <img
+                src="/images/logo-colegio.webp"
+                alt={t.common.logos.school}
+                className="h-9 w-auto max-w-[36px] object-contain"
+              />
+            </div>
             <p className="font-serif text-lg font-bold leading-tight text-warm-white">
               {t.common.names.parish}
             </p>

@@ -2,7 +2,6 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useI18n } from "@/i18n";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import LogoPlaceholder from "@/components/ui/LogoPlaceholder";
 import { IconMenu, IconX } from "@/components/ui/icons";
 
 /**
@@ -54,11 +53,19 @@ export default function Header() {
           aria-label={t.common.names.parish}
           onClick={() => setOpen(false)}
         >
-          {/* Logo / Escudo institucional */}
-          <LogoPlaceholder
-            label={t.common.logos.parish}
-            className="h-10 w-10 sm:h-11 sm:w-11 shrink-0"
-          />
+          {/* Logos institucionales */}
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+            <img
+              src="/images/logo-parroquia.webp"
+              alt={t.common.logos.parish}
+              className="h-9 w-auto max-w-[36px] sm:h-11 sm:max-w-[44px] object-contain transition-transform group-hover:scale-105"
+            />
+            <img
+              src="/images/logo-colegio.webp"
+              alt={t.common.logos.school}
+              className="h-9 w-auto max-w-[36px] sm:h-11 sm:max-w-[44px] object-contain transition-transform group-hover:scale-105"
+            />
+          </div>
           <span className="flex min-w-0 flex-col leading-tight">
             <span className="truncate font-serif text-[0.98rem] font-bold text-blue-deep transition-colors group-hover:text-red sm:text-lg sm:overflow-visible sm:whitespace-normal">
               {t.common.names.parish}

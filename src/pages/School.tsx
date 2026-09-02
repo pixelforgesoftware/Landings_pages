@@ -24,6 +24,13 @@ export default function School() {
       {/* Hero principal */}
       <section className="pattern-cross bg-blue-deep text-cream">
         <div className="wrap py-14 text-center lg:py-18">
+          <div className="mx-auto mb-4 flex justify-center">
+            <img
+              src="/images/logo-colegio.webp"
+              alt={t.common.logos.school}
+              className="h-20 w-20 object-contain sm:h-24 sm:w-24"
+            />
+          </div>
           <p className="flex items-center justify-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-gold-bright">
             <span aria-hidden className="h-px w-8 bg-gold-bright/70" />
             {s.eyebrow}

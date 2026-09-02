@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useI18n, usePageTitle } from "@/i18n";
 import { STATS } from "@/data/institution";
-import LogoPlaceholder from "@/components/ui/LogoPlaceholder";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Timeline from "@/components/ui/Timeline";
 import ProjectCard from "@/components/ui/ProjectCard";
@@ -153,7 +152,11 @@ export default function Home() {
                   to="/parroquia"
                   className="relative flex gap-5 border border-line bg-cream p-6 transition-all hover:border-gold hover:shadow-inst"
                 >
-                  <LogoPlaceholder label={t.common.logos.parish} className="h-14 w-14" />
+                  <img
+                    src="/images/logo-parroquia.webp"
+                    alt={t.common.logos.parish}
+                    className="h-14 w-auto max-w-[56px] shrink-0 object-contain"
+                  />
                   <span>
                     <span className="font-serif text-lg font-bold text-blue-deep">
                       {t.home.unity.parishCardTitle}
@@ -173,7 +176,11 @@ export default function Home() {
                   to="/colegio"
                   className="relative flex gap-5 border border-line bg-cream p-6 transition-all hover:border-gold hover:shadow-inst"
                 >
-                  <LogoPlaceholder label={t.common.logos.school} className="h-14 w-14" />
+                  <img
+                    src="/images/logo-colegio.webp"
+                    alt={t.common.logos.school}
+                    className="h-14 w-auto max-w-[56px] shrink-0 object-contain"
+                  />
                   <span>
                     <span className="font-serif text-lg font-bold text-blue-deep">
                       {t.home.unity.schoolCardTitle}

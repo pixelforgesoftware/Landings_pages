@@ -22,13 +22,6 @@ function base({ size = 20, ...props }: IconProps) {
   };
 }
 
-export function IconCross(props: IconProps) {
-  return (
-    <svg {...base(props)}>
-      <path d="M12 3v18M6.5 8.5h11" />
-    </svg>
-  );
-}
 
 export function IconMapPin(props: IconProps) {
   return (

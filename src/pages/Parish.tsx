@@ -19,6 +19,13 @@ export default function Parish() {
       <section className="pattern-cross bg-blue-deep text-cream">
         <div className="wrap grid items-center gap-10 py-14 lg:grid-cols-[1fr_1.05fr] lg:gap-16 lg:py-20">
           <div>
+            <div className="mb-4">
+              <img
+                src="/images/logo-parroquia.webp"
+                alt={t.common.logos.parish}
+                className="h-16 w-auto object-contain sm:h-20"
+              />
+            </div>
             <p className="flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-gold-bright">
               <span aria-hidden className="h-px w-10 bg-gold-bright/70" />
               {p.eyebrow}
