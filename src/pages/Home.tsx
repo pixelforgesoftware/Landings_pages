@@ -316,7 +316,6 @@ export default function Home() {
               meta={t.home.projects.p1NeedCount}
               photo={{
                 label: `${t.projects.educational.photos[0]} — ${t.projects.educational.subtitle}`,
-                kind: "photo",
                 src: "/images/colegio-aula-preparada.webp",
               }}
               ctaLabel={t.home.projects.p1Cta}
