@@ -431,8 +431,12 @@ export const es = {
     filterAll: "Todas",
     videos: {
       title: "Videos institucionales",
-      text: "Este espacio está preparado para incorporar videos sobre la historia del Colegio, el trabajo comunitario, los proyectos y la futura Capilla San José.",
-      empty: "Todavía no hay videos publicados.",
+      text: "Registros históricos y testimonios audiovisuales de la fundación e inauguración del Colegio Parroquial Sagrada Familia de Nazareth.",
+      video1Title: "Acto inaugural Colegio Parroquial Sagrada Familia de Nazareth",
+      video2Title: "Palabras alusivas en la inauguración del Colegio Parroquial (2012)",
+      tag1: "2012 · Acto fundacional",
+      tag2: "2012 · Testimonio histórico",
+      watchOnYoutube: "Ver en YouTube",
     },
     categories: [
       {

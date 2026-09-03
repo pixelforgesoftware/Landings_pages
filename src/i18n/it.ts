@@ -430,8 +430,12 @@ export const it: Dict = {
     filterAll: "Tutte",
     videos: {
       title: "Video istituzionali",
-      text: "Questo spazio è pronto per includere video sulla storia del Collegio, sul lavoro comunitario, sui progetti e sulla futura Cappella di San Giuseppe.",
-      empty: "Non ci sono ancora video pubblicati.",
+      text: "Registrazioni storiche e testimonianze audiovisive della fondazione e inaugurazione del Collegio Parrocchiale Sacra Famiglia di Nazareth.",
+      video1Title: "Cerimonia inaugurale Collegio Parrocchiale Sacra Famiglia di Nazareth",
+      video2Title: "Discorso inaugurale del Collegio Parrocchiale (2012)",
+      tag1: "2012 · Cerimonia fondativa",
+      tag2: "2012 · Testimonianza storica",
+      watchOnYoutube: "Guarda su YouTube",
     },
     categories: [
       {

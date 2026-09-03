@@ -3,6 +3,7 @@ import { useI18n, usePageTitle } from "@/i18n";
 import GalleryFilters from "@/components/gallery/GalleryFilters";
 import GalleryGrid, { type GalleryItem } from "@/components/gallery/GalleryGrid";
 import Reveal from "@/components/ui/Reveal";
+import { IconArrowRight } from "@/components/ui/icons";
 
 /**
  * Galería multimedia institucional con filtros interactivos por categoría.
@@ -104,20 +105,91 @@ export default function Gallery() {
       </section>
 
       {/* Videos institucionales */}
-      <section aria-label={g.videos.title} className="border-t border-line bg-cream">
-        <div className="wrap py-14">
-          <div className="mx-auto max-w-3xl border border-gold/40 bg-warm-white p-8 text-center shadow-inst sm:p-10">
-            <span aria-hidden className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-gold/50 text-gold">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                <rect x="3" y="5.5" width="18" height="13" rx="1.5" />
-                <path d="m10.5 9.5 4.5 2.5-4.5 2.5z" />
-              </svg>
-            </span>
-            <h2 className="mt-4 font-serif text-2xl font-bold text-blue-deep">{g.videos.title}</h2>
-            <p className="mx-auto mt-3 max-w-xl leading-relaxed text-ink-soft">{g.videos.text}</p>
-            <p className="mt-5 inline-block border border-line bg-cream px-4 py-2 text-sm italic text-ink-soft">
-              {g.videos.empty}
+      <section aria-label={g.videos.title} className="border-t border-line bg-cream py-14 sm:py-20">
+        <div className="wrap">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <h2 className="font-serif text-2xl font-bold text-blue-deep sm:text-3xl">
+              {g.videos.title}
+            </h2>
+            <p className="mt-3 leading-relaxed text-ink-soft">
+              {g.videos.text}
             </p>
+          </Reveal>
+
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
+            {/* Video 1: Acto inaugural */}
+            <Reveal>
+              <div className="flex flex-col border border-line bg-warm-white p-5 shadow-inst transition-all hover:border-gold/60 sm:p-6">
+                <div className="aspect-video w-full overflow-hidden bg-black shadow-sm">
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/h3bMCoJ0FdM"
+                    title={g.videos.video1Title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    loading="lazy"
+                    className="h-full w-full border-0"
+                  />
+                </div>
+                <div className="mt-4 flex flex-1 flex-col justify-between">
+                  <div>
+                    <span className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
+                      {g.videos.tag1}
+                    </span>
+                    <h3 className="mt-1.5 font-serif text-lg font-bold leading-snug text-blue-deep">
+                      {g.videos.video1Title}
+                    </h3>
+                  </div>
+                  <div className="mt-5 border-t border-line/70 pt-3.5">
+                    <a
+                      href="https://www.youtube.com/watch?v=h3bMCoJ0FdM"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-red transition-colors hover:underline"
+                    >
+                      <span>{g.videos.watchOnYoutube}</span>
+                      <IconArrowRight size={13} aria-hidden />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Video 2: Palabras alusivas */}
+            <Reveal delay={120}>
+              <div className="flex flex-col border border-line bg-warm-white p-5 shadow-inst transition-all hover:border-gold/60 sm:p-6">
+                <div className="aspect-video w-full overflow-hidden bg-black shadow-sm">
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/o_P7vwNhLFI"
+                    title={g.videos.video2Title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    loading="lazy"
+                    className="h-full w-full border-0"
+                  />
+                </div>
+                <div className="mt-4 flex flex-1 flex-col justify-between">
+                  <div>
+                    <span className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
+                      {g.videos.tag2}
+                    </span>
+                    <h3 className="mt-1.5 font-serif text-lg font-bold leading-snug text-blue-deep">
+                      {g.videos.video2Title}
+                    </h3>
+                  </div>
+                  <div className="mt-5 border-t border-line/70 pt-3.5">
+                    <a
+                      href="https://www.youtube.com/watch?v=o_P7vwNhLFI"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-red transition-colors hover:underline"
+                    >
+                      <span>{g.videos.watchOnYoutube}</span>
+                      <IconArrowRight size={13} aria-hidden />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>

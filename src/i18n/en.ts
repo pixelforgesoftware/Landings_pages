@@ -431,8 +431,12 @@ export const en: Dict = {
     filterAll: "All",
     videos: {
       title: "Institutional videos",
-      text: "This space is ready to include videos about the School's history, community work, projects and the future St. Joseph Chapel.",
-      empty: "No videos published yet.",
+      text: "Historical records and audiovisual testimonies of the founding and inauguration of the Holy Family of Nazareth Parochial School.",
+      video1Title: "Inaugural Ceremony of Holy Family of Nazareth Parochial School",
+      video2Title: "Inaugural Address at the Parochial School (2012)",
+      tag1: "2012 · Founding ceremony",
+      tag2: "2012 · Historical testimony",
+      watchOnYoutube: "Watch on YouTube",
     },
     categories: [
       {
