@@ -193,7 +193,6 @@ export const es = {
       intro: "Momentos e hitos compartidos junto a nuestra comunidad y las familias de Real del Padre.",
       items: [
         "Parroquia exterior",
-        "Interior de la Parroquia",
         "Celebración religiosa",
         "Comunidad",
         "Misiones rurales",
@@ -444,7 +443,6 @@ export const es = {
         name: "Parroquia",
         items: [
           "Exterior de la Parroquia San Francisco de Asís",
-          "Interior de la Parroquia",
           "Celebraciones religiosas",
           "Vida parroquial",
         ],
@@ -465,10 +463,7 @@ export const es = {
         name: "Actividades",
         items: [
           "Actos escolares",
-          "Actividades deportivas",
           "Actividades culturales",
-          "Actividades artísticas",
-          "Actividades pastorales",
         ],
       },
       {

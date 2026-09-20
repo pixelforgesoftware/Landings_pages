@@ -51,7 +51,7 @@ export default function Parish() {
       </section>
 
       {/* Historia de la misión */}
-      <section aria-labelledby="mision" className="wrap grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 sm:py-20">
+      <section id="mision" aria-labelledby="mision" className="scroll-mt-28 wrap grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 sm:py-20">
         <Reveal>
           <SectionTitle eyebrow={p.history.eyebrow} title={p.history.title} />
           <div className="mt-6 space-y-4 leading-relaxed text-ink-soft">
@@ -82,7 +82,7 @@ export default function Parish() {
       </section>
 
       {/* Vida parroquial */}
-      <section aria-labelledby="vida-parroquial" className="border-y border-line bg-cream">
+      <section id="vida-parroquial" aria-labelledby="vida-parroquial" className="scroll-mt-28 border-y border-line bg-cream">
         <div className="wrap py-16 sm:py-20">
           <Reveal>
             <SectionTitle eyebrow={p.life.eyebrow} title={p.life.title} lead={p.life.intro} />
@@ -109,12 +109,11 @@ export default function Parish() {
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {p.gallery.items.map((label, i) => {
             let src: string | undefined;
-            if (i === 0) src = "/images/colegio-edificio-exterior.webp";
-            if (i === 1) src = "/images/colegio-primeras-docentes.webp";
-            if (i === 2) src = "/images/parroquia-altar.webp";
-            if (i === 3) src = "/images/comunidad-trabajo.webp";
-            if (i === 4) src = "/images/colegio-comunidad-8xmille.webp";
-            if (i === 5) src = "/images/comunidad-jornada-trabajo.webp";
+            if (i === 0) src = "/images/hero-parish.webp";
+            if (i === 1) src = "/images/parroquia-altar.webp";
+            if (i === 2) src = "/images/comunidad-trabajo.webp";
+            if (i === 3) src = "/images/colegio-comunidad-8xmille.webp";
+            if (i === 4) src = "/images/comunidad-jornada-trabajo.webp";
 
             return (
               <Reveal key={label} delay={(i % 3) * 80}>
@@ -138,7 +137,7 @@ export default function Parish() {
       </section>
 
       {/* Horarios de Santa Misa */}
-      <section aria-labelledby="horarios-misa" className="bg-blue-deep text-cream">
+      <section id="horarios" aria-labelledby="horarios-misa" className="scroll-mt-28 bg-blue-deep text-cream">
         <div className="wrap py-16 sm:py-20">
           <Reveal>
             <SectionTitle align="center" tone="dark" eyebrow={p.mass.eyebrow} title={p.mass.title} />

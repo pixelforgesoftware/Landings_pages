@@ -10,22 +10,18 @@ import { IconArrowRight } from "@/components/ui/icons";
  */
 const PHOTO_MAP: Record<string, string> = {
   // Parroquia
-  "parroquia-0": "/images/colegio-edificio-exterior.webp",
-  "parroquia-1": "/images/colegio-primeras-docentes.webp",
-  "parroquia-2": "/images/parroquia-altar.webp",
-  "parroquia-3": "/images/hero-parish.webp",
+  "parroquia-0": "/images/hero-parish.webp",
+  "parroquia-1": "/images/parroquia-altar.webp",
+  "parroquia-2": "/images/comunidad-jornada-trabajo.webp",
   // Colegio
   "colegio-0": "/images/hero-school.webp",
   "colegio-1": "/images/colegio-aula-preparada.webp",
   "colegio-2": "/images/colegio-clase.webp",
   "colegio-3": "/images/comunidad-trabajo.webp",
   "colegio-4": "/images/colegio-sagrada-familia.webp",
-  // Actividades
+  // Actividades (fotos auténticas de actos y formación cultural)
   "actividades-0": "/images/colegio-alumnos-bandera.webp",
-  "actividades-1": "/images/colegio-nivel-inicial.webp",
-  "actividades-2": "/images/colegio-primaria-formacion.webp",
-  "actividades-3": "/images/colegio-inicial-merienda.webp",
-  "actividades-4": "/images/colegio-sagrada-familia.webp",
+  "actividades-1": "/images/colegio-primaria-formacion.webp",
   // Comunidad
   "comunidad-0": "/images/colegio-comunidad-8xmille.webp",
   "comunidad-1": "/images/comunidad-trabajo.webp",

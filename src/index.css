@@ -3,15 +3,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap");
 @import "tailwindcss";
 
+:root {
+  /* Rojo imperial / bordó profundo solicitado por el cliente: RGB(165, 15, 45) - HSL(348°, 83%, 35%) */
+  --rojo-imperial: #A50F2D;
+}
+
 @theme {
   /* Paleta institucional */
   --color-blue: #1e3a5f;
   --color-blue-deep: #14283f;
   --color-blue-soft: #e9eff6;
 
-  --color-red: #8c2f39;
-  --color-red-deep: #6d2129;
-  --color-red-soft: #f6ebee;
+  /* Rojo imperial: definición oficial y clases asociadas */
+  --rojo-imperial: #A50F2D;
+  --color-rojo-imperial: #A50F2D;
+  --color-red: #A50F2D;
+  --color-red-deep: #800c23;
+  --color-red-soft: #fbebed;
 
   --color-gold: #ab8a3d;
   --color-gold-bright: #cfae5e;

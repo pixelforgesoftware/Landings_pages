@@ -193,7 +193,6 @@ export const it: Dict = {
       intro: "Momenti e tappe condivisi insieme alla nostra comunità e alle famiglie di Real del Padre.",
       items: [
         "Esterno della Parrocchia",
-        "Interno della Parrocchia",
         "Celebrazione religiosa",
         "Comunità",
         "Missioni rurali",
@@ -443,7 +442,6 @@ export const it: Dict = {
         name: "Parrocchia",
         items: [
           "Esterno della Parrocchia San Francesco d'Assisi",
-          "Interno della Parrocchia",
           "Celebrazioni religiose",
           "Vita parrocchiale",
         ],
@@ -464,10 +462,7 @@ export const it: Dict = {
         name: "Attività",
         items: [
           "Cerimonie scolastiche",
-          "Attività sportive",
           "Attività culturali",
-          "Attività artistiche",
-          "Attività pastorali",
         ],
       },
       {

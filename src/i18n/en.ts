@@ -193,7 +193,6 @@ export const en: Dict = {
       intro: "Moments and milestones shared together with our community and families in Real del Padre.",
       items: [
         "Parish exterior",
-        "Parish interior",
         "Religious celebration",
         "Community",
         "Rural missions",
@@ -444,7 +443,6 @@ export const en: Dict = {
         name: "Parish",
         items: [
           "Exterior of the Parish of St. Francis of Assisi",
-          "Interior of the Parish",
           "Religious celebrations",
           "Parish life",
         ],
@@ -465,10 +463,7 @@ export const en: Dict = {
         name: "Activities",
         items: [
           "School ceremonies",
-          "Sports activities",
           "Cultural activities",
-          "Artistic activities",
-          "Pastoral activities",
         ],
       },
       {

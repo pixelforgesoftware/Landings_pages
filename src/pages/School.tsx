@@ -54,7 +54,7 @@ export default function School() {
       </section>
 
       {/* Identidad y propuesta educativa */}
-      <section aria-labelledby="identidad" className="wrap grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 sm:py-20">
+      <section id="identidad" aria-labelledby="identidad" className="scroll-mt-28 wrap grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 sm:py-20">
         <Reveal>
           <SectionTitle eyebrow={s.identity.eyebrow} title={s.identity.title} />
           <div className="mt-6 space-y-4 leading-relaxed text-ink-soft">
@@ -97,7 +97,7 @@ export default function School() {
       </section>
 
       {/* Niveles educativos */}
-      <section aria-labelledby="niveles" className="border-y border-line bg-cream">
+      <section id="niveles" aria-labelledby="niveles" className="scroll-mt-28 border-y border-line bg-cream">
         <div className="wrap py-16 sm:py-20">
           <Reveal>
             <SectionTitle eyebrow={s.levels.eyebrow} title={s.levels.title} lead={s.levels.intro} />
@@ -158,7 +158,7 @@ export default function School() {
       </section>
 
       {/* Actividades formativas */}
-      <section aria-labelledby="actividades" className="wrap py-16 sm:py-20">
+      <section id="actividades" aria-labelledby="actividades" className="scroll-mt-28 wrap py-16 sm:py-20">
         <Reveal>
           <SectionTitle eyebrow={s.activities.eyebrow} title={s.activities.title} lead={s.activities.intro} />
         </Reveal>
@@ -216,7 +216,7 @@ export default function School() {
       </section>
 
       {/* Horarios por nivel */}
-      <section aria-labelledby="horarios-colegio" className="border-y border-line bg-cream">
+      <section id="horarios-colegio" aria-labelledby="horarios-colegio" className="scroll-mt-28 border-y border-line bg-cream">
         <div className="wrap py-16 sm:py-20">
           <Reveal>
             <SectionTitle eyebrow={s.hours.eyebrow} title={s.hours.title} />

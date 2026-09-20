@@ -21,13 +21,22 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    // Si viene con ancla (#horarios, #niveles, etc.), buscamos el elemento en el DOM
     if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-        return;
-      }
+      // Damos un pequeño respiro para que la página de destino termine de montar
+      const timer = setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        } else {
+          window.scrollTo({ top: 0, behavior: "auto" });
+        }
+      }, 70);
+
+      return () => clearTimeout(timer);
     }
+
+    // Si no hay hash, siempre scrolleamos al inicio de la página
     window.scrollTo({ top: 0, behavior: "auto" });
   }, [pathname, hash]);
 
