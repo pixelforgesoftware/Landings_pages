@@ -24,6 +24,9 @@ export default function Header() {
   // Guardo qué institución está abierta en el megamenú (school, parish, garden)
   const [activeInstitution, setActiveInstitution] = useState<InstitutionId | null>(null);
 
+  // La cabecera se compacta si el usuario scrolleó hacia abajo O si tiene un megamenú abierto
+  const isCompact = scrolled || activeInstitution !== null;
+
   // Estado para abrir o cerrar el menú hamburguesa en celulares
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -36,8 +39,10 @@ export default function Header() {
   // Cargo los datos de las tres instituciones según el idioma actual
   const navData = getNavigationData(locale);
 
-  // Calculo la posición exacta donde termina el header para arrancar el sombreado justo ahí abajo
+  // Calculo la posición exacta donde termina el header para arrancar el sombreado justo ahí abajo cuando se abre el megamenú
   useEffect(() => {
+    if (!activeInstitution) return;
+
     const updateHeaderBottom = () => {
       if (navRef.current) {
         const rect = navRef.current.getBoundingClientRect();
@@ -47,13 +52,14 @@ export default function Header() {
       }
     };
     updateHeaderBottom();
-    window.addEventListener("scroll", updateHeaderBottom, { passive: true });
+    // Vuelvo a medir tras 320ms para sincronizar con la animación CSS de colapso de 300ms
+    const timer = setTimeout(updateHeaderBottom, 320);
     window.addEventListener("resize", updateHeaderBottom);
     return () => {
-      window.removeEventListener("scroll", updateHeaderBottom);
+      clearTimeout(timer);
       window.removeEventListener("resize", updateHeaderBottom);
     };
-  }, [scrolled, activeInstitution]);
+  }, [activeInstitution, isCompact]);
 
   // Armo las solapas de las tres instituciones para la barra de navegación
   const institutions: Array<{ id: InstitutionId; label: string; shortLabel: string }> = [
@@ -74,25 +80,29 @@ export default function Header() {
     },
   ];
 
-  // Enlaces directos a las páginas principales para que arranquen desde su hero
-  const directLinks = [
-    { href: "/historia", label: t.common.nav.history },
-    { href: "/proyectos", label: t.common.nav.projects },
-    { href: "/galeria", label: t.common.nav.gallery },
-    { href: "/contacto", label: t.common.nav.contact },
-  ];
-
-  // Manejo la compactación con un rango de histéresis para que no tironee ni parpadee al scrollear
+  // Manejo la compactación con detección direccional e histéresis amplia para evitar rebotes o saltos
   useEffect(() => {
+    let lastY = window.scrollY;
+    let ticking = false;
+
     const onScroll = () => {
-      const y = window.scrollY;
-      // Al bajar, compacto después de los 85px
-      if (y > 85) {
-        setScrolled(true);
-      }
-      // Al subir, recién agrando cuando llega bien arriba (< 15px)
-      else if (y < 15) {
-        setScrolled(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const y = window.scrollY;
+          const scrollingDown = y > lastY;
+          lastY = y;
+
+          // Al bajar, se compacta recién cuando el usuario pasó la zona de los escudos (> 150px)
+          if (scrollingDown && y > 150) {
+            setScrolled(true);
+          }
+          // Al subir, recién se vuelve a desplegar cuando el usuario llega arriba de todo (< 30px)
+          else if (!scrollingDown && y < 30) {
+            setScrolled(false);
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -149,46 +159,55 @@ export default function Header() {
     <header
       ref={headerRef}
       className={`sticky top-0 z-50 bg-[#fffdfa] transition-all duration-300 border-b ${
-        scrolled ? "border-line shadow-header" : "border-line/70"
+        isCompact ? "border-line shadow-header" : "border-line/70"
       }`}
     >
       {/* ------------------------------------------------------------
           1. Fila superior:
              En reposo: Lema o mensaje institucional a la izquierda.
-             En scroll: Logos compactos y nombre institucional a la izquierda.
+             En scroll o con megamenú: Logos compactos y nombre institucional a la izquierda.
              A la derecha: Selector de idiomas y botón CÓMO COLABORAR.
           ------------------------------------------------------------ */}
       <div className="relative z-50 border-b border-line/50 bg-[#faf7f0]/90">
         <div className="wrap flex items-center justify-between py-1.5 sm:py-2">
           
-          {/* Lado izquierdo: en desktop cambia dinámicamente al scrollear; en móvil se mantiene limpio porque los logos quedan abajo */}
-          {scrolled ? (
-            /* Versión compacta al scrollear: solo visible en desktop (lg:flex), en celular los logos no suben y quedan en su hilera */
-            <Link
-              to="/"
-              className="hidden lg:flex items-center gap-2 sm:gap-2.5 group transition-all animate-in fade-in duration-200"
-              onClick={() => setActiveInstitution(null)}
-              title="Ir al inicio"
-            >
-              {/* Escudo Parroquia (izquierda) */}
-              <img
-                src="/images/logo-parroquia.webp"
-                alt="Parroquia San Francisco de Asís"
-                className="h-7 sm:h-8 w-auto object-contain transition-transform group-hover:scale-105 shrink-0"
-              />
+          {/* Lado izquierdo: en desktop cambia dinámicamente al scrollear o al abrir un megamenú; en móvil se mantiene limpio */}
+          {isCompact ? (
+            /* Versión compacta al scrollear o con megamenú abierto: solo visible en desktop (lg:flex) */
+            <div className="hidden lg:flex items-center gap-2 sm:gap-2.5">
+              <Link
+                to="/"
+                className="flex items-center gap-2 sm:gap-2.5 group transition-all animate-in fade-in duration-200"
+                onClick={() => setActiveInstitution(null)}
+                title="Ir al inicio"
+              >
+                {/* Escudo Parroquia (izquierda) */}
+                <img
+                  src="/images/logo-parroquia.webp"
+                  alt="Parroquia San Francisco de Asís"
+                  className="h-7 sm:h-8 w-auto object-contain transition-transform group-hover:scale-105 shrink-0"
+                />
 
-              {/* Nombre institucional (centro) */}
-              <span className="font-serif text-xs sm:text-sm font-bold text-blue-deep group-hover:text-red transition-colors truncate">
-                {t.common.names.parish}
-              </span>
+                {/* Nombre institucional (centro) */}
+                <span className="font-serif text-xs sm:text-sm font-bold text-blue-deep group-hover:text-red transition-colors truncate">
+                  {t.common.names.parish}
+                </span>
+              </Link>
 
-              {/* Escudo Colegio (derecha) */}
-              <img
-                src="/images/logo-colegio.webp"
-                alt="Colegio Sagrada Familia de Nazareth"
-                className="h-7 sm:h-8 w-auto object-contain transition-transform group-hover:scale-105 shrink-0"
-              />
-            </Link>
+              {/* Escudo Colegio (derecha) -> lleva a la página del colegio */}
+              <Link
+                to="/colegio"
+                onClick={() => setActiveInstitution(null)}
+                title="Colegio Parroquial Sagrada Familia de Nazareth"
+                className="transition-transform hover:scale-105 shrink-0"
+              >
+                <img
+                  src="/images/logo-colegio.webp"
+                  alt="Colegio Sagrada Familia de Nazareth"
+                  className="h-7 sm:h-8 w-auto object-contain shrink-0"
+                />
+              </Link>
+            </div>
           ) : (
             /* Versión en reposo: lema institucional traducido */
             <div className="hidden md:flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-ink-soft">
@@ -235,19 +254,20 @@ export default function Header() {
       {/* ------------------------------------------------------------
           2. Fila de identidad institucional central:
              Escudo Parroquia (Izq) | Título central | Escudo Colegio (Der)
-             En desktop al scrollear se contrae suavemente a altura cero.
-             En celular se mantiene fija y visible para que no pegue saltos ni suba a la barra de arriba.
+             En reposo: escudos grandes agrupados al centro enmarcando el texto (según referencia del cliente).
+             Al scrollear o al abrir un megamenú: se contrae suavemente a altura cero en desktop para ceder espacio.
+             En celular: se mantiene fija y visible para que no pegue saltos ni suba a la barra de arriba.
           ------------------------------------------------------------ */}
       <div
         className={`relative z-50 wrap transition-all duration-300 ease-in-out ${
-          scrolled
-            ? "lg:max-h-0 lg:opacity-0 lg:overflow-hidden lg:py-0 lg:pointer-events-none max-h-36 opacity-100 py-2 sm:py-2.5"
-            : "max-h-36 opacity-100 py-2 sm:py-2.5"
+          isCompact
+            ? "lg:max-h-0 lg:opacity-0 lg:overflow-hidden lg:py-0 lg:pointer-events-none max-h-56 opacity-100 py-2 sm:py-2.5"
+            : "max-h-56 opacity-100 py-3 sm:py-4 md:py-4.5"
         }`}
       >
-        <div className="flex items-center justify-between gap-3 sm:gap-6">
+        <div className="flex items-center justify-center gap-4 sm:gap-7 md:gap-10 lg:gap-12 mx-auto max-w-5xl">
           
-          {/* Escudo Parroquia San Francisco de Asís (Extremo izquierdo) */}
+          {/* Escudo Parroquia San Francisco de Asís (Izquierda) */}
           <Link
             to="/"
             className="shrink-0 transition-transform hover:scale-105"
@@ -257,27 +277,27 @@ export default function Header() {
             <img
               src="/images/logo-parroquia.webp"
               alt="Escudo Parroquia San Francisco de Asís"
-              className="h-10 w-auto max-w-[40px] sm:h-12 sm:max-w-[48px] md:h-14 md:max-w-[56px] object-contain"
+              className="h-14 sm:h-20 md:h-24 lg:h-28 w-auto object-contain drop-shadow-xs"
             />
           </Link>
 
           {/* Nombre institucional centrado con tipografía proporcionada */}
           <Link
             to="/"
-            className="flex flex-1 flex-col items-center text-center px-1 group"
+            className="flex flex-col items-center text-center px-1 sm:px-2 group shrink-0 sm:shrink"
             onClick={() => setActiveInstitution(null)}
           >
-            <h1 className="font-serif text-base sm:text-xl md:text-2xl font-bold text-blue-deep leading-tight transition-colors group-hover:text-red">
+            <h1 className="font-serif text-lg sm:text-2xl md:text-3xl lg:text-[2.1rem] font-bold text-blue-deep leading-tight transition-colors group-hover:text-red tracking-tight">
               {t.common.names.parish}
             </h1>
-            <p className="mt-0.5 text-[0.62rem] sm:text-[0.72rem] font-semibold uppercase tracking-[0.18em] sm:tracking-[0.22em] text-ink-soft">
+            <p className="mt-1 sm:mt-1.5 text-[0.62rem] sm:text-[0.74rem] md:text-[0.82rem] font-semibold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-ink-soft">
               {t.common.locationLine}
             </p>
           </Link>
 
-          {/* Escudo Colegio Sagrada Familia de Nazareth (Extremo derecho) */}
+          {/* Escudo Colegio Sagrada Familia de Nazareth (Derecha) -> lleva a la página del colegio */}
           <Link
-            to="/"
+            to="/colegio"
             className="shrink-0 transition-transform hover:scale-105"
             title="Colegio Parroquial Sagrada Familia de Nazareth"
             onClick={() => setActiveInstitution(null)}
@@ -285,7 +305,7 @@ export default function Header() {
             <img
               src="/images/logo-colegio.webp"
               alt="Escudo Colegio Sagrada Familia de Nazareth"
-              className="h-10 w-auto max-w-[40px] sm:h-12 sm:max-w-[48px] md:h-14 md:max-w-[56px] object-contain"
+              className="h-14 sm:h-20 md:h-24 lg:h-28 w-auto object-contain drop-shadow-xs"
             />
           </Link>
         </div>
@@ -299,9 +319,9 @@ export default function Header() {
         aria-label="Navegación institucional"
         className="relative z-50 border-t border-line/70 bg-cream/90 lg:block hidden"
       >
-        <div className="wrap flex items-center justify-center gap-1 sm:gap-2 flex-nowrap">
-          {/* Solapas de las instituciones con su flechita y megamenú */}
-          <div className="flex items-center gap-0.5 sm:gap-1">
+        <div className="wrap flex items-center justify-center gap-1 sm:gap-2 flex-nowrap py-0.5">
+          {/* Solapas de las tres instituciones */}
+          <div className="flex items-center gap-1 sm:gap-4">
             {institutions.map((inst) => {
               const isTabActive = activeInstitution === inst.id;
 
@@ -311,7 +331,7 @@ export default function Header() {
                   type="button"
                   onClick={() => handleTabClick(inst.id)}
                   aria-expanded={isTabActive}
-                  className={`group relative inline-flex items-center gap-1.5 px-3 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
+                  className={`group relative inline-flex items-center gap-1.5 px-4 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap transition-all cursor-pointer rounded-sm hover:bg-black/[0.03] ${
                     isTabActive
                       ? "text-[#A50F2D] font-bold"
                       : "text-ink hover:text-[#A50F2D]"
@@ -319,7 +339,7 @@ export default function Header() {
                 >
                   <span>{inst.shortLabel}</span>
                   <ChevronDown
-                    size={14}
+                    size={15}
                     className={`transition-transform duration-200 ${
                       isTabActive
                         ? "rotate-180 text-[#A50F2D]"
@@ -334,38 +354,6 @@ export default function Header() {
                     />
                   )}
                 </button>
-              );
-            })}
-          </div>
-
-          {/* Separador vertical sutil entre desplegables y links directos */}
-          <div className="h-4 w-px bg-line/80 mx-1 sm:mx-2" aria-hidden="true" />
-
-          {/* Enlaces directos a páginas con hero propio (Historia, Proyectos, Galería, Contacto) */}
-          <div className="flex items-center gap-0.5 sm:gap-1">
-            {directLinks.map((link) => {
-              const isLinkActive = pathname === link.href;
-
-              return (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  onClick={() => setActiveInstitution(null)}
-                  className={`relative px-3 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold whitespace-nowrap transition-all ${
-                    isLinkActive
-                      ? "text-[#A50F2D] font-bold"
-                      : "text-ink hover:text-[#A50F2D]"
-                  }`}
-                >
-                  <span>{link.label}</span>
-                  {/* Indicador inferior en rojo imperial si la ruta está activa */}
-                  {isLinkActive && (
-                    <span
-                      aria-hidden
-                      className="absolute inset-x-2 -bottom-[1px] h-0.5 bg-[#A50F2D] animate-in fade-in duration-150"
-                    />
-                  )}
-                </Link>
               );
             })}
           </div>
@@ -387,7 +375,10 @@ export default function Header() {
 
           {/* Tarjeta flotante del megamenú con z-50 sobre el sombreado */}
           <div className="hidden lg:block absolute left-0 right-0 top-full z-50 px-4 pt-2.5 pb-6 bg-transparent pointer-events-none animate-in fade-in slide-in-from-top-1 duration-150">
-            <div ref={menuCardRef} className="w-full max-w-5xl mx-auto pointer-events-auto">
+            <div
+              ref={menuCardRef}
+              className="w-full max-w-5xl mx-auto pointer-events-auto max-h-[calc(100vh-6.5rem)] overflow-y-auto rounded-2xl shadow-2xl"
+            >
               <InstitutionAccordion
                 key={activeInstitution}
                 institution={navData[activeInstitution]}
@@ -462,44 +453,7 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Enlaces directos en móvil (los mismos 4 que en escritorio) */}
-            <div className="pt-3 border-t border-line/70 space-y-2">
-              <span className="block px-1 text-[0.68rem] font-bold uppercase tracking-[0.2em] text-ink-soft">
-                {locale === "en"
-                  ? "Direct Navigation"
-                  : locale === "it"
-                  ? "Navigazione diretta"
-                  : "Navegación directa"}
-              </span>
 
-              <div className="grid grid-cols-2 gap-2">
-                {directLinks.map((link) => {
-                  const isLinkActive = pathname === link.href;
-
-                  return (
-                    <Link
-                      key={link.href}
-                      to={link.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className={`flex items-center justify-between px-3.5 py-2.5 rounded-lg text-xs font-semibold transition-all border ${
-                        isLinkActive
-                          ? "bg-[#A50F2D] text-white border-[#A50F2D] font-bold shadow-xs"
-                          : "bg-white text-ink border-line hover:border-[#A50F2D] hover:text-[#A50F2D] active:bg-cream"
-                      }`}
-                    >
-                      <span>{link.label}</span>
-                      <span
-                        className={`text-[0.7rem] ${
-                          isLinkActive ? "text-white/80" : "text-ink-soft"
-                        }`}
-                      >
-                        →
-                      </span>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
 
             {/* Botón Colaborar en móvil */}
             <div className="pt-1">

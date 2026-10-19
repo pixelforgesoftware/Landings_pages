@@ -86,13 +86,9 @@ const NAVIGATION_ES: Record<InstitutionId, InstitutionNavData> = {
       {
         id: "niveles",
         title: "Niveles educativos y horarios",
-        subtitle: "Jardín Maternal, Inicial, Primario y Secundario",
+        subtitle: "Nivel Inicial, Primario y Secundario",
         iconName: "Users",
         items: [
-          {
-            title: "Jardín Maternal (JP-338)",
-            desc: "Turno mañana de 09:00 a 12:00 hs. Estimulación temprana, contención y afecto para los más chiquitos.",
-          },
           {
             title: "Nivel Inicial",
             desc: "Salas de 4 y 5 años. Primeros pasos pedagógicos y socialización en un clima de alegría.",
@@ -128,6 +124,23 @@ const NAVIGATION_ES: Record<InstitutionId, InstitutionNavData> = {
           },
         ],
         actionLink: { href: "/colegio#actividades", label: "Descubrir propuesta formativa →" },
+      },
+      {
+        id: "galeria",
+        title: "Galería de fotos",
+        subtitle: "Aulas, actos patrios y vida escolar",
+        iconName: "Camera",
+        items: [
+          {
+            title: "Instalaciones y Aulas",
+            desc: "Aulas equipadas, biblioteca y espacios donde se desarrolla el día a día escolar.",
+          },
+          {
+            title: "Actos y Comunidad",
+            desc: "Formación de alumnos, actos patrios, festejos y celebraciones religiosas con las familias.",
+          },
+        ],
+        actionLink: { href: "/galeria?cat=colegio-jardin", label: "Ver fotos del Colegio y Jardín →" },
       },
       {
         id: "proyectos",
@@ -169,7 +182,7 @@ const NAVIGATION_ES: Record<InstitutionId, InstitutionNavData> = {
             desc: "curanicolasortiz@yahoo.com.ar",
           },
         ],
-        actionLink: { href: "/contacto", label: "Contactar a secretaría escolar →" },
+        actionLink: { href: "/colegio#contacto", label: "Secretaría escolar y contacto →" },
       },
     ],
   },
@@ -252,6 +265,23 @@ const NAVIGATION_ES: Record<InstitutionId, InstitutionNavData> = {
         actionLink: { href: "/parroquia#vida-parroquial", label: "Conocer la vida parroquial →" },
       },
       {
+        id: "galeria",
+        title: "Galería de fotos",
+        subtitle: "Templo, celebraciones y misiones",
+        iconName: "Camera",
+        items: [
+          {
+            title: "Templo y Celebraciones",
+            desc: "Fotografías del altar, templo parroquial, santa misa y celebraciones sacramentales.",
+          },
+          {
+            title: "Misiones Rurales y Comunidad",
+            desc: "Jornadas comunitarias de trabajo, misiones y capillas de parajes vecinos.",
+          },
+        ],
+        actionLink: { href: "/galeria?cat=parroquia", label: "Ver fotos de la Parroquia →" },
+      },
+      {
         id: "proyectos",
         title: "Futura Capilla San José",
         subtitle: "El gran templo comunitario",
@@ -287,7 +317,7 @@ const NAVIGATION_ES: Record<InstitutionId, InstitutionNavData> = {
             desc: "curanicolasortiz@yahoo.com.ar",
           },
         ],
-        actionLink: { href: "/contacto", label: "Escribir a secretaría parroquial →" },
+        actionLink: { href: "/parroquia#contacto", label: "Secretaría parroquial y horarios →" },
       },
     ],
   },
@@ -304,7 +334,7 @@ const NAVIGATION_ES: Record<InstitutionId, InstitutionNavData> = {
         overview: {
           intro:
             "El Jardín Maternal JP-338 San Francisco de Asís inició sus actividades el 2 de octubre de 2012 para brindar contención, amor y estimulación temprana a los niños más pequeños de Real del Padre, acompañando a las familias en sus primeros años de crianza.",
-          actionLink: { href: "/colegio#niveles", label: "Ver nivel maternal en el Colegio →" },
+          actionLink: { href: "/jardin", label: "Ver página del Jardín Maternal →" },
           vision: {
             title: "Visión",
             text: "Ser un segundo hogar donde cada niño crezca en un entorno cálido, seguro y estimulante.",
@@ -330,7 +360,7 @@ const NAVIGATION_ES: Record<InstitutionId, InstitutionNavData> = {
       {
         id: "salas-horarios",
         title: "Salas y Horarios",
-        subtitle: "Atención de 09:00 a 12:00 hs",
+        subtitle: "Turno mañana de 09:00 a 12:00 hs",
         iconName: "Clock",
         items: [
           {
@@ -346,7 +376,7 @@ const NAVIGATION_ES: Record<InstitutionId, InstitutionNavData> = {
             desc: "Lunes a viernes con comunicación cotidiana en cuaderno de notas y diálogo cercano con las familias.",
           },
         ],
-        actionLink: { href: "/colegio#horarios-colegio", label: "Ver horarios institucionales →" },
+        actionLink: { href: "/jardin#salas-horarios", label: "Ver salas y horarios →" },
       },
       {
         id: "pedagogica",
@@ -363,7 +393,24 @@ const NAVIGATION_ES: Record<InstitutionId, InstitutionNavData> = {
             desc: "Aprendizaje de convivencia en un marco de ternura, cuidado y respeto mutuo.",
           },
         ],
-        actionLink: { href: "/colegio#actividades", label: "Ver actividades formativas →" },
+        actionLink: { href: "/jardin#propuesta", label: "Ver actividades formativas →" },
+      },
+      {
+        id: "galeria",
+        title: "Galería de fotos",
+        subtitle: "Salas, juegos y primera infancia",
+        iconName: "Camera",
+        items: [
+          {
+            title: "Salas de Primera Infancia",
+            desc: "Instalaciones adaptadas para bebés y niños pequeños, con mobiliario seguro y cálido.",
+          },
+          {
+            title: "Juegos y Merienda Compartida",
+            desc: "Estimulación sensoriomotriz, nanas, rondas y momentos cotidianos compartidos.",
+          },
+        ],
+        actionLink: { href: "/galeria?cat=colegio-jardin", label: "Ver fotos del Jardín y Colegio →" },
       },
       {
         id: "contacto",
@@ -380,7 +427,7 @@ const NAVIGATION_ES: Record<InstitutionId, InstitutionNavData> = {
             desc: "+54 9 260 4607108 (Comunícate directamente con la secretaría del jardín).",
           },
         ],
-        actionLink: { href: "/contacto", label: "Contactar por inscripciones →" },
+        actionLink: { href: "/jardin#contacto", label: "Inscripciones y atención →" },
       },
     ],
   },
@@ -428,13 +475,9 @@ const NAVIGATION_EN: Record<InstitutionId, InstitutionNavData> = {
       {
         id: "niveles",
         title: "Educational levels and schedules",
-        subtitle: "Nursery, Kindergarten, Primary and Secondary",
+        subtitle: "Kindergarten, Primary and Secondary",
         iconName: "Users",
         items: [
-          {
-            title: "Nursery (JP-338)",
-            desc: "Morning shift from 09:00 to 12:00. Early stimulation, warmth, and care for the youngest children.",
-          },
           {
             title: "Kindergarten",
             desc: "Ages 4 and 5. First pedagogical steps and socialization in an atmosphere of joy.",
@@ -470,6 +513,23 @@ const NAVIGATION_EN: Record<InstitutionId, InstitutionNavData> = {
           },
         ],
         actionLink: { href: "/colegio#actividades", label: "Discover educational project →" },
+      },
+      {
+        id: "galeria",
+        title: "Photo gallery",
+        subtitle: "Classrooms, ceremonies and school life",
+        iconName: "Camera",
+        items: [
+          {
+            title: "Facilities & Classrooms",
+            desc: "Equipped learning spaces, library, and grounds where daily school life unfolds.",
+          },
+          {
+            title: "Ceremonies & Community",
+            desc: "Student gatherings, civic celebrations, and liturgical milestones with families.",
+          },
+        ],
+        actionLink: { href: "/galeria?cat=colegio-jardin", label: "View School & Nursery photos →" },
       },
       {
         id: "proyectos",
@@ -511,7 +571,7 @@ const NAVIGATION_EN: Record<InstitutionId, InstitutionNavData> = {
             desc: "curanicolasortiz@yahoo.com.ar",
           },
         ],
-        actionLink: { href: "/contacto", label: "Contact school administration →" },
+        actionLink: { href: "/colegio#contacto", label: "School office and contact →" },
       },
     ],
   },
@@ -594,6 +654,23 @@ const NAVIGATION_EN: Record<InstitutionId, InstitutionNavData> = {
         actionLink: { href: "/parroquia#vida-parroquial", label: "Discover parish life →" },
       },
       {
+        id: "galeria",
+        title: "Photo gallery",
+        subtitle: "Church, celebrations and outreach",
+        iconName: "Camera",
+        items: [
+          {
+            title: "Church & Celebrations",
+            desc: "Altar photographs, Sunday masses, and patronal festivities in Real del Padre.",
+          },
+          {
+            title: "Rural Missions & Outreach",
+            desc: "Community work days, rural chapels, and charitable outreach in neighboring areas.",
+          },
+        ],
+        actionLink: { href: "/galeria?cat=parroquia", label: "View Parish photos →" },
+      },
+      {
         id: "proyectos",
         title: "Future St. Joseph Chapel",
         subtitle: "A spiritual sanctuary for our community",
@@ -629,7 +706,7 @@ const NAVIGATION_EN: Record<InstitutionId, InstitutionNavData> = {
             desc: "curanicolasortiz@yahoo.com.ar",
           },
         ],
-        actionLink: { href: "/contacto", label: "Write to the parish office →" },
+        actionLink: { href: "/parroquia#contacto", label: "Parish office and contact →" },
       },
     ],
   },
@@ -646,7 +723,7 @@ const NAVIGATION_EN: Record<InstitutionId, InstitutionNavData> = {
         overview: {
           intro:
             "St. Francis of Assisi Nursery JP-338 opened on October 2, 2012, to provide loving care, affection, and early stimulation for the youngest children of Real del Padre, supporting families during early parenthood.",
-          actionLink: { href: "/colegio#niveles", label: "View Nursery section →" },
+          actionLink: { href: "/jardin", label: "View Nursery page →" },
           vision: {
             title: "Vision",
             text: "To be a second home where every child thrives in a warm, safe, and nurturing environment.",
@@ -688,7 +765,7 @@ const NAVIGATION_EN: Record<InstitutionId, InstitutionNavData> = {
             desc: "Monday through Friday with daily communication logbooks and close dialogue with parents.",
           },
         ],
-        actionLink: { href: "/colegio#horarios-colegio", label: "View nursery schedules →" },
+        actionLink: { href: "/jardin#salas-horarios", label: "View nursery schedules →" },
       },
       {
         id: "pedagogica",
@@ -705,7 +782,24 @@ const NAVIGATION_EN: Record<InstitutionId, InstitutionNavData> = {
             desc: "First experiences in peaceful community living, guided with tenderness and mutual respect.",
           },
         ],
-        actionLink: { href: "/colegio#actividades", label: "View learning activities →" },
+        actionLink: { href: "/jardin#propuesta", label: "View learning activities →" },
+      },
+      {
+        id: "galeria",
+        title: "Photo gallery",
+        subtitle: "Rooms, play and early childhood",
+        iconName: "Camera",
+        items: [
+          {
+            title: "Early Childhood Rooms",
+            desc: "Warm and safe environments designed specifically for infants and toddlers.",
+          },
+          {
+            title: "Playtime & Shared Snacks",
+            desc: "Sensorimotor stimulation, songs, stories, and shared daily routines.",
+          },
+        ],
+        actionLink: { href: "/galeria?cat=colegio-jardin", label: "View Nursery & School photos →" },
       },
       {
         id: "contacto",
@@ -722,7 +816,7 @@ const NAVIGATION_EN: Record<InstitutionId, InstitutionNavData> = {
             desc: "+54 9 260 4607108 (Contact the nursery secretary directly).",
           },
         ],
-        actionLink: { href: "/contacto", label: "Contact for admissions →" },
+        actionLink: { href: "/jardin#contacto", label: "Admissions and contact →" },
       },
     ],
   },
@@ -770,13 +864,9 @@ const NAVIGATION_IT: Record<InstitutionId, InstitutionNavData> = {
       {
         id: "niveles",
         title: "Livelli educativi e orari",
-        subtitle: "Asilo Nido, Scuola dell'Infanzia, Primaria e Secondaria",
+        subtitle: "Scuola dell'Infanzia, Primaria e Secondaria",
         iconName: "Users",
         items: [
-          {
-            title: "Asilo Nido (JP-338)",
-            desc: "Turno mattutino dalle 09:00 alle 12:00. Stimolazione precoce, affetto e cura per i più piccini.",
-          },
           {
             title: "Scuola dell'Infanzia",
             desc: "Sezioni di 4 e 5 anni. Primi passi educativi e socializzazione in un clima di gioia.",
@@ -812,6 +902,23 @@ const NAVIGATION_IT: Record<InstitutionId, InstitutionNavData> = {
           },
         ],
         actionLink: { href: "/colegio#actividades", label: "Scopri il progetto formativo →" },
+      },
+      {
+        id: "galeria",
+        title: "Galleria fotografica",
+        subtitle: "Aule, cerimonie e vita scolastica",
+        iconName: "Camera",
+        items: [
+          {
+            title: "Strutture e Aule",
+            desc: "Aule attrezzate, biblioteca e spazi in cui si svolge la vita scolastica quotidiana.",
+          },
+          {
+            title: "Cerimonie e Comunità",
+            desc: "Formazione degli alunni, celebrazioni patriottiche e feste religiose con le famiglie.",
+          },
+        ],
+        actionLink: { href: "/galeria?cat=colegio-jardin", label: "Vedi le foto del Collegio e Asilo →" },
       },
       {
         id: "proyectos",
@@ -853,7 +960,7 @@ const NAVIGATION_IT: Record<InstitutionId, InstitutionNavData> = {
             desc: "curanicolasortiz@yahoo.com.ar",
           },
         ],
-        actionLink: { href: "/contacto", label: "Contatta la segreteria →" },
+        actionLink: { href: "/colegio#contacto", label: "Segreteria scolastica e contatti →" },
       },
     ],
   },
@@ -936,6 +1043,23 @@ const NAVIGATION_IT: Record<InstitutionId, InstitutionNavData> = {
         actionLink: { href: "/parroquia#vida-parroquial", label: "Scopri la vita parrocchiale →" },
       },
       {
+        id: "galeria",
+        title: "Galleria fotografica",
+        subtitle: "Tempio, celebrazioni e missioni",
+        iconName: "Camera",
+        items: [
+          {
+            title: "Tempio e Celebrazioni",
+            desc: "Fotografie dell'altare, delle messe domenicali e delle feste patronali a Real del Padre.",
+          },
+          {
+            title: "Missioni Rurali e Comunità",
+            desc: "Giornate di lavoro comunitario, missioni e cappelle nelle zone rurali vicine.",
+          },
+        ],
+        actionLink: { href: "/galeria?cat=parroquia", label: "Vedi le foto della Parrocchia →" },
+      },
+      {
         id: "proyectos",
         title: "Futura Cappella San Giuseppe",
         subtitle: "Un luogo sacro per tutta la comunità",
@@ -971,7 +1095,7 @@ const NAVIGATION_IT: Record<InstitutionId, InstitutionNavData> = {
             desc: "curanicolasortiz@yahoo.com.ar",
           },
         ],
-        actionLink: { href: "/contacto", label: "Scrivi alla segreteria parrocchiale →" },
+        actionLink: { href: "/parroquia#contacto", label: "Segreteria parrocchiale e orari →" },
       },
     ],
   },
@@ -988,7 +1112,7 @@ const NAVIGATION_IT: Record<InstitutionId, InstitutionNavData> = {
         overview: {
           intro:
             "L'Asilo Nido JP-338 San Francesco d'Assisi è nato il 2 ottobre 2012 per offrire cura, amore e stimolazione precoce ai bambini più piccoli di Real del Padre, affiancando le famiglie nella crescita dei figli.",
-          actionLink: { href: "/colegio#niveles", label: "Vedi sezione asilo nido →" },
+          actionLink: { href: "/jardin", label: "Vedi pagina dell'Asilo Nido →" },
           vision: {
             title: "Visione",
             text: "Essere una seconda casa dove ogni bambino cresce in un ambiente accogliente, sicuro e stimolante.",
@@ -1030,7 +1154,7 @@ const NAVIGATION_IT: Record<InstitutionId, InstitutionNavData> = {
             desc: "Dal lunedì al venerdì con comunicazione quotidiana sul diario e dialogo costante con le famiglie.",
           },
         ],
-        actionLink: { href: "/colegio#horarios-colegio", label: "Vedi gli orari dell'asilo →" },
+        actionLink: { href: "/jardin#salas-horarios", label: "Vedi sezioni e orari →" },
       },
       {
         id: "pedagogica",
@@ -1047,7 +1171,24 @@ const NAVIGATION_IT: Record<InstitutionId, InstitutionNavData> = {
             desc: "Primi passi nella convivenza serena, guidati con tenerezza, cura e rispetto reciproco.",
           },
         ],
-        actionLink: { href: "/colegio#actividades", label: "Vedi le attività educative →" },
+        actionLink: { href: "/jardin#propuesta", label: "Vedi le attività educative →" },
+      },
+      {
+        id: "galeria",
+        title: "Galleria fotografica",
+        subtitle: "Sezioni, giochi e prima infanzia",
+        iconName: "Camera",
+        items: [
+          {
+            title: "Aule della Prima Infanzia",
+            desc: "Ambienti accoglienti e sicuri progettati specificamente per neonati e bambini piccoli.",
+          },
+          {
+            title: "Momenti di Gioco e Merenda",
+            desc: "Stimolazione psicomotoria, canzoncine, filastrocche e sane abitudini condivise.",
+          },
+        ],
+        actionLink: { href: "/galeria?cat=colegio-jardin", label: "Vedi le foto dell'Asilo e Collegio →" },
       },
       {
         id: "contacto",
@@ -1064,7 +1205,7 @@ const NAVIGATION_IT: Record<InstitutionId, InstitutionNavData> = {
             desc: "+54 9 260 4607108 (Comunica direttamente con la segreteria dell'asilo).",
           },
         ],
-        actionLink: { href: "/contacto", label: "Richiedi informazioni per l'iscrizione →" },
+        actionLink: { href: "/jardin#contacto", label: "Iscrizioni e contatti →" },
       },
     ],
   },

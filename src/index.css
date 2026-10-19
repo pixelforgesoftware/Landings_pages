@@ -43,6 +43,7 @@
    ------------------------------------------------------------ */
 html {
   scroll-behavior: smooth;
+  overflow-anchor: none;
 }
 
 body {
@@ -51,6 +52,7 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-anchor: none;
 }
 
 ::selection {

@@ -4,10 +4,10 @@
 
 export interface GalleryItem {
   id: string;
-  caption: string;
   categoryName: string;
   categoryId: string;
   src?: string;
+  caption?: string;
 }
 
 interface GalleryGridProps {
@@ -22,24 +22,27 @@ export default function GalleryGrid({ items }: GalleryGridProps) {
       {items.map((item) => (
         <li
           key={item.id}
-          className="group border border-line bg-cream transition-colors hover:border-gold/70 shadow-sm"
+          className="group overflow-hidden rounded-sm border border-line bg-warm-white transition-all duration-300 hover:border-gold/80 hover:shadow-md"
         >
           {item.src && (
-            <div className="aspect-[4/3] w-full overflow-hidden border-b border-line bg-warm-white">
+            <div className="aspect-[4/3] w-full overflow-hidden border-b border-line bg-cream">
               <img
                 src={item.src}
-                alt={item.caption}
-                className="h-full w-full object-cover object-[center_15%] transition-transform duration-500 group-hover:scale-105"
+                alt={item.categoryName}
+                className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />
             </div>
           )}
-          <div className="flex items-start justify-between gap-3 px-4 py-3.5">
-            <p className="font-serif text-sm leading-snug text-ink">{item.caption}</p>
+          <div className="flex items-center justify-between px-4 py-3 bg-cream/40">
+            <span className="text-[0.72rem] font-bold uppercase tracking-[0.2em] text-gold">
+              {item.categoryName}
+            </span>
+            <span
+              className="h-1.5 w-1.5 rounded-full bg-gold/50 transition-colors group-hover:bg-[#A50F2D]"
+              aria-hidden
+            />
           </div>
-          <p className="border-t border-line/70 px-4 py-2 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-gold">
-            {item.categoryName}
-          </p>
         </li>
       ))}
     </ul>

@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import { useI18n, usePageTitle } from "@/i18n";
-import { STATS, SCHOOL_HOURS } from "@/data/institution";
+import { STATS, SCHOOL_HOURS, CONTACT } from "@/data/institution";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import { IconClock } from "@/components/ui/icons";
+import { IconClock, IconWhatsApp, IconMail, IconArrowRight } from "@/components/ui/icons";
 
 /**
- * Página institucional del Colegio Parroquial Sagrada Familia de Nazareth y Jardín Maternal.
+ * Página institucional del Colegio Parroquial Sagrada Familia de Nazareth.
  */
 export default function School() {
   const { t } = useI18n();
@@ -14,9 +15,8 @@ export default function School() {
   const s = t.school;
 
   const hourItems = [
-    { name: s.hours.items[0].name, time: SCHOOL_HOURS.garden },
-    { name: s.hours.items[1].name, time: SCHOOL_HOURS.primary },
-    { name: s.hours.items[2].name, time: SCHOOL_HOURS.secondary },
+    { name: s.hours.items[0].name, time: SCHOOL_HOURS.primary },
+    { name: s.hours.items[1].name, time: SCHOOL_HOURS.secondary },
   ];
 
   return (
@@ -221,10 +221,10 @@ export default function School() {
           <Reveal>
             <SectionTitle eyebrow={s.hours.eyebrow} title={s.hours.title} />
           </Reveal>
-          <div className="mt-10 grid gap-5 sm:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 max-w-2xl mx-auto">
             {hourItems.map((item, i) => (
               <Reveal key={item.name} delay={i * 80}>
-                <div className="h-full border border-line bg-warm-white p-6 text-center">
+                <div className="h-full border border-line bg-warm-white p-6 text-center shadow-xs">
                   <span aria-hidden className="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-gold/50 text-gold">
                     <IconClock size={18} />
                   </span>
@@ -238,7 +238,80 @@ export default function School() {
               </Reveal>
             ))}
           </div>
-          <p className="mt-6 max-w-2xl text-sm italic leading-relaxed text-ink-soft">{s.hours.initialNote}</p>
+
+          {/* Banner enlace a Jardín Maternal */}
+          <Reveal delay={150} className="mt-8">
+            <div className="mx-auto max-w-2xl rounded-lg border border-gold/40 bg-gold-soft/30 p-4 text-center sm:flex sm:items-center sm:justify-between sm:text-left">
+              <div>
+                <p className="text-xs font-bold text-blue-deep">¿Buscás salas de primera infancia (45 días a 3 años)?</p>
+                <p className="text-xs text-ink-soft mt-0.5">Conocé nuestro Jardín Maternal JP-338 San Francisco de Asís.</p>
+              </div>
+              <Link
+                to="/jardin"
+                className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-[#A50F2D] hover:underline sm:mt-0 shrink-0"
+              >
+                <span>Ver Jardín Maternal</span>
+                <IconArrowRight size={13} />
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Secretaría escolar y contacto directo */}
+      <section id="contacto" aria-labelledby="contacto-colegio" className="scroll-mt-28 wrap py-14 sm:py-16">
+        <div className="rounded-2xl border border-line bg-warm-white p-8 shadow-inst sm:p-10">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A50F2D]">
+                Secretaría y Atención
+              </p>
+              <h2 id="contacto-colegio" className="mt-2 font-serif text-2xl font-black text-blue-deep sm:text-3xl">
+                Contacto escolar y vacantes
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+                Para consultas de inscripción, secretaría académica, constancias y vacantes del Colegio Sagrada Familia de Nazareth.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-4">
+                <a
+                  href={`https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent("Hola, me comunico desde la web y quisiera consultar a la secretaría del Colegio Sagrada Familia de Nazareth.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-sm bg-[#A50F2D] px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-sm transition-all hover:bg-red-deep active:scale-[0.98]"
+                >
+                  <IconWhatsApp size={17} />
+                  <span>Consultar por WhatsApp</span>
+                </a>
+                <a
+                  href={`mailto:${CONTACT.email}?subject=${encodeURIComponent("Consulta secretaría - Colegio Sagrada Familia")}`}
+                  className="inline-flex items-center gap-2 rounded-sm border border-line bg-white px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] text-ink transition-colors hover:border-[#A50F2D] hover:text-[#A50F2D]"
+                >
+                  <IconMail size={17} />
+                  <span>Enviar correo</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-line/80 bg-cream/60 p-6 space-y-3.5">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-[#A50F2D]">Dirección escolar</p>
+                <p className="mt-1 text-sm font-semibold text-blue-deep">{CONTACT.schoolAddress.join(", ")}</p>
+              </div>
+              <div className="border-t border-line/60 pt-3">
+                <p className="text-xs font-bold text-ink">Horarios de secretaría:</p>
+                <p className="text-xs text-ink-soft mt-0.5">Lunes a viernes en turno mañana y turno tarde</p>
+              </div>
+              <div className="border-t border-line/60 pt-3">
+                <Link
+                  to="/galeria?cat=colegio-jardin"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#A50F2D] hover:underline"
+                >
+                  <span>Ver fotos del Colegio y Jardín en la Galería</span>
+                  <IconArrowRight size={13} />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

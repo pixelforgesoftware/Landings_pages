@@ -30,6 +30,7 @@ export const it: Dict = {
     nav: {
       home: "Home",
       parish: "Parrocchia",
+      garden: "Asilo Nido",
       school: "Collegio",
       history: "La nostra storia",
       projects: "Progetti",
@@ -40,6 +41,7 @@ export const it: Dict = {
     pageTitles: {
       home: "Parrocchia San Francesco d'Assisi | Real del Padre",
       parish: "Parrocchia | San Francesco d'Assisi",
+      garden: "Asilo Nido JP-338 San Francesco d'Assisi",
       school: "Collegio Sacra Famiglia di Nazareth",
       history: "La nostra storia | San Francesco d'Assisi",
       projects: "Progetti | San Francesco d'Assisi",
@@ -220,7 +222,7 @@ export const it: Dict = {
   school: {
     eyebrow: "Il nostro Collegio",
     title: "Collegio Parrocchiale 242 Sacra Famiglia di Nazareth",
-    subtitle: "Il progetto educativo comprende anche l'Asilo Nido JP-338 San Francesco d'Assisi.",
+    subtitle: "Educazione cattolica integrale dalla Scuola dell'Infanzia alla Scuola Secondaria.",
     heroPhoto: "Foto panoramica del Collegio",
     identity: {
       eyebrow: "Identità",
@@ -238,12 +240,11 @@ export const it: Dict = {
     levels: {
       eyebrow: "Proposta educativa",
       title: "Livelli educativi",
-      intro: "Il progetto educativo accompagna la crescita di bambini e giovani attraverso quattro livelli.",
+      intro: "Il Collegio accompagna il percorso scolastico attraverso la Scuola dell'Infanzia, Primaria e Secondaria.",
       items: [
-        { name: "Asilo Nido", note: "JP-338 San Francesco d'Assisi" },
-        { name: "Scuola dell'Infanzia", note: "" },
-        { name: "Scuola Primaria", note: "" },
-        { name: "Scuola Secondaria", note: "" },
+        { name: "Scuola dell'Infanzia", note: "Sezioni di 4 e 5 anni" },
+        { name: "Scuola Primaria", note: "Turno mattutino (08:00 a 12:45 hs)" },
+        { name: "Scuola Secondaria", note: "Turno pomeridiano (13:30 a 18:30 hs)" },
       ],
     },
     activities: {
@@ -277,15 +278,89 @@ export const it: Dict = {
       title: "Orari del Collegio",
       days: "Da lunedì a venerdì",
       items: [
-        { name: "Asilo Nido", time: "09:00 – 12:00" },
         { name: "Scuola Primaria", time: "08:00 – 12:45" },
         { name: "Scuola Secondaria", time: "13:30 – 18:30" },
       ],
-      initialNote: "L'orario della Scuola dell'Infanzia non è pubblicato; è possibile chiederlo via WhatsApp o e-mail.",
+      initialNote: "Per la Scuola dell'Infanzia e l'Asilo Nido (da 45 giorni a 3 anni), consulta le sezioni corrispondenti.",
     },
     cta: {
       text: "Il Collegio continua a crescere. Ogni contributo rende possibili nuove aule, spazi migliori e più opportunità.",
       button: "Vedi come aiutare",
+    },
+  },
+
+  garden: {
+    eyebrow: "Prima Infanzia",
+    title: "Asilo Nido JP-338 San Francesco d'Assisi",
+    subtitle: "Amore, accoglienza e stimolazione precoce per i primi passi dei nostri piccoli.",
+    foundedDate: "2 ottobre 2012",
+    heroPhoto: "Sezione e attività della prima infanzia",
+    identity: {
+      eyebrow: "La nostra identità",
+      title: "Una seconda casa per crescere con amore",
+      p1: "L'Asilo Nido JP-338 San Francesco d'Assisi ha iniziato le sue attività il 2 ottobre 2012, nato dal desiderio di offrire alle famiglie di Real del Padre un ambiente sicuro, affettuoso e stimolante per i più piccoli.",
+      p2: "Consideriamo la prima infanzia come una tappa fondamentale. Il nostro team accompagna ogni bambino rispettando i suoi ritmi, stimolando la naturale curiosità e offrendo affetto costante.",
+      p3: "Lavoriamo in stretta collaborazione con le famiglie, condividendo la gioia di vedere crescere i bambini nei valori cristiani e nel rispetto reciproco.",
+    },
+    rooms: {
+      eyebrow: "Organizzazione per sezioni",
+      title: "Spazi pensati per ogni fascia d'età",
+      intro: "Le nostre aule sono attrezzate con materiale didattico sicuro e adatto a ogni età.",
+      items: [
+        {
+          name: "Lattanti",
+          age: "Da 45 giorni a 1 anno",
+          desc: "Cura amorevole, stimolazione sensoriale, attaccamento sicuro e attenzione personalizzata nelle routine quotidiane.",
+        },
+        {
+          name: "Semidivezzi",
+          age: "1 anno",
+          desc: "Primi passi, esplorazione motoria, giochi di movimento e sviluppo del linguaggio attraverso canzoni e filastrocche.",
+        },
+        {
+          name: "Sezione 2 anni",
+          age: "2 anni",
+          desc: "Socializzazione precoce, gioco simbolico, buone abitudini, espressione corporea e sviluppo dell'autonomia.",
+        },
+        {
+          name: "Sezione 3 anni",
+          age: "3 anni",
+          desc: "Rafforzamento del linguaggio, creatività, attività di gruppo e preparazione all'ingresso nella scuola dell'infanzia.",
+        },
+      ],
+    },
+    hours: {
+      eyebrow: "Orari",
+      title: "Turno Mattutino",
+      time: "09:00 – 12:00",
+      days: "Dal lunedì al venerdì",
+      note: "Accoglienza personalizzata, inserimento graduale e comunicazione quotidiana con le famiglie.",
+    },
+    pedagogy: {
+      eyebrow: "Proposta formativa",
+      title: "Imparare giocando in un clima di tenerezza",
+      intro: "La stimolazione precoce e il gioco sono il linguaggio naturale dell'infanzia. Le nostre attività promuovono:",
+      items: [
+        "Stimolazione sensomotoria mirata",
+        "Musica, ninne nanne e canzoni per l'infanzia",
+        "Sviluppo del linguaggio e della comunicazione",
+        "Abitudini di igiene, riposo e merenda condivisa",
+        "Primi valori cristiani: condivisione, gratitudine e amore per il prossimo",
+        "Sostegno costante a genitori e famiglie",
+      ],
+    },
+    contact: {
+      eyebrow: "Iscrizioni e Informazioni",
+      title: "Contattaci",
+      intro: "Le iscrizioni all'Asilo Nido vengono gestite personalmente. Scrivici per conoscere la disponibilità di posti e concordare una visita.",
+      ctaWhatsApp: "Scrivici su WhatsApp",
+      ctaEmail: "Scrivici via Email",
+      addressTitle: "Sede dell'Asilo",
+      addressNote: "Calle Misiones y San Juan, Real del Padre, San Rafael, Mendoza (Complesso Parrocchiale e Scolastico).",
+    },
+    cta: {
+      text: "Vuoi scoprire la scuola in cui i nostri bambini proseguiranno il loro percorso educativo?",
+      button: "Scopri il Collegio Sacra Famiglia",
     },
   },
 
@@ -447,22 +522,13 @@ export const it: Dict = {
         ],
       },
       {
-        id: "colegio",
-        name: "Collegio",
+        id: "colegio-jardin",
+        name: "Collegio / Asilo",
         items: [
-          "Strutture del Collegio",
-          "Aule",
-          "Alunni e docenti",
-          "Famiglie",
-          "Attività educative",
-        ],
-      },
-      {
-        id: "actividades",
-        name: "Attività",
-        items: [
-          "Cerimonie scolastiche",
-          "Attività culturali",
+          "Strutture scolastiche e aule della prima infanzia",
+          "Aule e spazi di apprendimento",
+          "Alunni, docenti e attività educative",
+          "Cerimonie e vita comunitaria educativa",
         ],
       },
       {

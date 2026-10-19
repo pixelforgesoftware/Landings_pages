@@ -30,6 +30,7 @@ export const en: Dict = {
     nav: {
       home: "Home",
       parish: "Parish",
+      garden: "Nursery School",
       school: "School",
       history: "Our History",
       projects: "Projects",
@@ -40,6 +41,7 @@ export const en: Dict = {
     pageTitles: {
       home: "Parish of St. Francis of Assisi | Real del Padre",
       parish: "Parish | St. Francis of Assisi",
+      garden: "Nursery JP-338 St. Francis of Assisi",
       school: "Holy Family of Nazareth School",
       history: "Our History | St. Francis of Assisi",
       projects: "Projects | St. Francis of Assisi",
@@ -220,7 +222,7 @@ export const en: Dict = {
   school: {
     eyebrow: "Our School",
     title: "Parish School 242 Holy Family of Nazareth",
-    subtitle: "The educational project also includes the Nursery JP-338 St. Francis of Assisi.",
+    subtitle: "Comprehensive Catholic education from Kindergarten through Secondary School.",
     heroPhoto: "Panoramic photo of the School",
     identity: {
       eyebrow: "Identity",
@@ -238,12 +240,11 @@ export const en: Dict = {
     levels: {
       eyebrow: "Educational program",
       title: "Educational levels",
-      intro: "The educational project accompanies the growth of children and young people through four levels.",
+      intro: "The School accompanies academic growth through Kindergarten, Primary, and Secondary levels.",
       items: [
-        { name: "Nursery", note: "JP-338 St. Francis of Assisi" },
-        { name: "Kindergarten", note: "" },
-        { name: "Primary", note: "" },
-        { name: "Secondary", note: "" },
+        { name: "Kindergarten", note: "Ages 4 and 5" },
+        { name: "Primary School", note: "Morning shift (08:00 to 12:45 hs)" },
+        { name: "Secondary School", note: "Afternoon shift (13:30 to 18:30 hs)" },
       ],
     },
     activities: {
@@ -277,15 +278,89 @@ export const en: Dict = {
       title: "School hours",
       days: "Monday to Friday",
       items: [
-        { name: "Nursery", time: "09:00 – 12:00" },
         { name: "Primary", time: "08:00 – 12:45" },
         { name: "Secondary", time: "13:30 – 18:30" },
       ],
-      initialNote: "Kindergarten hours are not published; please ask via WhatsApp or email.",
+      initialNote: "For Kindergarten and Nursery School (ages 45 days to 3 years), please refer to the respective sections.",
     },
     cta: {
       text: "The School keeps growing. Every contribution makes possible new classrooms, better spaces and more opportunities.",
       button: "See how to help",
+    },
+  },
+
+  garden: {
+    eyebrow: "Early Childhood",
+    title: "Nursery School JP-338 St. Francis of Assisi",
+    subtitle: "Love, care and early stimulation for the first steps of our children.",
+    foundedDate: "October 2, 2012",
+    heroPhoto: "Classroom and early childhood activities",
+    identity: {
+      eyebrow: "Our Identity",
+      title: "A second home to grow with love",
+      p1: "Nursery School JP-338 St. Francis of Assisi began its activities on October 2, 2012, born from the desire to provide families in Real del Padre with a safe, caring and stimulating environment for the youngest.",
+      p2: "We understand early childhood as a sacred and foundational stage. Our team accompanies each child respecting their natural pace of growth, encouraging curiosity and providing constant affection.",
+      p3: "We work hand in hand with families, sharing the joy of seeing children grow in Christian values, warmth, and mutual respect.",
+    },
+    rooms: {
+      eyebrow: "Rooms by age",
+      title: "Spaces designed for each stage",
+      intro: "Our rooms are equipped with safe educational materials tailored to each age group.",
+      items: [
+        {
+          name: "Infants",
+          age: "45 days to 1 year",
+          desc: "Loving care, sensory stimulation, secure attachment, and personalized attention in their daily routines.",
+        },
+        {
+          name: "Toddlers",
+          age: "1 year old",
+          desc: "First steps, motor exploration, active play, and language development through songs and stories.",
+        },
+        {
+          name: "2-Year-Old Room",
+          age: "2 years old",
+          desc: "Early socialization, symbolic play, healthy habits, expression, and developing independence.",
+        },
+        {
+          name: "3-Year-Old Room",
+          age: "3 years old",
+          desc: "Language strengthening, creativity, group activities, and transition preparation for kindergarten.",
+        },
+      ],
+    },
+    hours: {
+      eyebrow: "Hours",
+      title: "Morning Shift",
+      time: "09:00 – 12:00",
+      days: "Monday to Friday",
+      note: "Personalized attention, gradual adaptation period, and daily communication with families.",
+    },
+    pedagogy: {
+      eyebrow: "Educational Approach",
+      title: "Learning through play in a caring environment",
+      intro: "Early stimulation and play are the natural language of childhood. Our activities foster:",
+      items: [
+        "Sensory and motor stimulation",
+        "Music, lullabies, and children's songs",
+        "Language and communication skills",
+        "Hygiene habits, rest, and shared snacks",
+        "Christian values: sharing, gratitude, and care for others",
+        "Close support for parents and families",
+      ],
+    },
+    contact: {
+      eyebrow: "Enrollment & Inquiries",
+      title: "Get in touch with us",
+      intro: "Nursery school enrollments are handled personally. Reach out to ask about available spots and schedule a visit.",
+      ctaWhatsApp: "Inquire via WhatsApp",
+      ctaEmail: "Inquire via Email",
+      addressTitle: "Nursery Location",
+      addressNote: "Calle Misiones y San Juan, Real del Padre, San Rafael, Mendoza (Parish & School grounds).",
+    },
+    cta: {
+      text: "Would you like to discover the school where our children continue their educational journey?",
+      button: "Visit Holy Family School",
     },
   },
 
@@ -448,22 +523,13 @@ export const en: Dict = {
         ],
       },
       {
-        id: "colegio",
-        name: "School",
+        id: "colegio-jardin",
+        name: "School / Nursery",
         items: [
-          "School facilities",
-          "Classrooms",
-          "Students and teachers",
-          "Families",
-          "Educational activities",
-        ],
-      },
-      {
-        id: "actividades",
-        name: "Activities",
-        items: [
-          "School ceremonies",
-          "Cultural activities",
+          "School facilities and early childhood classrooms",
+          "Classrooms and learning spaces",
+          "Students, teachers and educational activities",
+          "Ceremonies and educational community life",
         ],
       },
       {

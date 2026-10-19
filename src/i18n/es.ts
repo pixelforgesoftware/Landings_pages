@@ -28,6 +28,7 @@ export const es = {
     nav: {
       home: "Inicio",
       parish: "Parroquia",
+      garden: "Jardín Maternal",
       school: "Colegio",
       history: "Historia",
       projects: "Proyectos",
@@ -38,6 +39,7 @@ export const es = {
     pageTitles: {
       home: "Parroquia San Francisco de Asís | Real del Padre",
       parish: "Parroquia | San Francisco de Asís",
+      garden: "Jardín Maternal JP-338 San Francisco de Asís",
       school: "Colegio Sagrada Familia de Nazareth",
       history: "Nuestra historia | San Francisco de Asís",
       projects: "Proyectos | San Francisco de Asís",
@@ -220,7 +222,7 @@ export const es = {
   school: {
     eyebrow: "Nuestro Colegio",
     title: "Colegio Parroquial 242 Sagrada Familia de Nazareth",
-    subtitle: "El proyecto educativo comprende también el Jardín Maternal JP-338 San Francisco de Asís.",
+    subtitle: "Educación católica integral desde el Nivel Inicial hasta el Nivel Secundario.",
     heroPhoto: "Foto panorámica del Colegio",
     identity: {
       eyebrow: "Identidad",
@@ -238,12 +240,11 @@ export const es = {
     levels: {
       eyebrow: "Propuesta educativa",
       title: "Niveles educativos",
-      intro: "El proyecto educativo acompaña el crecimiento de niños y jóvenes a través de cuatro niveles.",
+      intro: "El Colegio acompaña la trayectoria académica a través de sus niveles Inicial, Primario y Secundario.",
       items: [
-        { name: "Jardín Maternal", note: "JP-338 San Francisco de Asís" },
-        { name: "Nivel Inicial", note: "" },
-        { name: "Nivel Primario", note: "" },
-        { name: "Nivel Secundario", note: "" },
+        { name: "Nivel Inicial", note: "Salas de 4 y 5 años" },
+        { name: "Nivel Primario", note: "Turno mañana (08:00 a 12:45 hs)" },
+        { name: "Nivel Secundario", note: "Turno tarde (13:30 a 18:30 hs)" },
       ],
     },
     activities: {
@@ -277,15 +278,89 @@ export const es = {
       title: "Horarios del Colegio",
       days: "Lunes a viernes",
       items: [
-        { name: "Jardín Maternal", time: "09:00 – 12:00" },
         { name: "Nivel Primario", time: "08:00 – 12:45" },
         { name: "Nivel Secundario", time: "13:30 – 18:30" },
       ],
-      initialNote: "El horario del Nivel Inicial no se encuentra publicado; pueden consultarlo por WhatsApp o correo electrónico.",
+      initialNote: "Para el Nivel Inicial y Jardín Maternal (de 45 días a 3 años), consultá salas y horarios en la sección correspondiente.",
     },
     cta: {
       text: "El Colegio sigue creciendo. Cada colaboración hace posible nuevas aulas, mejores espacios y más oportunidades.",
       button: "Ver cómo colaborar",
+    },
+  },
+
+  garden: {
+    eyebrow: "Primera Infancia",
+    title: "Jardín Maternal JP-338 San Francisco de Asís",
+    subtitle: "Contención, afecto y estimulación temprana para los primeros pasos de nuestros niños.",
+    foundedDate: "2 de octubre de 2012",
+    heroPhoto: "Sala y actividades de primera infancia",
+    identity: {
+      eyebrow: "Nuestra identidad",
+      title: "Un segundo hogar para crecer con amor",
+      p1: "El Jardín Maternal JP-338 San Francisco de Asís inició sus actividades el 2 de octubre de 2012, fruto del anhelo de brindar a las familias de Real del Padre un espacio seguro, tierno y pedagógicamente estimulante para los más pequeños.",
+      p2: "Comprendemos la primera infancia como una etapa sagrada y fundante. Por eso, nuestro equipo acompaña a cada bebé y niño respetando sus ritmos de maduración, fomentando su curiosidad natural y brindando contención afectiva permanente.",
+      p3: "Trabajamos en íntima colaboración con las familias, compartiendo la alegría de ver crecer a los niños en un marco de valores cristianos, calidez humana y respeto mutuo.",
+    },
+    rooms: {
+      eyebrow: "Organización por salas",
+      title: "Espacios pensados para cada etapa",
+      intro: "Nuestras salas están preparadas con material didáctico seguro y adecuado a la edad de cada niño.",
+      items: [
+        {
+          name: "Lactantes",
+          age: "45 días a 1 año",
+          desc: "Cuidado amoroso, estimulación sensorial, apego seguro y atención personalizada en sus primeras rutinas.",
+        },
+        {
+          name: "Deambuladores",
+          age: "1 año",
+          desc: "Primeros pasos, exploración motriz, juegos corporales y estímulos del lenguaje a través de canciones y cuentos.",
+        },
+        {
+          name: "Sala de 2 años",
+          age: "2 años",
+          desc: "Socialización temprana, juego simbólico, hábitos saludables, expresión corporal y desarrollo de la autonomía.",
+        },
+        {
+          name: "Sala de 3 años",
+          age: "3 años",
+          desc: "Afianzamiento del lenguaje, creatividad plástica, rondas de integración y preparación para el ingreso al Nivel Inicial.",
+        },
+      ],
+    },
+    hours: {
+      eyebrow: "Horarios",
+      title: "Turno Mañana",
+      time: "09:00 – 12:00",
+      days: "Lunes a viernes",
+      note: "Atención personalizada, ingreso escalonado para adaptación y comunicación diaria mediante cuaderno de notas.",
+    },
+    pedagogy: {
+      eyebrow: "Propuesta formativa",
+      title: "Aprender jugando en un clima de ternura",
+      intro: "La estimulación temprana y el juego son el lenguaje natural de la infancia. Nuestras actividades promueven:",
+      items: [
+        "Estimulación sensoriomotriz oportuna",
+        "Música, nanas y canciones infantiles",
+        "Desarrollo del lenguaje y la comunicación",
+        "Hábitos de higiene, descanso y merienda compartida",
+        "Primeros valores cristianos: compartir, agradecer y querer al prójimo",
+        "Acompañamiento cercano a mamás, papás y familias",
+      ],
+    },
+    contact: {
+      eyebrow: "Inscripciones y Vacantes",
+      title: "Comunicate con nosotros",
+      intro: "Las inscripciones para el Jardín Maternal se realizan de forma personalizada. Escribinos para conocer las vacantes disponibles y coordinar una visita a las instalaciones.",
+      ctaWhatsApp: "Consultar por WhatsApp",
+      ctaEmail: "Consultar por correo",
+      addressTitle: "Ubicación del Jardín",
+      addressNote: "Calle Misiones y San Juan, Real del Padre, San Rafael, Mendoza (Predio Parroquial y Escolar).",
+    },
+    cta: {
+      text: "¿Querés conocer el Colegio donde nuestros pequeños continuarán su trayectoria escolar?",
+      button: "Conocé el Colegio Sagrada Familia",
     },
   },
 
@@ -448,22 +523,13 @@ export const es = {
         ],
       },
       {
-        id: "colegio",
-        name: "Colegio",
+        id: "colegio-jardin",
+        name: "Colegio / Jardín",
         items: [
-          "Instalaciones del Colegio",
-          "Aulas",
-          "Alumnos y docentes",
-          "Familias",
-          "Actividades educativas",
-        ],
-      },
-      {
-        id: "actividades",
-        name: "Actividades",
-        items: [
-          "Actos escolares",
-          "Actividades culturales",
+          "Instalaciones escolares y salas de nivel inicial",
+          "Aulas y espacios de aprendizaje",
+          "Alumnos, docentes y actividades formativas",
+          "Actos y vida comunitaria educativa",
         ],
       },
       {

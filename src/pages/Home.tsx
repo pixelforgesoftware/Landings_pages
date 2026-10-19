@@ -31,7 +31,7 @@ export default function Home() {
   const institutions = [
     { icon: IconChurch, name: t.common.names.parish, desc: t.home.institutions.parishDesc, href: "/parroquia", cta: t.home.unity.parishCardLink },
     { icon: IconBook, name: t.common.names.schoolFull, desc: t.home.institutions.schoolDesc, href: "/colegio", cta: t.home.unity.schoolCardLink },
-    { icon: IconHeart, name: t.common.names.garden, desc: t.home.institutions.gardenDesc, href: "/colegio", cta: t.home.unity.schoolCardLink },
+    { icon: IconHeart, name: t.common.names.garden, desc: t.home.institutions.gardenDesc, href: "/jardin", cta: t.home.unity.schoolCardLink },
   ];
 
   return (
@@ -84,8 +84,8 @@ export default function Home() {
 
           <div className="frame-gold overflow-hidden">
             <img
-              src="/images/hero-home.webp"
-              alt="Acto de inauguración e inicio de clases de la comunidad en San José de los Chañares"
+              src="/images/parroquia-foto-03.webp"
+              alt={t.home.hero.title}
               className="aspect-[4/3] w-full object-cover lg:aspect-[5/4] transition-transform duration-700 hover:scale-105"
               loading="eager"
             />

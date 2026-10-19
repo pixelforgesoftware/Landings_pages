@@ -10,6 +10,7 @@ import Footer from "@/components/layout/Footer";
 import Home from "@/pages/Home";
 import Parish from "@/pages/Parish";
 import School from "@/pages/School";
+import Garden from "@/pages/Garden";
 import History from "@/pages/History";
 import Projects from "@/pages/Projects";
 import Gallery from "@/pages/Gallery";
@@ -60,6 +61,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/parroquia" element={<Parish />} />
+            <Route path="/jardin" element={<Garden />} />
             <Route path="/colegio" element={<School />} />
             <Route path="/historia" element={<History />} />
             <Route path="/proyectos" element={<Projects />} />

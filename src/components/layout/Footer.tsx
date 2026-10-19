@@ -14,6 +14,7 @@ export default function Footer() {
   const nav = [
     { href: "/", label: t.common.nav.home },
     { href: "/parroquia", label: t.common.nav.parish },
+    { href: "/jardin", label: t.common.nav.garden },
     { href: "/colegio", label: t.common.nav.school },
     { href: "/historia", label: t.common.nav.history },
     { href: "/proyectos", label: t.common.nav.projects },
@@ -98,7 +99,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/colegio" className="text-cream/85 transition-colors hover:text-gold-bright">
+              <Link to="/jardin" className="text-cream/85 transition-colors hover:text-gold-bright">
                 {t.common.names.garden}
               </Link>
             </li>

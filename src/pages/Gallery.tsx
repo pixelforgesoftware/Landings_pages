@@ -1,4 +1,5 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { useI18n, usePageTitle } from "@/i18n";
 import GalleryFilters from "@/components/gallery/GalleryFilters";
 import GalleryGrid, { type GalleryItem } from "@/components/gallery/GalleryGrid";
@@ -8,62 +9,106 @@ import { IconArrowRight } from "@/components/ui/icons";
 /**
  * Galería multimedia institucional con filtros interactivos por categoría.
  */
-const PHOTO_MAP: Record<string, string> = {
-  // Parroquia
-  "parroquia-0": "/images/hero-parish.webp",
-  "parroquia-1": "/images/parroquia-altar.webp",
-  "parroquia-2": "/images/comunidad-jornada-trabajo.webp",
-  // Colegio
-  "colegio-0": "/images/hero-school.webp",
-  "colegio-1": "/images/colegio-aula-preparada.webp",
-  "colegio-2": "/images/colegio-clase.webp",
-  "colegio-3": "/images/comunidad-trabajo.webp",
-  "colegio-4": "/images/colegio-sagrada-familia.webp",
-  // Actividades (fotos auténticas de actos y formación cultural)
-  "actividades-0": "/images/colegio-alumnos-bandera.webp",
-  "actividades-1": "/images/colegio-primaria-formacion.webp",
+interface GalleryPhotoDef {
+  id: string;
+  categoryId: string;
+  src: string;
+}
+
+const GALLERY_PHOTOS: GalleryPhotoDef[] = [
+  // Parroquia (18 fotos: altar + 17 fotos nuevas)
+  { id: "parroquia-0", categoryId: "parroquia", src: "/images/parroquia-altar.webp" },
+  { id: "parroquia-1", categoryId: "parroquia", src: "/images/parroquia-foto-01.webp" },
+  { id: "parroquia-2", categoryId: "parroquia", src: "/images/parroquia-foto-02.webp" },
+  { id: "parroquia-3", categoryId: "parroquia", src: "/images/parroquia-foto-03.webp" },
+  { id: "parroquia-4", categoryId: "parroquia", src: "/images/parroquia-foto-04.webp" },
+  { id: "parroquia-5", categoryId: "parroquia", src: "/images/parroquia-foto-05.webp" },
+  { id: "parroquia-6", categoryId: "parroquia", src: "/images/parroquia-foto-06.webp" },
+  { id: "parroquia-7", categoryId: "parroquia", src: "/images/parroquia-foto-07.webp" },
+  { id: "parroquia-8", categoryId: "parroquia", src: "/images/parroquia-foto-08.webp" },
+  { id: "parroquia-9", categoryId: "parroquia", src: "/images/parroquia-foto-09.webp" },
+  { id: "parroquia-10", categoryId: "parroquia", src: "/images/parroquia-foto-10.webp" },
+  { id: "parroquia-11", categoryId: "parroquia", src: "/images/parroquia-foto-11.webp" },
+  { id: "parroquia-12", categoryId: "parroquia", src: "/images/parroquia-foto-12.webp" },
+  { id: "parroquia-13", categoryId: "parroquia", src: "/images/parroquia-foto-13.webp" },
+  { id: "parroquia-14", categoryId: "parroquia", src: "/images/parroquia-foto-14.webp" },
+  { id: "parroquia-15", categoryId: "parroquia", src: "/images/parroquia-foto-15.webp" },
+  { id: "parroquia-16", categoryId: "parroquia", src: "/images/parroquia-foto-16.webp" },
+  { id: "parroquia-17", categoryId: "parroquia", src: "/images/parroquia-foto-17.webp" },
+
+  // Colegio / Jardín (unificadas sin repetición)
+  { id: "colegio-jardin-0", categoryId: "colegio-jardin", src: "/images/hero-school.webp" },
+  { id: "colegio-jardin-1", categoryId: "colegio-jardin", src: "/images/colegio-aula-preparada.webp" },
+  { id: "colegio-jardin-2", categoryId: "colegio-jardin", src: "/images/colegio-clase.webp" },
+  { id: "colegio-jardin-3", categoryId: "colegio-jardin", src: "/images/colegio-sagrada-familia.webp" },
+  { id: "colegio-jardin-4", categoryId: "colegio-jardin", src: "/images/colegio-alumnos-bandera.webp" },
+  { id: "colegio-jardin-5", categoryId: "colegio-jardin", src: "/images/colegio-primaria-formacion.webp" },
+  { id: "colegio-jardin-6", categoryId: "colegio-jardin", src: "/images/comunidad-trabajo.webp" },
+
   // Comunidad
-  "comunidad-0": "/images/colegio-comunidad-8xmille.webp",
-  "comunidad-1": "/images/comunidad-trabajo.webp",
-  "comunidad-2": "/images/comunidad-jornada-trabajo.webp",
+  { id: "comunidad-0", categoryId: "comunidad", src: "/images/colegio-comunidad-8xmille.webp" },
+  { id: "comunidad-1", categoryId: "comunidad", src: "/images/comunidad-trabajo.webp" },
+  { id: "comunidad-2", categoryId: "comunidad", src: "/images/comunidad-jornada-trabajo.webp" },
+
   // Historia
-  "historia-0": "/images/historia-2012-inicio.webp",
-  "historia-1": "/images/colegio-aula-preparada.webp",
-  "historia-2": "/images/obras-construccion-aulas.webp",
-  "historia-3": "/images/colegio-primeras-docentes.webp",
-  "historia-4": "/images/comunidad-trabajo.webp",
-  "historia-5": "/images/historia-2017-inauguracion.webp",
-  "historia-6": "/images/colegio-primaria-formacion.webp",
-};
+  { id: "historia-0", categoryId: "historia", src: "/images/historia-2012-inicio.webp" },
+  { id: "historia-1", categoryId: "historia", src: "/images/colegio-aula-preparada.webp" },
+  { id: "historia-2", categoryId: "historia", src: "/images/obras-construccion-aulas.webp" },
+  { id: "historia-3", categoryId: "historia", src: "/images/colegio-primeras-docentes.webp" },
+  { id: "historia-4", categoryId: "historia", src: "/images/comunidad-trabajo.webp" },
+  { id: "historia-5", categoryId: "historia", src: "/images/historia-2017-inauguracion.webp" },
+  { id: "historia-6", categoryId: "historia", src: "/images/colegio-primaria-formacion.webp" },
+];
 
 export default function Gallery() {
   const { t } = useI18n();
   usePageTitle(t.common.pageTitles.gallery);
   const g = t.gallery;
 
+  const [searchParams, setSearchParams] = useSearchParams();
+  const catQuery = searchParams.get("cat");
   const [active, setActive] = useState<string>("all");
 
-  const allItems = useMemo<GalleryItem[]>(() => {
-    return g.categories.flatMap((cat) =>
-      cat.items.map((caption, i) => {
-        const id = `${cat.id}-${i}`;
-        return {
-          id,
-          caption,
-          categoryName: cat.name,
-          categoryId: cat.id,
-          src: PHOTO_MAP[id],
-        };
-      }),
-    );
+  useEffect(() => {
+    if (catQuery) {
+      if (catQuery === "colegio" || catQuery === "jardin" || catQuery === "actividades") {
+        setActive("colegio-jardin");
+      } else if (catQuery === "all" || g.categories.some((c) => c.id === catQuery)) {
+        setActive(catQuery);
+      }
+    }
+  }, [catQuery, g.categories]);
+
+  const handleFilterChange = (categoryId: string) => {
+    setActive(categoryId);
+    if (categoryId === "all") {
+      setSearchParams({}, { replace: true });
+    } else {
+      setSearchParams({ cat: categoryId }, { replace: true });
+    }
+  };
+
+  const categoryMap = useMemo(() => {
+    const map = new Map<string, string>();
+    g.categories.forEach((c) => map.set(c.id, c.name));
+    return map;
   }, [g.categories]);
+
+  const allItems = useMemo<GalleryItem[]>(() => {
+    return GALLERY_PHOTOS.map((photo) => ({
+      id: photo.id,
+      categoryId: photo.categoryId,
+      categoryName: categoryMap.get(photo.categoryId) || photo.categoryId,
+      src: photo.src,
+    }));
+  }, [categoryMap]);
 
   const visible = active === "all" ? allItems : allItems.filter((it) => it.categoryId === active);
 
   const filters = g.categories.map((cat) => ({
     id: cat.id,
     name: cat.name,
-    count: cat.items.length,
+    count: allItems.filter((it) => it.categoryId === cat.id).length,
   }));
 
   return (
@@ -90,7 +135,7 @@ export default function Gallery() {
           allLabel={g.filterAll}
           categories={filters}
           active={active}
-          onChange={setActive}
+          onChange={handleFilterChange}
         />
         <p className="sr-only" role="status">
           {visible.length} — {active === "all" ? g.filterAll : filters.find((f) => f.id === active)?.name}

@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
 import { useI18n, usePageTitle } from "@/i18n";
-import { MASS_TIMES } from "@/data/institution";
+import { MASS_TIMES, CONTACT } from "@/data/institution";
 import SectionTitle from "@/components/ui/SectionTitle";
-import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import { IconClock, IconMapPin } from "@/components/ui/icons";
+import { IconClock, IconMapPin, IconWhatsApp, IconMail, IconArrowRight } from "@/components/ui/icons";
 
 /**
  * Página institucional de la Parroquia San Francisco de Asís (historia, vida parroquial y horarios de misa).
@@ -41,9 +41,9 @@ export default function Parish() {
           </div>
           <div className="frame-gold overflow-hidden">
             <img
-              src="/images/hero-parish.webp"
-              alt="Monseñor Eduardo María Taussig junto al Pbro. Nicolás Ortiz ante la placa inaugural"
-              className="aspect-[4/3] w-full object-cover object-top transition-transform duration-700 hover:scale-105"
+              src="/images/parroquia-foto-05.webp"
+              alt={p.title}
+              className="aspect-[4/3] w-full object-cover object-center transition-transform duration-700 hover:scale-105"
               loading="eager"
             />
           </div>
@@ -176,13 +176,60 @@ export default function Parish() {
         </div>
       </section>
 
-      {/* Contacto */}
-      <section className="wrap py-14">
-        <div className="flex flex-col items-start justify-between gap-6 border border-line bg-cream p-8 sm:flex-row sm:items-center">
-          <p className="max-w-2xl font-serif text-lg italic leading-relaxed text-ink">{p.cta.text}</p>
-          <Button href="/contacto" variant="secondary">
-            {p.cta.button}
-          </Button>
+      {/* Contacto y secretaría parroquial */}
+      <section id="contacto" aria-labelledby="contacto-parroquia" className="scroll-mt-28 wrap py-14 sm:py-16">
+        <div className="rounded-2xl border border-line bg-warm-white p-8 shadow-inst sm:p-10">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A50F2D]">
+                Secretaría Parroquial
+              </p>
+              <h2 id="contacto-parroquia" className="mt-2 font-serif text-2xl font-black text-blue-deep sm:text-3xl">
+                Atención pastoral y consultas
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+                {p.cta.text}
+              </p>
+              <div className="mt-6 flex flex-wrap gap-4">
+                <a
+                  href={`https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent("Hola, me comunico desde la web y quisiera realizar una consulta a la secretaría parroquial.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-sm bg-[#A50F2D] px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-sm transition-all hover:bg-red-deep active:scale-[0.98]"
+                >
+                  <IconWhatsApp size={17} />
+                  <span>Escribir por WhatsApp</span>
+                </a>
+                <a
+                  href={`mailto:${CONTACT.email}?subject=${encodeURIComponent("Consulta secretaría parroquial")}`}
+                  className="inline-flex items-center gap-2 rounded-sm border border-line bg-white px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] text-ink transition-colors hover:border-[#A50F2D] hover:text-[#A50F2D]"
+                >
+                  <IconMail size={17} />
+                  <span>Enviar correo</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-line/80 bg-cream/60 p-6 space-y-3.5">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-[#A50F2D]">Sede Parroquial</p>
+                <p className="mt-1 text-sm font-semibold text-blue-deep">{CONTACT.parishAddress.join(", ")}</p>
+              </div>
+              <div className="border-t border-line/60 pt-3">
+                <p className="text-xs font-bold text-ink">Horarios de secretaría:</p>
+                <p className="text-xs text-ink-soft mt-0.5">Martes a domingos antes y después de cada celebración</p>
+              </div>
+              <div className="border-t border-line/60 pt-3">
+                <Link
+                  to="/galeria?cat=parroquia"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#A50F2D] hover:underline"
+                >
+                  <span>Ver fotos de la Parroquia en la Galería</span>
+                  <IconArrowRight size={13} />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>
