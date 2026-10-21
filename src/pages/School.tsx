@@ -241,7 +241,7 @@ export default function School() {
 
           {/* Banner enlace a Jardín Maternal */}
           <Reveal delay={150} className="mt-8">
-            <div className="mx-auto max-w-2xl rounded-lg border border-gold/40 bg-gold-soft/30 p-4 text-center sm:flex sm:items-center sm:justify-between sm:text-left">
+            <div className="mx-auto max-w-2xl border border-gold/40 bg-gold-soft/30 p-4 text-center sm:flex sm:items-center sm:justify-between sm:text-left">
               <div>
                 <p className="text-xs font-bold text-blue-deep">¿Buscás salas de primera infancia (45 días a 3 años)?</p>
                 <p className="text-xs text-ink-soft mt-0.5">Conocé nuestro Jardín Maternal JP-338 San Francisco de Asís.</p>
@@ -260,7 +260,7 @@ export default function School() {
 
       {/* Secretaría escolar y contacto directo */}
       <section id="contacto" aria-labelledby="contacto-colegio" className="scroll-mt-28 wrap py-14 sm:py-16">
-        <div className="rounded-2xl border border-line bg-warm-white p-8 shadow-inst sm:p-10">
+        <div className="border border-line bg-warm-white p-8 shadow-inst sm:p-10">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A50F2D]">
@@ -292,7 +292,7 @@ export default function School() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-line/80 bg-cream/60 p-6 space-y-3.5">
+            <div className="border border-line/80 bg-cream/60 p-6 space-y-3.5">
               <div>
                 <p className="text-xs font-bold uppercase tracking-wider text-[#A50F2D]">Dirección escolar</p>
                 <p className="mt-1 text-sm font-semibold text-blue-deep">{CONTACT.schoolAddress.join(", ")}</p>

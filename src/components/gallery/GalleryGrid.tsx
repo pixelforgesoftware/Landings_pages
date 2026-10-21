@@ -8,6 +8,7 @@ export interface GalleryItem {
   categoryId: string;
   src?: string;
   caption?: string;
+  alt?: string;
 }
 
 interface GalleryGridProps {
@@ -22,13 +23,13 @@ export default function GalleryGrid({ items }: GalleryGridProps) {
       {items.map((item) => (
         <li
           key={item.id}
-          className="group overflow-hidden rounded-sm border border-line bg-warm-white transition-all duration-300 hover:border-gold/80 hover:shadow-md"
+          className="group overflow-hidden border border-line bg-warm-white transition-all duration-300 hover:border-gold/80 hover:shadow-md"
         >
           {item.src && (
             <div className="aspect-[4/3] w-full overflow-hidden border-b border-line bg-cream">
               <img
                 src={item.src}
-                alt={item.categoryName}
+                alt={item.alt || item.categoryName}
                 className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />

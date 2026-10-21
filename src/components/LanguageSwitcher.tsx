@@ -32,7 +32,7 @@ export default function LanguageSwitcher({ tone = "light", className = "" }: Lan
             aria-pressed={active}
             onClick={() => setLocale(code)}
             className={[
-              "px-3 py-2 text-xs font-bold uppercase tracking-wider transition-colors min-w-[40px]",
+              "px-2 py-1 text-[0.7rem] sm:px-3 sm:py-1.5 sm:text-xs font-bold uppercase tracking-wider transition-colors min-w-[28px] sm:min-w-[36px]",
               i > 0 ? "border-l" : "",
               tone === "dark" ? "border-warm-white/30" : "border-line",
               active

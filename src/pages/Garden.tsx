@@ -86,7 +86,7 @@ export default function Garden() {
             ].map(({ icon: Icon, label }) => (
               <div
                 key={label}
-                className="flex flex-col items-center justify-center rounded-lg border border-line bg-cream/50 p-3 text-center transition-colors hover:border-gold/60 hover:bg-cream"
+                className="flex flex-col items-center justify-center border border-line bg-cream/50 p-3 text-center transition-colors hover:border-gold/60 hover:bg-cream"
               >
                 <Icon size={20} className="text-[#A50F2D] mb-1.5" />
                 <span className="text-[0.74rem] font-bold text-ink">{label}</span>
@@ -96,7 +96,7 @@ export default function Garden() {
         </Reveal>
 
         <Reveal delay={120} className="space-y-5">
-          <div className="border border-line bg-warm-white shadow-inst overflow-hidden rounded-sm">
+          <div className="border border-line bg-warm-white shadow-inst overflow-hidden">
             <div className="overflow-hidden aspect-[4/3] w-full bg-warm-white">
               <img
                 src="/images/colegio-inicial-merienda.webp"
@@ -125,7 +125,7 @@ export default function Garden() {
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {g.rooms.items.map((room, i) => (
               <Reveal key={room.name} delay={i * 80}>
-                <div className="flex h-full flex-col justify-between rounded-lg border border-line bg-warm-white p-5 shadow-xs transition-all hover:border-gold hover:shadow-inst">
+                <div className="flex h-full flex-col justify-between border border-line bg-warm-white p-5 shadow-xs transition-all hover:border-gold hover:shadow-inst">
                   <div>
                     <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-red-soft px-3 py-1 text-xs font-bold text-[#A50F2D]">
                       <Baby size={14} />
@@ -141,7 +141,7 @@ export default function Garden() {
 
           {/* Horario destacado del Jardín */}
           <Reveal delay={200} className="mt-10">
-            <div className="mx-auto max-w-2xl rounded-xl border border-gold/50 bg-gold-soft/40 p-6 text-center sm:p-8">
+            <div className="mx-auto max-w-2xl border border-gold/50 bg-gold-soft/40 p-6 text-center sm:p-8">
               <span aria-hidden className="mx-auto flex h-11 w-11 items-center justify-center rounded-full border border-gold text-gold">
                 <IconClock size={22} />
               </span>
@@ -176,7 +176,7 @@ export default function Garden() {
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="overflow-hidden rounded-lg border border-line bg-warm-white shadow-inst">
+            <div className="overflow-hidden border border-line bg-warm-white shadow-inst">
               <div className="aspect-[4/3] w-full overflow-hidden">
                 <img
                   src="/images/colegio-aula-preparada.webp"
@@ -223,7 +223,7 @@ export default function Garden() {
               },
             ].map((photo, i) => (
               <Reveal key={photo.caption} delay={i * 80}>
-                <div className="overflow-hidden rounded-lg border border-line bg-warm-white shadow-xs transition-all hover:border-gold hover:shadow-inst">
+                <div className="overflow-hidden border border-line bg-warm-white shadow-xs transition-all hover:border-gold hover:shadow-inst">
                   <div className="aspect-[4/3] w-full overflow-hidden">
                     <img
                       src={photo.src}
@@ -252,7 +252,7 @@ export default function Garden() {
           6. Contacto e Inscripciones (#contacto)
           ------------------------------------------------------------ */}
       <section id="contacto" aria-labelledby="contacto-jardin" className="scroll-mt-28 wrap py-16 sm:py-20">
-        <div className="overflow-hidden rounded-2xl border border-line bg-warm-white p-8 shadow-inst sm:p-12">
+        <div className="overflow-hidden border border-line bg-warm-white p-8 shadow-inst sm:p-12">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A50F2D]">
@@ -284,7 +284,7 @@ export default function Garden() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-line/80 bg-cream/60 p-6 space-y-4">
+            <div className="border border-line/80 bg-cream/60 p-6 space-y-4">
               <div>
                 <h3 className="font-serif text-base font-bold text-blue-deep flex items-center gap-2">
                   <IconMapPin size={18} className="text-[#A50F2D]" />

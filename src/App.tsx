@@ -22,15 +22,21 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    if (typeof window !== "undefined" && "scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
     // Si viene con ancla (#horarios, #niveles, etc.), buscamos el elemento en el DOM
     if (hash) {
-      // Damos un pequeño respiro para que la página de destino termine de montar
+      const cleanHash = hash.replace("#", "");
       const timer = setTimeout(() => {
-        const element = document.querySelector(hash);
+        const element =
+          document.getElementById(cleanHash) ||
+          document.querySelector(`#${CSS.escape(cleanHash)}`);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         } else {
-          window.scrollTo({ top: 0, behavior: "auto" });
+          window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
         }
       }, 70);
 
@@ -38,7 +44,9 @@ function ScrollToTop() {
     }
 
     // Si no hay hash, siempre scrolleamos al inicio de la página
-    window.scrollTo({ top: 0, behavior: "auto" });
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   }, [pathname, hash]);
 
   return null;

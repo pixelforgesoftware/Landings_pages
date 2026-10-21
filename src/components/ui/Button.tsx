@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import clsx from "clsx";
 import type { ReactNode } from "react";
+import { handleNavClick } from "@/utils/scroll";
 
 /**
  * Componente de botón y enlace reutilizable con variantes institucionales.
@@ -48,6 +49,8 @@ export default function Button({
   className = "",
   ariaLabel,
 }: ButtonProps) {
+  const { pathname } = useLocation();
+
   const classes = clsx(
     "inline-flex items-center justify-center gap-2 rounded-sm font-semibold",
     "transition-colors duration-200 select-none cursor-pointer",
@@ -72,7 +75,15 @@ export default function Button({
       );
     }
     return (
-      <Link to={href} aria-label={ariaLabel} className={classes}>
+      <Link
+        to={href}
+        aria-label={ariaLabel}
+        className={classes}
+        onClick={() => {
+          onClick?.();
+          handleNavClick(href, pathname);
+        }}
+      >
         {children}
       </Link>
     );

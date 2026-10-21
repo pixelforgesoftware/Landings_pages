@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useI18n } from "@/i18n";
+import { handleNavClick } from "@/utils/scroll";
 import { CONTACT, WHATSAPP_URL, SOCIAL } from "@/data/institution";
 import { IconMail, IconWhatsApp } from "@/components/ui/icons";
 
@@ -9,6 +10,7 @@ import { IconMail, IconWhatsApp } from "@/components/ui/icons";
 
 export default function Footer() {
   const { t } = useI18n();
+  const { pathname } = useLocation();
   const year = new Date().getFullYear();
 
   const nav = [
@@ -73,6 +75,7 @@ export default function Footer() {
               <li key={item.href}>
                 <Link
                   to={item.href}
+                  onClick={() => handleNavClick(item.href, pathname)}
                   className="text-sm text-cream/80 transition-colors hover:text-gold-bright"
                 >
                   {item.label}
@@ -89,17 +92,29 @@ export default function Footer() {
           </h2>
           <ul className="mt-4 grid gap-4 text-sm leading-snug">
             <li>
-              <Link to="/parroquia" className="text-cream/85 transition-colors hover:text-gold-bright">
+              <Link
+                to="/parroquia"
+                onClick={() => handleNavClick("/parroquia", pathname)}
+                className="text-cream/85 transition-colors hover:text-gold-bright"
+              >
                 {t.common.names.parish}
               </Link>
             </li>
             <li>
-              <Link to="/colegio" className="text-cream/85 transition-colors hover:text-gold-bright">
+              <Link
+                to="/colegio"
+                onClick={() => handleNavClick("/colegio", pathname)}
+                className="text-cream/85 transition-colors hover:text-gold-bright"
+              >
                 {t.common.names.schoolFull}
               </Link>
             </li>
             <li>
-              <Link to="/jardin" className="text-cream/85 transition-colors hover:text-gold-bright">
+              <Link
+                to="/jardin"
+                onClick={() => handleNavClick("/jardin", pathname)}
+                className="text-cream/85 transition-colors hover:text-gold-bright"
+              >
                 {t.common.names.garden}
               </Link>
             </li>
@@ -143,7 +158,7 @@ export default function Footer() {
               <li
                 key={s.name}
                 title={t.contact.social.note}
-                className="cursor-default rounded-sm border border-warm-white/20 px-2.5 py-1 text-xs text-cream/50"
+                className="cursor-default border border-warm-white/20 px-2.5 py-1 text-xs text-cream/50"
               >
                 {s.name}
               </li>

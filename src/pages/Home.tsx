@@ -314,10 +314,7 @@ export default function Home() {
               title={t.home.projects.p1Title}
               text={t.home.projects.p1Goal}
               meta={t.home.projects.p1NeedCount}
-              photo={{
-                label: `${t.projects.educational.photos[0]} — ${t.projects.educational.subtitle}`,
-                src: "/images/colegio-aula-preparada.webp",
-              }}
+              icon={IconBook}
               ctaLabel={t.home.projects.p1Cta}
               ctaHref="/proyectos#proyecto-educativo"
               className="h-full"
@@ -329,10 +326,7 @@ export default function Home() {
               kicker={t.home.projects.p2Kicker}
               title={t.home.projects.p2Title}
               text={t.home.projects.p2Text}
-              photo={{
-                label: "Comunidad parroquial y educativa en el predio escolar",
-                src: "/images/colegio-comunidad-8xmille.webp",
-              }}
+              icon={IconChurch}
               ctaLabel={t.home.projects.p2Cta}
               ctaHref="/proyectos#capilla-san-jose"
               className="h-full"

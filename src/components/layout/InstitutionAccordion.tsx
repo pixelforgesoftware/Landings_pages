@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import type { InstitutionNavData } from "@/data/navigationData";
+import { handleNavClick } from "@/utils/scroll";
 import {
   GraduationCap,
   Users,
@@ -39,6 +40,7 @@ export default function InstitutionAccordion({
   institution,
   onClose,
 }: InstitutionAccordionProps) {
+  const { pathname } = useLocation();
   // Arranco con todos los acordeones plegados (null) para que el usuario elija cuál abrir
   const [openId, setOpenId] = useState<string | null>(null);
 
@@ -119,20 +121,28 @@ export default function InstitutionAccordion({
                 {isOpen && (
                   <div className="bg-white px-3.5 py-4 sm:px-5 sm:py-4 border-t border-line/40 animate-in fade-in duration-150">
                     {/* Caso 1: Vista Quiénes somos con 4 columnas (reseña, visión, misión y valores) */}
-                    {accordion.overview ? (
+                    {accordion.overview ? (() => {
+                      const overview = accordion.overview;
+                      return (
                       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-5 divide-y md:divide-y-0 md:divide-x divide-line/60">
                         {/* Columna 1: Reseña general y botón para ir a la página principal */}
                         <div className="flex flex-col justify-between pb-4 md:pb-0 md:pr-3">
                           <p className="text-xs leading-relaxed text-ink text-center md:text-left">
-                            {accordion.overview.intro}
+                            {overview.intro}
                           </p>
                           <div className="mt-3.5 pt-1 flex justify-center md:justify-start">
                             <Link
-                              to={accordion.overview.actionLink.href}
-                              onClick={onClose}
+                              to={overview.actionLink.href}
+                              onClick={() =>
+                                handleNavClick(
+                                  overview.actionLink.href,
+                                  pathname,
+                                  onClose
+                                )
+                              }
                               className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 rounded-sm bg-[#A50F2D] px-4 py-2 text-xs font-bold text-white shadow-sm transition-colors hover:bg-red-deep active:bg-red-deep"
                             >
-                              <span>{accordion.overview.actionLink.label}</span>
+                              <span>{overview.actionLink.label}</span>
                             </Link>
                           </div>
                         </div>
@@ -169,10 +179,10 @@ export default function InstitutionAccordion({
                             <Users size={16} />
                           </div>
                           <h4 className="text-xs font-bold text-[#A50F2D] mb-2">
-                            {accordion.overview.valores.title}
+                            {overview.valores.title}
                           </h4>
                           <div className="flex flex-wrap justify-center gap-1.5 max-w-xs">
-                            {accordion.overview.valores.items.map((val) => (
+                            {overview.valores.items.map((val) => (
                               <span
                                 key={val}
                                 className="inline-block rounded-full bg-red-soft/80 border border-red/20 px-2.5 py-0.5 text-[0.72rem] font-semibold text-[#A50F2D]"
@@ -183,7 +193,8 @@ export default function InstitutionAccordion({
                           </div>
                         </div>
                       </div>
-                    ) : accordion.items ? (
+                      );
+                    })() : accordion.items ? (
                       /* Caso 2: Acordeón con tarjetas informativas en cuadrícula */
                       <div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3">
@@ -203,17 +214,26 @@ export default function InstitutionAccordion({
                         </div>
 
                         {/* Botón de acción para ir a la sección o página correspondiente */}
-                        {accordion.actionLink && (
+                        {accordion.actionLink && (() => {
+                          const action = accordion.actionLink;
+                          return (
                           <div className="mt-3.5 pt-3 border-t border-line/60 flex justify-center sm:justify-end">
                             <Link
-                              to={accordion.actionLink.href}
-                              onClick={onClose}
+                              to={action.href}
+                              onClick={() =>
+                                handleNavClick(
+                                  action.href,
+                                  pathname,
+                                  onClose
+                                )
+                              }
                               className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 rounded-sm bg-[#A50F2D] px-4 py-2 text-xs font-bold text-white shadow-sm transition-colors hover:bg-red-deep active:bg-red-deep text-center"
                             >
-                              <span>{accordion.actionLink.label}</span>
+                              <span>{action.label}</span>
                             </Link>
                           </div>
-                        )}
+                          );
+                        })()}
                       </div>
                     ) : null}
                   </div>

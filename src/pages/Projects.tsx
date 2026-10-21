@@ -1,7 +1,7 @@
 import { useI18n, usePageTitle } from "@/i18n";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import { IconCalendar, IconChurch } from "@/components/ui/icons";
+import { IconBook, IconCalendar, IconChurch } from "@/components/ui/icons";
 
 /**
  * Página de proyectos institucionales: Crecimiento Educativo y Futura Capilla San José.
@@ -32,69 +32,66 @@ export default function Projects() {
 
       {/* Proyecto 1: Crecimiento Educativo */}
       <section id="proyecto-educativo" aria-labelledby="edu-title" className="scroll-mt-28 border-b border-line bg-cream">
-        <div className="wrap grid gap-12 py-16 lg:grid-cols-[1fr_1fr] lg:gap-16 sm:py-20">
-          <div>
-            <p className="text-[0.72rem] font-bold uppercase tracking-[0.2em] text-red">{p.educational.kicker}</p>
-            <h2 id="edu-title" className="mt-2.5 font-serif text-3xl font-bold text-blue-deep sm:text-4xl">
-              {p.educational.title}
-            </h2>
-            <p className="mt-2 font-serif text-lg italic text-gold">{p.educational.subtitle}</p>
-            <p className="mt-5 leading-relaxed text-ink-soft">{p.educational.description}</p>
+        <div className="wrap grid gap-12 py-16 lg:grid-cols-12 lg:gap-14 lg:items-start sm:py-20">
+          <div className="lg:col-span-5">
+            <Reveal>
+              <p className="text-[0.72rem] font-bold uppercase tracking-[0.2em] text-red">{p.educational.kicker}</p>
+              <h2 id="edu-title" className="mt-2.5 font-serif text-3xl font-bold text-blue-deep sm:text-4xl">
+                {p.educational.title}
+              </h2>
+              <p className="mt-2 font-serif text-lg italic text-gold">{p.educational.subtitle}</p>
+              <p className="mt-5 leading-relaxed text-ink-soft">{p.educational.description}</p>
 
-            <h3 className="mt-8 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-gold">
-              {p.needsTitle}
-            </h3>
-            <ul className="mt-4 grid gap-x-8 gap-y-2.5 sm:grid-cols-2">
-              {p.educational.needs.map((need) => (
-                <li key={need} className="flex items-center gap-3 border-b border-line/70 pb-2.5 text-[0.95rem] font-semibold text-ink">
-                  <span aria-hidden className="h-1.5 w-1.5 shrink-0 rotate-45 bg-red" />
-                  {need}
-                </li>
-              ))}
-            </ul>
+              {/* Estado y avances del proyecto */}
+              <div className="mt-8 border border-line bg-warm-white p-6 shadow-xs">
+                <h3 className="flex items-center gap-2.5 font-serif text-base font-bold text-blue-deep sm:text-lg">
+                  <IconCalendar size={18} aria-hidden className="text-gold" />
+                  {p.educational.progressTitle}
+                </h3>
+                <p className="mt-2 text-sm italic leading-relaxed text-ink-soft">{p.educational.progressText}</p>
+              </div>
 
-            {/* Estado y avances del proyecto */}
-            <div className="mt-8 border border-line bg-warm-white p-6">
-              <h3 className="flex items-center gap-2.5 font-serif text-lg font-bold text-blue-deep">
-                <IconCalendar size={18} aria-hidden className="text-gold" />
-                {p.educational.progressTitle}
-              </h3>
-              <p className="mt-2 text-sm italic leading-relaxed text-ink-soft">{p.educational.progressText}</p>
-            </div>
-
-            <div className="mt-8">
-              <Button href="/colaborar" variant="primary">
-                {p.educational.cta}
-              </Button>
-            </div>
+              <div className="mt-8">
+                <Button href="/colaborar" variant="primary">
+                  {p.educational.cta}
+                </Button>
+              </div>
+            </Reveal>
           </div>
 
-          <div className="grid grid-cols-2 content-start gap-4">
-            {p.educational.photos.map((photo, i) => {
-              let src: string | undefined;
-              if (i === 0) src = "/images/colegio-edificio-exterior.webp";
-              if (i === 1) src = "/images/colegio-aula-preparada.webp";
-              if (i === 2) src = "/images/obras-construccion-aulas.webp";
-              if (i === 3) src = "/images/historia-2017-inauguracion.webp";
+          <div className="lg:col-span-7">
+            <Reveal delay={100}>
+              <div className="border border-line bg-warm-white p-7 sm:p-9 shadow-inst">
+                <div className="flex items-center gap-3.5 border-b border-line pb-5">
+                  <span
+                    aria-hidden
+                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-red/30 bg-red-soft text-red shadow-xs"
+                  >
+                    <IconBook size={20} />
+                  </span>
+                  <div>
+                    <p className="text-[0.72rem] font-bold uppercase tracking-[0.2em] text-gold">
+                      {p.needsTitle}
+                    </p>
+                    <h3 className="font-serif text-xl font-bold text-blue-deep">
+                      {p.educational.subtitle}
+                    </h3>
+                  </div>
+                </div>
 
-              return (
-                <Reveal key={photo} delay={i * 70}>
-                  <figure className="group overflow-hidden border border-line bg-warm-white shadow-sm transition-all duration-300 hover:border-gold/60 hover:shadow-inst">
-                    <div className="aspect-[4/3] w-full overflow-hidden">
-                      <img
-                        src={src}
-                        alt={photo}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        loading="lazy"
-                      />
-                    </div>
-                    <figcaption className="border-t border-line/80 px-3 py-2 text-xs italic text-ink-soft">
-                      {photo}
-                    </figcaption>
-                  </figure>
-                </Reveal>
-              );
-            })}
+                <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {p.educational.needs.map((need) => (
+                    <li
+                      key={need}
+                      className="flex items-start gap-3 border border-line/70 bg-cream/50 p-3.5 text-[0.92rem] font-semibold text-ink transition-colors hover:border-gold/60"
+                    >
+                      <span aria-hidden className="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-red" />
+                      <span>{need}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>

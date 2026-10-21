@@ -13,21 +13,47 @@ interface GalleryPhotoDef {
   id: string;
   categoryId: string;
   src: string;
+  alt?: string;
 }
 
 const GALLERY_PHOTOS: GalleryPhotoDef[] = [
   // Parroquia (18 fotos: altar + 17 fotos nuevas)
-  { id: "parroquia-0", categoryId: "parroquia", src: "/images/parroquia-altar.webp" },
+  { id: "parroquia-0", categoryId: "parroquia", src: "/images/parroquia-altar.webp", alt: "Altar mayor de la Parroquia San Francisco de Asís" },
   { id: "parroquia-1", categoryId: "parroquia", src: "/images/parroquia-foto-01.webp" },
-  { id: "parroquia-2", categoryId: "parroquia", src: "/images/parroquia-foto-02.webp" },
+  {
+    id: "parroquia-2",
+    categoryId: "parroquia",
+    src: "/images/parroquia-foto-02.webp",
+    alt: "Sacerdotes concelebrando la Santa Misa en el presbiterio de la Parroquia San Francisco de Asís",
+  },
   { id: "parroquia-3", categoryId: "parroquia", src: "/images/parroquia-foto-03.webp" },
   { id: "parroquia-4", categoryId: "parroquia", src: "/images/parroquia-foto-04.webp" },
-  { id: "parroquia-5", categoryId: "parroquia", src: "/images/parroquia-foto-05.webp" },
-  { id: "parroquia-6", categoryId: "parroquia", src: "/images/parroquia-foto-06.webp" },
+  {
+    id: "parroquia-5",
+    categoryId: "parroquia",
+    src: "/images/parroquia-foto-05.webp",
+    alt: "Altar mayor ornamentado con flores y feligreses participando de la celebración litúrgica",
+  },
+  {
+    id: "parroquia-6",
+    categoryId: "parroquia",
+    src: "/images/parroquia-foto-06.webp",
+    alt: "Fachada exterior y campanario del templo parroquial en Real del Padre",
+  },
   { id: "parroquia-7", categoryId: "parroquia", src: "/images/parroquia-foto-07.webp" },
   { id: "parroquia-8", categoryId: "parroquia", src: "/images/parroquia-foto-08.webp" },
-  { id: "parroquia-9", categoryId: "parroquia", src: "/images/parroquia-foto-09.webp" },
-  { id: "parroquia-10", categoryId: "parroquia", src: "/images/parroquia-foto-10.webp" },
+  {
+    id: "parroquia-9",
+    categoryId: "parroquia",
+    src: "/images/parroquia-foto-09.webp",
+    alt: "Comunidad parroquial reunida durante la procesión y fiesta patronal",
+  },
+  {
+    id: "parroquia-10",
+    categoryId: "parroquia",
+    src: "/images/parroquia-foto-10.webp",
+    alt: "Interior del templo con la nave central iluminada y fieles en oración",
+  },
   { id: "parroquia-11", categoryId: "parroquia", src: "/images/parroquia-foto-11.webp" },
   { id: "parroquia-12", categoryId: "parroquia", src: "/images/parroquia-foto-12.webp" },
   { id: "parroquia-13", categoryId: "parroquia", src: "/images/parroquia-foto-13.webp" },
@@ -100,6 +126,7 @@ export default function Gallery() {
       categoryId: photo.categoryId,
       categoryName: categoryMap.get(photo.categoryId) || photo.categoryId,
       src: photo.src,
+      alt: photo.alt,
     }));
   }, [categoryMap]);
 

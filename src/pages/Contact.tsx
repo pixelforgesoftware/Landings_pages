@@ -113,7 +113,7 @@ export default function Contact() {
         <div className="mx-auto max-w-2xl border border-gold/40 bg-warm-white p-8 text-center shadow-inst">
           <h2 id="redes" className="font-serif text-xl font-bold text-blue-deep">{c.social.title}</h2>
           <p className="mt-3 text-sm leading-relaxed text-ink-soft">{c.social.note}</p>
-          <p className="mt-4 inline-block rounded-sm border border-gold/60 bg-warm-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-gold">
+          <p className="mt-4 inline-block border border-gold/60 bg-warm-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-gold">
             {t.common.soon}
           </p>
         </div>

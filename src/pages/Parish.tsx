@@ -4,12 +4,36 @@ import { MASS_TIMES, CONTACT } from "@/data/institution";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Reveal from "@/components/ui/Reveal";
 import { IconClock, IconMapPin, IconWhatsApp, IconMail, IconArrowRight } from "@/components/ui/icons";
+import { Camera } from "lucide-react";
+
+const PARISH_GALLERY_PHOTOS = [
+  {
+    src: "/images/parroquia-foto-02.webp",
+    alt: "Sacerdotes concelebrando la Santa Misa en el presbiterio de la Parroquia San Francisco de Asís",
+  },
+  {
+    src: "/images/parroquia-foto-05.webp",
+    alt: "Altar mayor ornamentado con flores y feligreses participando de la celebración litúrgica",
+  },
+  {
+    src: "/images/parroquia-foto-06.webp",
+    alt: "Fachada exterior y campanario del templo parroquial en Real del Padre",
+  },
+  {
+    src: "/images/parroquia-foto-09.webp",
+    alt: "Comunidad parroquial reunida durante la procesión y fiesta patronal",
+  },
+  {
+    src: "/images/parroquia-foto-10.webp",
+    alt: "Interior del templo con la nave central iluminada y fieles en oración",
+  },
+];
 
 /**
  * Página institucional de la Parroquia San Francisco de Asís (historia, vida parroquial y horarios de misa).
  */
 export default function Parish() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   usePageTitle(t.common.pageTitles.parish);
   const p = t.parish;
 
@@ -101,38 +125,62 @@ export default function Parish() {
         </div>
       </section>
 
-      {/* Galería */}
+      {/* Galería: La vida de la Parroquia */}
       <section aria-labelledby="galeria-parroquia" className="wrap py-16 sm:py-20">
         <Reveal>
           <SectionTitle eyebrow={t.common.nav.gallery} title={p.gallery.title} lead={p.gallery.intro} />
         </Reveal>
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {p.gallery.items.map((label, i) => {
-            let src: string | undefined;
-            if (i === 0) src = "/images/hero-parish.webp";
-            if (i === 1) src = "/images/parroquia-altar.webp";
-            if (i === 2) src = "/images/comunidad-trabajo.webp";
-            if (i === 3) src = "/images/colegio-comunidad-8xmille.webp";
-            if (i === 4) src = "/images/comunidad-jornada-trabajo.webp";
+          {PARISH_GALLERY_PHOTOS.map((photo, i) => (
+            <Reveal key={photo.src} delay={(i % 3) * 80}>
+              <div className="group overflow-hidden border border-line bg-warm-white shadow-sm transition-all duration-300 hover:border-gold/60 hover:shadow-inst">
+                <div className="aspect-[4/3] w-full overflow-hidden">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </Reveal>
+          ))}
 
-            return (
-              <Reveal key={label} delay={(i % 3) * 80}>
-                <figure className="group overflow-hidden border border-line bg-warm-white shadow-sm transition-all duration-300 hover:border-gold/60 hover:shadow-inst">
-                  <div className="aspect-[4/3] w-full overflow-hidden">
-                    <img
-                      src={src}
-                      alt={label}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                  </div>
-                  <figcaption className="border-t border-line/80 px-3 py-2 text-xs italic text-ink-soft">
-                    {label}
-                  </figcaption>
-                </figure>
-              </Reveal>
-            );
-          })}
+          {/* Sexto recuadro: acceso directo a la galería completa */}
+          <Reveal delay={160}>
+            <Link
+              to="/galeria?cat=parroquia"
+              className="group flex aspect-[4/3] w-full flex-col items-center justify-center border border-gold-bright/40 bg-gradient-to-br from-blue-deep to-[#18314e] p-6 text-center text-cream shadow-sm transition-all duration-300 hover:border-gold-bright hover:shadow-inst-lg hover:-translate-y-0.5"
+            >
+              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full border border-gold-bright/40 bg-gold-bright/15 text-gold-bright transition-transform duration-300 group-hover:scale-110">
+                <Camera size={22} aria-hidden />
+              </div>
+              <h3 className="font-serif text-lg font-bold text-warm-white sm:text-xl">
+                {locale === "en"
+                  ? "Parish Gallery"
+                  : locale === "it"
+                  ? "Galleria della Parrocchia"
+                  : "Galería de la Parroquia"}
+              </h3>
+              <p className="mt-1.5 max-w-xs text-xs leading-relaxed text-cream/75 sm:text-[0.82rem]">
+                {locale === "en"
+                  ? "Discover more photos of our community, celebrations, and outreach."
+                  : locale === "it"
+                  ? "Scopri altre foto della nostra comunità, celebrazioni e missioni."
+                  : "Conocé más fotos de nuestra comunidad, celebraciones y misiones."}
+              </p>
+              <span className="mt-4 inline-flex items-center gap-1.5 rounded-sm bg-[#A50F2D] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-sm transition-all group-hover:bg-red-deep">
+                <span>
+                  {locale === "en"
+                    ? "View more photos"
+                    : locale === "it"
+                    ? "Vedi altre immagini"
+                    : "Ver más imágenes"}
+                </span>
+                <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+              </span>
+            </Link>
+          </Reveal>
         </div>
       </section>
 
@@ -178,7 +226,7 @@ export default function Parish() {
 
       {/* Contacto y secretaría parroquial */}
       <section id="contacto" aria-labelledby="contacto-parroquia" className="scroll-mt-28 wrap py-14 sm:py-16">
-        <div className="rounded-2xl border border-line bg-warm-white p-8 shadow-inst sm:p-10">
+        <div className="border border-line bg-warm-white p-8 shadow-inst sm:p-10">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A50F2D]">
@@ -210,7 +258,7 @@ export default function Parish() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-line/80 bg-cream/60 p-6 space-y-3.5">
+            <div className="border border-line/80 bg-cream/60 p-6 space-y-3.5">
               <div>
                 <p className="text-xs font-bold uppercase tracking-wider text-[#A50F2D]">Sede Parroquial</p>
                 <p className="mt-1 text-sm font-semibold text-blue-deep">{CONTACT.parishAddress.join(", ")}</p>
